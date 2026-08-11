@@ -1,0 +1,109 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 1650 >> stream
+BT
+/F1 11 Tf
+72 790 Td
+14 TL
+(Healthcare AI QA Engineering Platform) Tj
+T*
+(Step 0.2 - Repository Foundation + GitHub Configuration) Tj
+T*
+() Tj
+T*
+(Objective) Tj
+T*
+(Initialize repository foundation and configure GitHub origin safely.) Tj
+T*
+() Tj
+T*
+(Architecture) Tj
+T*
+(Modular structure for frontend, automation, AI components, mock systems, knowledge, and docs.) Tj
+T*
+() Tj
+T*
+(Repository Structure) Tj
+T*
+(- frontend, automation, rag, mcp, agent) Tj
+T*
+(- mock-systems/jira, confluence, jenkins) Tj
+T*
+(- knowledge/brd, prd, epics, user-stories, acceptance-criteria, business-rules, test-scenarios, test-cases) Tj
+T*
+(- docs/architecture, qa, rag, mcp, agent, implementations, .github) Tj
+T*
+() Tj
+T*
+(Git Configuration) Tj
+T*
+(- Repository initialized locally) Tj
+T*
+(- Branch set to main) Tj
+T*
+() Tj
+T*
+(GitHub Configuration) Tj
+T*
+(- origin: https://github.com/Satishnjr/healthcare-ai-qa-engineering.git) Tj
+T*
+() Tj
+T*
+(Security) Tj
+T*
+(- No credentials/tokens/passwords stored in files) Tj
+T*
+(- .gitignore covers env files, secrets, logs, artifacts) Tj
+T*
+() Tj
+T*
+(Validation) Tj
+T*
+(- Git init/branch/remote checks performed) Tj
+T*
+(- Structure and mandatory docs created) Tj
+T*
+(- No package installation performed) Tj
+T*
+() Tj
+T*
+(Git Commit) Tj
+T*
+(- Pending update after commit execution) Tj
+T*
+() Tj
+T*
+(Git Push) Tj
+T*
+(- Pending update after push execution) Tj
+T*
+() Tj
+T*
+(Lessons Learned) Tj
+T*
+(- Foundation-first execution improves reproducibility and governance.) Tj
+T*
+() Tj
+T*
+(Interview Talking Points) Tj
+T*
+(- Why repository baseline before features) Tj
+T*
+(- How to handle enterprise constraints and security) Tj
+ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+2013
+%%EOF
