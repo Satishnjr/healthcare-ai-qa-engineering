@@ -1,0 +1,229 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 3484 >>
+stream
+BT
+/F1 13 Tf
+1 0 0 1 54 748 Tm
+(Step 1.8 Implementation Report) Tj
+/F1 10 Tf
+1 0 0 1 54 734 Tm
+(- Healthcare AI QA Engineering - CareFlow Health) Tj
+/F1 10 Tf
+1 0 0 1 54 720 Tm
+(- Document Type: Step Implementation Report) Tj
+/F1 10 Tf
+1 0 0 1 54 706 Tm
+(- Status: PASS) Tj
+/F1 10 Tf
+1 0 0 1 54 692 Tm
+(- Scope: Test Scenario -> Test Case only) Tj
+/F1 10 Tf
+1 0 0 1 54 678 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 664 Tm
+(Objective) Tj
+/F1 10 Tf
+1 0 0 1 54 650 Tm
+(- Define canonical, detailed, traceable, and automation-ready test cases from approved test scenarios.) Tj
+/F1 10 Tf
+1 0 0 1 54 636 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 622 Tm
+(Context and Boundaries) Tj
+/F1 10 Tf
+1 0 0 1 54 608 Tm
+(- Project remains frontend-only with synthetic healthcare data.) Tj
+/F1 10 Tf
+1 0 0 1 54 594 Tm
+(- No backend, API, Playwright, Cucumber, RAG, MCP, LangGraph, or agent implementation was introduced) Tj
+/F1 10 Tf
+1 0 0 1 54 580 Tm
+(  in this step.) Tj
+/F1 10 Tf
+1 0 0 1 54 566 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 552 Tm
+(Requirements-to-Test Lifecycle) Tj
+/F1 10 Tf
+1 0 0 1 54 538 Tm
+(- BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case) Tj
+/F1 10 Tf
+1 0 0 1 54 524 Tm
+(- Traceability document was extended to include scenario-to-test-case mapping.) Tj
+/F1 10 Tf
+1 0 0 1 54 510 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 496 Tm
+(Design Approach) Tj
+/F1 10 Tf
+1 0 0 1 54 482 Tm
+(- Used stable IDs: TC-<SCENARIO-ID>-<SEQUENCE>.) Tj
+/F1 10 Tf
+1 0 0 1 54 468 Tm
+(- Preserved scenario intent while making step-level execution explicit.) Tj
+/F1 10 Tf
+1 0 0 1 54 454 Tm
+(- Kept expected results UI-observable and deterministic for future automation.) Tj
+/F1 10 Tf
+1 0 0 1 54 440 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 426 Tm
+(Coverage Results) Tj
+/F1 10 Tf
+1 0 0 1 54 412 Tm
+(- Total Test Scenarios: 96) Tj
+/F1 10 Tf
+1 0 0 1 54 398 Tm
+(- Total Test Cases: 96) Tj
+/F1 10 Tf
+1 0 0 1 54 384 Tm
+(- User Stories Covered: 32) Tj
+/F1 10 Tf
+1 0 0 1 54 370 Tm
+(- Acceptance Criteria Covered: 109) Tj
+/F1 10 Tf
+1 0 0 1 54 356 Tm
+(- Smoke: 6, Regression: 96) Tj
+/F1 10 Tf
+1 0 0 1 54 342 Tm
+(- Priority: P0=16, P1=40, P2=40, P3=0) Tj
+/F1 10 Tf
+1 0 0 1 54 328 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 314 Tm
+(Classification and Metadata) Tj
+/F1 10 Tf
+1 0 0 1 54 300 Tm
+(- Test type, level, priority, risk, module, actor, dependencies, tags, and AI relevance metadata are) Tj
+/F1 10 Tf
+1 0 0 1 54 286 Tm
+(  defined per test case.) Tj
+/F1 10 Tf
+1 0 0 1 54 272 Tm
+(- Playwright page-object area and Cucumber scenario reference are included for future implementation.) Tj
+/F1 10 Tf
+1 0 0 1 54 258 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 244 Tm
+(Automation Readiness) Tj
+/F1 10 Tf
+1 0 0 1 54 230 Tm
+(- All test cases are marked automation candidates with prioritized automation lanes.) Tj
+/F1 10 Tf
+1 0 0 1 54 216 Tm
+(- Steps and expected outcomes are suitable for Playwright + TypeScript + Cucumber conversion.) Tj
+/F1 10 Tf
+1 0 0 1 54 202 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 188 Tm
+(AI Readiness) Tj
+/F1 10 Tf
+1 0 0 1 54 174 Tm
+(- RAG relevance supports retrieval by IDs, tags, modules, and traceability links.) Tj
+/F1 10 Tf
+1 0 0 1 54 160 Tm
+(- MCP relevance supports future test case query and execution-tool operations.) Tj
+/F1 10 Tf
+1 0 0 1 54 146 Tm
+(- Agent relevance supports prioritization, regression selection, and failure-impact workflows.) Tj
+/F1 10 Tf
+1 0 0 1 54 132 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 118 Tm
+(Validation) Tj
+/F1 10 Tf
+1 0 0 1 54 104 Tm
+(- Unique IDs verified.) Tj
+/F1 10 Tf
+1 0 0 1 54 90 Tm
+(- No orphan test cases.) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 751 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 748 Tm
+(- No uncovered scenarios.) Tj
+/F1 10 Tf
+1 0 0 1 54 734 Tm
+(- No out-of-scope technical implementation introduced.) Tj
+/F1 10 Tf
+1 0 0 1 54 720 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 706 Tm
+(Interview Q&A Themes) Tj
+/F1 10 Tf
+1 0 0 1 54 692 Tm
+(- Scenario vs test case) Tj
+/F1 10 Tf
+1 0 0 1 54 678 Tm
+(- Traceability governance) Tj
+/F1 10 Tf
+1 0 0 1 54 664 Tm
+(- Risk-based prioritization) Tj
+/F1 10 Tf
+1 0 0 1 54 650 Tm
+(- Smoke vs regression strategy) Tj
+/F1 10 Tf
+1 0 0 1 54 636 Tm
+(- Automation readiness and AI-QA relevance) Tj
+/F1 10 Tf
+1 0 0 1 54 622 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 608 Tm
+(Next Step) Tj
+/F1 10 Tf
+1 0 0 1 54 594 Tm
+(- Step 1.9 - Test Data & Test Management Strategy) Tj
+/F1 10 Tf
+1 0 0 1 54 580 Tm
+() Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000003621 00000 n 
+0000004423 00000 n 
+0000004549 00000 n 
+0000004675 00000 n 
+0000004738 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+4787
+%%EOF

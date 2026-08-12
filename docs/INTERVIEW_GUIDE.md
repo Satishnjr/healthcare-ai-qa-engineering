@@ -14,17 +14,18 @@ Healthcare AI QA Engineering Platform built incrementally with architecture gove
 - 1.5 User story definition (CFH-US-001)
 - 1.6 Acceptance criteria definition (CFH-AC-001)
 - 1.7 Test scenario definition (CFH-TS-001)
+- 1.8 Test case definition (CFH-TC-001)
 
-## Step 1.7 Highlights
-- Defined 96 business-level test scenarios mapped to approved requirements.
-- Added stable test-scenario IDs and complete scenario metadata.
-- Added smoke/regression classification and P0/P1/P2/P3 prioritization.
-- Added BDD intent and Playwright-readiness notes per scenario.
-- Updated traceability with Acceptance Criteria -> Test Scenario mapping and coverage summary.
+## Step 1.8 Highlights
+- Defined 96 detailed test cases mapped to approved test scenarios.
+- Extended traceability to: BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case.
+- Added executable step-level structure, expected outcomes, data strategy, and validation metadata.
+- Added automation readiness mapping for future Playwright + Cucumber + POM implementation.
+- Added RAG/MCP/Agent relevance metadata for future AI-QA orchestration.
 - Preserved frontend-only scope and synthetic-data boundaries.
 
 ## Current Boundary
-- Test Scenario Definition = IMPLEMENTED
+- Test Case Definition = IMPLEMENTED
 - Frontend = NOT IMPLEMENTED
 - Backend = NOT IMPLEMENTED
 - API = NOT IMPLEMENTED

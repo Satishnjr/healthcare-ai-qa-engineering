@@ -93,3 +93,10 @@
 - Updated `knowledge/requirements-traceability.md` with Acceptance Criteria -> Test Scenario mapping and test-scenario coverage summary.
 - Added Step 1.7 implementation artifacts (`prompt.md`, `README.md`, `implementation-report.pdf`, `interview-notes.md`, `response.md`).
 - Updated root documentation to include Step 1.7 PASS and clarify non-implemented technical scope boundaries.
+
+## Step 1.8 - Test Case Definition
+- Added `knowledge/test-cases/CAREFLOW_HEALTH_TEST_CASES.md` (CFH-TC-001 v1.0 baseline).
+- Added `knowledge/test-cases/README.md` with conventions, traceability, and automation/AI readiness context.
+- Updated `knowledge/requirements-traceability.md` with Test Scenario -> Test Case mapping and test-case coverage summary.
+- Added Step 1.8 implementation artifacts (`prompt.md`, `README.md`, `implementation-report.pdf`, `interview-notes.md`, `response.md`).
+- Updated root documentation to include Step 1.8 PASS and preserve non-implemented technical scope boundaries.

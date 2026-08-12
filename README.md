@@ -17,16 +17,17 @@ CareFlow Health (frontend-only healthcare management portal)
 - Step 1.5: User Story Definition
 - Step 1.6: Acceptance Criteria Definition
 - Step 1.7: Test Scenario Definition
+- Step 1.8: Test Case Definition
 
-## Step 1.7 Output
-- Baseline Test Scenario document `CFH-TS-001` (Version 1.0)
-- 96 business-level test scenarios mapped from approved requirements
-- Scenario metadata for BDD and Playwright readiness
-- Smoke and regression classifications
-- Acceptance Criteria -> Test Scenario traceability and coverage summary
+## Step 1.8 Output
+- Baseline Test Case document `CFH-TC-001` (Version 1.0)
+- 96 detailed test cases mapped from 96 approved test scenarios
+- End-to-end traceability through Test Case layer
+- Automation readiness metadata for future Playwright/Cucumber implementation
+- AI-ready metadata for future RAG/MCP/LangGraph/Agent workflows
 
 ## Important Boundary
-- Test Scenario Definition is IMPLEMENTED.
+- Test Case Definition is IMPLEMENTED.
 - Frontend is NOT IMPLEMENTED.
 - Backend is NOT IMPLEMENTED.
 - API is NOT IMPLEMENTED.
@@ -43,4 +44,4 @@ CareFlow Health (frontend-only healthcare management portal)
 - No real PHI
 
 ## Next Step
-Await user direction for Step 1.8.
+Await user direction for Step 1.9.
