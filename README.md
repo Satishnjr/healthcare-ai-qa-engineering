@@ -11,17 +11,18 @@ CareFlow Health (frontend-only healthcare management portal)
 - Step 0.2: Repository Foundation
 - Step 0.3: Engineering Standards and Architecture Contract
 - Step 1.1: Product Vision and Requirements Strategy
-- Step 1.2: Business Requirements Document (BRD) Creation
+- Step 1.2: BRD Creation
+- Step 1.3: PRD Creation
 
-## Step 1.2 Output
-- Baseline BRD `CFH-BRD-001` (Version 1.0)
-- BRD readme and change-management context
-- Stable business identifiers (BR, BRULE, NFR, BP, RISK, STK)
-- Updated requirements traceability with BRD source layer
+## Step 1.3 Output
+- Baseline PRD `CFH-PRD-001` (Version 1.0)
+- Persona definitions and role capability matrix
+- Detailed functional and non-functional requirements
+- BRD-to-PRD traceability mapping
 
 ## Important Boundary
-- BRD is implemented as a documentation artifact.
-- Application functionality remains NOT IMPLEMENTED in Step 1.2.
+- PRD documentation is implemented.
+- Healthcare application functionality is NOT IMPLEMENTED in Step 1.3.
 
 ## Constraints
 - Frontend-only architecture
@@ -30,4 +31,4 @@ CareFlow Health (frontend-only healthcare management portal)
 - No real PHI
 
 ## Next Step
-Await user direction for Step 1.3 (PRD).
+Await user direction for Step 1.4.

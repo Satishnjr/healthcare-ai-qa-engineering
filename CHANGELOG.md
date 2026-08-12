@@ -36,3 +36,10 @@
 - Updated requirements traceability with BRD source-layer identifiers.
 - Added Step 1.2 implementation artifacts.
 - Updated root documentation to include Step 1.2 PASS and clarify no application functionality implementation.
+
+## Step 1.3 - PRD Creation
+- Added `knowledge/prd/CAREFLOW_HEALTH_PRD.md` (CFH-PRD-001 v1.0 baseline).
+- Added `knowledge/prd/README.md` with PRD governance context.
+- Updated requirements traceability with BRD-to-PRD mapping.
+- Added Step 1.3 implementation artifacts.
+- Updated root documentation to include Step 1.3 PASS and clarify no healthcare app implementation.

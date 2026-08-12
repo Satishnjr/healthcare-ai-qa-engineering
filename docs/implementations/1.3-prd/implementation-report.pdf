@@ -1,0 +1,91 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 1430 >> stream
+BT
+/F1 11 Tf
+72 790 Td
+14 TL
+(Healthcare AI QA Engineering Platform) Tj
+T*
+(Step 1.3 - Product Requirements Document) Tj
+T*
+() Tj
+T*
+(PRD Overview) Tj
+T*
+(- Document: CFH-PRD-001) Tj
+T*
+(- Product: CareFlow Health) Tj
+T*
+(- Version: 1.0) Tj
+T*
+(- Status: BASELINE / APPROVED FOR UI DESIGN AND IMPLEMENTATION) Tj
+T*
+() Tj
+T*
+(Product Architecture and Personas) Tj
+T*
+(- Role personas defined: Patient, Doctor, Nurse, Receptionist, Admin) Tj
+T*
+(- Role capability matrix and information architecture defined) Tj
+T*
+() Tj
+T*
+(Functional and Non-Functional Requirements) Tj
+T*
+(- Functional requirements: FR-001 .. FR-030) Tj
+T*
+(- Non-functional requirements: NFR-001 .. NFR-014) Tj
+T*
+(- BRD references, validation, error behavior, and testability captured) Tj
+T*
+() Tj
+T*
+(UI and Validation Requirements) Tj
+T*
+(- Validation, state handling, dialogs, notifications, accessibility, responsiveness defined) Tj
+T*
+() Tj
+T*
+(Traceability) Tj
+T*
+(- BRD-to-PRD mapping added with stable identifiers) Tj
+T*
+(- Downstream artifacts remain TBD per step constraints) Tj
+T*
+() Tj
+T*
+(RAG/MCP/Agent Relevance \(Planned\)) Tj
+T*
+(- PRD structured for future ingestion/retrieval and requirement reasoning) Tj
+T*
+() Tj
+T*
+(Interview Talking Points) Tj
+T*
+(- BRD vs PRD decomposition value) Tj
+T*
+(- Why stable IDs and testability-first requirement design) Tj
+T*
+() Tj
+T*
+(Next Step) Tj
+T*
+(- Step 1.4 \(planned, not executed in this step\)) Tj
+ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1793
+%%EOF
