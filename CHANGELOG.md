@@ -56,3 +56,18 @@
   - RAG = NOT IMPLEMENTED
   - MCP = NOT IMPLEMENTED
   - Agent = NOT IMPLEMENTED
+
+## Step 1.5 - User Story Definition
+- Added `knowledge/user-stories/CAREFLOW_HEALTH_USER_STORIES.md` (CFH-US-001 v1.0 baseline).
+- Added `knowledge/user-stories/README.md` with user story governance context.
+- Updated `knowledge/requirements-traceability.md` with BRD/PRD/Epic/User Story mapping and coverage summary.
+- Added Step 1.5 implementation artifacts.
+- Updated root documentation to include Step 1.5 PASS and clarify:
+  - User Story Definition = IMPLEMENTED
+  - Frontend = NOT IMPLEMENTED
+  - Backend = NOT IMPLEMENTED
+  - API = NOT IMPLEMENTED
+  - API Automation = NOT IMPLEMENTED
+  - RAG = NOT IMPLEMENTED
+  - MCP = NOT IMPLEMENTED
+  - Agent = NOT IMPLEMENTED

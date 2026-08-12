@@ -98,6 +98,55 @@
 | BR-023 | FR-025, FR-026, FR-027, FR-028 | EPIC-003, EPIC-004, EPIC-009 | Validation standards, list standards, state handling, and dialog behavior | MAPPED |
 | BR-024 | FR-029, FR-030, NFR-003, NFR-004 | EPIC-003, EPIC-004, EPIC-009, EPIC-011 | Responsive and accessibility behavior | MAPPED |
 
+## BRD-PRD-Epic-User Story Mapping
+
+| BRD ID | PRD ID | Epic ID | User Story ID | Requirement | Status |
+|---|---|---|---|---|---|
+| BR-001 | FR-001 | EPIC-001 | US-001-001 | Render login screen with role-aware entry options | MAPPED |
+| BR-001 | FR-002 | EPIC-001 | US-001-002 | Simulate credential validation outcomes | MAPPED |
+| BR-001 | FR-003, NFR-014 | EPIC-001 | US-001-003 | Logout and clear session-like state | MAPPED |
+| BR-002, BR-003 | FR-004 | EPIC-002 | US-002-001 | View role-specific dashboard summary | MAPPED |
+| BR-003, BR-018, BR-022 | FR-005 | EPIC-002 | US-002-002 | View activity and notification widgets on dashboard | MAPPED |
+| BR-004 | FR-006 | EPIC-003 | US-003-001 | Register a new synthetic patient | MAPPED |
+| BR-004 | FR-007 | EPIC-003 | US-003-002 | View patient list with core columns | MAPPED |
+| BR-005, BR-006 | FR-008 | EPIC-003 | US-003-003 | Search patients by ID, name, DOB, or phone | MAPPED |
+| BR-007 | FR-009 | EPIC-003 | US-003-004 | View and update patient profile sections | MAPPED |
+| BR-023 | FR-025 | EPIC-003 | US-003-005 | Enforce patient module form validation standards | MAPPED |
+| BR-023 | FR-026 | EPIC-003 | US-003-006 | Apply search, filter, sort, and pagination standards in patient lists | MAPPED |
+| BR-024 | FR-029, FR-030 | EPIC-003 | US-003-007 | Support responsive and accessible patient workflows | MAPPED |
+| BR-008 | FR-010 | EPIC-004 | US-004-001 | Create appointment with patient, doctor, date, and type | MAPPED |
+| BR-009 | FR-011 | EPIC-004 | US-004-002 | Reschedule existing appointment | MAPPED |
+| BR-010 | FR-012 | EPIC-004 | US-004-003 | Cancel appointment with reason and status update | MAPPED |
+| BR-023 | FR-025 | EPIC-004 | US-004-004 | Validate appointment inputs and conflict simulation | MAPPED |
+| BR-023 | FR-026 | EPIC-004 | US-004-005 | Use search/filter/sort/pagination on appointment lists | MAPPED |
+| BR-023 | FR-028 | EPIC-004 | US-004-006 | Use modal/dialog standards for appointment actions | MAPPED |
+| BR-011 | FR-013 | EPIC-005 | US-005-001 | View and search doctor directory | MAPPED |
+| BR-012 | FR-014 | EPIC-005 | US-005-002 | View doctor schedule and assigned appointments | MAPPED |
+| BR-013 | FR-015 | EPIC-006 | US-006-001 | View medical records list and record details | MAPPED |
+| BR-014 | FR-016 | EPIC-006 | US-006-002 | Create and save synthetic clinical notes | MAPPED |
+| BR-015 | FR-017 | EPIC-007 | US-007-001 | View prescription list and details | MAPPED |
+| BR-016 | FR-018 | EPIC-008 | US-008-001 | View billing summary and invoice-like details | MAPPED |
+| BR-017 | FR-019 | EPIC-008 | US-008-002 | View insurance summary, coverage, and claim-like status | MAPPED |
+| BR-018 | FR-020 | EPIC-009 | US-009-001 | View and manage notification center | MAPPED |
+| BR-023 | FR-027 | EPIC-009 | US-009-002 | Handle loading, empty, error, and success UI states | MAPPED |
+| BR-023 | FR-028 | EPIC-009 | US-009-003 | Use standardized modal and dialog interactions for feedback | MAPPED |
+| BR-019 | FR-021 | EPIC-010 | US-010-001 | View synthetic operational reports and summaries | MAPPED |
+| BR-020 | FR-022 | EPIC-011 | US-011-001 | Manage user profile details in simulated admin context | MAPPED |
+| BR-021 | FR-023 | EPIC-011 | US-011-002 | Update profile and application preferences | MAPPED |
+| BR-022 | FR-024 | EPIC-012 | US-012-001 | View and filter simulated activity history | MAPPED |
+
+## User Story Coverage Summary
+
+Total Epics: 12
+
+Total User Stories: 32
+
+PRD Requirements Covered: 31
+
+BRD Requirements Covered: 24
+
+Uncovered Requirements: 13 (NFR-001 to NFR-013 are not directly mapped to Epics and are handled as cross-cutting quality constraints.)
+
 ## Downstream Traceability (TBD)
 
 | PRD ID | Epic | User Story | Acceptance Criteria | Test Scenario | Test Case | Automation | Status |

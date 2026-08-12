@@ -1,0 +1,108 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3191 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 760 Tm (Step 1.5 - User Story Definition Implementation Report) Tj
+1 0 0 1 50 746 Tm () Tj
+1 0 0 1 50 732 Tm (Project overview) Tj
+1 0 0 1 50 718 Tm (- Project: Healthcare AI QA Engineering Platform) Tj
+1 0 0 1 50 704 Tm (- Product: CareFlow Health) Tj
+1 0 0 1 50 690 Tm (- Step: 1.5 User Story Definition) Tj
+1 0 0 1 50 676 Tm (- Status: PASS) Tj
+1 0 0 1 50 662 Tm () Tj
+1 0 0 1 50 648 Tm (User Story strategy) Tj
+1 0 0 1 50 634 Tm (- Created canonical user stories from approved epics and PRD requirements.) Tj
+1 0 0 1 50 620 Tm (- Used stable IDs in US-<epic>-<sequence> format.) Tj
+1 0 0 1 50 606 Tm (- Kept all stories business-oriented and acceptance-criteria ready.) Tj
+1 0 0 1 50 592 Tm () Tj
+1 0 0 1 50 578 Tm (Story inventory) Tj
+1 0 0 1 50 564 Tm (- Total Epics: 12) Tj
+1 0 0 1 50 550 Tm (- Total User Stories: 32) Tj
+1 0 0 1 50 536 Tm (- Distribution reflects epic complexity, not fixed per-epic counts.) Tj
+1 0 0 1 50 522 Tm () Tj
+1 0 0 1 50 508 Tm (Epic, BRD, and PRD mapping) Tj
+1 0 0 1 50 494 Tm (- All epics have at least one mapped user story.) Tj
+1 0 0 1 50 480 Tm (- Traceability table added: BRD ID, PRD ID, Epic ID, User Story ID, Requirement, Status.) Tj
+1 0 0 1 50 466 Tm (- All FR requirements are represented in story mappings.) Tj
+1 0 0 1 50 452 Tm () Tj
+1 0 0 1 50 438 Tm (PRD coverage reconciliation) Tj
+1 0 0 1 50 424 Tm (- Total PRD requirements: 44) Tj
+1 0 0 1 50 410 Tm (- Mapped to Epics: 31) Tj
+1 0 0 1 50 396 Tm (- Not directly mapped: 13 \(cross-cutting NFR-001 to NFR-013\)) Tj
+1 0 0 1 50 382 Tm (- Cross-cutting NFRs are covered via quality expectations across stories.) Tj
+1 0 0 1 50 368 Tm () Tj
+1 0 0 1 50 354 Tm (Story examples) Tj
+1 0 0 1 50 340 Tm (- US-001-001 Login screen rendering) Tj
+1 0 0 1 50 326 Tm (- US-003-003 Patient search by ID/name/DOB/phone) Tj
+1 0 0 1 50 312 Tm (- US-004-001 Appointment creation) Tj
+1 0 0 1 50 298 Tm (- US-006-002 Clinical note simulation save flow) Tj
+1 0 0 1 50 284 Tm (- US-009-002 Loading/empty/error/success state handling) Tj
+1 0 0 1 50 270 Tm () Tj
+1 0 0 1 50 256 Tm (QA, Playwright, and Cucumber relevance) Tj
+1 0 0 1 50 242 Tm (- Each story includes preconditions, main/alternate/negative flow, and validation expectations.) Tj
+1 0 0 1 50 228 Tm (- Future chain documented: Story -> AC -> Gherkin -> Steps -> Page Object -> Playwright test.) Tj
+1 0 0 1 50 214 Tm (- No automation artifacts were implemented in this step.) Tj
+1 0 0 1 50 200 Tm () Tj
+1 0 0 1 50 186 Tm (RAG, MCP, and LangGraph relevance) Tj
+1 0 0 1 50 172 Tm (- Stable IDs and traceability links enable retrieval and explainable requirement analysis.) Tj
+1 0 0 1 50 158 Tm (- Future MCP queries and LangGraph reasoning workflows are documented only.) Tj
+1 0 0 1 50 144 Tm () Tj
+1 0 0 1 50 130 Tm (Jira, Confluence, Jenkins relevance) Tj
+1 0 0 1 50 116 Tm (- Dataset is ready for future Jira story conversion under mapped epics.) Tj
+1 0 0 1 50 102 Tm (- Documentation hierarchy aligns with future Confluence structure.) Tj
+1 0 0 1 50 88 Tm (- Future Jenkins relevance documented for quality/report grouping; no pipeline implementation.) Tj
+1 0 0 1 50 74 Tm () Tj
+1 0 0 1 50 60 Tm (Implementation boundaries) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 529 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 760 Tm (- Frontend: NOT IMPLEMENTED) Tj
+1 0 0 1 50 746 Tm (- Backend/API/API automation: NOT IMPLEMENTED) Tj
+1 0 0 1 50 732 Tm (- RAG/MCP/LangGraph: NOT IMPLEMENTED) Tj
+1 0 0 1 50 718 Tm () Tj
+1 0 0 1 50 704 Tm (Interview talking points) Tj
+1 0 0 1 50 690 Tm (- How story quality enables AC and BDD readiness.) Tj
+1 0 0 1 50 676 Tm (- How traceability prevents orphan requirements.) Tj
+1 0 0 1 50 662 Tm (- How cross-cutting NFRs are handled without artificial epic forcing.) Tj
+1 0 0 1 50 648 Tm () Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000003496 00000 n 
+0000003622 00000 n 
+0000004202 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4272
+%%EOF

@@ -14,17 +14,20 @@ CareFlow Health (frontend-only healthcare management portal)
 - Step 1.2: BRD Creation
 - Step 1.3: PRD Creation
 - Step 1.4: Epic Definition
+- Step 1.5: User Story Definition
 
-## Step 1.4 Output
-- Baseline Epic document `CFH-EPIC-001` (Version 1.0)
-- 12 business-capability epics with priorities, dependencies, and actors
-- BRD -> PRD -> Epic traceability mapping
-- Epic-to-PRD/BRD alignment table for downstream story decomposition
+## Step 1.5 Output
+- Baseline User Story document `CFH-US-001` (Version 1.0)
+- 32 user stories across 12 epics with stable story IDs
+- BRD -> PRD -> Epic -> User Story traceability mapping
+- PRD coverage reconciliation (44 total, 31 direct epic mappings, 13 cross-cutting NFRs)
 
 ## Important Boundary
-- Epic Definition is IMPLEMENTED.
+- User Story Definition is IMPLEMENTED.
 - Frontend is NOT IMPLEMENTED.
-- Automation is NOT IMPLEMENTED.
+- Backend is NOT IMPLEMENTED.
+- API is NOT IMPLEMENTED.
+- API Automation is NOT IMPLEMENTED.
 - RAG is NOT IMPLEMENTED.
 - MCP is NOT IMPLEMENTED.
 - Agent is NOT IMPLEMENTED.
@@ -36,4 +39,4 @@ CareFlow Health (frontend-only healthcare management portal)
 - No real PHI
 
 ## Next Step
-Await user direction for Step 1.5.
+Await user direction for Step 1.6.
