@@ -18,16 +18,17 @@ CareFlow Health (frontend-only healthcare management portal)
 - Step 1.6: Acceptance Criteria Definition
 - Step 1.7: Test Scenario Definition
 - Step 1.8: Test Case Definition
+- Step 1.9: Test Data & Test Management Strategy
 
-## Step 1.8 Output
-- Baseline Test Case document `CFH-TC-001` (Version 1.0)
-- 96 detailed test cases mapped from 96 approved test scenarios
-- End-to-end traceability through Test Case layer
-- Automation readiness metadata for future Playwright/Cucumber implementation
-- AI-ready metadata for future RAG/MCP/LangGraph/Agent workflows
+## Step 1.9 Output
+- Baseline test-data strategy and catalog (`CFH-TD-STR-001`).
+- QA test-management strategy contract docs (core, Jira, Confluence, Jenkins).
+- Test data lifecycle and test-data traceability strategy.
+- Extended chain to include Test Case -> Test Data mapping.
+- Future AI-QA readiness for RAG/MCP/Agent workflows through structured metadata.
 
 ## Important Boundary
-- Test Case Definition is IMPLEMENTED.
+- Step 1.9 strategy documentation is IMPLEMENTED.
 - Frontend is NOT IMPLEMENTED.
 - Backend is NOT IMPLEMENTED.
 - API is NOT IMPLEMENTED.
@@ -44,4 +45,4 @@ CareFlow Health (frontend-only healthcare management portal)
 - No real PHI
 
 ## Next Step
-Await user direction for Step 1.9.
+Await user direction for Step 1.10.

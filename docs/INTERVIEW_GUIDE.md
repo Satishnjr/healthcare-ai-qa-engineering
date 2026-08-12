@@ -15,17 +15,17 @@ Healthcare AI QA Engineering Platform built incrementally with architecture gove
 - 1.6 Acceptance criteria definition (CFH-AC-001)
 - 1.7 Test scenario definition (CFH-TS-001)
 - 1.8 Test case definition (CFH-TC-001)
+- 1.9 Test data and test management strategy
 
-## Step 1.8 Highlights
-- Defined 96 detailed test cases mapped to approved test scenarios.
-- Extended traceability to: BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case.
-- Added executable step-level structure, expected outcomes, data strategy, and validation metadata.
-- Added automation readiness mapping for future Playwright + Cucumber + POM implementation.
-- Added RAG/MCP/Agent relevance metadata for future AI-QA orchestration.
-- Preserved frontend-only scope and synthetic-data boundaries.
+## Step 1.9 Highlights
+- Defined enterprise-style synthetic test-data strategy and catalog with stable `TD-*` IDs.
+- Extended traceability to include Test Case -> Test Data mapping.
+- Defined QA test-management strategy including suite strategy, execution lifecycle, and defect lifecycle.
+- Defined future Jira/Confluence/Jenkins strategy contracts without implementing external systems.
+- Added RAG/MCP/Agent relevance for future AI-QA orchestration.
 
 ## Current Boundary
-- Test Case Definition = IMPLEMENTED
+- Test Data & Test Management Strategy = IMPLEMENTED
 - Frontend = NOT IMPLEMENTED
 - Backend = NOT IMPLEMENTED
 - API = NOT IMPLEMENTED
