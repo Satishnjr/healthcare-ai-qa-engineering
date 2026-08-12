@@ -6,36 +6,28 @@ Healthcare AI QA Engineering Platform
 ## Product Under Test
 CareFlow Health (frontend-only healthcare management portal)
 
-## Current Implemented Steps
-- Step 0.1: Environment Discovery + documentation correction
-- Step 0.2: Repository Foundation + GitHub configuration
-- Step 0.3: Engineering Standards & Architecture Contract
-- Step 1.1: Healthcare Product Vision & Requirements Strategy
+## Implemented Documentation Steps
+- Step 0.1: Environment Discovery
+- Step 0.2: Repository Foundation
+- Step 0.3: Engineering Standards and Architecture Contract
+- Step 1.1: Product Vision and Requirements Strategy
+- Step 1.2: Business Requirements Document (BRD) Creation
 
-## What Step 1.1 Added
-- Product vision and mission
-- Product scope (in-scope/out-of-scope)
-- User roles and capabilities
-- Planned application modules
-- Planned user journeys
-- Requirements strategy and hierarchy
-- Product QA strategy
-- Synthetic data strategy
-- AI/RAG relevance strategy
-- Requirements traceability template
+## Step 1.2 Output
+- Baseline BRD `CFH-BRD-001` (Version 1.0)
+- BRD readme and change-management context
+- Stable business identifiers (BR, BRULE, NFR, BP, RISK, STK)
+- Updated requirements traceability with BRD source layer
 
-## Explicitly Not Implemented Yet
-- Full BRD (planned Step 1.2)
-- Full PRD (planned Step 1.3)
-- Frontend functionality
-- Automation framework implementation
-- RAG/MCP/Agent implementation
+## Important Boundary
+- BRD is implemented as a documentation artifact.
+- Application functionality remains NOT IMPLEMENTED in Step 1.2.
 
 ## Constraints
 - Frontend-only architecture
-- No backend/API automation
+- No backend/API/API automation
 - Synthetic healthcare data only
-- No real PHI or secrets
+- No real PHI
 
 ## Next Step
-Await user direction for Step 1.2.
+Await user direction for Step 1.3 (PRD).

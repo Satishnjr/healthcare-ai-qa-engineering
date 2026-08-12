@@ -29,3 +29,10 @@
 - Added product QA strategy and AI/RAG relevance strategy documents.
 - Added synthetic healthcare data strategy and requirements traceability template.
 - Added Step 1.1 implementation artifacts and updated root documentation.
+
+## Step 1.2 - BRD Creation
+- Added `knowledge/brd/CAREFLOW_HEALTH_BRD.md` (CFH-BRD-001 v1.0 baseline).
+- Added `knowledge/brd/README.md` with BRD governance context.
+- Updated requirements traceability with BRD source-layer identifiers.
+- Added Step 1.2 implementation artifacts.
+- Updated root documentation to include Step 1.2 PASS and clarify no application functionality implementation.

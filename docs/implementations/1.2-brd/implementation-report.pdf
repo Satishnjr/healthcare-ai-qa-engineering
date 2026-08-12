@@ -1,0 +1,101 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 1633 >> stream
+BT
+/F1 11 Tf
+72 790 Td
+14 TL
+(Healthcare AI QA Engineering Platform) Tj
+T*
+(Step 1.2 - Business Requirements Document) Tj
+T*
+() Tj
+T*
+(BRD Overview) Tj
+T*
+(- Document: CFH-BRD-001) Tj
+T*
+(- Product: CareFlow Health) Tj
+T*
+(- Version: 1.0) Tj
+T*
+(- Status: BASELINE / APPROVED FOR PROJECT DEVELOPMENT) Tj
+T*
+() Tj
+T*
+(Product Vision and Business Problem) Tj
+T*
+(- Frontend-only healthcare workflow simulation for QA/AI engineering demonstration.) Tj
+T*
+(- Business problems, objectives, and stakeholder model documented.) Tj
+T*
+() Tj
+T*
+(Business Processes and Requirements) Tj
+T*
+(- 15 business processes \(BP-001 .. BP-015\)) Tj
+T*
+(- 24 business requirements \(BR-001 .. BR-024\)) Tj
+T*
+(- 22 business rules \(BRULE-001 .. BRULE-022\)) Tj
+T*
+(- 12 non-functional requirements \(NFR-001 .. NFR-012\)) Tj
+T*
+() Tj
+T*
+(Security and Privacy) Tj
+T*
+(- Synthetic data only, no PHI, no secrets, no compliance-certification claims.) Tj
+T*
+() Tj
+T*
+(Risks, Assumptions, Constraints) Tj
+T*
+(- 15 risks with mitigation and ownership) Tj
+T*
+(- 15 assumptions and explicit architecture constraints) Tj
+T*
+() Tj
+T*
+(RAG and AI Relevance) Tj
+T*
+(- BRD structured for future ingestion, retrieval, and agent reasoning workflows.) Tj
+T*
+() Tj
+T*
+(Traceability) Tj
+T*
+(- Updated requirements traceability template with BRD source-layer IDs and downstream TBD mapping.) Tj
+T*
+() Tj
+T*
+(Interview Talking Points) Tj
+T*
+(- Why BRD-first before PRD) Tj
+T*
+(- Why stable IDs for QA and AI traceability) Tj
+T*
+(- Why frontend-only and synthetic healthcare data) Tj
+T*
+() Tj
+T*
+(Next Step) Tj
+T*
+(- Step 1.3 PRD \(planned, not executed in this step\)) Tj
+ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1996
+%%EOF
