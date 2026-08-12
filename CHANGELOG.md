@@ -71,3 +71,18 @@
   - RAG = NOT IMPLEMENTED
   - MCP = NOT IMPLEMENTED
   - Agent = NOT IMPLEMENTED
+
+## Step 1.6 - Acceptance Criteria Definition
+- Added `knowledge/acceptance-criteria/CAREFLOW_HEALTH_ACCEPTANCE_CRITERIA.md` (CFH-AC-001 v1.0 baseline).
+- Added `knowledge/acceptance-criteria/README.md` with acceptance-criteria governance context.
+- Updated `knowledge/requirements-traceability.md` with User Story -> Acceptance Criteria mapping and AC coverage summary.
+- Added Step 1.6 implementation artifacts.
+- Updated root documentation to include Step 1.6 PASS and clarify:
+  - Acceptance Criteria Definition = IMPLEMENTED
+  - Frontend = NOT IMPLEMENTED
+  - Backend = NOT IMPLEMENTED
+  - API = NOT IMPLEMENTED
+  - API Automation = NOT IMPLEMENTED
+  - RAG = NOT IMPLEMENTED
+  - MCP = NOT IMPLEMENTED
+  - Agent = NOT IMPLEMENTED

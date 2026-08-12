@@ -12,16 +12,17 @@ Healthcare AI QA Engineering Platform built incrementally with architecture gove
 - 1.3 PRD creation (CFH-PRD-001)
 - 1.4 Epic definition (CFH-EPIC-001)
 - 1.5 User story definition (CFH-US-001)
+- 1.6 Acceptance criteria definition (CFH-AC-001)
 
-## Step 1.5 Highlights
-- Defined 32 canonical user stories across 12 epics using stable IDs (`US-<epic>-<sequence>`)
-- Added story-level actor, value, flows, validation/error/accessibility/responsive/testability expectations
-- Updated traceability with BRD -> PRD -> Epic -> User Story mappings and coverage summary
-- Reconciled PRD coverage (44 total, 31 directly mapped to epics, 13 cross-cutting NFRs)
-- Documented future QA, Playwright, Cucumber, RAG, MCP, LangGraph, Jira, Confluence, and Jenkins relevance
+## Step 1.6 Highlights
+- Defined acceptance criteria for all 32 approved user stories with stable AC IDs
+- Added BDD-ready Given/When/Then representation for criteria
+- Added per-story automation/testability notes and cross-cutting NFR acceptance criteria
+- Updated traceability with User Story -> Acceptance Criteria mapping and coverage summary
+- Preserved frontend-only scope and synthetic-data boundaries
 
 ## Current Boundary
-- User Story Definition = IMPLEMENTED
+- Acceptance Criteria Definition = IMPLEMENTED
 - Frontend = NOT IMPLEMENTED
 - Backend = NOT IMPLEMENTED
 - API = NOT IMPLEMENTED

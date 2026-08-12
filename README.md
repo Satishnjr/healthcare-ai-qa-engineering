@@ -15,15 +15,17 @@ CareFlow Health (frontend-only healthcare management portal)
 - Step 1.3: PRD Creation
 - Step 1.4: Epic Definition
 - Step 1.5: User Story Definition
+- Step 1.6: Acceptance Criteria Definition
 
-## Step 1.5 Output
-- Baseline User Story document `CFH-US-001` (Version 1.0)
-- 32 user stories across 12 epics with stable story IDs
-- BRD -> PRD -> Epic -> User Story traceability mapping
-- PRD coverage reconciliation (44 total, 31 direct epic mappings, 13 cross-cutting NFRs)
+## Step 1.6 Output
+- Baseline Acceptance Criteria document `CFH-AC-001` (Version 1.0)
+- Acceptance criteria defined for all 32 user stories
+- Stable acceptance criteria IDs with BDD-ready Given/When/Then representation
+- Cross-cutting NFR acceptance criteria for NFR-001 to NFR-013
+- BRD -> PRD -> Epic -> User Story -> Acceptance Criteria traceability mapping
 
 ## Important Boundary
-- User Story Definition is IMPLEMENTED.
+- Acceptance Criteria Definition is IMPLEMENTED.
 - Frontend is NOT IMPLEMENTED.
 - Backend is NOT IMPLEMENTED.
 - API is NOT IMPLEMENTED.
@@ -39,4 +41,4 @@ CareFlow Health (frontend-only healthcare management portal)
 - No real PHI
 
 ## Next Step
-Await user direction for Step 1.6.
+Await user direction for Step 1.7.

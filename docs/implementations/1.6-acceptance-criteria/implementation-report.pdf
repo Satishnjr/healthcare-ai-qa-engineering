@@ -1,0 +1,113 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3055 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 760 Tm (Step 1.6 - Acceptance Criteria Definition Implementation Report) Tj
+1 0 0 1 50 746 Tm () Tj
+1 0 0 1 50 732 Tm (Objective) Tj
+1 0 0 1 50 718 Tm (- Define canonical, testable acceptance criteria for all approved user stories in CareFlow) Tj
+1 0 0 1 50 704 Tm (  Health.) Tj
+1 0 0 1 50 690 Tm () Tj
+1 0 0 1 50 676 Tm (Architecture and context) Tj
+1 0 0 1 50 662 Tm (- Frontend-only healthcare simulation; no backend, APIs, API automation, or real PHI.) Tj
+1 0 0 1 50 648 Tm (- Acceptance criteria layer sits between user stories and test scenario/test case layers.) Tj
+1 0 0 1 50 634 Tm () Tj
+1 0 0 1 50 620 Tm (What was implemented) Tj
+1 0 0 1 50 606 Tm (- Created CFH-AC-001 acceptance criteria document.) Tj
+1 0 0 1 50 592 Tm (- Added criteria for all 32 user stories with stable IDs and BDD representation.) Tj
+1 0 0 1 50 578 Tm (- Added cross-cutting NFR acceptance criteria and updated traceability.) Tj
+1 0 0 1 50 564 Tm () Tj
+1 0 0 1 50 550 Tm (Acceptance criteria approach) Tj
+1 0 0 1 50 536 Tm (- Three core criteria per story: happy path, validation/negative behavior, and) Tj
+1 0 0 1 50 522 Tm (  state/accessibility/responsive behavior.) Tj
+1 0 0 1 50 508 Tm (- Per-story automation/testability notes added for future execution stability.) Tj
+1 0 0 1 50 494 Tm () Tj
+1 0 0 1 50 480 Tm (Example acceptance criteria) Tj
+1 0 0 1 50 466 Tm (- AC-US-001-001-001 Happy Path) Tj
+1 0 0 1 50 452 Tm (- AC-US-004-003-002 Validation/Negative flow) Tj
+1 0 0 1 50 438 Tm (- AC-NFR-003 Accessibility cross-cutting criterion) Tj
+1 0 0 1 50 424 Tm () Tj
+1 0 0 1 50 410 Tm (BDD examples) Tj
+1 0 0 1 50 396 Tm (- Given the user has required role access) Tj
+1 0 0 1 50 382 Tm (- When the user performs the workflow action) Tj
+1 0 0 1 50 368 Tm (- Then expected outcome is visible and traceable) Tj
+1 0 0 1 50 354 Tm () Tj
+1 0 0 1 50 340 Tm (Traceability approach) Tj
+1 0 0 1 50 326 Tm (- Maintained BRD -> PRD -> Epic -> User Story -> Acceptance Criteria chain.) Tj
+1 0 0 1 50 312 Tm (- Updated requirements-traceability with story-to-AC mapping and coverage summary.) Tj
+1 0 0 1 50 298 Tm () Tj
+1 0 0 1 50 284 Tm (QA automation relevance) Tj
+1 0 0 1 50 270 Tm (- Criteria are automation-ready for future Playwright + TypeScript + Cucumber + POM) Tj
+1 0 0 1 50 256 Tm (  implementation.) Tj
+1 0 0 1 50 242 Tm (- No automation code was implemented in this step.) Tj
+1 0 0 1 50 228 Tm () Tj
+1 0 0 1 50 214 Tm (RAG, MCP, LangGraph relevance) Tj
+1 0 0 1 50 200 Tm (- Stable IDs and atomic criteria improve retrieval and AI reasoning quality.) Tj
+1 0 0 1 50 186 Tm (- MCP/Agent operations are prepared conceptually, not implemented.) Tj
+1 0 0 1 50 172 Tm () Tj
+1 0 0 1 50 158 Tm (Validation results) Tj
+1 0 0 1 50 144 Tm (- User Stories covered: 32/32) Tj
+1 0 0 1 50 130 Tm (- Story-mapped AC count: 96) Tj
+1 0 0 1 50 116 Tm (- Cross-cutting NFR AC count: 13) Tj
+1 0 0 1 50 102 Tm (- Total AC count: 109) Tj
+1 0 0 1 50 88 Tm (- User stories without AC: 0) Tj
+1 0 0 1 50 74 Tm (- Orphan AC: 0) Tj
+1 0 0 1 50 60 Tm (- Unmapped AC: 0) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 818 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 760 Tm () Tj
+1 0 0 1 50 746 Tm (Interview questions and answers) Tj
+1 0 0 1 50 732 Tm (- How AC differs from requirements and test cases.) Tj
+1 0 0 1 50 718 Tm (- How BDD formatting improves downstream implementation speed.) Tj
+1 0 0 1 50 704 Tm (- How traceability reduces coverage risk.) Tj
+1 0 0 1 50 690 Tm () Tj
+1 0 0 1 50 676 Tm (Lessons learned) Tj
+1 0 0 1 50 662 Tm (- Cross-cutting NFRs should be documented globally while keeping story AC focused on business) Tj
+1 0 0 1 50 648 Tm (  behavior.) Tj
+1 0 0 1 50 634 Tm (- Stable identifier design significantly reduces downstream ambiguity.) Tj
+1 0 0 1 50 620 Tm () Tj
+1 0 0 1 50 606 Tm (Future implementation steps) Tj
+1 0 0 1 50 592 Tm (- Step 1.7 Test Scenario Definition \(not executed automatically\).) Tj
+1 0 0 1 50 578 Tm () Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000003360 00000 n 
+0000003486 00000 n 
+0000004355 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4425
+%%EOF

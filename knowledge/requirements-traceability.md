@@ -147,6 +147,144 @@ BRD Requirements Covered: 24
 
 Uncovered Requirements: 13 (NFR-001 to NFR-013 are not directly mapped to Epics and are handled as cross-cutting quality constraints.)
 
+## User Story-to-Acceptance Criteria Mapping
+
+| User Story ID | Acceptance Criteria ID | Type | Status |
+|---|---|---|---|
+| US-001-001 | AC-US-001-001-001 | Story | MAPPED |
+| US-001-001 | AC-US-001-001-002 | Story | MAPPED |
+| US-001-001 | AC-US-001-001-003 | Story | MAPPED |
+| US-001-002 | AC-US-001-002-001 | Story | MAPPED |
+| US-001-002 | AC-US-001-002-002 | Story | MAPPED |
+| US-001-002 | AC-US-001-002-003 | Story | MAPPED |
+| US-001-003 | AC-US-001-003-001 | Story | MAPPED |
+| US-001-003 | AC-US-001-003-002 | Story | MAPPED |
+| US-001-003 | AC-US-001-003-003 | Story | MAPPED |
+| US-002-001 | AC-US-002-001-001 | Story | MAPPED |
+| US-002-001 | AC-US-002-001-002 | Story | MAPPED |
+| US-002-001 | AC-US-002-001-003 | Story | MAPPED |
+| US-002-002 | AC-US-002-002-001 | Story | MAPPED |
+| US-002-002 | AC-US-002-002-002 | Story | MAPPED |
+| US-002-002 | AC-US-002-002-003 | Story | MAPPED |
+| US-003-001 | AC-US-003-001-001 | Story | MAPPED |
+| US-003-001 | AC-US-003-001-002 | Story | MAPPED |
+| US-003-001 | AC-US-003-001-003 | Story | MAPPED |
+| US-003-002 | AC-US-003-002-001 | Story | MAPPED |
+| US-003-002 | AC-US-003-002-002 | Story | MAPPED |
+| US-003-002 | AC-US-003-002-003 | Story | MAPPED |
+| US-003-003 | AC-US-003-003-001 | Story | MAPPED |
+| US-003-003 | AC-US-003-003-002 | Story | MAPPED |
+| US-003-003 | AC-US-003-003-003 | Story | MAPPED |
+| US-003-004 | AC-US-003-004-001 | Story | MAPPED |
+| US-003-004 | AC-US-003-004-002 | Story | MAPPED |
+| US-003-004 | AC-US-003-004-003 | Story | MAPPED |
+| US-003-005 | AC-US-003-005-001 | Story | MAPPED |
+| US-003-005 | AC-US-003-005-002 | Story | MAPPED |
+| US-003-005 | AC-US-003-005-003 | Story | MAPPED |
+| US-003-006 | AC-US-003-006-001 | Story | MAPPED |
+| US-003-006 | AC-US-003-006-002 | Story | MAPPED |
+| US-003-006 | AC-US-003-006-003 | Story | MAPPED |
+| US-003-007 | AC-US-003-007-001 | Story | MAPPED |
+| US-003-007 | AC-US-003-007-002 | Story | MAPPED |
+| US-003-007 | AC-US-003-007-003 | Story | MAPPED |
+| US-004-001 | AC-US-004-001-001 | Story | MAPPED |
+| US-004-001 | AC-US-004-001-002 | Story | MAPPED |
+| US-004-001 | AC-US-004-001-003 | Story | MAPPED |
+| US-004-002 | AC-US-004-002-001 | Story | MAPPED |
+| US-004-002 | AC-US-004-002-002 | Story | MAPPED |
+| US-004-002 | AC-US-004-002-003 | Story | MAPPED |
+| US-004-003 | AC-US-004-003-001 | Story | MAPPED |
+| US-004-003 | AC-US-004-003-002 | Story | MAPPED |
+| US-004-003 | AC-US-004-003-003 | Story | MAPPED |
+| US-004-004 | AC-US-004-004-001 | Story | MAPPED |
+| US-004-004 | AC-US-004-004-002 | Story | MAPPED |
+| US-004-004 | AC-US-004-004-003 | Story | MAPPED |
+| US-004-005 | AC-US-004-005-001 | Story | MAPPED |
+| US-004-005 | AC-US-004-005-002 | Story | MAPPED |
+| US-004-005 | AC-US-004-005-003 | Story | MAPPED |
+| US-004-006 | AC-US-004-006-001 | Story | MAPPED |
+| US-004-006 | AC-US-004-006-002 | Story | MAPPED |
+| US-004-006 | AC-US-004-006-003 | Story | MAPPED |
+| US-005-001 | AC-US-005-001-001 | Story | MAPPED |
+| US-005-001 | AC-US-005-001-002 | Story | MAPPED |
+| US-005-001 | AC-US-005-001-003 | Story | MAPPED |
+| US-005-002 | AC-US-005-002-001 | Story | MAPPED |
+| US-005-002 | AC-US-005-002-002 | Story | MAPPED |
+| US-005-002 | AC-US-005-002-003 | Story | MAPPED |
+| US-006-001 | AC-US-006-001-001 | Story | MAPPED |
+| US-006-001 | AC-US-006-001-002 | Story | MAPPED |
+| US-006-001 | AC-US-006-001-003 | Story | MAPPED |
+| US-006-002 | AC-US-006-002-001 | Story | MAPPED |
+| US-006-002 | AC-US-006-002-002 | Story | MAPPED |
+| US-006-002 | AC-US-006-002-003 | Story | MAPPED |
+| US-007-001 | AC-US-007-001-001 | Story | MAPPED |
+| US-007-001 | AC-US-007-001-002 | Story | MAPPED |
+| US-007-001 | AC-US-007-001-003 | Story | MAPPED |
+| US-008-001 | AC-US-008-001-001 | Story | MAPPED |
+| US-008-001 | AC-US-008-001-002 | Story | MAPPED |
+| US-008-001 | AC-US-008-001-003 | Story | MAPPED |
+| US-008-002 | AC-US-008-002-001 | Story | MAPPED |
+| US-008-002 | AC-US-008-002-002 | Story | MAPPED |
+| US-008-002 | AC-US-008-002-003 | Story | MAPPED |
+| US-009-001 | AC-US-009-001-001 | Story | MAPPED |
+| US-009-001 | AC-US-009-001-002 | Story | MAPPED |
+| US-009-001 | AC-US-009-001-003 | Story | MAPPED |
+| US-009-002 | AC-US-009-002-001 | Story | MAPPED |
+| US-009-002 | AC-US-009-002-002 | Story | MAPPED |
+| US-009-002 | AC-US-009-002-003 | Story | MAPPED |
+| US-009-003 | AC-US-009-003-001 | Story | MAPPED |
+| US-009-003 | AC-US-009-003-002 | Story | MAPPED |
+| US-009-003 | AC-US-009-003-003 | Story | MAPPED |
+| US-010-001 | AC-US-010-001-001 | Story | MAPPED |
+| US-010-001 | AC-US-010-001-002 | Story | MAPPED |
+| US-010-001 | AC-US-010-001-003 | Story | MAPPED |
+| US-011-001 | AC-US-011-001-001 | Story | MAPPED |
+| US-011-001 | AC-US-011-001-002 | Story | MAPPED |
+| US-011-001 | AC-US-011-001-003 | Story | MAPPED |
+| US-011-002 | AC-US-011-002-001 | Story | MAPPED |
+| US-011-002 | AC-US-011-002-002 | Story | MAPPED |
+| US-011-002 | AC-US-011-002-003 | Story | MAPPED |
+| US-012-001 | AC-US-012-001-001 | Story | MAPPED |
+| US-012-001 | AC-US-012-001-002 | Story | MAPPED |
+| US-012-001 | AC-US-012-001-003 | Story | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-001 (NFR-001) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-002 (NFR-002) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-003 (NFR-003) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-004 (NFR-004) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-005 (NFR-005) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-006 (NFR-006) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-007 (NFR-007) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-008 (NFR-008) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-009 (NFR-009) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-010 (NFR-010) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-011 (NFR-011) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-012 (NFR-012) | Cross-Cutting NFR | MAPPED |
+| CROSS-CUTTING-NFR | AC-NFR-013 (NFR-013) | Cross-Cutting NFR | MAPPED |
+
+## Acceptance Criteria Coverage Summary
+
+Total BRD requirements: 24
+
+Total PRD requirements: 44
+
+Total Epics: 12
+
+Total User Stories: 32
+
+Total Acceptance Criteria: 109
+
+User Stories with acceptance criteria: 32
+
+User Stories without acceptance criteria: 0
+
+Orphan acceptance criteria: 0
+
+Unmapped acceptance criteria: 0
+
+Notes:
+- Story-level acceptance criteria are fully mapped to all 32 user stories.
+- Cross-cutting NFR acceptance criteria are intentionally modeled as global criteria mapped to PRD NFR-001..NFR-013.
+
 ## Downstream Traceability (TBD)
 
 | PRD ID | Epic | User Story | Acceptance Criteria | Test Scenario | Test Case | Automation | Status |
