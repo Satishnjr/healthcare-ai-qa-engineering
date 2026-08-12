@@ -1,0 +1,113 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 1862 >> stream
+BT
+/F1 11 Tf
+72 790 Td
+14 TL
+(Healthcare AI QA Engineering Platform) Tj
+T*
+(Step 1.1 - Healthcare Product Vision & Requirements Strategy) Tj
+T*
+() Tj
+T*
+(Product: CareFlow Health) Tj
+T*
+() Tj
+T*
+(Objective) Tj
+T*
+(Define product vision and requirements strategy before BRD/PRD authoring.) Tj
+T*
+() Tj
+T*
+(Product Vision) Tj
+T*
+(- Frontend-only healthcare management portal simulation for QA/AI engineering.) Tj
+T*
+() Tj
+T*
+(Product Scope) Tj
+T*
+(- In-scope and out-of-scope boundaries documented with explicit no-backend/no-API rules.) Tj
+T*
+() Tj
+T*
+(User Roles) Tj
+T*
+(- Patient, Doctor, Nurse, Receptionist, Healthcare Administrator roles and capabilities defined.) Tj
+T*
+() Tj
+T*
+(Application Modules) Tj
+T*
+(- Planned module catalog established \(login, dashboard, patients, appointments, etc.\).) Tj
+T*
+() Tj
+T*
+(User Journeys) Tj
+T*
+(- 12 role-based journeys documented with preconditions, main/alternate/error flows.) Tj
+T*
+() Tj
+T*
+(Requirements Strategy) Tj
+T*
+(- Hierarchy defined from Product Vision through Automation with BRD/PRD staging.) Tj
+T*
+() Tj
+T*
+(QA Strategy) Tj
+T*
+(- Frontend-focused QA strategy defined; API testing marked not applicable.) Tj
+T*
+() Tj
+T*
+(AI/RAG Relevance) Tj
+T*
+(- Future knowledge and AI-agent usage of requirements artifacts documented.) Tj
+T*
+() Tj
+T*
+(Traceability) Tj
+T*
+(- Requirement -> Story -> AC -> Scenario -> Case -> Automation -> Result -> Defect chain defined.) Tj
+T*
+() Tj
+T*
+(Architecture Relationship) Tj
+T*
+(- Step 1.1 aligns with Step 0.3 architecture/standards and avoids premature implementation.) Tj
+T*
+() Tj
+T*
+(Interview Talking Points) Tj
+T*
+(- Why product strategy before BRD/PRD) Tj
+T*
+(- Why frontend-only and synthetic data) Tj
+T*
+(- How traceability supports QA and AI workflows) Tj
+T*
+() Tj
+T*
+(Next Steps) Tj
+T*
+(- Step 1.2 \(BRD authoring\) planned; no auto-execution performed.) Tj
+ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+2225
+%%EOF

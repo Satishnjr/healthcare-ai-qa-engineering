@@ -1,27 +1,29 @@
 ﻿# Interview Guide
 
 ## Project Overview
-Healthcare AI QA Engineering Platform delivered step-by-step with strict traceability and governance.
+Healthcare AI QA Engineering Platform delivered incrementally with strong architecture, traceability, and QA/AI readiness.
 
-## Implemented Scope
-- Step 0.1: Environment discovery and baseline constraints
-- Step 0.2: Repository foundation, GitHub integration, documentation baseline
-- Step 0.3: Engineering standards contract, ADRs, planned AI/QA architecture definitions
+## Implemented Steps
+- 0.1 Environment discovery
+- 0.2 Repository foundation
+- 0.3 Engineering standards and ADRs
+- 1.1 Product vision and requirements strategy (CareFlow Health)
 
-## Planned Scope
-- BRD/PRD and requirement lifecycle assets
-- Frontend healthcare modules
-- Playwright + Cucumber automation framework
-- RAG, MCP, and LangGraph agent implementation
-- Lightweight Jira/Confluence/Jenkins mock systems
+## Product Definition Highlights (Step 1.1)
+- Defined CareFlow Health vision, mission, goals, and non-goals
+- Documented user roles and major modules
+- Defined planned user journeys
+- Established requirements hierarchy and traceability strategy
+- Documented QA strategy for frontend-only constraints
+- Captured AI/RAG relevance for future steps
 
-## Key Design Decisions
-- Frontend-only architecture
-- UI automation-first QA approach
-- Python-based AI layer with FastMCP + LangGraph
-- Synthetic healthcare data policy
+## Planned Next Artifacts
+- BRD (Step 1.2)
+- PRD (Step 1.3)
+- Epics/stories/acceptance criteria/test design assets
 
-## Status Markers
-- IMPLEMENTED: 0.1, 0.2, 0.3
-- PLANNED: Functional modules and AI workflows
-- BLOCKED: None
+## Key Interview Talking Points
+- Why requirements strategy precedes BRD/PRD in this project
+- Why frontend-only is an intentional architecture choice
+- Why synthetic healthcare data is mandatory
+- How traceability enables QA automation and AI reasoning
