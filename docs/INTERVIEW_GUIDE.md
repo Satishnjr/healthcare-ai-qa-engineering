@@ -1,21 +1,27 @@
 ﻿# Interview Guide
 
 ## Project Overview
-Healthcare AI QA Engineering Platform developed incrementally from repository foundation through QA automation and AI-assisted workflows.
+Healthcare AI QA Engineering Platform delivered step-by-step with strict traceability and governance.
 
-## Current Implemented Scope
-- Step 0.1 documentation finalized
-- Step 0.2 repository foundation completed (Git/GitHub setup, structure, security baseline)
+## Implemented Scope
+- Step 0.1: Environment discovery and baseline constraints
+- Step 0.2: Repository foundation, GitHub integration, documentation baseline
+- Step 0.3: Engineering standards contract, ADRs, planned AI/QA architecture definitions
 
 ## Planned Scope
-- BRD/PRD and requirements hierarchy
-- Frontend modules
-- Automation framework
-- Mock systems
-- RAG, MCP, LangGraph AI agent
-- CI/CD
+- BRD/PRD and requirement lifecycle assets
+- Frontend healthcare modules
+- Playwright + Cucumber automation framework
+- RAG, MCP, and LangGraph agent implementation
+- Lightweight Jira/Confluence/Jenkins mock systems
+
+## Key Design Decisions
+- Frontend-only architecture
+- UI automation-first QA approach
+- Python-based AI layer with FastMCP + LangGraph
+- Synthetic healthcare data policy
 
 ## Status Markers
-- IMPLEMENTED: Foundation and baseline documentation
-- PLANNED: Functional and AI components
-- BLOCKED: None currently
+- IMPLEMENTED: 0.1, 0.2, 0.3
+- PLANNED: Functional modules and AI workflows
+- BLOCKED: None
