@@ -86,3 +86,10 @@
   - RAG = NOT IMPLEMENTED
   - MCP = NOT IMPLEMENTED
   - Agent = NOT IMPLEMENTED
+
+## Step 1.7 - Test Scenario Definition
+- Added `knowledge/test-scenarios/CAREFLOW_HEALTH_TEST_SCENARIOS.md` (CFH-TS-001 v1.0 baseline).
+- Added `knowledge/test-scenarios/README.md` with scenario-governance context and coverage snapshot.
+- Updated `knowledge/requirements-traceability.md` with Acceptance Criteria -> Test Scenario mapping and test-scenario coverage summary.
+- Added Step 1.7 implementation artifacts (`prompt.md`, `README.md`, `implementation-report.pdf`, `interview-notes.md`, `response.md`).
+- Updated root documentation to include Step 1.7 PASS and clarify non-implemented technical scope boundaries.

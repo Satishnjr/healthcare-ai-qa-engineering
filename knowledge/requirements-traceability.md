@@ -285,6 +285,160 @@ Notes:
 - Story-level acceptance criteria are fully mapped to all 32 user stories.
 - Cross-cutting NFR acceptance criteria are intentionally modeled as global criteria mapped to PRD NFR-001..NFR-013.
 
+## Acceptance Criteria-to-Test Scenario Mapping
+
+| Acceptance Criteria ID | Test Scenario ID | Scenario Title | Status |
+|---|---|---|---|
+| AC-US-001-001-001 | TS-001-001 | Validate happy path for Render login screen with role-aware entry options | MAPPED |
+| AC-US-001-001-002 | TS-001-002 | Validate negative and validation behavior for Render login screen with role-aware entry options | MAPPED |
+| AC-US-001-001-003 | TS-001-003 | Validate state, accessibility, and responsive behavior for Render login screen with role-aware entry options | MAPPED |
+| AC-US-001-002-001 | TS-001-004 | Validate happy path for Simulate credential validation outcomes | MAPPED |
+| AC-US-001-002-002 | TS-001-005 | Validate negative and validation behavior for Simulate credential validation outcomes | MAPPED |
+| AC-US-001-002-003 | TS-001-006 | Validate state, accessibility, and responsive behavior for Simulate credential validation outcomes | MAPPED |
+| AC-US-001-003-001 | TS-001-007 | Validate happy path for Logout and clear session-like state | MAPPED |
+| AC-US-001-003-002 | TS-001-008 | Validate negative and validation behavior for Logout and clear session-like state | MAPPED |
+| AC-US-001-003-003 | TS-001-009 | Validate state, accessibility, and responsive behavior for Logout and clear session-like state | MAPPED |
+| AC-US-002-001-001 | TS-002-001 | Validate happy path for View role-specific dashboard summary | MAPPED |
+| AC-US-002-001-002 | TS-002-002 | Validate negative and validation behavior for View role-specific dashboard summary | MAPPED |
+| AC-US-002-001-003 | TS-002-003 | Validate state, accessibility, and responsive behavior for View role-specific dashboard summary | MAPPED |
+| AC-US-002-002-001 | TS-002-004 | Validate happy path for View activity and notification widgets on dashboard | MAPPED |
+| AC-US-002-002-002 | TS-002-005 | Validate negative and validation behavior for View activity and notification widgets on dashboard | MAPPED |
+| AC-US-002-002-003 | TS-002-006 | Validate state, accessibility, and responsive behavior for View activity and notification widgets on dashboard | MAPPED |
+| AC-US-003-001-001 | TS-003-001 | Validate happy path for Register a new synthetic patient | MAPPED |
+| AC-US-003-001-002 | TS-003-002 | Validate negative and validation behavior for Register a new synthetic patient | MAPPED |
+| AC-US-003-001-003 | TS-003-003 | Validate state, accessibility, and responsive behavior for Register a new synthetic patient | MAPPED |
+| AC-US-003-002-001 | TS-003-004 | Validate happy path for View patient list with core columns | MAPPED |
+| AC-US-003-002-002 | TS-003-005 | Validate negative and validation behavior for View patient list with core columns | MAPPED |
+| AC-US-003-002-003 | TS-003-006 | Validate state, accessibility, and responsive behavior for View patient list with core columns | MAPPED |
+| AC-US-003-003-001 | TS-003-007 | Validate happy path for Search patients by ID, name, DOB, or phone | MAPPED |
+| AC-US-003-003-002 | TS-003-008 | Validate negative and validation behavior for Search patients by ID, name, DOB, or phone | MAPPED |
+| AC-US-003-003-003 | TS-003-009 | Validate state, accessibility, and responsive behavior for Search patients by ID, name, DOB, or phone | MAPPED |
+| AC-US-003-004-001 | TS-003-010 | Validate happy path for View and update patient profile sections | MAPPED |
+| AC-US-003-004-002 | TS-003-011 | Validate negative and validation behavior for View and update patient profile sections | MAPPED |
+| AC-US-003-004-003 | TS-003-012 | Validate state, accessibility, and responsive behavior for View and update patient profile sections | MAPPED |
+| AC-US-003-005-001 | TS-003-013 | Validate happy path for Enforce patient module form validation standards | MAPPED |
+| AC-US-003-005-002 | TS-003-014 | Validate negative and validation behavior for Enforce patient module form validation standards | MAPPED |
+| AC-US-003-005-003 | TS-003-015 | Validate state, accessibility, and responsive behavior for Enforce patient module form validation standards | MAPPED |
+| AC-US-003-006-001 | TS-003-016 | Validate happy path for Apply search, filter, sort, and pagination standards in patient lists | MAPPED |
+| AC-US-003-006-002 | TS-003-017 | Validate negative and validation behavior for Apply search, filter, sort, and pagination standards in patient lists | MAPPED |
+| AC-US-003-006-003 | TS-003-018 | Validate state, accessibility, and responsive behavior for Apply search, filter, sort, and pagination standards in patient lists | MAPPED |
+| AC-US-003-007-001 | TS-003-019 | Validate happy path for Support responsive and accessible patient workflows | MAPPED |
+| AC-US-003-007-002 | TS-003-020 | Validate negative and validation behavior for Support responsive and accessible patient workflows | MAPPED |
+| AC-US-003-007-003 | TS-003-021 | Validate state, accessibility, and responsive behavior for Support responsive and accessible patient workflows | MAPPED |
+| AC-US-004-001-001 | TS-004-001 | Validate happy path for Create appointment with patient, doctor, date, and type | MAPPED |
+| AC-US-004-001-002 | TS-004-002 | Validate negative and validation behavior for Create appointment with patient, doctor, date, and type | MAPPED |
+| AC-US-004-001-003 | TS-004-003 | Validate state, accessibility, and responsive behavior for Create appointment with patient, doctor, date, and type | MAPPED |
+| AC-US-004-002-001 | TS-004-004 | Validate happy path for Reschedule existing appointment | MAPPED |
+| AC-US-004-002-002 | TS-004-005 | Validate negative and validation behavior for Reschedule existing appointment | MAPPED |
+| AC-US-004-002-003 | TS-004-006 | Validate state, accessibility, and responsive behavior for Reschedule existing appointment | MAPPED |
+| AC-US-004-003-001 | TS-004-007 | Validate happy path for Cancel appointment with reason and status update | MAPPED |
+| AC-US-004-003-002 | TS-004-008 | Validate negative and validation behavior for Cancel appointment with reason and status update | MAPPED |
+| AC-US-004-003-003 | TS-004-009 | Validate state, accessibility, and responsive behavior for Cancel appointment with reason and status update | MAPPED |
+| AC-US-004-004-001 | TS-004-010 | Validate happy path for Validate appointment inputs and conflict simulation | MAPPED |
+| AC-US-004-004-002 | TS-004-011 | Validate negative and validation behavior for Validate appointment inputs and conflict simulation | MAPPED |
+| AC-US-004-004-003 | TS-004-012 | Validate state, accessibility, and responsive behavior for Validate appointment inputs and conflict simulation | MAPPED |
+| AC-US-004-005-001 | TS-004-013 | Validate happy path for Use search/filter/sort/pagination on appointment lists | MAPPED |
+| AC-US-004-005-002 | TS-004-014 | Validate negative and validation behavior for Use search/filter/sort/pagination on appointment lists | MAPPED |
+| AC-US-004-005-003 | TS-004-015 | Validate state, accessibility, and responsive behavior for Use search/filter/sort/pagination on appointment lists | MAPPED |
+| AC-US-004-006-001 | TS-004-016 | Validate happy path for Use modal/dialog standards for appointment actions | MAPPED |
+| AC-US-004-006-002 | TS-004-017 | Validate negative and validation behavior for Use modal/dialog standards for appointment actions | MAPPED |
+| AC-US-004-006-003 | TS-004-018 | Validate state, accessibility, and responsive behavior for Use modal/dialog standards for appointment actions | MAPPED |
+| AC-US-005-001-001 | TS-005-001 | Validate happy path for View and search doctor directory | MAPPED |
+| AC-US-005-001-002 | TS-005-002 | Validate negative and validation behavior for View and search doctor directory | MAPPED |
+| AC-US-005-001-003 | TS-005-003 | Validate state, accessibility, and responsive behavior for View and search doctor directory | MAPPED |
+| AC-US-005-002-001 | TS-005-004 | Validate happy path for View doctor schedule and assigned appointments | MAPPED |
+| AC-US-005-002-002 | TS-005-005 | Validate negative and validation behavior for View doctor schedule and assigned appointments | MAPPED |
+| AC-US-005-002-003 | TS-005-006 | Validate state, accessibility, and responsive behavior for View doctor schedule and assigned appointments | MAPPED |
+| AC-US-006-001-001 | TS-006-001 | Validate happy path for View medical records list and record details | MAPPED |
+| AC-US-006-001-002 | TS-006-002 | Validate negative and validation behavior for View medical records list and record details | MAPPED |
+| AC-US-006-001-003 | TS-006-003 | Validate state, accessibility, and responsive behavior for View medical records list and record details | MAPPED |
+| AC-US-006-002-001 | TS-006-004 | Validate happy path for Create and save synthetic clinical notes | MAPPED |
+| AC-US-006-002-002 | TS-006-005 | Validate negative and validation behavior for Create and save synthetic clinical notes | MAPPED |
+| AC-US-006-002-003 | TS-006-006 | Validate state, accessibility, and responsive behavior for Create and save synthetic clinical notes | MAPPED |
+| AC-US-007-001-001 | TS-007-001 | Validate happy path for View prescription list and details | MAPPED |
+| AC-US-007-001-002 | TS-007-002 | Validate negative and validation behavior for View prescription list and details | MAPPED |
+| AC-US-007-001-003 | TS-007-003 | Validate state, accessibility, and responsive behavior for View prescription list and details | MAPPED |
+| AC-US-008-001-001 | TS-008-001 | Validate happy path for View billing summary and invoice-like details | MAPPED |
+| AC-US-008-001-002 | TS-008-002 | Validate negative and validation behavior for View billing summary and invoice-like details | MAPPED |
+| AC-US-008-001-003 | TS-008-003 | Validate state, accessibility, and responsive behavior for View billing summary and invoice-like details | MAPPED |
+| AC-US-008-002-001 | TS-008-004 | Validate happy path for View insurance summary, coverage, and claim-like status | MAPPED |
+| AC-US-008-002-002 | TS-008-005 | Validate negative and validation behavior for View insurance summary, coverage, and claim-like status | MAPPED |
+| AC-US-008-002-003 | TS-008-006 | Validate state, accessibility, and responsive behavior for View insurance summary, coverage, and claim-like status | MAPPED |
+| AC-US-009-001-001 | TS-009-001 | Validate happy path for View and manage notification center | MAPPED |
+| AC-US-009-001-002 | TS-009-002 | Validate negative and validation behavior for View and manage notification center | MAPPED |
+| AC-US-009-001-003 | TS-009-003 | Validate state, accessibility, and responsive behavior for View and manage notification center | MAPPED |
+| AC-US-009-002-001 | TS-009-004 | Validate happy path for Handle loading, empty, error, and success UI states | MAPPED |
+| AC-US-009-002-002 | TS-009-005 | Validate negative and validation behavior for Handle loading, empty, error, and success UI states | MAPPED |
+| AC-US-009-002-003 | TS-009-006 | Validate state, accessibility, and responsive behavior for Handle loading, empty, error, and success UI states | MAPPED |
+| AC-US-009-003-001 | TS-009-007 | Validate happy path for Use standardized modal and dialog interactions for feedback | MAPPED |
+| AC-US-009-003-002 | TS-009-008 | Validate negative and validation behavior for Use standardized modal and dialog interactions for feedback | MAPPED |
+| AC-US-009-003-003 | TS-009-009 | Validate state, accessibility, and responsive behavior for Use standardized modal and dialog interactions for feedback | MAPPED |
+| AC-US-010-001-001 | TS-010-001 | Validate happy path for View synthetic operational reports and summaries | MAPPED |
+| AC-US-010-001-002 | TS-010-002 | Validate negative and validation behavior for View synthetic operational reports and summaries | MAPPED |
+| AC-US-010-001-003 | TS-010-003 | Validate state, accessibility, and responsive behavior for View synthetic operational reports and summaries | MAPPED |
+| AC-US-011-001-001 | TS-011-001 | Validate happy path for Manage user profile details in simulated admin context | MAPPED |
+| AC-US-011-001-002 | TS-011-002 | Validate negative and validation behavior for Manage user profile details in simulated admin context | MAPPED |
+| AC-US-011-001-003 | TS-011-003 | Validate state, accessibility, and responsive behavior for Manage user profile details in simulated admin context | MAPPED |
+| AC-US-011-002-001 | TS-011-004 | Validate happy path for Update profile and application preferences | MAPPED |
+| AC-US-011-002-002 | TS-011-005 | Validate negative and validation behavior for Update profile and application preferences | MAPPED |
+| AC-US-011-002-003 | TS-011-006 | Validate state, accessibility, and responsive behavior for Update profile and application preferences | MAPPED |
+| AC-US-012-001-001 | TS-012-001 | Validate happy path for View and filter simulated activity history | MAPPED |
+| AC-US-012-001-002 | TS-012-002 | Validate negative and validation behavior for View and filter simulated activity history | MAPPED |
+| AC-US-012-001-003 | TS-012-003 | Validate state, accessibility, and responsive behavior for View and filter simulated activity history | MAPPED |
+| AC-NFR-001 | TS-001-003 | Validate state, accessibility, and responsive behavior for Render login screen with role-aware entry options (cross-cutting coverage) | MAPPED |
+| AC-NFR-002 | TS-001-006 | Validate state, accessibility, and responsive behavior for Simulate credential validation outcomes (cross-cutting coverage) | MAPPED |
+| AC-NFR-003 | TS-001-009 | Validate state, accessibility, and responsive behavior for Logout and clear session-like state (cross-cutting coverage) | MAPPED |
+| AC-NFR-004 | TS-002-003 | Validate state, accessibility, and responsive behavior for View role-specific dashboard summary (cross-cutting coverage) | MAPPED |
+| AC-NFR-005 | TS-002-006 | Validate state, accessibility, and responsive behavior for View activity and notification widgets on dashboard (cross-cutting coverage) | MAPPED |
+| AC-NFR-006 | TS-003-003 | Validate state, accessibility, and responsive behavior for Register a new synthetic patient (cross-cutting coverage) | MAPPED |
+| AC-NFR-007 | TS-003-006 | Validate state, accessibility, and responsive behavior for View patient list with core columns (cross-cutting coverage) | MAPPED |
+| AC-NFR-008 | TS-003-009 | Validate state, accessibility, and responsive behavior for Search patients by ID, name, DOB, or phone (cross-cutting coverage) | MAPPED |
+| AC-NFR-009 | TS-003-012 | Validate state, accessibility, and responsive behavior for View and update patient profile sections (cross-cutting coverage) | MAPPED |
+| AC-NFR-010 | TS-003-015 | Validate state, accessibility, and responsive behavior for Enforce patient module form validation standards (cross-cutting coverage) | MAPPED |
+| AC-NFR-011 | TS-003-018 | Validate state, accessibility, and responsive behavior for Apply search, filter, sort, and pagination standards in patient lists (cross-cutting coverage) | MAPPED |
+| AC-NFR-012 | TS-003-021 | Validate state, accessibility, and responsive behavior for Support responsive and accessible patient workflows (cross-cutting coverage) | MAPPED |
+| AC-NFR-013 | TS-004-003 | Validate state, accessibility, and responsive behavior for Create appointment with patient, doctor, date, and type (cross-cutting coverage) | MAPPED |
+
+## Test Scenario Coverage Summary
+
+Total BRD requirements: 24
+
+Total PRD requirements: 44
+
+Total Epics: 12
+
+Total User Stories: 32
+
+Total Acceptance Criteria: 109
+
+Total Test Scenarios: 96
+
+Acceptance Criteria with scenario coverage: 109
+
+Acceptance Criteria without scenario coverage: 0
+
+Orphan Test Scenarios: 0
+
+Duplicate/overlapping scenarios: 0 critical overlaps (reviewed)
+
+Smoke scenarios: 6
+
+Regression P0 scenarios: 16
+
+Regression P1 scenarios: 40
+
+Positive scenarios: 32
+
+Negative scenarios: 32
+
+Validation scenarios: 32
+
+Accessibility scenarios: 32
+
+Responsive scenarios: 32
+
+Cross-browser scenarios: 32
+
 ## Downstream Traceability (TBD)
 
 | PRD ID | Epic | User Story | Acceptance Criteria | Test Scenario | Test Case | Automation | Status |

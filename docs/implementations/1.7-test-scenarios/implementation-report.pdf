@@ -1,0 +1,286 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 3578 >>
+stream
+BT
+/F1 13 Tf
+1 0 0 1 54 748 Tm
+(Step 1.7 Implementation Report) Tj
+/F1 10 Tf
+1 0 0 1 54 734 Tm
+(- Healthcare AI QA Engineering - CareFlow Health) Tj
+/F1 10 Tf
+1 0 0 1 54 720 Tm
+(- Document Type: Step Implementation Report) Tj
+/F1 10 Tf
+1 0 0 1 54 706 Tm
+(- Status: PASS) Tj
+/F1 10 Tf
+1 0 0 1 54 692 Tm
+(- Scope: Acceptance Criteria -> Test Scenario only) Tj
+/F1 10 Tf
+1 0 0 1 54 678 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 664 Tm
+(Objective) Tj
+/F1 10 Tf
+1 0 0 1 54 650 Tm
+(- Define canonical business-level test scenarios from approved acceptance criteria, with complete) Tj
+/F1 10 Tf
+1 0 0 1 54 636 Tm
+(  traceability and prioritization for future manual, BDD, and UI automation execution.) Tj
+/F1 10 Tf
+1 0 0 1 54 622 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 608 Tm
+(Architecture and Context) Tj
+/F1 10 Tf
+1 0 0 1 54 594 Tm
+(- Project remains frontend-only. No backend, API, API automation, RAG, MCP, LangGraph, or) Tj
+/F1 10 Tf
+1 0 0 1 54 580 Tm
+(  Playwright/Cucumber code was implemented in this step.) Tj
+/F1 10 Tf
+1 0 0 1 54 566 Tm
+(- All references and scenario data are synthetic. No PHI or real healthcare integrations were) Tj
+/F1 10 Tf
+1 0 0 1 54 552 Tm
+(  introduced.) Tj
+/F1 10 Tf
+1 0 0 1 54 538 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 524 Tm
+(Requirements-to-Test Lifecycle) Tj
+/F1 10 Tf
+1 0 0 1 54 510 Tm
+(- BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario) Tj
+/F1 10 Tf
+1 0 0 1 54 496 Tm
+(- Traceability document was extended to include Acceptance Criteria-to-Test Scenario mapping and) Tj
+/F1 10 Tf
+1 0 0 1 54 482 Tm
+(  coverage summary.) Tj
+/F1 10 Tf
+1 0 0 1 54 468 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 454 Tm
+(Design Approach) Tj
+/F1 10 Tf
+1 0 0 1 54 440 Tm
+(- Used business-focused scenario design with stable IDs \(TS-<EPIC>-<SEQUENCE>\).) Tj
+/F1 10 Tf
+1 0 0 1 54 426 Tm
+(- Applied happy path + negative/validation + state/accessibility/responsive pattern per user story) Tj
+/F1 10 Tf
+1 0 0 1 54 412 Tm
+(  where appropriate.) Tj
+/F1 10 Tf
+1 0 0 1 54 398 Tm
+(- Maintained explicit metadata for future BDD/Playwright conversion.) Tj
+/F1 10 Tf
+1 0 0 1 54 384 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 370 Tm
+(Scenario Categories) Tj
+/F1 10 Tf
+1 0 0 1 54 356 Tm
+(- Positive, Negative, Validation, Boundary, Error Handling, Role/Authorization UI, Accessibility,) Tj
+/F1 10 Tf
+1 0 0 1 54 342 Tm
+(  Responsive, Cross-Browser, Regression, and additional UI state/navigation categories where) Tj
+/F1 10 Tf
+1 0 0 1 54 328 Tm
+(  applicable.) Tj
+/F1 10 Tf
+1 0 0 1 54 314 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 300 Tm
+(Prioritization Model) Tj
+/F1 10 Tf
+1 0 0 1 54 286 Tm
+(- Regression priorities assigned using business criticality, user impact, risk, frequency, and) Tj
+/F1 10 Tf
+1 0 0 1 54 272 Tm
+(  regression importance.) Tj
+/F1 10 Tf
+1 0 0 1 54 258 Tm
+(- Distribution: P0=16, P1=40, P2=40, P3=0.) Tj
+/F1 10 Tf
+1 0 0 1 54 244 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 230 Tm
+(Smoke vs Regression) Tj
+/F1 10 Tf
+1 0 0 1 54 216 Tm
+(- Smoke scenarios were intentionally restricted to critical journeys.) Tj
+/F1 10 Tf
+1 0 0 1 54 202 Tm
+(- Smoke scenarios: 6.) Tj
+/F1 10 Tf
+1 0 0 1 54 188 Tm
+(- All scenarios include regression priority.) Tj
+/F1 10 Tf
+1 0 0 1 54 174 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 160 Tm
+(BDD and Playwright Relationship) Tj
+/F1 10 Tf
+1 0 0 1 54 146 Tm
+(- Each scenario includes BDD intent in Given/When/Then style.) Tj
+/F1 10 Tf
+1 0 0 1 54 132 Tm
+(- Each scenario includes automation notes for future Playwright implementation without writing) Tj
+/F1 10 Tf
+1 0 0 1 54 118 Tm
+(  selectors or code in this step.) Tj
+/F1 10 Tf
+1 0 0 1 54 104 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 90 Tm
+(Coverage Results) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 2100 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 54 748 Tm
+(- Total User Stories: 32) Tj
+/F1 10 Tf
+1 0 0 1 54 734 Tm
+(- Total Acceptance Criteria: 109) Tj
+/F1 10 Tf
+1 0 0 1 54 720 Tm
+(- Total Test Scenarios: 96) Tj
+/F1 10 Tf
+1 0 0 1 54 706 Tm
+(- Acceptance Criteria covered: 109) Tj
+/F1 10 Tf
+1 0 0 1 54 692 Tm
+(- Acceptance Criteria without scenario coverage: 0) Tj
+/F1 10 Tf
+1 0 0 1 54 678 Tm
+(- Orphan scenarios: 0) Tj
+/F1 10 Tf
+1 0 0 1 54 664 Tm
+(- Positive: 32, Negative: 32, Validation: 32, Boundary: 12, Error Handling: 32) Tj
+/F1 10 Tf
+1 0 0 1 54 650 Tm
+(- Accessibility: 32, Responsive: 32, Cross-Browser: 32) Tj
+/F1 10 Tf
+1 0 0 1 54 636 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 622 Tm
+(Validation Results) Tj
+/F1 10 Tf
+1 0 0 1 54 608 Tm
+(- Source documents reviewed completely.) Tj
+/F1 10 Tf
+1 0 0 1 54 594 Tm
+(- Unique scenario IDs verified.) Tj
+/F1 10 Tf
+1 0 0 1 54 580 Tm
+(- Traceability completeness and gap checks completed.) Tj
+/F1 10 Tf
+1 0 0 1 54 566 Tm
+(- No out-of-scope implementation artifacts introduced.) Tj
+/F1 10 Tf
+1 0 0 1 54 552 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 538 Tm
+(Interview Q&A Themes) Tj
+/F1 10 Tf
+1 0 0 1 54 524 Tm
+(- Scenario vs test case) Tj
+/F1 10 Tf
+1 0 0 1 54 510 Tm
+(- Scenario vs acceptance criterion) Tj
+/F1 10 Tf
+1 0 0 1 54 496 Tm
+(- Coverage decision model) Tj
+/F1 10 Tf
+1 0 0 1 54 482 Tm
+(- Smoke/regression strategy) Tj
+/F1 10 Tf
+1 0 0 1 54 468 Tm
+(- RAG/MCP/LangGraph readiness) Tj
+/F1 10 Tf
+1 0 0 1 54 454 Tm
+(- Frontend-only QA implications) Tj
+/F1 10 Tf
+1 0 0 1 54 440 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 426 Tm
+(Lessons Learned) Tj
+/F1 10 Tf
+1 0 0 1 54 412 Tm
+(- Structured metadata at scenario stage significantly improves downstream automation and AI reasoning) Tj
+/F1 10 Tf
+1 0 0 1 54 398 Tm
+(  readiness.) Tj
+/F1 10 Tf
+1 0 0 1 54 384 Tm
+(- Coverage quality depends on risk-based grouping, not mechanical one-criterion-to-one-scenario) Tj
+/F1 10 Tf
+1 0 0 1 54 370 Tm
+(  expansion.) Tj
+/F1 10 Tf
+1 0 0 1 54 356 Tm
+() Tj
+/F1 13 Tf
+1 0 0 1 54 342 Tm
+(Future Steps) Tj
+/F1 10 Tf
+1 0 0 1 54 328 Tm
+(- Next recommended step: Step 1.8 - Test Case Definition.) Tj
+/F1 10 Tf
+1 0 0 1 54 314 Tm
+() Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000003715 00000 n 
+0000005867 00000 n 
+0000005993 00000 n 
+0000006119 00000 n 
+0000006182 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+6231
+%%EOF
