@@ -13,16 +13,21 @@ CareFlow Health (frontend-only healthcare management portal)
 - Step 1.1: Product Vision and Requirements Strategy
 - Step 1.2: BRD Creation
 - Step 1.3: PRD Creation
+- Step 1.4: Epic Definition
 
-## Step 1.3 Output
-- Baseline PRD `CFH-PRD-001` (Version 1.0)
-- Persona definitions and role capability matrix
-- Detailed functional and non-functional requirements
-- BRD-to-PRD traceability mapping
+## Step 1.4 Output
+- Baseline Epic document `CFH-EPIC-001` (Version 1.0)
+- 12 business-capability epics with priorities, dependencies, and actors
+- BRD -> PRD -> Epic traceability mapping
+- Epic-to-PRD/BRD alignment table for downstream story decomposition
 
 ## Important Boundary
-- PRD documentation is implemented.
-- Healthcare application functionality is NOT IMPLEMENTED in Step 1.3.
+- Epic Definition is IMPLEMENTED.
+- Frontend is NOT IMPLEMENTED.
+- Automation is NOT IMPLEMENTED.
+- RAG is NOT IMPLEMENTED.
+- MCP is NOT IMPLEMENTED.
+- Agent is NOT IMPLEMENTED.
 
 ## Constraints
 - Frontend-only architecture
@@ -31,4 +36,4 @@ CareFlow Health (frontend-only healthcare management portal)
 - No real PHI
 
 ## Next Step
-Await user direction for Step 1.4.
+Await user direction for Step 1.5.

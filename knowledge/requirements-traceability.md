@@ -69,6 +69,35 @@
 | BR-003 | NFR-012 | Pagination/performance-related list behavior | MAPPED |
 | BR-022 | NFR-010 | Observable UI evidence expectations | MAPPED |
 
+## BRD-to-PRD-to-Epic Mapping
+
+| BRD ID | PRD ID | Epic ID | Requirement | Status |
+|---|---|---|---|---|
+| BR-001 | FR-001, FR-002, FR-003, NFR-014 | EPIC-001 | Login and simulated session behaviors | MAPPED |
+| BR-002 | FR-004, NFR-005 | EPIC-001, EPIC-002, EPIC-011 | Role-based experience and access constraints | MAPPED |
+| BR-003 | FR-004, FR-005 | EPIC-002 | Dashboard overview and role-aware visibility | MAPPED |
+| BR-004 | FR-006, FR-007 | EPIC-003 | Patient registration and list behavior | MAPPED |
+| BR-005 | FR-008 | EPIC-003 | Patient search by patient ID | MAPPED |
+| BR-006 | FR-008 | EPIC-003 | Patient search by demographics | MAPPED |
+| BR-007 | FR-009 | EPIC-003 | Patient profile sections and visibility | MAPPED |
+| BR-008 | FR-010 | EPIC-004 | Appointment creation workflow | MAPPED |
+| BR-009 | FR-011 | EPIC-004 | Appointment rescheduling workflow | MAPPED |
+| BR-010 | FR-012 | EPIC-004 | Appointment cancellation workflow | MAPPED |
+| BR-011 | FR-013 | EPIC-005 | Doctor directory/profile behavior | MAPPED |
+| BR-012 | FR-014 | EPIC-005 | Doctor schedule behavior | MAPPED |
+| BR-013 | FR-015 | EPIC-006 | Medical records review behavior | MAPPED |
+| BR-014 | FR-016 | EPIC-006 | Clinical note entry simulation workflow | MAPPED |
+| BR-015 | FR-017 | EPIC-007 | Prescription review behavior | MAPPED |
+| BR-016 | FR-018 | EPIC-008 | Billing summary behavior | MAPPED |
+| BR-017 | FR-019 | EPIC-008 | Insurance summary behavior | MAPPED |
+| BR-018 | FR-020 | EPIC-002, EPIC-009 | Notifications and dashboard visibility context | MAPPED |
+| BR-019 | FR-021 | EPIC-010 | Reporting behavior | MAPPED |
+| BR-020 | FR-022 | EPIC-011 | User management behavior | MAPPED |
+| BR-021 | FR-023 | EPIC-011 | Settings and preferences behavior | MAPPED |
+| BR-022 | FR-024 | EPIC-002, EPIC-012 | Activity history behavior and dashboard activity context | MAPPED |
+| BR-023 | FR-025, FR-026, FR-027, FR-028 | EPIC-003, EPIC-004, EPIC-009 | Validation standards, list standards, state handling, and dialog behavior | MAPPED |
+| BR-024 | FR-029, FR-030, NFR-003, NFR-004 | EPIC-003, EPIC-004, EPIC-009, EPIC-011 | Responsive and accessibility behavior | MAPPED |
+
 ## Downstream Traceability (TBD)
 
 | PRD ID | Epic | User Story | Acceptance Criteria | Test Scenario | Test Case | Automation | Status |

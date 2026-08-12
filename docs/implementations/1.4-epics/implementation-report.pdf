@@ -1,0 +1,120 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 3380 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 760 Tm (Step 1.4 - Epic Definition Implementation Report) Tj
+1 0 0 1 50 746 Tm () Tj
+1 0 0 1 50 732 Tm (Project Overview) Tj
+1 0 0 1 50 718 Tm (- Project: Healthcare AI QA Engineering Platform) Tj
+1 0 0 1 50 704 Tm (- Product: CareFlow Health) Tj
+1 0 0 1 50 690 Tm (- Scope: Documentation-only epic definition for frontend-only system) Tj
+1 0 0 1 50 676 Tm (- Status: PASS) Tj
+1 0 0 1 50 662 Tm () Tj
+1 0 0 1 50 648 Tm (Epic Strategy) Tj
+1 0 0 1 50 634 Tm (- Created 12 business-meaningful epics from approved PRD requirements.) Tj
+1 0 0 1 50 620 Tm (- Used stable IDs EPIC-001 through EPIC-012 and explicit metadata.) Tj
+1 0 0 1 50 606 Tm (- Avoided technical-task epics and preserved synthetic-data constraints.) Tj
+1 0 0 1 50 592 Tm () Tj
+1 0 0 1 50 578 Tm (Epic Inventory) Tj
+1 0 0 1 50 564 Tm (- EPIC-001 Authentication and Access Simulation) Tj
+1 0 0 1 50 550 Tm (- EPIC-002 Role-Aware Dashboard and Work Visibility) Tj
+1 0 0 1 50 536 Tm (- EPIC-003 Patient Identity and Profile Management) Tj
+1 0 0 1 50 522 Tm (- EPIC-004 Appointment Lifecycle Management) Tj
+1 0 0 1 50 508 Tm (- EPIC-005 Doctor Directory and Schedule Management) Tj
+1 0 0 1 50 494 Tm (- EPIC-006 Medical Records and Clinical Notes Simulation) Tj
+1 0 0 1 50 480 Tm (- EPIC-007 Prescription Review and Medication Visibility) Tj
+1 0 0 1 50 466 Tm (- EPIC-008 Billing and Insurance Information Visibility) Tj
+1 0 0 1 50 452 Tm (- EPIC-009 Notifications and User Feedback Experience) Tj
+1 0 0 1 50 438 Tm (- EPIC-010 Reporting and Operational Insights) Tj
+1 0 0 1 50 424 Tm (- EPIC-011 User Administration and Settings) Tj
+1 0 0 1 50 410 Tm (- EPIC-012 Activity History and Audit Simulation) Tj
+1 0 0 1 50 396 Tm () Tj
+1 0 0 1 50 382 Tm (Business Value) Tj
+1 0 0 1 50 368 Tm (- Epics provide planning-scale capability boundaries for product and QA teams.) Tj
+1 0 0 1 50 354 Tm (- They enable prioritization, ownership clarity, and dependency-aware delivery.) Tj
+1 0 0 1 50 340 Tm (- They create stable parent artifacts for user stories and acceptance criteria.) Tj
+1 0 0 1 50 326 Tm () Tj
+1 0 0 1 50 312 Tm (Traceability) Tj
+1 0 0 1 50 298 Tm (- Added Epic mapping in requirements traceability table:) Tj
+1 0 0 1 50 284 Tm (- | BRD ID | PRD ID | Epic ID | Requirement | Status |) Tj
+1 0 0 1 50 270 Tm (- Maintained existing BRD->PRD mappings and extended to BRD->PRD->Epic chain.) Tj
+1 0 0 1 50 256 Tm (- Included dedicated epic-to-PRD/BRD table in epic document.) Tj
+1 0 0 1 50 242 Tm () Tj
+1 0 0 1 50 228 Tm (Dependencies) Tj
+1 0 0 1 50 214 Tm (- Primary dependency chain: EPIC-001 -> EPIC-002 -> EPIC-003 -> EPIC-004 -> EPIC-006 -> EPIC-007) Tj
+1 0 0 1 50 200 Tm (- Additional dependencies are documented for dashboard, doctor, reporting, and activity flows.) Tj
+1 0 0 1 50 186 Tm () Tj
+1 0 0 1 50 172 Tm (QA Relevance) Tj
+1 0 0 1 50 158 Tm (- Each epic includes relevance for functional, UI, validation, negative, accessibility,) Tj
+1 0 0 1 50 144 Tm (  responsive, cross-browser, and regression testing.) Tj
+1 0 0 1 50 130 Tm () Tj
+1 0 0 1 50 116 Tm (Playwright and Cucumber Relevance) Tj
+1 0 0 1 50 102 Tm (- Defined future hierarchy: Epic -> User Story -> Acceptance Criteria -> Gherkin -> Steps -> Page) Tj
+1 0 0 1 50 88 Tm (  Object -> Playwright Test.) Tj
+1 0 0 1 50 74 Tm (- BDD relevance documented without creating feature files in this step.) Tj
+1 0 0 1 50 60 Tm () Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1338 >>
+stream
+BT
+/F1 11 Tf
+1 0 0 1 50 760 Tm (RAG, MCP, and LangGraph Relevance) Tj
+1 0 0 1 50 746 Tm (- Epic structure is optimized for retrieval with stable IDs and atomic sections.) Tj
+1 0 0 1 50 732 Tm (- MCP and LangGraph relevance documented as future planned capabilities only.) Tj
+1 0 0 1 50 718 Tm () Tj
+1 0 0 1 50 704 Tm (Jira, Confluence, and Jenkins Relevance) Tj
+1 0 0 1 50 690 Tm (- Epic metadata is designed for future Jira conversion.) Tj
+1 0 0 1 50 676 Tm (- Confluence hierarchy alignment is documented.) Tj
+1 0 0 1 50 662 Tm (- Future Jenkins relation is documented without pipeline implementation.) Tj
+1 0 0 1 50 648 Tm () Tj
+1 0 0 1 50 634 Tm (Interview Talking Points) Tj
+1 0 0 1 50 620 Tm (- Why epics are required between PRD and user stories.) Tj
+1 0 0 1 50 606 Tm (- How traceability avoids orphan requirements.) Tj
+1 0 0 1 50 592 Tm (- How epic structure improves QA and AI-assisted analysis readiness.) Tj
+1 0 0 1 50 578 Tm () Tj
+1 0 0 1 50 564 Tm (Implementation Boundaries) Tj
+1 0 0 1 50 550 Tm (- Frontend implementation: NOT IMPLEMENTED) Tj
+1 0 0 1 50 536 Tm (- Automation implementation: NOT IMPLEMENTED) Tj
+1 0 0 1 50 522 Tm (- RAG implementation: NOT IMPLEMENTED) Tj
+1 0 0 1 50 508 Tm (- MCP implementation: NOT IMPLEMENTED) Tj
+1 0 0 1 50 494 Tm (- Agent implementation: NOT IMPLEMENTED) Tj
+1 0 0 1 50 480 Tm () Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000003685 00000 n 
+0000003811 00000 n 
+0000005201 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+5271
+%%EOF

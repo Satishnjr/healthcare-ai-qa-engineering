@@ -10,14 +10,18 @@ Healthcare AI QA Engineering Platform built incrementally with architecture gove
 - 1.1 Product vision and strategy
 - 1.2 BRD creation (CFH-BRD-001)
 - 1.3 PRD creation (CFH-PRD-001)
+- 1.4 Epic definition (CFH-EPIC-001)
 
-## Step 1.3 Highlights
-- Converted business requirements into product-level functional and non-functional requirements
-- Added role capability matrix and information architecture
-- Added explicit UI behavior, validation, accessibility, responsiveness, and testability expectations
-- Mapped BRD requirements to PRD IDs for downstream test and AI traceability
+## Step 1.4 Highlights
+- Defined 12 business-capability epics with stable IDs (`EPIC-001` to `EPIC-012`)
+- Documented epic objective, value, scope, dependencies, risks, and actors
+- Added BRD -> PRD -> Epic traceability mapping and epic-to-PRD/BRD table
+- Documented future QA, Playwright, Cucumber, RAG, MCP, LangGraph, Jira, Confluence, and Jenkins relevance
 
-## PRD Value
-- Bridges business goals and implementation detail
-- Reduces ambiguity for epics/stories/acceptance criteria creation
-- Improves automation and AI reasoning readiness through stable IDs
+## Current Boundary
+- Epic Definition = IMPLEMENTED
+- Frontend = NOT IMPLEMENTED
+- Automation = NOT IMPLEMENTED
+- RAG = NOT IMPLEMENTED
+- MCP = NOT IMPLEMENTED
+- Agent = NOT IMPLEMENTED

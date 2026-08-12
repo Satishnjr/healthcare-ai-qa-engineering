@@ -43,3 +43,16 @@
 - Updated requirements traceability with BRD-to-PRD mapping.
 - Added Step 1.3 implementation artifacts.
 - Updated root documentation to include Step 1.3 PASS and clarify no healthcare app implementation.
+
+## Step 1.4 - Epic Definition
+- Added `knowledge/epics/CAREFLOW_HEALTH_EPICS.md` (CFH-EPIC-001 v1.0 baseline).
+- Added `knowledge/epics/README.md` with epic governance and usage context.
+- Updated `knowledge/requirements-traceability.md` with BRD->PRD->Epic mapping table.
+- Added Step 1.4 implementation artifacts.
+- Updated root documentation to include Step 1.4 PASS and clarify:
+  - Epic Definition = IMPLEMENTED
+  - Frontend = NOT IMPLEMENTED
+  - Automation = NOT IMPLEMENTED
+  - RAG = NOT IMPLEMENTED
+  - MCP = NOT IMPLEMENTED
+  - Agent = NOT IMPLEMENTED
