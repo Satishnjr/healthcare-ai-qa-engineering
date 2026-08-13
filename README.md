@@ -18,6 +18,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 | STEP 2 | UI Architecture and Frontend Application | PASS |
 | STEP 3 | Deterministic UI Automation and Governance | PASS |
 | STEP 4 | Jira + Confluence Enterprise QA Knowledge Foundation | PASS |
+| STEP 4.1 | Jira + Confluence UI Simulation | PASS |
 | STEP 5 | RAG Knowledge System Runtime | PLANNED |
 | STEP 6 | RAGAS and AI Evaluation Runtime | PLANNED |
 | STEP 7 | MCP and Tool Calling Runtime | PLANNED |
@@ -32,6 +33,13 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 - Implemented Jira story -> Confluence knowledge synchronization service.
 - Implemented RAG-ready deterministic knowledge export service.
 - Added traceability lookup services and Step 4 deterministic tests.
+
+## Step 4.1 Highlights
+- Added Jira-style UI simulation pages (dashboard, issues, issue detail, test cases, defects, board).
+- Added Confluence-style UI simulation pages (home, spaces, pages, page detail, search).
+- Added traceability explorer and RAG knowledge explorer views.
+- Added role-aware route controls so patient role has no Jira access.
+- Added targeted Step 4.1 Playwright+Cucumber scenarios (8 scenarios, 8 passed).
 
 ## Jira and Confluence Boundary
 - Implemented now: local/mock enterprise foundation.

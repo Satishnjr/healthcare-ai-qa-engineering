@@ -1036,10 +1036,127 @@ tbody tr:hover {
   line-height: 1.45;
 }
 
+/* Jira + Confluence Step 4.1 */
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.filters-grid label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  color: #2e4f5d;
+}
+
+.filters-grid input,
+.filters-grid select {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.55rem 0.62rem;
+  background: #fff;
+}
+
+.definition-grid {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr;
+  gap: 8px 12px;
+  margin: 0;
+}
+
+.definition-grid dt {
+  font-weight: 700;
+  color: #19465e;
+}
+
+.definition-grid dd {
+  margin: 0;
+  color: #325865;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.board-column {
+  border: 1px solid #cfe2eb;
+  border-radius: 12px;
+  background: #f8fcff;
+  padding: var(--space-3);
+}
+
+.board-column h3 {
+  margin-top: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.board-column-cards {
+  display: grid;
+  gap: 10px;
+}
+
+.board-card {
+  border: 1px solid #dcecf2;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+}
+
+.board-card p {
+  margin: 0 0 8px;
+}
+
+.board-card-key {
+  font-weight: 700;
+  color: #0e5c95;
+}
+
+.knowledge-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.knowledge-card {
+  border: 1px solid rgba(149, 196, 210, 0.45);
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(160deg, #fcffff, #f3fbff);
+}
+
+.knowledge-card h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.traceability-chain {
+  display: grid;
+  gap: 8px;
+}
+
+.traceability-node {
+  border: 1px solid #c7d9e4;
+  border-radius: 10px;
+  background: #f7fbff;
+  padding: 8px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.traceability-node.active {
+  border-color: #3f95cf;
+  background: #eaf5ff;
+}
+
 @media (max-width: 1280px) {
   .ops-summary-strip,
   .kpi-grid,
-  .flow-grid {
+  .flow-grid,
+  .knowledge-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1063,6 +1180,14 @@ tbody tr:hover {
 
   .grid-two {
     grid-template-columns: 1fr;
+  }
+
+  .filters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .board-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .login-layout {
@@ -1102,7 +1227,10 @@ tbody tr:hover {
 @media (max-width: 700px) {
   .ops-summary-strip,
   .flow-grid,
-  .kpi-grid {
+  .kpi-grid,
+  .knowledge-card-grid,
+  .filters-grid,
+  .board-grid {
     grid-template-columns: 1fr;
   }
 }

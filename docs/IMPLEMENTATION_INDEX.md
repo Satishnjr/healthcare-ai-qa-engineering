@@ -17,7 +17,7 @@ This file is the single source of truth for roadmap structure, historical step m
 
 ## Project Overview
 - Project: Healthcare AI QA Engineering Platform (CareFlow Health).
-- Current delivery model: frontend simulation + deterministic automation baseline + enterprise Jira/Confluence knowledge foundation.
+- Current delivery model: frontend simulation + deterministic automation baseline + enterprise Jira/Confluence knowledge foundation + Jira/Confluence simulation UI layer.
 - Scope boundary: runtime RAG/MCP/agents/LangGraph are not implemented yet.
 
 ## New Major Roadmap (Authoritative)
@@ -28,6 +28,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 2 | UI Architecture and CareFlow Frontend Application | PASS | UI architecture/design system and production-style frontend runtime. |
 | STEP 3 | Deterministic UI Automation and Governance | PASS | Playwright+Cucumber foundation, smoke/regression subset, and AI-ready automation governance. |
 | STEP 4 | Jira + Confluence Enterprise QA Knowledge Foundation | PASS | Typed models, local/mock adapters, synchronization flow, traceability lookup, and RAG-ready export contracts. |
+| STEP 4.1 | Jira + Confluence UI Simulation | PASS | Jira-style UI, Confluence-style UI, traceability explorer, RAG-ready knowledge explorer, and targeted Step 4.1 automation. |
 | STEP 5 | RAG Knowledge System Runtime | PLANNED | Real ingestion/retrieval/citation runtime. |
 | STEP 6 | RAGAS and AI Evaluation Runtime | PLANNED | Evaluation pipelines and runtime AI quality gates. |
 | STEP 7 | MCP and Tool Calling Runtime | PLANNED | MCP server/tools/runtime integration. |
@@ -44,9 +45,10 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 2 | Completed | `docs/architecture/UI_*` + frontend runtime in `frontend/` + step folders `2.1-ui-architecture`, `2.2-frontend-implementation`. |
 | STEP 3 | Completed | `automation/` framework/suites + governance docs + step folders `3.1-playwright-cucumber`, `3.2-regression-automation`, `3.3-ai-automation-governance`. |
 | STEP 4 | Completed | `mcp/jira-confluence-foundation/`, Step 4 architecture docs, and implementation artifact package. |
+| STEP 4.1 | Completed | `frontend/src/pages/*jira*`, `frontend/src/pages/*confluence*`, `frontend/src/pages/traceability-page.tsx`, `frontend/src/pages/knowledge-page.tsx`, targeted Step 4.1 automation feature. |
 
 ## Current Phase
-- Current roadmap position: between STEP 4 completion and STEP 5 start.
+- Current roadmap position: between STEP 4.1 completion and STEP 5 start.
 - Active mode: runtime preparation with enterprise knowledge foundation established.
 
 ## Remaining Major Phases
@@ -76,6 +78,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | 3.2 | Regression Automation Expansion | STEP 3 | 3.2 | PASS |
 | 3.3 | AI-Ready Automation Governance and Agent Handoff Foundation | STEP 3 | 3.3 | PASS |
 | 4 | Jira + Confluence Enterprise QA Knowledge Foundation | STEP 4 | 4.1-4.3 | PASS |
+| 4.1 | Jira + Confluence UI Simulation | STEP 4 | 4.1 | PASS |
 
 ## Major-Step/Substep Hierarchy
 
@@ -84,7 +87,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 1 | 1.01 to 1.10 | PASS |
 | STEP 2 | 2.1 UI Architecture and Design System, 2.2 Frontend Application Implementation | PASS |
 | STEP 3 | 3.1 Playwright + Cucumber Foundation, 3.2 Regression Automation Expansion, 3.3 AI-Ready Automation Governance | PASS |
-| STEP 4 | 4.1 Jira typed models/adapters, 4.2 sync + export + tests, 4.3 docs | PASS |
+| STEP 4 | 4.0 foundation (typed models/adapters/sync/export/docs) + 4.1 UI simulation | PASS |
 | STEP 5 | 5.x | PLANNED |
 | STEP 6 | 6.x | PLANNED |
 | STEP 7 | 7.x | PLANNED |
@@ -123,6 +126,19 @@ This file is the single source of truth for roadmap structure, historical step m
 | Traceability propagation in sync payload | PASS | AC/scenario/test-case IDs propagated. |
 | Confluence export for future RAG | PASS | Structured JSON export with checksum and access metadata. |
 | Live bidirectional enterprise sync | PLANNED | Deferred to runtime integration phases. |
+
+## Step 4.1 UI Simulation Status
+
+| Capability | Status | Notes |
+|---|---|---|
+| Jira dashboard/issues/detail/test-cases/defects/board UI | PASS | Implemented in frontend with deterministic synthetic data. |
+| Confluence home/spaces/pages/page-detail/search UI | PASS | Implemented in frontend with metadata panel alignment to Step 4 contracts. |
+| Traceability visual chain UI | PASS | Dedicated `/traceability` view with linked entities. |
+| RAG-ready knowledge explorer UI | PASS | Dedicated `/knowledge` view with readiness/metadata statuses. |
+| Role-aware access including patient Jira restriction | PASS | Route access updated; patient blocked from Jira routes. |
+| Stable automation selectors for Step 4.1 | PASS | `data-testid` added for major interactive elements. |
+| Targeted Step 4.1 automation scenarios | PASS | 8 scenarios implemented and passing. |
+| Live Jira/Confluence runtime integration | PLANNED | Deferred to future runtime phases. |
 
 ## Automation Strategy
 

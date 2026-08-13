@@ -14,6 +14,7 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 |---|---|---|
 | RAG | FOUNDATION | STEP 5 |
 | RAGAS | FOUNDATION | STEP 6 |
+| RAG evaluation | FOUNDATION | STEP 6 |
 | Retrieval evaluation | FOUNDATION | STEP 6 |
 | Groundedness | FOUNDATION | STEP 6 |
 | Faithfulness | FOUNDATION | STEP 6 |
@@ -25,6 +26,7 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 | MCP tools | PASS | STEP 7 |
 | Tool calling | FOUNDATION | STEP 7 |
 | Agentic AI | FOUNDATION | STEP 8 |
+| Agent evaluation | FOUNDATION | STEP 8/10 |
 | Multi-agent systems | FOUNDATION | STEP 10 |
 | LangGraph | FOUNDATION | STEP 9 |
 | Human-in-the-loop | FOUNDATION | STEP 9/11 |
@@ -55,3 +57,6 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 
 ## Step 4 Note
 Step 4 made Jira/Confluence enterprise knowledge foundations first-class with deterministic adapters, traceability propagation, and RAG-ready export contracts. No runtime RAG/MCP/agent execution is claimed in this step.
+
+## Step 4.1 Note
+Step 4.1 added frontend simulation visibility for Jira, Confluence, traceability, and RAG-ready knowledge status. This improves interview and QA workflow demonstration value while keeping runtime boundaries unchanged (no live Jira/Confluence, no runtime RAG/MCP/agents).

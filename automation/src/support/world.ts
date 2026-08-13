@@ -6,6 +6,7 @@ import { LayoutPage } from "../pages/layout-page";
 import { LoginPage } from "../pages/login-page";
 import { PatientSearchPage } from "../pages/patient-search-page";
 import { RegressionPage } from "../pages/regression-page";
+import { Step41Page } from "../pages/step41-page";
 
 export class CustomWorld extends World {
   browser!: Browser;
@@ -21,6 +22,7 @@ export class CustomWorld extends World {
   patientSearchPage!: PatientSearchPage;
   appointmentsPage!: AppointmentsPage;
   regressionPage!: RegressionPage;
+  step41Page!: Step41Page;
 
   constructor(options: IWorldOptions) {
     super(options);

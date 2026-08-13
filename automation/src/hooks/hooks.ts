@@ -14,6 +14,7 @@ import { LayoutPage } from "../pages/layout-page";
 import { LoginPage } from "../pages/login-page";
 import { PatientSearchPage } from "../pages/patient-search-page";
 import { RegressionPage } from "../pages/regression-page";
+import { Step41Page } from "../pages/step41-page";
 import { writeFailureMetadata } from "../utils/report-writer";
 import { artifactPath, ensureDir, sanitizeName, timestamp } from "../utils/path-utils";
 import { launchBrowser } from "../utils/browser-factory";
@@ -59,6 +60,7 @@ Before(async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
   this.patientSearchPage = new PatientSearchPage(page);
   this.appointmentsPage = new AppointmentsPage(page);
   this.regressionPage = new RegressionPage(page);
+  this.step41Page = new Step41Page(page);
 });
 
 After(async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
@@ -69,28 +71,37 @@ After(async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
 
   if (scenario.result?.status === Status.FAILED && this.page) {
     screenshotPath = path.join(artifactPath("screenshots"), `${safe}.png`);
-    await this.page.screenshot({ path: screenshotPath, fullPage: true });
-    this.attach(`Failure screenshot: ${screenshotPath}`);
+    await this.page
+      .screenshot({ path: screenshotPath, fullPage: true })
+      .then(() => this.attach(`Failure screenshot: ${screenshotPath}`))
+      .catch((error) => {
+        this.attach(`Failure screenshot skipped: ${(error as Error).message}`);
+        screenshotPath = undefined;
+      });
 
     const tcIds = this.tags.filter((t) => t.startsWith("@tc-")).map((t) => t.replace("@tc-", ""));
     const tsIds = this.tags.filter((t) => t.startsWith("@ts-")).map((t) => t.replace("@ts-", ""));
     const acIds = this.tags.filter((t) => t.startsWith("@ac-")).map((t) => t.replace("@ac-", ""));
 
-    writeFailureMetadata({
-      scenario: this.scenarioName,
-      tags: this.tags,
-      browser: runtimeConfig.browserName,
-      environment: runtimeConfig.baseUrl,
-      url: this.page.url(),
-      errorMessage: scenario.result.message ?? "Scenario failed without explicit message",
-      timestamp: this.startedAt,
-      testCaseIds: tcIds,
-      testScenarioIds: tsIds,
-      acceptanceCriteriaIds: acIds,
-      screenshotPath,
-      tracePath,
-      videoPath,
-    });
+    try {
+      writeFailureMetadata({
+        scenario: this.scenarioName,
+        tags: this.tags,
+        browser: runtimeConfig.browserName,
+        environment: runtimeConfig.baseUrl,
+        url: this.page.url(),
+        errorMessage: scenario.result.message ?? "Scenario failed without explicit message",
+        timestamp: this.startedAt,
+        testCaseIds: tcIds,
+        testScenarioIds: tsIds,
+        acceptanceCriteriaIds: acIds,
+        screenshotPath,
+        tracePath,
+        videoPath,
+      });
+    } catch (error) {
+      this.attach(`Failure metadata write skipped: ${(error as Error).message}`);
+    }
   }
 
   if (this.context) {

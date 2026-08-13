@@ -958,3 +958,30 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira Issue -> Conflue
 - Jira and Confluence local/mock adapters preserve traceability IDs and source-system references.
 - Knowledge export contract includes metadata required for future RAG ingestion.
 - Runtime RAG, MCP server execution, and agent execution remain planned.
+
+## Step 4.1 Jira + Confluence UI Simulation Traceability Extension
+
+### Extended UI Traceability Chain
+User Story -> Jira Issue -> Confluence Page -> Test Scenario -> Test Case -> Test Data -> BDD -> Automation -> Execution -> Defect -> RAG Knowledge -> MCP Tool -> AI Agent
+
+### Step 4.1 Deterministic Mapping Snapshot
+
+| Layer | Example ID | Status |
+|---|---|---|
+| User Story | US-003-003 | PASS |
+| Jira Issue | CFH-101 | PASS |
+| Confluence Page | CFH-PAGE-001 | PASS |
+| Test Scenario | TS-003-007 | PASS |
+| Test Case | TC-TS-003-007-01 | PASS |
+| Test Data | TD-PATIENT-BASE-001 | PASS |
+| BDD | TS-STEP41-003 | PASS |
+| Automation | automation/features/functional/step41-jira-confluence-ui.feature | PASS |
+| Execution | Step 4.1 targeted run (8/8 PASS) | PASS |
+| Defect | CFH-301 | PASS |
+| RAG Knowledge | RAG-CFH-PAGE-001 | FOUNDATION |
+| MCP Tool | MCP-get_confluence_page | FOUNDATION |
+| AI Agent | AGENT-IMPACT-ANALYZER | PLANNED |
+
+### Step 4.1 Notes
+- Step 4.1 extends visibility of traceability in frontend UI while preserving existing stable IDs.
+- Runtime RAG/MCP/Agent execution remains out of scope and is not claimed as implemented.

@@ -1,5 +1,21 @@
-﻿# Changelog
+# Changelog
 
+## Step 4.1 - Jira + Confluence UI Simulation
+- Implemented Jira UI simulation routes/pages in frontend:
+  - `/jira/dashboard`, `/jira/issues`, `/jira/issues/:issueKey`, `/jira/test-cases`, `/jira/defects`, `/jira/board`
+- Implemented Confluence UI simulation routes/pages in frontend:
+  - `/confluence`, `/confluence/spaces`, `/confluence/pages`, `/confluence/pages/:pageId`, `/confluence/search`
+- Implemented `/traceability` and `/knowledge` views for end-to-end chain visibility and RAG-ready knowledge presentation.
+- Added Step 4.1 deterministic data models and synthetic datasets for Jira, Confluence, traceability, and AI status panels.
+- Updated role-based route access and navigation for Step 4.1 modules (patient has no Jira access).
+- Added targeted automation feature `step41-jira-confluence-ui.feature` with 8 high-value scenarios.
+- Updated automation hooks to gracefully handle intermittent file-write EPERM in artifact generation.
+- Added Step 4.1 documentation package:
+  - `docs/implementations/4.1-jira-confluence-ui/prompt.md`
+  - `docs/implementations/4.1-jira-confluence-ui/README.md`
+  - `docs/implementations/4.1-jira-confluence-ui/interview-notes.md`
+  - `docs/implementations/4.1-jira-confluence-ui/response.md`
+- Updated root docs and indexes for Step 4.1 status alignment.
 ## Step 0.2 - Repository Foundation + GitHub Configuration
 - Initialized Git repository and set branch to `main`
 - Configured remote `origin` as `https://github.com/Satishnjr/healthcare-ai-qa-engineering.git`
@@ -273,3 +289,4 @@
 - Added deterministic Step 4 validation test:
   - `node mcp/jira-confluence-foundation/tests/step4-foundation.test.js` PASS
 - Updated core docs and implementation index to mark Step 4 as PASS and shift subsequent roadmap phases accordingly.
+

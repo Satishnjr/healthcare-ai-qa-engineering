@@ -14,6 +14,7 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 | Playwright+Cucumber baseline | PASS | `automation/` with smoke/regression subsets |
 | AI governance and handoff contracts | PASS | Step 1.15 architecture/qa/ai docs |
 | Jira+Confluence enterprise knowledge foundation (local/mock) | PASS | `mcp/jira-confluence-foundation/` + Step 4 architecture docs |
+| Jira+Confluence UI simulation layer | PASS | Jira/Confluence/traceability/knowledge pages in frontend + Step 4.1 targeted automation |
 
 ## What Is Not Yet Implemented
 
@@ -45,6 +46,12 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 - Built repository layer, traceability lookup services, Jira->Confluence sync service, and RAG-ready export contract.
 - Added deterministic tests for issue/page lifecycle, mapping, sync, and export.
 
+### STEP 4.1 - Jira + Confluence UI Simulation
+- Integrated Jira-style and Confluence-style UI modules into the existing CareFlow frontend.
+- Added bidirectional issue-to-knowledge navigation and traceability visualization.
+- Added RAG-ready knowledge explorer UI and AI-status boundary panels.
+- Added targeted 8-scenario Step 4.1 automation validation.
+
 ### STEP 5 to STEP 11 - Planned Runtime Journey
 - STEP 5: RAG runtime.
 - STEP 6: RAGAS/evaluation runtime.
@@ -63,6 +70,28 @@ I used Confluence as the knowledge management layer for product and QA informati
 
 ### How to explain future AI architecture
 Jira and Confluence provide the enterprise knowledge and workflow layer. RAG provides grounded retrieval, MCP exposes controlled tools, and agents orchestrate QA actions with human approval and auditability.
+
+## Step 4.1 Question Bank
+### How did you integrate Jira and Confluence into your AI QA platform?
+I added a deterministic Jira/Confluence UI simulation in the existing frontend, linked issue and page entities, and preserved traceability IDs across requirements, tests, evidence, and knowledge.
+
+### Did you use real Jira and Confluence?
+No. Step 4.1 is explicitly local/mock UI simulation only. No live Atlassian integration or credentials were used.
+
+### How does Jira data become RAG knowledge?
+Issue context is linked to Confluence pages with metadata and traceability IDs. The knowledge explorer exposes ingestion readiness, while runtime RAG is deferred to Step 5.
+
+### How do you maintain traceability?
+By preserving explicit entity links in both data and UI: User Story -> Jira -> Confluence -> Scenario -> Case -> Data -> BDD -> Automation -> Execution -> Defect -> RAG -> MCP -> Agent.
+
+### How would an AI agent use Jira?
+Through controlled, evidence-based context retrieval from issue + knowledge + traceability entities; runtime agent execution is planned for later phases.
+
+### How would an MCP server expose Jira tools?
+As guarded tool endpoints (search/get/link/traceability) aligned with Step 4 contracts; runtime MCP implementation is scheduled for Step 7.
+
+### How would you prevent an agent from modifying Jira without approval?
+Use role-scoped permissions, human approval gates for write actions, audit logs, and no-fabrication/evidence policies.
 
 ## Fast Interview Answers
 - Why mock adapters first: avoid fake integration claims and still deliver enterprise-grade contracts with deterministic validation.

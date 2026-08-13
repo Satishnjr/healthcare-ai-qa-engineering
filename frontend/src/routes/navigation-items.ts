@@ -81,6 +81,69 @@ export const navigationItems: NavigationItem[] = [
     roles: ["Doctor", "Receptionist", "Healthcare Administrator"],
   },
   {
+    path: "/jira/dashboard",
+    label: "Jira QA",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
+    path: "/jira/issues",
+    label: "Jira Issues",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
+    path: "/jira/test-cases",
+    label: "Jira Test Cases",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
+    path: "/jira/defects",
+    label: "Jira Defects",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
+    path: "/jira/board",
+    label: "Jira Board",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
+    path: "/confluence",
+    label: "Confluence",
+    roles: [
+      "Patient",
+      "Doctor",
+      "Nurse",
+      "Receptionist",
+      "Healthcare Administrator",
+    ],
+  },
+  {
+    path: "/confluence/search",
+    label: "Confluence Search",
+    roles: [
+      "Patient",
+      "Doctor",
+      "Nurse",
+      "Receptionist",
+      "Healthcare Administrator",
+    ],
+  },
+  {
+    path: "/traceability",
+    label: "Traceability",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
+    path: "/knowledge",
+    label: "Knowledge",
+    roles: [
+      "Patient",
+      "Doctor",
+      "Nurse",
+      "Receptionist",
+      "Healthcare Administrator",
+    ],
+  },
+  {
     path: "/admin",
     label: "Administration",
     roles: ["Healthcare Administrator"],

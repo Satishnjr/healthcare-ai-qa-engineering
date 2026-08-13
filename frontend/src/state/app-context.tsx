@@ -52,6 +52,13 @@ interface AppState {
 }
 
 const AppContext = createContext<AppState | null>(null);
+const sessionStorageKey = "careflow-session";
+
+interface PersistedSession {
+  isAuthenticated: boolean;
+  role: Role;
+  userId: string | null;
+}
 
 function toRoutePattern(pathname: string): string {
   if (pathname.startsWith("/patients/") && pathname !== "/patients/search") {
@@ -60,14 +67,43 @@ function toRoutePattern(pathname: string): string {
   if (pathname.startsWith("/appointments/") && pathname !== "/appointments") {
     return "/appointments/:appointmentId";
   }
+  if (pathname.startsWith("/jira/issues/") && pathname !== "/jira/issues") {
+    return "/jira/issues/:issueKey";
+  }
+  if (pathname.startsWith("/confluence/pages/") && pathname !== "/confluence/pages") {
+    return "/confluence/pages/:pageId";
+  }
   return pathname;
 }
 
 export function AppStateProvider({ children }: { children: React.ReactNode }) {
   const users = useMemo(() => mockService.getUsers(), []);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [role, setRole] = useState<Role>("Receptionist");
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const persistedSession = useMemo<PersistedSession>(() => {
+    if (typeof window === "undefined") {
+      return { isAuthenticated: false, role: "Receptionist", userId: null };
+    }
+    const raw = window.sessionStorage.getItem(sessionStorageKey);
+    if (!raw) {
+      return { isAuthenticated: false, role: "Receptionist", userId: null };
+    }
+    try {
+      const parsed = JSON.parse(raw) as PersistedSession;
+      return {
+        isAuthenticated: Boolean(parsed.isAuthenticated),
+        role: parsed.role ?? "Receptionist",
+        userId: parsed.userId ?? null,
+      };
+    } catch {
+      return { isAuthenticated: false, role: "Receptionist", userId: null };
+    }
+  }, []);
+  const persistedUser =
+    users.find((entry) => entry.id === persistedSession.userId) ?? null;
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    persistedSession.isAuthenticated,
+  );
+  const [role, setRole] = useState<Role>(persistedSession.role);
+  const [currentUser, setCurrentUser] = useState<User | null>(persistedUser);
   const [patients, setPatients] = useState<Patient[]>(() => mockService.getPatients());
   const [providers] = useState<Provider[]>(() => mockService.getProviders());
   const [appointments, setAppointments] = useState<Appointment[]>(() =>
@@ -106,6 +142,14 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
     setRole(targetRole);
     setCurrentUser(user);
     setIsAuthenticated(true);
+    if (typeof window !== "undefined") {
+      const next: PersistedSession = {
+        isAuthenticated: true,
+        role: targetRole,
+        userId: user.id,
+      };
+      window.sessionStorage.setItem(sessionStorageKey, JSON.stringify(next));
+    }
     return { success: true };
   };
 
@@ -113,12 +157,23 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
     setIsAuthenticated(false);
     setCurrentUser(null);
     setRole("Receptionist");
+    if (typeof window !== "undefined") {
+      window.sessionStorage.removeItem(sessionStorageKey);
+    }
   };
 
   const switchRole = (nextRole: Role) => {
     const user = users.find((entry) => entry.role === nextRole) ?? null;
     setRole(nextRole);
     setCurrentUser(user);
+    if (typeof window !== "undefined" && isAuthenticated) {
+      const next: PersistedSession = {
+        isAuthenticated: true,
+        role: nextRole,
+        userId: user?.id ?? null,
+      };
+      window.sessionStorage.setItem(sessionStorageKey, JSON.stringify(next));
+    }
   };
 
   const canAccess = (path: string): boolean => {
