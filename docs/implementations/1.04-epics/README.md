@@ -1,4 +1,4 @@
-﻿# Step 1.4 - Epic Definition
+# Step 1.4 - Epic Definition
 
 ## Objective
 Define enterprise-style epics for CareFlow Health by decomposing approved PRD capabilities into business-meaningful, traceable, and testable capability layers ready for user-story decomposition.
@@ -94,11 +94,11 @@ Documented future relation of epic-tagged requirement coverage to CI validation 
 ## Files Created
 - `knowledge/epics/CAREFLOW_HEALTH_EPICS.md`
 - `knowledge/epics/README.md`
-- `docs/implementations/1.4-epics/prompt.md`
-- `docs/implementations/1.4-epics/README.md`
-- `docs/implementations/1.4-epics/interview-notes.md`
-- `docs/implementations/1.4-epics/implementation-report.pdf`
-- `docs/implementations/1.4-epics/response.md`
+- `docs/implementations/1.04-epics/prompt.md`
+- `docs/implementations/1.04-epics/README.md`
+- `docs/implementations/1.04-epics/interview-notes.md`
+- `docs/implementations/1.04-epics/implementation-report.pdf`
+- `docs/implementations/1.04-epics/response.md`
 
 ## Files Modified
 - `knowledge/requirements-traceability.md`
@@ -115,3 +115,4 @@ This step provides clear narrative evidence for enterprise requirement decomposi
 
 ## Status
 PASS
+

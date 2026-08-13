@@ -55,35 +55,35 @@ This file is the single source of truth for roadmap structure, historical step m
 
 ## Old Step -> New Major Step Mapping
 
-| Old Step | Old Topic | New Major Step | Status |
-|---|---|---|---|
-| 0.1 | Environment Discovery | Pre-step foundation before STEP 1 | PASS |
-| 0.2 | Repository Foundation | Pre-step foundation before STEP 1 | PASS |
-| 0.3 | Engineering Standards | Pre-step foundation before STEP 1 | PASS |
-| 1.1 | Product Vision and Requirements Strategy | STEP 1 | PASS |
-| 1.2 | BRD | STEP 1 | PASS |
-| 1.3 | PRD | STEP 1 | PASS |
-| 1.4 | Epics | STEP 1 | PASS |
-| 1.5 | User Stories | STEP 1 | PASS |
-| 1.6 | Acceptance Criteria | STEP 1 | PASS |
-| 1.7 | Test Scenarios | STEP 1 | PASS |
-| 1.8 | Test Cases | STEP 1 | PASS |
-| 1.9 | Test Data and Test Management Strategy | STEP 1 | PASS |
-| 1.10 | PM Delivery Foundation (Jira/Confluence/Jenkins strategy) | STEP 1 | PASS |
-| 1.11 | UI Architecture and Design System | STEP 2 | PASS |
-| 1.12 | Frontend Application Implementation | STEP 2 | PASS |
-| 1.13 | Playwright + Cucumber Foundation | STEP 3 | PASS |
-| 1.14 | Regression Automation Expansion | STEP 3 | PASS |
-| 1.15 | AI-Ready Automation Governance and Agent Handoff Foundation | STEP 3 | PASS |
-| 4 | Jira + Confluence Enterprise QA Knowledge Foundation | STEP 4 | PASS |
+| Old Step | Old Topic | New Major Step | New Substep | Status |
+|---|---|---|---|---|
+| 0.1 | Environment Discovery | Pre-step foundation before STEP 1 | N/A | PASS |
+| 0.2 | Repository Foundation | Pre-step foundation before STEP 1 | N/A | PASS |
+| 0.3 | Engineering Standards | Pre-step foundation before STEP 1 | N/A | PASS |
+| 1.1 | Product Vision and Requirements Strategy | STEP 1 | 1.1 | PASS |
+| 1.2 | BRD | STEP 1 | 1.2 | PASS |
+| 1.3 | PRD | STEP 1 | 1.3 | PASS |
+| 1.4 | Epics | STEP 1 | 1.4 | PASS |
+| 1.5 | User Stories | STEP 1 | 1.5 | PASS |
+| 1.6 | Acceptance Criteria | STEP 1 | 1.6 | PASS |
+| 1.7 | Test Scenarios | STEP 1 | 1.7 | PASS |
+| 1.8 | Test Cases | STEP 1 | 1.8 | PASS |
+| 1.9 | Test Data and Test Management Strategy | STEP 1 | 1.9 | PASS |
+| 1.10 | PM Delivery Foundation (Jira/Confluence/Jenkins strategy) | STEP 1 | 1.10 | PASS |
+| 1.11 | UI Architecture and Design System | STEP 2 | 2.1 | PASS |
+| 1.12 | Frontend Application Implementation | STEP 2 | 2.2 | PASS |
+| 1.13 | Playwright + Cucumber Foundation | STEP 3 | 3.1 | PASS |
+| 1.14 | Regression Automation Expansion | STEP 3 | 3.2 | PASS |
+| 1.15 | AI-Ready Automation Governance and Agent Handoff Foundation | STEP 3 | 3.3 | PASS |
+| 4 | Jira + Confluence Enterprise QA Knowledge Foundation | STEP 4 | 4.1-4.3 | PASS |
 
 ## Major-Step/Substep Hierarchy
 
 | Major Step | Substeps | Status |
 |---|---|---|
 | STEP 1 | 1.1 to 1.10 | PASS |
-| STEP 2 | 1.11 to 1.12 | PASS |
-| STEP 3 | 1.13 to 1.15 | PASS |
+| STEP 2 | 2.1 UI Architecture and Design System, 2.2 Frontend Application Implementation | PASS |
+| STEP 3 | 3.1 Playwright + Cucumber Foundation, 3.2 Regression Automation Expansion, 3.3 AI-Ready Automation Governance | PASS |
 | STEP 4 | 4.1 Jira typed models/adapters, 4.2 sync + export + tests, 4.3 docs | PASS |
 | STEP 5 | 5.x | PLANNED |
 | STEP 6 | 6.x | PLANNED |

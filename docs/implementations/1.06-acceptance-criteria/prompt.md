@@ -574,7 +574,7 @@ STEP DOCUMENTATION
 
 Create:
 
-docs/implementations/1.6-acceptance-criteria/
+docs/implementations/1.06-acceptance-criteria/
 
 Inside it create:
 

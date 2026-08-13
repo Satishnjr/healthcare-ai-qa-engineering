@@ -1050,7 +1050,7 @@ Also validate:
 
 Create:
 
-docs/implementations/1.5-user-stories/
+docs/implementations/1.05-user-stories/
 
 Inside:
 
@@ -1067,7 +1067,7 @@ response.md
 
 Save this exact prompt into:
 
-docs/implementations/1.5-user-stories/prompt.md
+docs/implementations/1.05-user-stories/prompt.md
 
 
 ============================================================
@@ -1076,7 +1076,7 @@ docs/implementations/1.5-user-stories/prompt.md
 
 Create:
 
-docs/implementations/1.5-user-stories/README.md
+docs/implementations/1.05-user-stories/README.md
 
 Include:
 
@@ -1135,7 +1135,7 @@ Include:
 
 Create:
 
-docs/implementations/1.5-user-stories/implementation-report.pdf
+docs/implementations/1.05-user-stories/implementation-report.pdf
 
 The PDF must be professional and interview-ready.
 
@@ -1169,7 +1169,7 @@ Document only what was actually implemented.
 
 Create:
 
-docs/implementations/1.5-user-stories/interview-notes.md
+docs/implementations/1.05-user-stories/interview-notes.md
 
 Include:
 

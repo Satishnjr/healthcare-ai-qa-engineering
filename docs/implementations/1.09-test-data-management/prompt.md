@@ -862,13 +862,13 @@ Every dataset should have:
 
 Create:
 
-docs/implementations/1.9-test-data-management/prompt.md
+docs/implementations/1.09-test-data-management/prompt.md
 
 This file must contain the COMPLETE prompt used for this step.
 
 Create:
 
-docs/implementations/1.9-test-data-management/README.md
+docs/implementations/1.09-test-data-management/README.md
 
 Include:
 
@@ -890,7 +890,7 @@ Include:
 
 Create:
 
-docs/implementations/1.9-test-data-management/interview-notes.md
+docs/implementations/1.09-test-data-management/interview-notes.md
 
 Include interview-ready explanations for:
 
@@ -908,13 +908,13 @@ Include interview-ready explanations for:
 
 Create:
 
-docs/implementations/1.9-test-data-management/implementation-report.pdf
+docs/implementations/1.09-test-data-management/implementation-report.pdf
 
 The PDF must summarize what was implemented in Step 1.9.
 
 Create:
 
-docs/implementations/1.9-test-data-management/response.md
+docs/implementations/1.09-test-data-management/response.md
 
 This must contain the complete final implementation response.
 

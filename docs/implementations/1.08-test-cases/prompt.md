@@ -141,8 +141,8 @@ Also inspect the completed implementation documentation
 for Steps 1.6 and 1.7 to understand the established
 documentation format:
 
-16. docs/implementations/1.6-acceptance-criteria/
-17. docs/implementations/1.7-test-scenarios/
+16. docs/implementations/1.06-acceptance-criteria/
+17. docs/implementations/1.07-test-scenarios/
 
 Do not assume the contents of these files.
 Read them before creating Step 1.8 artifacts.
@@ -665,7 +665,7 @@ STEP DOCUMENTATION
 
 Create:
 
-docs/implementations/1.8-test-cases/
+docs/implementations/1.08-test-cases/
 
 Inside this directory create:
 

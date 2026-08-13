@@ -20,7 +20,7 @@ Create the canonical Test Case Definition layer for CareFlow Health by translati
 - Added `knowledge/test-cases/CAREFLOW_HEALTH_TEST_CASES.md` as the canonical test case document.
 - Added `knowledge/test-cases/README.md` with conventions and future usage guidance.
 - Extended `knowledge/requirements-traceability.md` with Test Scenario -> Test Case mapping and test-case coverage summary.
-- Added Step 1.8 implementation artifacts in `docs/implementations/1.8-test-cases/`.
+- Added Step 1.8 implementation artifacts in `docs/implementations/1.08-test-cases/`.
 - Updated root docs and implementation roadmap with Step 1.8 PASS and planned future phases.
 
 Scope controls preserved:
@@ -47,11 +47,11 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test
 ## Files Created
 - `knowledge/test-cases/CAREFLOW_HEALTH_TEST_CASES.md`
 - `knowledge/test-cases/README.md`
-- `docs/implementations/1.8-test-cases/prompt.md`
-- `docs/implementations/1.8-test-cases/README.md`
-- `docs/implementations/1.8-test-cases/implementation-report.pdf`
-- `docs/implementations/1.8-test-cases/interview-notes.md`
-- `docs/implementations/1.8-test-cases/response.md`
+- `docs/implementations/1.08-test-cases/prompt.md`
+- `docs/implementations/1.08-test-cases/README.md`
+- `docs/implementations/1.08-test-cases/implementation-report.pdf`
+- `docs/implementations/1.08-test-cases/interview-notes.md`
+- `docs/implementations/1.08-test-cases/response.md`
 
 ## Files Modified
 - `knowledge/requirements-traceability.md`
@@ -94,11 +94,11 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test
 - Working Tree Status: 2bbaa3274c83b30dd2b38d25e6960ed55f5e8497
 
 ## Documentation
-- Prompt: `docs/implementations/1.8-test-cases/prompt.md`
-- README: `docs/implementations/1.8-test-cases/README.md`
-- PDF: `docs/implementations/1.8-test-cases/implementation-report.pdf`
-- Interview Notes: `docs/implementations/1.8-test-cases/interview-notes.md`
-- Response: `docs/implementations/1.8-test-cases/response.md`
+- Prompt: `docs/implementations/1.08-test-cases/prompt.md`
+- README: `docs/implementations/1.08-test-cases/README.md`
+- PDF: `docs/implementations/1.08-test-cases/implementation-report.pdf`
+- Interview Notes: `docs/implementations/1.08-test-cases/interview-notes.md`
+- Response: `docs/implementations/1.08-test-cases/response.md`
 
 ## Known Issues
 - Network-restricted sandbox may require approved unsandboxed execution for push and remote verification.
@@ -108,4 +108,5 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test
 STEP 1.9 - Test Data & Test Management Strategy
 
 Stopped at Step 1.8. No automatic progression was executed.
+
 

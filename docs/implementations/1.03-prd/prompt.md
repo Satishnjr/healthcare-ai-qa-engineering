@@ -1,16 +1,16 @@
-﻿# ============================================================
-# STEP 1.3 â€” PRODUCT REQUIREMENTS DOCUMENT (PRD)
+# ============================================================
+# STEP 1.3 — PRODUCT REQUIREMENTS DOCUMENT (PRD)
 # ============================================================
 
 You are continuing the Healthcare AI QA Engineering Platform.
 
 Completed and verified:
 
-STEP 0.1 â€” Environment Discovery â€” PASS
-STEP 0.2 â€” Repository Foundation â€” PASS
-STEP 0.3 â€” Engineering Standards & Architecture Contract â€” PASS
-STEP 1.1 â€” Healthcare Product Vision & Requirements Strategy â€” PASS
-STEP 1.2 â€” Business Requirements Document â€” PASS
+STEP 0.1 — Environment Discovery — PASS
+STEP 0.2 — Repository Foundation — PASS
+STEP 0.3 — Engineering Standards & Architecture Contract — PASS
+STEP 1.1 — Healthcare Product Vision & Requirements Strategy — PASS
+STEP 1.2 — Business Requirements Document — PASS
 
 The latest Step 1.2 Git verification has been completed.
 
@@ -223,33 +223,33 @@ Do not create backend authorization.
 Define:
 
 Login
-  â†“
+  ↓
 Dashboard
-  â”œâ”€â”€ Patients
-  â”‚     â”œâ”€â”€ Patient List
-  â”‚     â”œâ”€â”€ Search
-  â”‚     â””â”€â”€ Patient Profile
-  â”‚
-  â”œâ”€â”€ Appointments
-  â”‚     â”œâ”€â”€ Calendar
-  â”‚     â”œâ”€â”€ Upcoming
-  â”‚     â””â”€â”€ Appointment Details
-  â”‚
-  â”œâ”€â”€ Doctors
-  â”‚
-  â”œâ”€â”€ Medical Records
-  â”‚
-  â”œâ”€â”€ Prescriptions
-  â”‚
-  â”œâ”€â”€ Billing & Insurance
-  â”‚
-  â”œâ”€â”€ Notifications
-  â”‚
-  â”œâ”€â”€ Reports
-  â”‚
-  â”œâ”€â”€ Activity History
-  â”‚
-  â””â”€â”€ Settings
+  ├── Patients
+  │     ├── Patient List
+  │     ├── Search
+  │     └── Patient Profile
+  │
+  ├── Appointments
+  │     ├── Calendar
+  │     ├── Upcoming
+  │     └── Appointment Details
+  │
+  ├── Doctors
+  │
+  ├── Medical Records
+  │
+  ├── Prescriptions
+  │
+  ├── Billing & Insurance
+  │
+  ├── Notifications
+  │
+  ├── Reports
+  │
+  ├── Activity History
+  │
+  └── Settings
 
 Define navigation behavior.
 
@@ -485,13 +485,13 @@ Define a simulated workflow for:
 Doctor:
 
 View patient
-  â†“
+  ↓
 Review history
-  â†“
+  ↓
 Add note
-  â†“
+  ↓
 Save note
-  â†“
+  ↓
 Confirmation
 
 Notes must be clearly synthetic.
@@ -924,19 +924,19 @@ Explain how future automation maps to the PRD.
 Example:
 
 FR-PAT-001
-      â†“
+      ↓
 User Story
-      â†“
+      ↓
 Acceptance Criteria
-      â†“
+      ↓
 Gherkin Scenario
-      â†“
+      ↓
 Step Definition
-      â†“
+      ↓
 Page Object
-      â†“
+      ↓
 Playwright
-      â†“
+      ↓
 Execution Result
 
 
@@ -957,17 +957,17 @@ Ensure:
 Explain future RAG usage:
 
 PRD
- â†“
+ ↓
 Document Loader
- â†“
+ ↓
 Chunking
- â†“
+ ↓
 Metadata
- â†“
+ ↓
 Embeddings
- â†“
+ ↓
 Vector Store
- â†“
+ ↓
 Retriever
 
 
@@ -1108,7 +1108,7 @@ Include:
 
 Create:
 
-docs/implementations/1.3-prd/
+docs/implementations/1.03-prd/
 
 Inside:
 
@@ -1129,7 +1129,7 @@ README.md
 
 Include:
 
-# Step 1.3 â€” Product Requirements Document
+# Step 1.3 — Product Requirements Document
 
 ## Objective
 
@@ -1271,7 +1271,7 @@ docs/INTERVIEW_GUIDE.md
 
 Add:
 
-STEP 1.3 â€” PRD Creation
+STEP 1.3 — PRD Creation
 
 Status:
 
@@ -1331,7 +1331,7 @@ Implementation Status:
 PASS / FAIL / BLOCKED / PARTIAL
 
 Step:
-STEP 1.3 â€” Product Requirements Document
+STEP 1.3 — Product Requirements Document
 
 Objective:
 
@@ -1411,3 +1411,4 @@ WAIT FOR MY NEXT PROMPT.
 ============================================================
 END OF STEP 1.3
 ============================================================
+

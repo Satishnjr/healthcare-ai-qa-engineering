@@ -1,4 +1,4 @@
-﻿# Step 1.2 - Business Requirements Document
+# Step 1.2 - Business Requirements Document
 
 ## Objective
 Create the baseline BRD for CareFlow Health as the business-level source of truth for downstream artifacts.
@@ -60,11 +60,11 @@ Updated `knowledge/requirements-traceability.md` with BRD source layer and downs
 ## Files Created
 - `knowledge/brd/CAREFLOW_HEALTH_BRD.md`
 - `knowledge/brd/README.md`
-- `docs/implementations/1.2-brd/prompt.md`
-- `docs/implementations/1.2-brd/README.md`
-- `docs/implementations/1.2-brd/implementation-report.pdf`
-- `docs/implementations/1.2-brd/interview-notes.md`
-- `docs/implementations/1.2-brd/response.md`
+- `docs/implementations/1.02-brd/prompt.md`
+- `docs/implementations/1.02-brd/README.md`
+- `docs/implementations/1.02-brd/implementation-report.pdf`
+- `docs/implementations/1.02-brd/interview-notes.md`
+- `docs/implementations/1.02-brd/response.md`
 
 ## Files Modified
 - `knowledge/requirements-traceability.md`
@@ -84,3 +84,4 @@ The BRD now provides structured, interview-ready evidence for requirements engin
 
 ## Status
 PASS
+

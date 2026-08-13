@@ -1,17 +1,17 @@
-﻿# ============================================================
-# STEP 1.4 â€” EPIC DEFINITION
+# ============================================================
+# STEP 1.4 — EPIC DEFINITION
 # ============================================================
 
 You are continuing the Healthcare AI QA Engineering Platform.
 
 Completed and verified:
 
-STEP 0.1 â€” Environment Discovery â€” PASS
-STEP 0.2 â€” Repository Foundation â€” PASS
-STEP 0.3 â€” Engineering Standards & Architecture Contract â€” PASS
-STEP 1.1 â€” Healthcare Product Vision & Requirements Strategy â€” PASS
-STEP 1.2 â€” Business Requirements Document â€” PASS
-STEP 1.3 â€” Product Requirements Document â€” PASS
+STEP 0.1 — Environment Discovery — PASS
+STEP 0.2 — Repository Foundation — PASS
+STEP 0.3 — Engineering Standards & Architecture Contract — PASS
+STEP 1.1 — Healthcare Product Vision & Requirements Strategy — PASS
+STEP 1.2 — Business Requirements Document — PASS
+STEP 1.3 — Product Requirements Document — PASS
 
 The latest Step 1.3 Git verification has been completed successfully.
 
@@ -44,15 +44,15 @@ logical business/product capabilities that can later be
 decomposed into:
 
 Epic
-  â†“
+  ↓
 User Story
-  â†“
+  ↓
 Acceptance Criteria
-  â†“
+  ↓
 Test Scenario
-  â†“
+  ↓
 Test Case
-  â†“
+  ↓
 Playwright + Cucumber BDD
 
 The Epic layer will also become an important knowledge
@@ -378,13 +378,13 @@ Define:
 Define:
 
 View patient
-    â†“
+    ↓
 Review history
-    â†“
+    ↓
 Create note
-    â†“
+    ↓
 Save note
-    â†“
+    ↓
 Confirmation
 
 This must remain a UI simulation.
@@ -518,10 +518,10 @@ Assign:
 
 Priority:
 
-P0 â€” Critical
-P1 â€” High
-P2 â€” Medium
-P3 â€” Low
+P0 — Critical
+P1 — High
+P2 — Medium
+P3 — Low
 
 Prioritize according to:
 
@@ -541,15 +541,15 @@ Document dependencies.
 Example:
 
 Authentication
-      â†“
+      ↓
 Dashboard
-      â†“
+      ↓
 Patient Management
-      â†“
+      ↓
 Appointments
-      â†“
+      ↓
 Medical Records
-      â†“
+      ↓
 Prescriptions
 
 Do not create artificial dependencies.
@@ -564,9 +564,9 @@ Only document meaningful product dependencies.
 Create a complete mapping:
 
 BRD
- â†“
+ ↓
 PRD
- â†“
+ ↓
 EPIC
 
 Create:
@@ -578,7 +578,7 @@ Add Epic mapping columns:
 | BRD ID | PRD ID | Epic ID | Requirement | Status |
 |---|---|---|---|---|
 
-Do not remove existing BRD â†’ PRD mappings.
+Do not remove existing BRD → PRD mappings.
 
 Add Epic references to them.
 
@@ -671,17 +671,17 @@ Do not implement tests yet.
 Document how each Epic will eventually map to:
 
 Epic
- â†“
+ ↓
 User Story
- â†“
+ ↓
 Acceptance Criteria
- â†“
+ ↓
 Gherkin Scenario
- â†“
+ ↓
 Step Definition
- â†“
+ ↓
 Page Object
- â†“
+ ↓
 Playwright Test
 
 
@@ -780,19 +780,19 @@ Epic information.
 Example:
 
 User request
-    â†“
+    ↓
 LangGraph Agent
-    â†“
+    ↓
 Identify Epic
-    â†“
+    ↓
 Retrieve PRD
-    â†“
+    ↓
 Retrieve User Story
-    â†“
+    ↓
 Retrieve Acceptance Criteria
-    â†“
+    ↓
 Retrieve Test Cases
-    â†“
+    ↓
 Analyze coverage
 
 Possible future tasks:
@@ -830,11 +830,11 @@ Epics later.
 The future flow will be:
 
 Epic Definition
-      â†“
+      ↓
 Jira Epic
-      â†“
+      ↓
 Jira User Story
-      â†“
+      ↓
 Acceptance Criteria
 
 
@@ -869,17 +869,17 @@ Document future CI/CD relevance.
 Eventually:
 
 Git Push
-   â†“
+   ↓
 Jenkins
-   â†“
+   ↓
 Build
-   â†“
+   ↓
 Frontend validation
-   â†“
+   ↓
 Playwright
-   â†“
+   ↓
 Cucumber
-   â†“
+   ↓
 Reports
 
 Do not create Jenkins pipelines in this step.
@@ -950,7 +950,7 @@ Validate:
 
 Create:
 
-docs/implementations/1.4-epics/
+docs/implementations/1.04-epics/
 
 Inside:
 
@@ -972,7 +972,7 @@ if consistent with previous project steps.
 
 Save this exact Step 1.4 prompt into:
 
-docs/implementations/1.4-epics/prompt.md
+docs/implementations/1.04-epics/prompt.md
 
 
 ============================================================
@@ -981,7 +981,7 @@ docs/implementations/1.4-epics/prompt.md
 
 Create a detailed implementation README containing:
 
-# Step 1.4 â€” Epic Definition
+# Step 1.4 — Epic Definition
 
 ## Objective
 
@@ -1034,7 +1034,7 @@ Create a detailed implementation README containing:
 
 Create:
 
-docs/implementations/1.4-epics/implementation-report.pdf
+docs/implementations/1.04-epics/implementation-report.pdf
 
 The PDF must be professional and interview-ready.
 
@@ -1067,7 +1067,7 @@ Only document what was actually implemented.
 
 Create:
 
-docs/implementations/1.4-epics/interview-notes.md
+docs/implementations/1.04-epics/interview-notes.md
 
 Include:
 
@@ -1133,7 +1133,7 @@ docs/INTERVIEW_GUIDE.md
 
 Add:
 
-STEP 1.4 â€” Epic Definition
+STEP 1.4 — Epic Definition
 
 Status:
 
@@ -1230,7 +1230,7 @@ Implementation Status:
 PASS / FAIL / BLOCKED / PARTIAL
 
 Step:
-STEP 1.4 â€” Epic Definition
+STEP 1.4 — Epic Definition
 
 Objective:
 
@@ -1325,3 +1325,4 @@ WAIT FOR MY NEXT PROMPT.
 ============================================================
 END OF STEP 1.4
 ============================================================
+

@@ -1,4 +1,4 @@
-﻿# Step 1.1 - Healthcare Product Vision & Requirements Strategy
+# Step 1.1 - Healthcare Product Vision & Requirements Strategy
 
 ## Objective
 Define product vision, scope, roles, modules, journeys, and requirements strategy for CareFlow Health before formal BRD/PRD authoring.
@@ -42,11 +42,11 @@ Template created at `knowledge/requirements-traceability.md`.
 - `docs/architecture/AI_REQUIREMENTS_RELEVANCE.md`
 - `knowledge/requirements-traceability.md`
 - `knowledge/README.md`
-- `docs/implementations/1.1-product-vision/prompt.md`
-- `docs/implementations/1.1-product-vision/README.md`
-- `docs/implementations/1.1-product-vision/implementation-report.pdf`
-- `docs/implementations/1.1-product-vision/interview-notes.md`
-- `docs/implementations/1.1-product-vision/response.md`
+- `docs/implementations/1.01-product-vision/prompt.md`
+- `docs/implementations/1.01-product-vision/README.md`
+- `docs/implementations/1.01-product-vision/implementation-report.pdf`
+- `docs/implementations/1.01-product-vision/interview-notes.md`
+- `docs/implementations/1.01-product-vision/response.md`
 
 ## Files Modified
 - `README.md`
@@ -65,3 +65,4 @@ Documents now contain product narrative and requirement strategy rationale suita
 
 ## Status
 PASS
+

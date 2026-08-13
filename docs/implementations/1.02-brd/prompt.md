@@ -1,15 +1,15 @@
-﻿# ============================================================
-# STEP 1.2 â€” BUSINESS REQUIREMENTS DOCUMENT (BRD)
+# ============================================================
+# STEP 1.2 — BUSINESS REQUIREMENTS DOCUMENT (BRD)
 # ============================================================
 
 You are continuing the Healthcare AI QA Engineering Platform.
 
 Completed and verified:
 
-STEP 0.1 â€” Environment Discovery â€” PASS
-STEP 0.2 â€” Repository Foundation â€” PASS
-STEP 0.3 â€” Engineering Standards & Architecture Contract â€” PASS
-STEP 1.1 â€” Healthcare Product Vision & Requirements Strategy â€” PASS
+STEP 0.1 — Environment Discovery — PASS
+STEP 0.2 — Repository Foundation — PASS
+STEP 0.3 — Engineering Standards & Architecture Contract — PASS
+STEP 1.1 — Healthcare Product Vision & Requirements Strategy — PASS
 
 Latest verified Git commit:
 
@@ -825,15 +825,15 @@ The BRD becomes a source document.
 Future pipeline:
 
 BRD
- â†“
+ ↓
 Document ingestion
- â†“
+ ↓
 Chunking
- â†“
+ ↓
 Embeddings
- â†“
+ ↓
 Vector store
- â†“
+ ↓
 Retrieval
 
 MCP:
@@ -986,7 +986,7 @@ Before completing the step, validate that:
 
 Create:
 
-docs/implementations/1.2-brd/
+docs/implementations/1.02-brd/
 
 Inside:
 
@@ -1007,7 +1007,7 @@ README.md
 
 Include:
 
-# Step 1.2 â€” Business Requirements Document
+# Step 1.2 — Business Requirements Document
 
 ## Objective
 
@@ -1155,7 +1155,7 @@ docs/INTERVIEW_GUIDE.md
 
 Add:
 
-STEP 1.2 â€” BRD Creation
+STEP 1.2 — BRD Creation
 
 Status:
 
@@ -1220,7 +1220,7 @@ Implementation Status:
 PASS / FAIL / BLOCKED / PARTIAL
 
 Step:
-STEP 1.2 â€” Business Requirements Document
+STEP 1.2 — Business Requirements Document
 
 Objective:
 
@@ -1308,3 +1308,4 @@ WAIT FOR MY NEXT PROMPT.
 ============================================================
 END OF STEP 1.2
 ============================================================
+

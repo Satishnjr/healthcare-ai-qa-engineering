@@ -1,6 +1,6 @@
-﻿# ============================================================
+# ============================================================
 
-# STEP 1.1 â€” HEALTHCARE PRODUCT VISION & REQUIREMENTS STRATEGY
+# STEP 1.1 — HEALTHCARE PRODUCT VISION & REQUIREMENTS STRATEGY
 
 # ============================================================
 
@@ -8,9 +8,9 @@ You are continuing the Healthcare AI QA Engineering Platform.
 
 Completed steps:
 
-STEP 0.1 â€” Environment Discovery â€” PASS
-STEP 0.2 â€” Repository Foundation â€” PASS
-STEP 0.3 â€” Engineering Standards & Architecture Contract â€” PASS
+STEP 0.1 — Environment Discovery — PASS
+STEP 0.2 — Repository Foundation — PASS
+STEP 0.3 — Engineering Standards & Architecture Contract — PASS
 
 Current GitHub repository:
 
@@ -54,11 +54,11 @@ Healthcare AI QA Engineering Platform
 
 The project has two major parts:
 
-PART A â€” Healthcare Application
+PART A — Healthcare Application
 
 A production-like frontend-only healthcare application.
 
-PART B â€” AI QA Engineering Ecosystem
+PART B — AI QA Engineering Ecosystem
 
 A QA and AI engineering ecosystem built around the healthcare
 application, including:
@@ -414,31 +414,31 @@ Define the future navigation model.
 Example:
 
 Login
-â†“
+↓
 Dashboard
-â”œâ”€â”€ Patients
-â”‚     â”œâ”€â”€ Search
-â”‚     â”œâ”€â”€ Patient List
-â”‚     â””â”€â”€ Patient Profile
-â”‚
-â”œâ”€â”€ Appointments
-â”‚     â”œâ”€â”€ Calendar
-â”‚     â”œâ”€â”€ Upcoming
-â”‚     â””â”€â”€ Appointment Details
-â”‚
-â”œâ”€â”€ Doctors
-â”‚
-â”œâ”€â”€ Medical Records
-â”‚
-â”œâ”€â”€ Prescriptions
-â”‚
-â”œâ”€â”€ Billing & Insurance
-â”‚
-â”œâ”€â”€ Notifications
-â”‚
-â”œâ”€â”€ Reports
-â”‚
-â””â”€â”€ Settings
+├── Patients
+│     ├── Search
+│     ├── Patient List
+│     └── Patient Profile
+│
+├── Appointments
+│     ├── Calendar
+│     ├── Upcoming
+│     └── Appointment Details
+│
+├── Doctors
+│
+├── Medical Records
+│
+├── Prescriptions
+│
+├── Billing & Insurance
+│
+├── Notifications
+│
+├── Reports
+│
+└── Settings
 
 Role-based navigation should be considered in the future
 implementation.
@@ -526,23 +526,23 @@ docs/architecture/REQUIREMENTS_STRATEGY.md
 Define the hierarchy:
 
 Product Vision
-â†“
+↓
 BRD
-â†“
+↓
 PRD
-â†“
+↓
 Epics
-â†“
+↓
 User Stories
-â†“
+↓
 Acceptance Criteria
-â†“
+↓
 Business Rules
-â†“
+↓
 Test Scenarios
-â†“
+↓
 Test Cases
-â†“
+↓
 Automation
 
 Explain how each layer will be used.
@@ -574,7 +574,7 @@ Do NOT create the full BRD yet.
 
 Mark it:
 
-PLANNED â€” STEP 1.2
+PLANNED — STEP 1.2
 
 ============================================================
 15. PRD STRATEGY
@@ -603,7 +603,7 @@ Do NOT create the full PRD yet.
 
 Mark it:
 
-PLANNED â€” STEP 1.3
+PLANNED — STEP 1.3
 
 ============================================================
 16. QA STRATEGY
@@ -636,7 +636,7 @@ Visual validation where justified
 
 API testing must be explicitly marked:
 
-NOT APPLICABLE â€” frontend-only architecture.
+NOT APPLICABLE — frontend-only architecture.
 
 ============================================================
 17. AI / RAG RELEVANCE
@@ -678,19 +678,19 @@ Do NOT implement them now.
 Define:
 
 Requirement
-â†“
+↓
 User Story
-â†“
+↓
 Acceptance Criteria
-â†“
+↓
 Test Scenario
-â†“
+↓
 Test Case
-â†“
+↓
 Automation
-â†“
+↓
 Execution Result
-â†“
+↓
 Defect
 
 This traceability chain will be important for the future
@@ -779,7 +779,7 @@ future steps.
 
 Create:
 
-docs/implementations/1.1-product-vision/
+docs/implementations/1.01-product-vision/
 
 Inside:
 
@@ -800,7 +800,7 @@ Save this exact Step 1.1 prompt.
 
 Include:
 
-# Step 1.1 â€” Healthcare Product Vision & Requirements Strategy
+# Step 1.1 — Healthcare Product Vision & Requirements Strategy
 
 ## Objective
 
@@ -892,7 +892,7 @@ docs/INTERVIEW_GUIDE.md
 
 Add:
 
-STEP 1.1 â€” Product Vision & Requirements Strategy
+STEP 1.1 — Product Vision & Requirements Strategy
 
 Status:
 
@@ -970,7 +970,7 @@ Implementation Status:
 PASS / FAIL / BLOCKED / PARTIAL
 
 Step:
-STEP 1.1 â€” Healthcare Product Vision & Requirements Strategy
+STEP 1.1 — Healthcare Product Vision & Requirements Strategy
 
 Objective:
 
@@ -1025,4 +1025,5 @@ WAIT FOR MY NEXT PROMPT.
 ============================================================
 END OF STEP 1.1
 ===============
+
 

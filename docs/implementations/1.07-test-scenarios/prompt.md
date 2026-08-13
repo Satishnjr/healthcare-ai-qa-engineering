@@ -805,7 +805,7 @@ STEP IMPLEMENTATION DOCUMENTATION
 
 Create:
 
-docs/implementations/1.7-test-scenarios/
+docs/implementations/1.07-test-scenarios/
 
 Inside it create exactly:
 
