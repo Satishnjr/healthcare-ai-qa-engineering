@@ -1,0 +1,12 @@
+{
+  "name": "careflow-rag-runtime",
+  "version": "5.0.0",
+  "private": true,
+  "description": "Step 5 RAG runtime for CareFlow Health",
+  "scripts": {
+    "rag:ingest": "node src/cli-ingest.js",
+    "rag:index": "node src/cli-ingest.js",
+    "rag:query": "node src/cli-query.js",
+    "test": "node tests/step5-rag-runtime.test.js"
+  }
+}

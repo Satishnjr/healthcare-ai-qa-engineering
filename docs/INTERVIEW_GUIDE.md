@@ -1,7 +1,7 @@
 # Interview Guide
 
 ## Project Story (Major-Phase View)
-Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> planned RAG/MCP/agent runtime.
+Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> planned MCP/agent runtime.
 
 ## What Is Implemented
 
@@ -15,12 +15,12 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 | AI governance and handoff contracts | PASS | Step 1.15 architecture/qa/ai docs |
 | Jira+Confluence enterprise knowledge foundation (local/mock) | PASS | `mcp/jira-confluence-foundation/` + Step 4 architecture docs |
 | Jira+Confluence UI simulation layer | PASS | Jira/Confluence/traceability/knowledge pages in frontend + Step 4.1 targeted automation |
+| RAG runtime (local deterministic) | PASS | `rag/` runtime + Step 5 docs + Knowledge page RAG query flow |
 
 ## What Is Not Yet Implemented
 
 | Area | Status |
 |---|---|
-| RAG runtime | PLANNED |
 | RAGAS runtime evaluation pipeline | PLANNED |
 | MCP runtime server/tools | PLANNED |
 | Single QA agent runtime | PLANNED |
@@ -52,8 +52,8 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 - Added RAG-ready knowledge explorer UI and AI-status boundary panels.
 - Added targeted 8-scenario Step 4.1 automation validation.
 
-### STEP 5 to STEP 11 - Planned Runtime Journey
-- STEP 5: RAG runtime.
+### STEP 5 to STEP 11 - Runtime Journey
+- STEP 5: RAG runtime (implemented as local deterministic foundation).
 - STEP 6: RAGAS/evaluation runtime.
 - STEP 7: MCP runtime.
 - STEP 8: first QA AI agent runtime.
@@ -79,7 +79,7 @@ I added a deterministic Jira/Confluence UI simulation in the existing frontend, 
 No. Step 4.1 is explicitly local/mock UI simulation only. No live Atlassian integration or credentials were used.
 
 ### How does Jira data become RAG knowledge?
-Issue context is linked to Confluence pages with metadata and traceability IDs. The knowledge explorer exposes ingestion readiness, while runtime RAG is deferred to Step 5.
+Issue context is linked to Confluence pages and repository QA docs with metadata and traceability IDs. Step 5 ingests these sources into chunks/vectors and returns grounded answers with citations in the Knowledge page.
 
 ### How do you maintain traceability?
 By preserving explicit entity links in both data and UI: User Story -> Jira -> Confluence -> Scenario -> Case -> Data -> BDD -> Automation -> Execution -> Defect -> RAG -> MCP -> Agent.
@@ -95,7 +95,7 @@ Use role-scoped permissions, human approval gates for write actions, audit logs,
 
 ## Fast Interview Answers
 - Why mock adapters first: avoid fake integration claims and still deliver enterprise-grade contracts with deterministic validation.
-- What proves readiness for RAG: normalized Confluence metadata plus deterministic knowledge export contract.
+- What proves RAG implementation: deterministic ingest/query CLI, citation output, role-based filtering, Step 5 automation (`@step5`) and runtime architecture docs.
 - How hallucination risk is controlled: evidence-first outputs, no-fabrication policy, traceability IDs, HITL gates.
 - Why not run full regression here: Step 4 scope is Jira/Confluence foundation only.
 

@@ -12,15 +12,23 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 
 | Concept | Status | Future Step |
 |---|---|---|
-| RAG | FOUNDATION | STEP 5 |
-| RAGAS | FOUNDATION | STEP 6 |
-| RAG evaluation | FOUNDATION | STEP 6 |
-| Retrieval evaluation | FOUNDATION | STEP 6 |
-| Groundedness | FOUNDATION | STEP 6 |
-| Faithfulness | FOUNDATION | STEP 6 |
-| Context precision | FOUNDATION | STEP 6 |
-| Context recall | FOUNDATION | STEP 6 |
-| Answer relevance | FOUNDATION | STEP 6 |
+| RAG | PASS | STEP 5 |
+| RAG ingestion | PASS | STEP 5 |
+| RAG chunking | PASS | STEP 5 |
+| Embeddings (deterministic fallback) | PASS | STEP 5 |
+| Vector store (local development) | PASS | STEP 5 |
+| Retrieval | PASS | STEP 5 |
+| Context assembly | PASS | STEP 5 |
+| Grounded generation | PASS | STEP 5 |
+| Evidence/citations | PASS | STEP 5 |
+| RAGAS | PLANNED | STEP 6 |
+| RAG evaluation | PLANNED | STEP 6 |
+| Retrieval evaluation | PLANNED | STEP 6 |
+| Groundedness | PLANNED | STEP 6 |
+| Faithfulness | PLANNED | STEP 6 |
+| Context precision | PLANNED | STEP 6 |
+| Context recall | PLANNED | STEP 6 |
+| Answer relevance | PLANNED | STEP 6 |
 | AI observability | FOUNDATION | STEP 11 |
 | MCP | FOUNDATION | STEP 7 |
 | MCP tools | PASS | STEP 7 |
@@ -59,4 +67,7 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 Step 4 made Jira/Confluence enterprise knowledge foundations first-class with deterministic adapters, traceability propagation, and RAG-ready export contracts. No runtime RAG/MCP/agent execution is claimed in this step.
 
 ## Step 4.1 Note
-Step 4.1 added frontend simulation visibility for Jira, Confluence, traceability, and RAG-ready knowledge status. This improves interview and QA workflow demonstration value while keeping runtime boundaries unchanged (no live Jira/Confluence, no runtime RAG/MCP/agents).
+Step 4.1 added frontend simulation visibility for Jira, Confluence, traceability, and RAG-ready knowledge status.
+
+## Step 5 Note
+Step 5 implemented deterministic local RAG runtime (ingest/retrieve/cite) with development fallback embeddings and local vector-store abstraction. MCP/agent/LangGraph runtimes remain planned.

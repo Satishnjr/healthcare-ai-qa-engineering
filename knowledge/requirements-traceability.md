@@ -985,3 +985,32 @@ User Story -> Jira Issue -> Confluence Page -> Test Scenario -> Test Case -> Tes
 ### Step 4.1 Notes
 - Step 4.1 extends visibility of traceability in frontend UI while preserving existing stable IDs.
 - Runtime RAG/MCP/Agent execution remains out of scope and is not claimed as implemented.
+
+## Step 5 RAG Runtime Traceability Extension
+
+### Extended RAG Traceability Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira Issue -> Confluence Page -> Knowledge Document -> Chunk -> Embedding -> Vector -> Retrieval -> Context -> RAG Answer -> Citation -> Test Scenario -> Test Case -> BDD -> Automation -> Execution -> Future MCP -> Future Agent
+
+### Step 5 Deterministic Mapping Snapshot
+
+| Layer | Example ID | Status |
+|---|---|---|
+| Jira Issue | CFH-101 | PASS |
+| Confluence Page | CFH-PAGE-001 | PASS |
+| Knowledge Document | DOC-e3f57f4d780d6f72 | PASS |
+| Chunk | CHUNK-7ecf8ad82f4c73ff | PASS |
+| Embedding Provider | deterministic-fallback/hashing-v1 | PASS |
+| Vector Store | .tmp/rag-runtime/index/vector-store.json | PASS |
+| Retrieval | RagQueryService.retrieve() | PASS |
+| Context Assembly | ContextAssembler.assemble() | PASS |
+| RAG Answer | queryRag() response answer | PASS |
+| Citation | sourceSystem/sourceId/documentId/chunkId | PASS |
+| BDD | TS-STEP5-003 | PASS |
+| Automation | automation/features/functional/step5-rag-runtime.feature | PASS |
+| Execution | Targeted @step5 run (7/7 PASS) | PASS |
+| Future MCP | search_knowledge/query_rag boundary | FOUNDATION |
+| Future Agent | AGENT-IMPACT-ANALYZER | PLANNED |
+
+### Step 5 Notes
+- Step 5 implements deterministic local RAG runtime and citation chain while preserving synthetic-data-only boundaries.
+- MCP and agent runtime execution remain future phases.

@@ -1,5 +1,38 @@
 # Changelog
 
+## Step 5 - RAG Knowledge System Runtime
+- Implemented deterministic local RAG runtime under `rag/`:
+  - knowledge discovery and normalized document contract
+  - deterministic chunking with stable IDs
+  - embedding provider abstraction with deterministic fallback embedding
+  - local vector store abstraction with metadata filtering and cosine similarity search
+  - retriever with role-based access filtering and no-evidence thresholds
+  - context assembly and grounded generation with explicit no-fabrication behavior
+  - query observability logging for RAG telemetry metadata
+- Added RAG CLI flows:
+  - `npm run rag:ingest`
+  - `npm run rag:index`
+  - `npm run rag:query`
+- Added Step 5 RAG tests:
+  - `rag/tests/step5-rag-runtime.test.js`
+- Extended frontend Knowledge page for RAG query/answer/citations and stable Step 5 test selectors.
+- Added targeted Step 5 automation feature and step definitions:
+  - `automation/features/functional/step5-rag-runtime.feature`
+  - `automation/src/steps/step5-rag.steps.ts`
+- Added Step 5 architecture docs:
+  - `docs/architecture/RAG_ARCHITECTURE.md`
+  - `docs/architecture/RAG_INGESTION_ARCHITECTURE.md`
+  - `docs/architecture/RAG_RETRIEVAL_ARCHITECTURE.md`
+  - `docs/architecture/RAG_SECURITY_BOUNDARY.md`
+  - `docs/architecture/RAG_MCP_AGENT_BOUNDARY.md`
+- Added Step 5 implementation package:
+  - `docs/implementations/5-rag-runtime/prompt.md`
+  - `docs/implementations/5-rag-runtime/README.md`
+  - `docs/implementations/5-rag-runtime/implementation-report.pdf`
+  - `docs/implementations/5-rag-runtime/interview-notes.md`
+  - `docs/implementations/5-rag-runtime/response.md`
+- Updated root status docs to align Step 5 status and AI concept classifications.
+
 ## Step 4.1 - Jira + Confluence UI Simulation
 - Implemented Jira UI simulation routes/pages in frontend:
   - `/jira/dashboard`, `/jira/issues`, `/jira/issues/:issueKey`, `/jira/test-cases`, `/jira/defects`, `/jira/board`

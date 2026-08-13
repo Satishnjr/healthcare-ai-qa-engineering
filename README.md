@@ -8,7 +8,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 - CareFlow frontend runtime implemented.
 - Playwright+Cucumber deterministic baseline implemented.
 - Step 4 Jira+Confluence enterprise QA knowledge foundation implemented with deterministic local/mock adapters.
-- Runtime RAG/MCP/agent/LangGraph and live Jira/Confluence API integrations are planned.
+- Runtime RAG is implemented (deterministic local foundation); MCP/agent/LangGraph and live Jira/Confluence API integrations remain planned.
 
 ## New Major Roadmap
 
@@ -19,7 +19,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 | STEP 3 | Deterministic UI Automation and Governance | PASS |
 | STEP 4 | Jira + Confluence Enterprise QA Knowledge Foundation | PASS |
 | STEP 4.1 | Jira + Confluence UI Simulation | PASS |
-| STEP 5 | RAG Knowledge System Runtime | PLANNED |
+| STEP 5 | RAG Knowledge System Runtime | PASS |
 | STEP 6 | RAGAS and AI Evaluation Runtime | PLANNED |
 | STEP 7 | MCP and Tool Calling Runtime | PLANNED |
 | STEP 8 | QA AI Agent Runtime | PLANNED |
@@ -51,12 +51,18 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 - Full 96-case deterministic conversion is intentionally not performed.
 - Existing Playwright/Cucumber work remains intact.
 
+## Step 5 Highlights
+ - Implemented local deterministic RAG runtime under `rag/` (ingestion, chunking, embeddings fallback, vector search, retrieval, context assembly, grounded answer generation, citations, observability).
+ - Extended existing Knowledge UI with query/answer/citation flow and stable Step 5 selectors.
+ - Added targeted Step 5 automation feature with 7 scenarios (`@step5`) and passing run.
+ - Added Step 5 architecture documentation and implementation package.
+
 ## AI/Runtime Boundary
 Implemented:
 - Governance + contracts + local/mock knowledge foundation.
+- Step 5 deterministic local RAG runtime.
 
 Not implemented yet:
-- RAG runtime.
 - MCP runtime.
 - Agent and LangGraph runtime.
 - Multi-agent runtime.

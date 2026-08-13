@@ -1,0 +1,32 @@
+{
+  "datasetId": "RAG-EVAL-STEP5-001",
+  "description": "Step 5 evaluation-ready dataset skeleton for future RAGAS runtime",
+  "records": [
+    {
+      "question": "What are the acceptance criteria for patient search by medical record number?",
+      "expectedSources": ["CFH-US-005", "CFH-PAGE-001"],
+      "expectedAnswer": "Answer should reference AC-US-003-003-001 and related patient search criteria from indexed evidence.",
+      "referenceContext": ["US-003-003", "AC-US-003-003-001", "TS-003-007"],
+      "metadata": {
+        "contextPrecision": null,
+        "contextRecall": null,
+        "faithfulness": null,
+        "answerRelevance": null,
+        "groundedness": null
+      }
+    },
+    {
+      "question": "Why can a patient not access Jira dashboard routes?",
+      "expectedSources": ["careflow-help-access", "AC-NFR-005"],
+      "expectedAnswer": "Answer should explain role-based access policy and patient restrictions in simulation UI.",
+      "referenceContext": ["US-011-001", "AC-NFR-005"],
+      "metadata": {
+        "contextPrecision": null,
+        "contextRecall": null,
+        "faithfulness": null,
+        "answerRelevance": null,
+        "groundedness": null
+      }
+    }
+  ]
+}
