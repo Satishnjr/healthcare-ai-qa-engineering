@@ -1,41 +1,42 @@
-﻿# Implementation Index
+# Implementation Index
 
 ## Purpose
-Master progress tracker for completed and planned implementation steps.
+Master tracker for completed and planned implementation steps.
 
 ## Update Rule
 - Update this file at the end of every completed step.
-- Move the completed step to `PASS` with its primary commit SHA.
-- Keep all future steps as `PLANNED` until implemented.
+- Mark completed steps as `PASS` with primary commit SHA.
+- Keep all future steps `PLANNED`.
 
 ## Completed Steps
 
-| Step | Description | Status | Validation | Documentation | Primary Commit |
+| Step | Description | Status | Major Deliverables | AI Concepts Introduced | Primary Commit |
 |---|---|---|---|---|---|
-| 0.1 | Environment Discovery | PASS | Discovery checks PASS | Complete | N/A |
-| 0.2 | Repository Foundation | PASS | Validation checklist PASS | Complete | 2742800236b4b0054c1267bfc9d5d5c33781d30e |
-| 0.3 | Engineering Standards and Architecture Contract | PASS | Documentation checks PASS | Complete | f3c7813379ae94e70c20cca845aa32ccea1871f1 |
-| 1.1 | Healthcare Product Vision and Requirements Strategy | PASS | Documentation checks PASS | Complete | 84ceb61166000b296216f7cc9b8ccb3a489f8095 |
-| 1.2 | BRD Creation | PASS | Documentation checks PASS | Complete | 5f7c54ad31a3ad9e45424761786fccd1cef126d9 |
-| 1.3 | PRD Creation | PASS | Documentation checks PASS | Complete | 96aaad76bdd7768df0205dcff906965b82d1af05 |
-| 1.4 | Epic Definition | PASS | Documentation checks PASS | Complete | ecaed808884e32ae785518c51ebaf85072aa3894 |
-| 1.5 | User Story Definition | PASS | Documentation checks PASS | Complete | 43e3960a4081f4ae1b86d6f7d6c70d0b2d4c3838 |
-| 1.6 | Acceptance Criteria Definition | PASS | Documentation checks PASS | Complete | 0e52160c697cae28e0e41b0119704103f5274cca |
-| 1.7 | Test Scenario Definition | PASS | Documentation checks PASS | Complete | 337851768463f2ed6f86b752ba75c03ee847cc80 |
-| 1.8 | Test Case Definition | PASS | Documentation checks PASS | Complete | 2bbaa3274c83b30dd2b38d25e6960ed55f5e8497 |
-| 1.9 | Test Data and Test Management Strategy | PASS | Documentation checks PASS | Complete | 5fc55eb493fd0c4b6ef0456e924807b8142e73d8 |
-| 1.10 | Project Management and Delivery Foundation | PASS | Documentation checks PASS | Complete | 54da634bc8710076a132d401db7701bd2f676236 |
+| 0.1 | Environment Discovery | PASS | Environment baseline | N/A | N/A |
+| 0.2 | Repository Foundation | PASS | Repo structure, base docs, git remote | N/A | 2742800236b4b0054c1267bfc9d5d5c33781d30e |
+| 0.3 | Engineering Standards and Architecture Contract | PASS | ADRs and architecture standards | AI architecture planning baseline | f3c7813379ae94e70c20cca845aa32ccea1871f1 |
+| 1.1 | Product Vision and Requirements Strategy | PASS | Vision, scope, modules, roles, journeys | AI/RAG strategy relevance | 84ceb61166000b296216f7cc9b8ccb3a489f8095 |
+| 1.2 | BRD Creation | PASS | `CFH-BRD-001` | Future AI-ready requirement framing | 5f7c54ad31a3ad9e45424761786fccd1cef126d9 |
+| 1.3 | PRD Creation | PASS | `CFH-PRD-001` | RAG/MCP/Agent relevance contracts | 96aaad76bdd7768df0205dcff906965b82d1af05 |
+| 1.4 | Epic Definition | PASS | `CFH-EPIC-001` | AI-ready epic granularity | ecaed808884e32ae785518c51ebaf85072aa3894 |
+| 1.5 | User Story Definition | PASS | `CFH-US-001` | AI-testability story context | 43e3960a4081f4ae1b86d6f7d6c70d0b2d4c3838 |
+| 1.6 | Acceptance Criteria Definition | PASS | `CFH-AC-001` | AI-ready acceptance clarity | 0e52160c697cae28e0e41b0119704103f5274cca |
+| 1.7 | Test Scenario Definition | PASS | `CFH-TS-001` | AI-oriented scenario structure | 337851768463f2ed6f86b752ba75c03ee847cc80 |
+| 1.8 | Test Case Definition | PASS | `CFH-TC-001` | Automation and AI-ready case format | 2bbaa3274c83b30dd2b38d25e6960ed55f5e8497 |
+| 1.9 | Test Data and Test Management Strategy | PASS | test-data strategy/catalog + QA strategy docs | RAG/MCP/Agent data-readiness | 5fc55eb493fd0c4b6ef0456e924807b8142e73d8 |
+| 1.10 | Project Management and Delivery Foundation | PASS | Jira/Confluence/Jenkins contracts + AI gates/defects | RAGAS, observability, MCP, agents, AI gates | 54da634bc8710076a132d401db7701bd2f676236 |
+| 1.11 | UI Architecture and Design System | PASS | UI architecture package + UI-AI boundary + testability architecture | RAG, RAGAS, evaluation, observability, MCP, tool calling, LangGraph, agentic AI, multi-agent, HITL, guardrails, prompt injection protection, AI security, LLMOps, AI quality gates, AI failure analysis, AI defects, dataset/run/version/experiment concepts | TBD |
 
 ## Current Step
-- STEP 1.10 - Project Management and Delivery Foundation (COMPLETED)
+- STEP 1.11 - UI Architecture and Design System (COMPLETED)
 
-## Next Step
-- STEP 1.11 - Requirements-to-Test Traceability Finalization
+## Next Recommended Step
+- STEP 1.12 - Frontend Implementation Readiness and Scaffolding Plan
 
-## Remaining Roadmap
+## Remaining Steps
 
 ### Requirements / QA Foundation
-- STEP 1.11 - Requirements-to-Test Traceability Finalization - PLANNED
+- STEP 1.12 - Frontend Implementation Readiness and Scaffolding Plan - PLANNED
 
 ### Frontend Implementation
 - STEP 2.1 - Frontend Technology and Project Scaffolding - PLANNED

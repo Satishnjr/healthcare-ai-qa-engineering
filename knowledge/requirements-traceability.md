@@ -782,3 +782,22 @@ Requirement -> AI Use Case -> AI Component -> Tool/MCP -> Evaluation Dataset -> 
 - Existing IDs (`BR-*`, `FR-*`, `EPIC-*`, `US-*`, `AC-*`, `TS-*`, `TC-*`, `TD-*`) remain unchanged.
 - New project-management entities must reference existing stable IDs rather than introducing conflicting replacement IDs.
 - Execution and defect entities are managed as governance records in this step; runtime tooling implementation is planned in future steps.
+
+## Step 1.11 UI and AI Traceability Extension
+
+### UI-Extended Chain
+
+Requirement -> UI Page -> UI Component -> Test Case -> Automation Test -> Execution Result -> Failure Analysis -> Defect
+
+### Preserved Core Chain
+
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case -> Test Data
+
+### Future AI Chain (Preserved and Extended)
+
+Requirement -> AI Use Case -> AI Component -> Tool/MCP -> Evaluation Dataset -> Evaluation Run -> AI Quality Gate -> AI Defect -> Remediation
+
+### Step 1.11 Notes
+- UI page/component mappings are architecture contracts for future implementation.
+- Existing stable IDs remain unchanged and are referenced by UI contracts.
+- Automation and AI layers remain planned integrations; no runtime implementation was added in this step.
