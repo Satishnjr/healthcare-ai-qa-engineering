@@ -763,3 +763,22 @@ No orphan test-case dataset mappings: PASS
 | NFR-012 | TBD | TBD | TBD | TBD | TBD | TBD | PLANNED |
 | NFR-013 | TBD | TBD | TBD | TBD | TBD | TBD | PLANNED |
 | NFR-014 | TBD | TBD | TBD | TBD | TBD | TBD | PLANNED |
+
+## Step 1.10 Project-Management Traceability Extension
+
+### Execution Chain Extension
+
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case -> Test Data -> Test Management -> Test Execution -> Defect
+
+### Automation Outcome Chain
+
+Story -> Automation Test -> Execution Result -> Failure Analysis -> Defect
+
+### AI Delivery Chain
+
+Requirement -> AI Use Case -> AI Component -> Tool/MCP -> Evaluation Dataset -> Evaluation Run -> AI Quality Gate -> AI Defect -> Remediation
+
+### Step 1.10 Governance Notes
+- Existing IDs (`BR-*`, `FR-*`, `EPIC-*`, `US-*`, `AC-*`, `TS-*`, `TC-*`, `TD-*`) remain unchanged.
+- New project-management entities must reference existing stable IDs rather than introducing conflicting replacement IDs.
+- Execution and defect entities are managed as governance records in this step; runtime tooling implementation is planned in future steps.

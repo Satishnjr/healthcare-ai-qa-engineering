@@ -1,4 +1,4 @@
-# Interview Guide
+﻿# Interview Guide
 
 ## Project Overview
 Healthcare AI QA Engineering Platform built incrementally with architecture governance, requirement traceability, and AI-ready documentation.
@@ -16,21 +16,28 @@ Healthcare AI QA Engineering Platform built incrementally with architecture gove
 - 1.7 Test scenario definition (CFH-TS-001)
 - 1.8 Test case definition (CFH-TC-001)
 - 1.9 Test data and test management strategy
+- 1.10 Project management and delivery foundation
 
-## Step 1.9 Highlights
-- Defined enterprise-style synthetic test-data strategy and catalog with stable `TD-*` IDs.
-- Extended traceability to include Test Case -> Test Data mapping.
-- Defined QA test-management strategy including suite strategy, execution lifecycle, and defect lifecycle.
-- Defined future Jira/Confluence/Jenkins strategy contracts without implementing external systems.
-- Added RAG/MCP/Agent relevance for future AI-QA orchestration.
+## Step 1.10 Highlights
+- Defined Jira-like project model, workflow, governance, and dashboard contracts.
+- Defined Confluence-like information architecture and governance.
+- Defined Jenkins-like CI/CD stage architecture and gate integration points.
+- Defined AI quality gates and AI defect-management schema.
+- Documented AI delivery chain and integration model for RAG, MCP, agents, and observability.
+
+## Interview Quick Answers
+- Why Jira-like model: creates accountable execution and traceability discipline.
+- Why Confluence-like model: creates governed, searchable engineering knowledge.
+- Why Jenkins-like model: enforces repeatable quality checks before release.
+- Why AI gates: prevents low-quality or unsafe AI behavior from shipping.
 
 ## Current Boundary
-- Test Data & Test Management Strategy = IMPLEMENTED
+- Project management and delivery contracts = IMPLEMENTED
 - Frontend = NOT IMPLEMENTED
 - Backend = NOT IMPLEMENTED
 - API = NOT IMPLEMENTED
 - API Automation = NOT IMPLEMENTED
-- Playwright/Cucumber Automation = NOT IMPLEMENTED
-- RAG = NOT IMPLEMENTED
-- MCP = NOT IMPLEMENTED
-- Agent = NOT IMPLEMENTED
+- Playwright/Cucumber runtime = NOT IMPLEMENTED
+- RAG runtime = NOT IMPLEMENTED
+- MCP runtime = NOT IMPLEMENTED
+- Agent runtime = NOT IMPLEMENTED

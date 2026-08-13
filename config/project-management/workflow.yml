@@ -1,0 +1,25 @@
+workflow:
+  statuses:
+    - BACKLOG
+    - READY
+    - IN PROGRESS
+    - CODE REVIEW
+    - READY FOR QA
+    - QA IN PROGRESS
+    - BLOCKED
+    - FAILED
+    - RETEST
+    - DONE
+    - CLOSED
+  transitions:
+    - "BACKLOG -> READY"
+    - "READY -> IN PROGRESS"
+    - "IN PROGRESS -> CODE REVIEW"
+    - "CODE REVIEW -> READY FOR QA"
+    - "READY FOR QA -> QA IN PROGRESS"
+    - "QA IN PROGRESS -> DONE"
+    - "QA IN PROGRESS -> FAILED"
+    - "FAILED -> RETEST"
+    - "RETEST -> DONE"
+    - "RETEST -> FAILED"
+    - "DONE -> CLOSED"

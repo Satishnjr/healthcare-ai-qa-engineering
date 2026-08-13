@@ -1,34 +1,18 @@
-# Confluence Knowledge Strategy (Future Implementation Contract)
+﻿# Confluence Knowledge Strategy (Future Implementation Contract)
 
 ## Objective
 Define future Confluence-like information architecture for QA and AI knowledge operations.
 
-## Proposed Spaces and Pages
-- Product Overview
-- BRD
-- PRD
-- Architecture
-- QA Strategy
-- Test Data
-- Test Scenarios
-- Test Cases
-- Automation
-- RAG
-- MCP
-- AI Agents
-- Agentic AI
-- Jenkins
-- Release Notes
-- Defect Knowledge
-- Interview Preparation
+## Canonical Reference
+Use `docs/qa/CONFLUENCE_INFORMATION_ARCHITECTURE.md` and `docs/qa/CONFLUENCE_GOVERNANCE.md` as the Step 1.10 baseline contracts.
 
-## Content Governance
-- Canonical source path linkage to repository files.
-- Version history and approval notes per page.
-- Traceability references (`BR`, `FR`, `EPIC`, `US`, `AC`, `TS`, `TC`, `TD`).
+## Knowledge Rules
+- Repository file is the canonical source for implementation history.
+- Confluence-like pages mirror approved repository artifacts.
+- Traceability IDs and version metadata are mandatory.
 
 ## Retrieval Readiness
-- Structured headings
+- Structured headings and stable sections
 - Stable IDs
 - Page metadata tags
 - Search aliases for modules and roles

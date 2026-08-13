@@ -1,0 +1,12 @@
+project:
+  name: CareFlow Health
+  key: CFH
+  type: Software-QA-AI
+  sprint_model:
+    duration_weeks: 2
+    naming: "CFH Sprint <n>"
+  release_model:
+    naming:
+      - "CFH Release 1.0"
+      - "CFH Release 1.1"
+      - "CFH AI-QA Release 1.0"

@@ -1,23 +1,22 @@
-# Jenkins QA Pipeline Strategy (Future Implementation Contract)
+﻿# Jenkins QA Pipeline Strategy (Future Implementation Contract)
 
 ## Objective
 Define conceptual CI pipeline for frontend QA workflows without implementing a live Jenkins server in this step.
 
-## Conceptual Pipeline
-Checkout -> Install Dependencies -> Build Frontend -> Start Frontend -> Run Smoke -> Run Regression -> Generate Reports -> Publish Artifacts -> AI QA Analysis -> Archive Results
+## Canonical Reference
+Use `docs/qa/JENKINS_PIPELINE_ARCHITECTURE.md` and `docs/qa/AI_QUALITY_GATES.md` as the Step 1.10 baseline contracts.
 
-## Stage Responsibilities
-- Smoke stage: rapid critical-path confidence.
-- Regression stage: broader behavior validation by suite/tags.
-- Reporting stage: consolidated execution, failure evidence, trend metrics.
+## Conceptual Pipeline
+Checkout -> Environment Validation -> Install Dependencies -> Lint -> Build Frontend -> Start Frontend -> Smoke -> Functional -> Regression -> Accessibility -> Cross Browser -> Reports -> AI QA Analysis -> Quality Gates -> Publish -> Archive
 
 ## AI Integration Points (Future)
-- RAG: requirement/test-context retrieval for failures.
-- MCP: standardized tool calls for execution summaries and artifact lookup.
-- Agents: prioritization, failure triage, and recommendation generation.
+- RAG evaluation
+- MCP tool-call quality
+- Agent quality scoring
+- Guardrail and security gate checks
 
 ## Artifacts
 - Execution summary
-- Screenshots/traces/videos (future automation stage)
+- Reports and quality evidence
 - Defect candidate report
-- Trend dashboard payload
+- Dashboard payloads

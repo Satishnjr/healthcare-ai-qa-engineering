@@ -1,0 +1,54 @@
+dashboard:
+  product:
+    - Open Stories
+    - Completed Stories
+    - Sprint Progress
+    - Release Progress
+  qa:
+    - Total Test Cases
+    - Executed
+    - Passed
+    - Failed
+    - Blocked
+    - Pass Percentage
+    - Automation Coverage
+    - Regression Status
+    - Smoke Status
+  defects:
+    - Open Defects
+    - Critical Defects
+    - High Defects
+    - Reopened Defects
+    - Defect Aging
+    - Defect Leakage
+  automation:
+    - Total Automated Tests
+    - Automation Pass Rate
+    - Automation Failure Rate
+    - Flaky Tests
+    - Execution Duration
+    - Browser-wise results
+  ai:
+    - AI Use Cases
+    - RAG Evaluation Score
+    - RAGAS Metrics
+    - Retrieval Quality
+    - Faithfulness
+    - Answer Relevancy
+    - Context Precision
+    - Context Recall
+    - Agent Success Rate
+    - Tool Success Rate
+    - Agent Failure Rate
+    - AI Defect Count
+    - Guardrail Violations
+    - Prompt Injection Attempts
+    - Human Escalations
+    - AI Observability Alerts
+  cicd:
+    - Build Success Rate
+    - Failed Builds
+    - Average Pipeline Duration
+    - Latest Build
+    - Latest Regression
+    - Latest AI QA Evaluation

@@ -1,0 +1,38 @@
+issue_types:
+  - Epic
+  - Story
+  - Task
+  - Sub-task
+  - Bug
+  - Test
+  - Test Execution
+  - Improvement
+  - AI Evaluation
+  - AI Defect
+  - AI Experiment
+
+priorities:
+  - P0
+  - P1
+  - P2
+  - P3
+
+components:
+  - Frontend
+  - UX
+  - Accessibility
+  - Playwright
+  - Cucumber
+  - Test Data
+  - Test Management
+  - RAG
+  - RAG Evaluation
+  - AI Observability
+  - MCP
+  - Agent
+  - Multi-Agent
+  - AI Security
+  - AI Guardrails
+  - Jenkins
+  - Reporting
+  - Documentation
