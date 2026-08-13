@@ -22,25 +22,25 @@ CareFlow Health (frontend-first healthcare management portal)
 - Step 1.10: Project Management and Delivery Foundation
 - Step 1.11: UI Architecture and Design System
 - Step 1.12: CareFlow Health Frontend Application Implementation
+- Step 1.13: Playwright + Cucumber BDD Automation Framework Foundation
 
-## Step 1.12 Output
-- Implemented React + TypeScript + Vite + React Router frontend runtime under `frontend/`.
-- Implemented production-like application shell and role-aware navigation.
-- Implemented core modules/pages for dashboard, patient, appointment, provider, records, prescription, billing/insurance, claims, notifications, reports, profile/settings, admin/help/search.
-- Implemented deterministic mock service and mock datasets with stable IDs.
-- Implemented reusable component primitives and design-token based styling.
-- Implemented deterministic `data-testid` selectors for automation readiness.
-- Added Step 1.12 implementation artifacts under `docs/implementations/1.12-frontend-implementation/`.
+## Step 1.13 Output
+- Implemented Playwright + Cucumber automation framework under `automation/`.
+- Added TypeScript-based BDD structure with hooks, page objects, steps, and deterministic role test data.
+- Added first smoke suite for login, dashboard, patient search, appointments, role-based visibility, and logout.
+- Added reporting and artifact foundation (Cucumber JSON + HTML, traces, screenshots, videos, failure metadata).
+- Added Step 1.13 implementation artifacts under `docs/implementations/1.13-playwright-cucumber/`.
 
 ## Important Boundary
 Implemented:
 - Frontend runtime (Step 1.12)
+- Automation foundation and initial smoke scenarios (Step 1.13)
 
 Not implemented yet:
 - Backend
 - Real API integration
 - API automation runtime
-- Playwright/Cucumber runtime automation
+- Full 96-case UI automation coverage
 - RAG runtime
 - MCP runtime
 - Agent runtime (LangGraph/multi-agent/HITL)
@@ -52,4 +52,4 @@ Not implemented yet:
 - No secrets
 
 ## Next Step
-Await explicit user direction for Step 1.13.
+Await explicit user direction for the next step.

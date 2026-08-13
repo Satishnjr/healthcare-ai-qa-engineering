@@ -170,3 +170,17 @@
 - Added deterministic `data-testid` selectors for automation readiness.
 - Added Step 1.12 implementation artifacts (`prompt.md`, `README.md`, `implementation-report.pdf`, `interview-notes.md`, `response.md`).
 - Updated root docs (`README.md`, `docs/INTERVIEW_GUIDE.md`, `docs/IMPLEMENTATION_INDEX.md`, `knowledge/requirements-traceability.md`).
+
+## Step 1.13 - Playwright + Cucumber BDD Automation Framework Foundation
+- Implemented automation framework under `automation/` with Playwright + Cucumber + TypeScript.
+- Added foundational structure for config, hooks, page objects, steps, support world, utilities, reporters, fixtures/data, and suite folders.
+- Added deterministic role credential dataset and traceability-aware BDD tags.
+- Implemented smoke scenarios for login, dashboard, patient search, appointments, role-based navigation, and logout.
+- Added reporting foundation: Cucumber JSON, Cucumber HTML report generator, artifact directories, and structured failure metadata writer.
+- Executed validation:
+  - `automation`: `npm run typecheck` PASS
+  - `automation`: `npm run smoke:chromium` PASS
+  - `automation`: Firefox/WebKit smoke runs attempted but blocked by missing Playwright browser binaries
+  - `frontend`: `npm run lint` PASS
+  - `frontend`: `npm run build` PASS
+- Added Step 1.13 implementation artifacts (`prompt.md`, `README.md`, `implementation-report.pdf`, `interview-notes.md`, `response.md`).

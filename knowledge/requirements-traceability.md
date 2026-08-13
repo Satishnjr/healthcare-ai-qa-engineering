@@ -813,3 +813,27 @@ Requirement -> UI Route -> UI Component -> Deterministic Selector -> Planned Pla
 - Deterministic selectors are implemented to preserve test-case to automation mapping expectations.
 - Synthetic deterministic data and mock service contracts were implemented to align with test-data strategy while keeping backend/API out of scope.
 - AI runtime concepts remain planned; only integration boundaries are preserved in the frontend architecture.
+
+## Step 1.13 Automation Traceability Extension
+
+### Automation Execution Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case -> Test Data -> BDD Feature -> Step Definition -> Page Object -> Execution Result -> Failure Artifact
+
+### Implemented Step 1.13 Automation IDs and Links
+- Feature file: `automation/features/smoke/careflow-smoke.feature`
+- Implemented smoke traceability tags:
+  - `@tc-TC-TS-001-001-01` / `@ts-TS-001-001` / `@ac-AC-US-001-001-001`
+  - `@tc-TC-TS-003-007-01` / `@ts-TS-003-007` / `@ac-AC-US-003-003-001`
+  - `@tc-TC-TS-004-001-01` / `@ts-TS-004-001` / `@ac-AC-US-004-001-001`
+  - `@tc-TC-TS-001-003-01` / `@ts-TS-001-003` / `@ac-AC-US-001-003-001`
+- Test data linkage in automation users:
+  - `TD-USERS-ROLE-001`
+  - `TD-PATIENT-BASE-001`
+  - `TD-APPOINTMENT-BASE-001`
+  - `TD-PROVIDER-BASE-001`
+  - `TD-NOTIFICATION-BASE-001`
+
+### Step 1.13 Notes
+- Full test-case suite conversion is not yet completed; Step 1.13 implements the framework baseline + smoke coverage.
+- Structured failure artifact schema is implemented for AI failure-analysis readiness.
+- Browser matrix readiness is implemented; Firefox/WebKit execution currently depends on local Playwright browser binary installation.

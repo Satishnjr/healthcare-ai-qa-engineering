@@ -1,0 +1,129 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [3 0 R 5 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2212 >>
+stream
+BT
+/F1 11 Tf
+54 720 Td
+(Healthcare AI QA Engineering Platform) Tj
+0 -14 Td (Step 1.13 Implementation Report) Tj
+0 -14 Td () Tj
+0 -14 Td (Project:) Tj
+0 -14 Td (CareFlow Health) Tj
+0 -14 Td () Tj
+0 -14 Td (Step:) Tj
+0 -14 Td (STEP 1.13 - Playwright + Cucumber BDD Automation Framework Foundation) Tj
+0 -14 Td () Tj
+0 -14 Td (Objective:) Tj
+0 -14 Td (Establish a production-quality UI automation foundation for the existing frontend using) Tj
+0 -14 Td (Playwright + Cucumber with TypeScript, deterministic selectors, reporting, and traceability.) Tj
+0 -14 Td () Tj
+0 -14 Td (Architecture:) Tj
+0 -14 Td (- BDD feature layer under automation/features) Tj
+0 -14 Td (- Step definition layer under automation/src/steps) Tj
+0 -14 Td (- Page Object Model under automation/src/pages) Tj
+0 -14 Td (- Hook lifecycle and artifact capture under automation/src/hooks) Tj
+0 -14 Td (- Runtime config under automation/src/config) Tj
+0 -14 Td (- Structured failure metadata under automation/src/utils) Tj
+0 -14 Td () Tj
+0 -14 Td (Technologies:) Tj
+0 -14 Td (- Playwright) Tj
+0 -14 Td (- Cucumber BDD) Tj
+0 -14 Td (- TypeScript) Tj
+0 -14 Td (- Node.js tooling) Tj
+0 -14 Td () Tj
+0 -14 Td (Implemented Framework Areas:) Tj
+0 -14 Td (- Multi-browser-ready Playwright configuration \(Chromium/Firefox/WebKit\)) Tj
+0 -14 Td (- Cucumber runner and typed world) Tj
+0 -14 Td (- Initial smoke feature suite and step definitions) Tj
+0 -14 Td (- Core page objects for login, layout, dashboard, patient search, appointments) Tj
+0 -14 Td (- Reporting foundation: Cucumber JSON + HTML report) Tj
+0 -14 Td (- Failure evidence foundation: screenshot, trace, video path, metadata JSON) Tj
+0 -14 Td (- Deterministic role-based test users mapped to synthetic dataset IDs) Tj
+0 -14 Td () Tj
+0 -14 Td (Scenarios Automated in this step:) Tj
+0 -14 Td (1. Successful login) Tj
+0 -14 Td (2. Dashboard access after login) Tj
+0 -14 Td (3. Patient navigation and search) Tj
+0 -14 Td (4. Appointment navigation) Tj
+0 -14 Td (5. Role-based restricted navigation visibility) Tj
+0 -14 Td (6. Logout flow) Tj
+0 -14 Td () Tj
+0 -14 Td (Validation Results:) Tj
+0 -14 Td (- npm install \(automation\): PASS) Tj
+0 -14 Td (- npm run typecheck \(automation\): PASS) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1784 >>
+stream
+BT
+/F1 11 Tf
+54 720 Td
+(- npm run smoke:chromium: PASS \(5/5 scenarios\)) Tj
+0 -14 Td (- npm run smoke:firefox: FAIL \(missing Playwright Firefox browser binary\)) Tj
+0 -14 Td (- npm run smoke:webkit: FAIL \(missing Playwright WebKit browser binary\)) Tj
+0 -14 Td (- npm run report:html: PASS) Tj
+0 -14 Td (- npm run lint \(frontend\): PASS) Tj
+0 -14 Td (- npm run build \(frontend\): PASS) Tj
+0 -14 Td () Tj
+0 -14 Td (Testability and Traceability:) Tj
+0 -14 Td (- Stable data-testid-based selector strategy used) Tj
+0 -14 Td (- Scenario tags include traceability IDs: @tc-*, @ts-*, @ac-*) Tj
+0 -14 Td (- Output artifacts structured for future AI failure-analysis use) Tj
+0 -14 Td () Tj
+0 -14 Td (AI Boundary and Readiness:) Tj
+0 -14 Td (Implemented/Enabled in Step 1.13:) Tj
+0 -14 Td (- AI-assisted automation readiness through structured metadata and deterministic artifacts) Tj
+0 -14 Td (- Failure-analysis readiness via machine-readable evidence) Tj
+0 -14 Td (- AI quality-gate readiness via report and result artifacts) Tj
+0 -14 Td () Tj
+0 -14 Td (Planned \(not implemented runtime\):) Tj
+0 -14 Td (- RAG, MCP, tool-calling runtime) Tj
+0 -14 Td (- LangGraph runtime) Tj
+0 -14 Td (- Agentic and multi-agent runtime) Tj
+0 -14 Td (- AI observability runtime) Tj
+0 -14 Td () Tj
+0 -14 Td (Known Issues:) Tj
+0 -14 Td (- Firefox and WebKit execution blocked because browser binaries are not installed.) Tj
+0 -14 Td (- Cucumber warns that Node v24 has not been explicitly tested.) Tj
+0 -14 Td () Tj
+0 -14 Td (Interview Summary:) Tj
+0 -14 Td (This step demonstrates automation framework architecture, BDD layering, robust evidence) Tj
+0 -14 Td (capture,) Tj
+0 -14 Td (traceability mapping, and readiness for future AI-QA capabilities without over-claiming runtime) Tj
+0 -14 Td (AI.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000002511 00000 n 
+0000002637 00000 n 
+0000004473 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4543
+%%EOF
