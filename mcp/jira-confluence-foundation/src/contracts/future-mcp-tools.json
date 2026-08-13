@@ -1,0 +1,64 @@
+{
+  "tools": [
+    {
+      "name": "search_jira",
+      "purpose": "Search Jira issues by type/status/traceability.",
+      "inputs": { "query": "string", "issueType": "string?", "status": "string?", "traceabilityId": "string?" },
+      "outputs": { "issues": "JiraIssue[]", "count": "number" },
+      "authorization": "read:jira",
+      "validation": "query length and allowed filters",
+      "audit": "log search operation and correlationId",
+      "errors": ["INVALID_INPUT", "UNAUTHORIZED", "SOURCE_UNAVAILABLE"]
+    },
+    {
+      "name": "get_jira_issue",
+      "purpose": "Get canonical issue details with traceability fields.",
+      "inputs": { "issueKey": "string" },
+      "outputs": { "issue": "JiraIssue" },
+      "authorization": "read:jira",
+      "validation": "issueKey format CFH-*",
+      "audit": "log issue lookup and traceability IDs",
+      "errors": ["NOT_FOUND", "UNAUTHORIZED", "SOURCE_UNAVAILABLE"]
+    },
+    {
+      "name": "search_confluence",
+      "purpose": "Find Confluence pages by title, label, or traceability ID.",
+      "inputs": { "titleContains": "string?", "label": "string?", "traceabilityId": "string?" },
+      "outputs": { "pages": "ConfluencePage[]", "count": "number" },
+      "authorization": "read:confluence",
+      "validation": "at least one selector is required",
+      "audit": "log search scope and correlationId",
+      "errors": ["INVALID_INPUT", "UNAUTHORIZED", "SOURCE_UNAVAILABLE"]
+    },
+    {
+      "name": "get_confluence_page",
+      "purpose": "Fetch one Confluence page with metadata for evidence-backed reasoning.",
+      "inputs": { "documentId": "string" },
+      "outputs": { "page": "ConfluencePage" },
+      "authorization": "read:confluence",
+      "validation": "documentId format",
+      "audit": "log page retrieval and source links",
+      "errors": ["NOT_FOUND", "UNAUTHORIZED", "SOURCE_UNAVAILABLE"]
+    },
+    {
+      "name": "search_test_cases",
+      "purpose": "Find mapped test cases by Jira key, story, scenario, or AC.",
+      "inputs": { "jiraKey": "string?", "testScenarioId": "string?", "acceptanceCriteriaId": "string?" },
+      "outputs": { "testCaseIds": "string[]" },
+      "authorization": "read:qa",
+      "validation": "at least one selector",
+      "audit": "log mappings used",
+      "errors": ["INVALID_INPUT", "NOT_FOUND"]
+    },
+    {
+      "name": "get_traceability",
+      "purpose": "Reverse lookup across requirements, Jira, Confluence, scenarios, and test cases.",
+      "inputs": { "traceabilityId": "string" },
+      "outputs": { "jiraKeys": "string[]", "documentIds": "string[]", "testCaseIds": "string[]" },
+      "authorization": "read:qa",
+      "validation": "traceabilityId is required",
+      "audit": "log traceability access",
+      "errors": ["INVALID_INPUT", "NOT_FOUND"]
+    }
+  ]
+}

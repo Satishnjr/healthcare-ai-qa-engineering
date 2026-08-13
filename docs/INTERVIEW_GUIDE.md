@@ -1,92 +1,81 @@
 # Interview Guide
 
-## Project Overview
-Healthcare AI QA Engineering Platform built incrementally with architecture governance, requirement traceability, frontend runtime implementation, and automation foundation.
+## Project Story (Major-Phase View)
+Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> planned RAG/MCP/agent runtime.
 
-## Implemented Steps
-- 0.1 Environment discovery
-- 0.2 Repository foundation
-- 0.3 Engineering standards and ADRs
-- 1.1 Product vision and strategy
-- 1.2 BRD creation (CFH-BRD-001)
-- 1.3 PRD creation (CFH-PRD-001)
-- 1.4 Epic definition (CFH-EPIC-001)
-- 1.5 User story definition (CFH-US-001)
-- 1.6 Acceptance criteria definition (CFH-AC-001)
-- 1.7 Test scenario definition (CFH-TS-001)
-- 1.8 Test case definition (CFH-TC-001)
-- 1.9 Test data and test management strategy
-- 1.10 Project management and delivery foundation
-- 1.11 UI architecture and design system
-- 1.12 CareFlow frontend runtime implementation
-- 1.13 Playwright + Cucumber automation foundation
-- 1.14 Full regression automation expansion
-- 1.15 AI-ready automation governance and agent handoff foundation
+## What Is Implemented
 
-## Step 1.13 Highlights
-- Implemented TypeScript Playwright + Cucumber framework architecture under `automation/`.
-- Implemented BDD smoke features with traceability-aware tags (`@tc-*`, `@ts-*`, `@ac-*`).
-- Implemented page objects, world/hook lifecycle, and deterministic role-based test data.
-- Implemented artifact foundation: Cucumber JSON/HTML, screenshot/trace/video directories, failure metadata JSON.
-- Executed smoke suite successfully on Chromium against running frontend.
-- Verified cross-browser readiness by attempting Firefox/WebKit runs (blocked by missing local Playwright binaries in this environment).
+| Area | Status | Evidence |
+|---|---|---|
+| Requirements and QA foundation | PASS | `knowledge/` + `docs/qa/` + traceability artifacts |
+| Jira/Confluence governance model | PASS | Jira/Confluence strategy and governance docs |
+| UI architecture and design system | PASS | `docs/architecture/UI_*` |
+| Frontend runtime | PASS | `frontend/` |
+| Playwright+Cucumber baseline | PASS | `automation/` with smoke/regression subsets |
+| AI governance and handoff contracts | PASS | Step 1.15 architecture/qa/ai docs |
+| Jira+Confluence enterprise knowledge foundation (local/mock) | PASS | `mcp/jira-confluence-foundation/` + Step 4 architecture docs |
 
-## Interview Quick Answers
-- Why Playwright: fast, reliable web-first assertions and strong artifact capabilities.
-- Why Cucumber: executable requirements and readable BDD collaboration model.
-- Why POM + hooks: maintainability, reuse, and consistent setup/teardown.
-- Why structured failure metadata: prepares for AI-assisted failure triage and quality gates.
-- Why only smoke now: Step 1.13 is framework foundation before full 96-case automation expansion.
+## What Is Not Yet Implemented
 
-## Step 1.14 Highlights
-- Expanded from smoke baseline to broader regression coverage with BDD suites for authentication, module navigation, role access, patient search, validation, accessibility, and responsive checks.
-- Preserved POM-first architecture by introducing a dedicated regression page object and reusable regression step library.
-- Added execution-summary JSON artifact to support AI-ready failure analysis and observability ingestion in future steps.
-- Executed Chromium smoke and regression successfully (`5/5`, `39/39`) with honest Firefox/WebKit blocked reporting due missing browser binaries.
-- Updated traceability to connect Test Case IDs to BDD scenarios, step definitions, page objects, execution results, and artifact paths.
+| Area | Status |
+|---|---|
+| RAG runtime | PLANNED |
+| RAGAS runtime evaluation pipeline | PLANNED |
+| MCP runtime server/tools | PLANNED |
+| Single QA agent runtime | PLANNED |
+| LangGraph orchestration runtime | PLANNED |
+| Multi-agent runtime | PLANNED |
+| Live Jira/Confluence API integration | PLANNED/BLOCKED |
 
-## Step 1.14 Interview Quick Answers
-- Why expand in Step 1.14 instead of rewriting: preserve deterministic baseline and scale safely by adding suite modules.
-- How you ensure reliability: semantic/data-testid selectors, reusable steps, deterministic test users, and isolated hooks.
-- How this supports AI roadmap: structured JSON outputs and stable traceability IDs can be consumed by future RAG/MCP/agent workflows.
-- What is still pending: full 96-case automation completion, cross-browser binary setup, and future AI runtime implementations.
+## Interview Walkthrough by Major Step
 
-## Step 1.15 Highlights
-- Established governance-first QA automation strategy instead of forcing full 96-case deterministic automation.
-- Classified all 96 test cases into deterministic, AI-assisted, AI-agent-candidate, manual, backend dependency, UI gap, and future buckets.
-- Defined agent handoff contracts, agent output contracts, role model, workflow, AI/Playwright boundary, and observability contract.
-- Added RAGAS/evaluation strategy and AI quality gate extension as foundations only (no runtime AI system implemented).
+### STEP 1 - Requirements, QA Foundation, Jira/Confluence Governance
+- Built end-to-end requirements-to-test traceability and governance baseline.
+- Established Jira and Confluence as first-class governance systems in project design.
 
-## Step 1.15 Interview Quick Answers
-- Why not automate all tests now: deterministic quality drops when UI/API dependencies and variability are unresolved; governance-first keeps signal quality high.
-- When should AI agents automate tests: high-variation, retrieval-heavy, or reasoning-heavy workflows where deterministic scripts alone are inefficient.
-- Deterministic vs agentic automation:
-  - Deterministic: fixed script, fixed assertions, predictable input.
-  - Agentic: planning + retrieval + tool selection + evidence-based reasoning under guardrails.
-- How an AI agent selects a test: uses classification matrix, risk/priority, change scope, and policy constraints.
-- How RAG helps QA agents: retrieves BRD/PRD/US/AC/TS/TC/test-data context to reduce blind generation and improve traceable reasoning.
-- Why MCP: standardizes safe tool interfaces for retrieval, execution, evidence, and defect workflows.
-- What is tool calling: constrained invocation of approved operations with typed inputs/outputs and policy controls.
-- How LangGraph fits: orchestration layer for multi-step, multi-agent workflow state and approval gates.
-- How multiple agents collaborate: specialized agents produce bounded outputs that are coordinated by QA orchestrator with handoff contracts.
-- How hallucinations are controlled: strict no-fabrication rules, evidence-required outputs, policy validation, and mandatory human review for sensitive cases.
-- Prompt injection handling: treat instructions as untrusted unless policy-approved; enforce tool permissions and approval gates.
-- How agents are evaluated: task success, tool correctness, reasoning consistency, evidence quality, hallucination rate, policy compliance, override rate.
-- How agents are observed: task/trace/model/prompt/tool/token/failure telemetry in observability contract.
-- Where human approval is required: healthcare-sensitive, security-sensitive, destructive, ambiguous, low-confidence, or conflicting-evidence actions.
-- Playwright integration with AI agents: agents decide *what* within policy; Playwright remains deterministic executor of approved steps.
+### STEP 2 - UI Architecture and Frontend Application
+- Implemented realistic, role-aware CareFlow frontend runtime with deterministic testability hooks.
 
-## Current Boundary
-Implemented:
-- Frontend runtime and UI simulation layer (Step 1.12)
-- Automation foundation + expanded regression suite (Step 1.13/1.14)
-- Governance and agent handoff foundation for AI-ready QA automation (Step 1.15)
+### STEP 3 - Deterministic UI Automation and Governance
+- Implemented Playwright+Cucumber foundation and limited deterministic regression baseline.
+- Added AI-ready governance, classification, handoff, and observability contracts.
 
-Not implemented yet:
-- Backend
-- API
-- API automation
-- Full regression suite conversion
-- RAG runtime
-- MCP runtime
-- Agent runtime
+### STEP 4 - Jira + Confluence Enterprise QA Knowledge Foundation
+- Built typed domain models and deterministic local/mock adapters for Jira and Confluence.
+- Built repository layer, traceability lookup services, Jira->Confluence sync service, and RAG-ready export contract.
+- Added deterministic tests for issue/page lifecycle, mapping, sync, and export.
+
+### STEP 5 to STEP 11 - Planned Runtime Journey
+- STEP 5: RAG runtime.
+- STEP 6: RAGAS/evaluation runtime.
+- STEP 7: MCP runtime.
+- STEP 8: first QA AI agent runtime.
+- STEP 9: LangGraph orchestration runtime.
+- STEP 10: multi-agent runtime.
+- STEP 11: enterprise integration, observability, LLMOps, security, and production readiness.
+
+## Required Interview Statements
+### How to explain Jira
+I used Jira as the system of record for requirements, stories, acceptance criteria, defects and QA traceability. I created an adapter boundary so the QA platform is not tightly coupled to Jira's implementation.
+
+### How to explain Confluence
+I used Confluence as the knowledge management layer for product and QA information. The content is structured with metadata and traceability so it can later become a governed RAG knowledge source.
+
+### How to explain future AI architecture
+Jira and Confluence provide the enterprise knowledge and workflow layer. RAG provides grounded retrieval, MCP exposes controlled tools, and agents orchestrate QA actions with human approval and auditability.
+
+## Fast Interview Answers
+- Why mock adapters first: avoid fake integration claims and still deliver enterprise-grade contracts with deterministic validation.
+- What proves readiness for RAG: normalized Confluence metadata plus deterministic knowledge export contract.
+- How hallucination risk is controlled: evidence-first outputs, no-fabrication policy, traceability IDs, HITL gates.
+- Why not run full regression here: Step 4 scope is Jira/Confluence foundation only.
+
+## Canonical References
+- `docs/IMPLEMENTATION_INDEX.md`
+- `docs/ROADMAP_RESTRUCTURE.md`
+- `docs/architecture/JIRA_CONFLUENCE_AI_ARCHITECTURE.md`
+- `docs/architecture/JIRA_ARCHITECTURE.md`
+- `docs/architecture/CONFLUENCE_ARCHITECTURE.md`
+- `docs/architecture/JIRA_CONFLUENCE_INTEGRATION.md`
+- `docs/architecture/KNOWLEDGE_EXPORT_CONTRACT.md`
+- `docs/architecture/FUTURE_MCP_JIRA_CONFLUENCE_TOOLS.md`

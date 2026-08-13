@@ -913,3 +913,48 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test
 - Existing deterministic automation mappings from Step 1.13/1.14 remain valid.
 - Step 1.15 introduces governance + handoff metadata without replacing canonical requirements/test-case IDs.
 - Full 96-case deterministic execution remains intentionally deferred; classification and handoff readiness are now traceable artifacts.
+
+## Roadmap Governance Alignment (Major-Phase Restructure)
+
+### Legacy to Major-Phase Mapping
+
+| Legacy Step Range | Domain | New Major Step | Status |
+|---|---|---|---|
+| 1.1 to 1.10 | Requirements, QA foundation, project governance (including Jira/Confluence strategy) | STEP 1 | PASS |
+| 1.11 to 1.12 | UI architecture and frontend runtime | STEP 2 | PASS |
+| 1.13 to 1.15 | Deterministic automation + AI-ready governance contracts | STEP 3 | PASS |
+| STEP 4+ | RAG, MCP, agents, integrations, observability, security | STEP 4 to STEP 11 | PLANNED |
+
+### Jira and Confluence Traceability Position
+- Jira chain (governance implemented): Requirement -> Epic -> Story -> Acceptance Criteria -> Test Scenario -> Test Case -> Execution -> Defect -> Release.
+- Confluence chain (governance implemented): Requirements -> Architecture -> QA Knowledge -> Automation -> AI Knowledge -> Evaluation -> Observability -> Release Knowledge.
+- Runtime API/tooling integrations for Jira/Confluence are planned and not claimed as implemented.
+
+### AI Runtime Boundary Note
+- This repository currently provides traceability/governance foundations and deterministic execution evidence.
+- RAG/MCP/agent runtime integrations are roadmap phases and remain planned.
+
+## Step 4 Jira and Confluence Enterprise Knowledge Extension
+
+### Extended Enterprise Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira Issue -> Confluence Knowledge Artifact -> Test Scenario -> Test Case -> Test Data -> Automation -> Execution -> Defect -> Future RAG -> Future MCP -> Future Agent
+
+### Step 4 Deterministic Mapping Example
+| Layer | Example ID |
+|---|---|
+| Epic | CFH-EPIC-001 |
+| Story | CFH-US-005 |
+| Acceptance Criteria | AC-US-003-003-001 |
+| Jira Issue | CFH-US-005 |
+| Confluence Knowledge Artifact | CFH-PAGE-001 |
+| Test Scenario | TS-003-007 |
+| Test Case | TC-TS-003-007-01 |
+| Test Data | TD-PATIENT-BASE-001 |
+| Automation | automation/features/regression/patient-search-regression.feature |
+| Execution | automation/test-results/cucumber/execution-summary.json |
+| Defect | CFH-BUG-014 |
+
+### Step 4 Notes
+- Jira and Confluence local/mock adapters preserve traceability IDs and source-system references.
+- Knowledge export contract includes metadata required for future RAG ingestion.
+- Runtime RAG, MCP server execution, and agent execution remain planned.

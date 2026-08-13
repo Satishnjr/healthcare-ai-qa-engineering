@@ -1,0 +1,47 @@
+{
+  "spaceKey": "CFH",
+  "pages": [
+    {
+      "documentId": "CFH-PAGE-001",
+      "spaceKey": "CFH",
+      "title": "Patient Search - Medical Record Number",
+      "parentPageId": "CFH-PAGE-ROOT-QA",
+      "version": 1,
+      "content": "Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappings.",
+      "labels": ["requirement", "patient-search", "qa"],
+      "traceabilityIds": ["US-003-003", "AC-US-003-003-001", "TS-003-007", "TC-TS-003-007-01"],
+      "sourceType": "requirement",
+      "sourceSystem": "jira",
+      "sourceId": "CFH-US-005",
+      "status": "IMPLEMENTED",
+      "createdAt": "2026-08-13T10:30:00Z",
+      "updatedAt": "2026-08-13T10:30:00Z",
+      "author": "qa.lead",
+      "lastModifiedBy": "qa.lead",
+      "accessScope": "team",
+      "sensitivity": "internal",
+      "checksum": "sha256:cfh-page-001"
+    },
+    {
+      "documentId": "CFH-PAGE-002",
+      "spaceKey": "CFH",
+      "title": "Defect Knowledge - CFH-BUG-014",
+      "parentPageId": "CFH-PAGE-ROOT-DEFECTS",
+      "version": 1,
+      "content": "Defect context, evidence references, and retest requirements for CFH-BUG-014.",
+      "labels": ["defect", "patient-search", "knowledge"],
+      "traceabilityIds": ["CFH-BUG-014", "TS-003-008", "TC-TS-003-008-01"],
+      "sourceType": "defect",
+      "sourceSystem": "jira",
+      "sourceId": "CFH-BUG-014",
+      "status": "IMPLEMENTED",
+      "createdAt": "2026-08-13T10:35:00Z",
+      "updatedAt": "2026-08-13T10:35:00Z",
+      "author": "qa.engineer",
+      "lastModifiedBy": "qa.engineer",
+      "accessScope": "team",
+      "sensitivity": "internal",
+      "checksum": "sha256:cfh-page-002"
+    }
+  ]
+}

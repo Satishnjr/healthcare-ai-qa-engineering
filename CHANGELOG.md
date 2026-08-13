@@ -228,3 +228,48 @@
 - Extended `docs/qa/AI_QUALITY_GATES.md` with Step 1.15 configurable gate foundations and human-approval policy.
 - Updated `docs/IMPLEMENTATION_INDEX.md`, `knowledge/requirements-traceability.md`, `docs/INTERVIEW_GUIDE.md`, and `README.md` for Step 1.15 status alignment.
 - Validation focused on governance completeness and 96-case classification consistency; full regression execution intentionally deferred.
+
+## Roadmap Restructure - Major Phase Governance Alignment
+- Restructured project roadmap from legacy linear `1.x` progression into major phases `STEP 1` to `STEP 11`.
+- Rebuilt `docs/IMPLEMENTATION_INDEX.md` as the authoritative roadmap/status source with:
+  - completed phases,
+  - current phase,
+  - remaining phases,
+  - old-to-new mapping,
+  - Jira/Confluence status classification,
+  - AI concept and runtime/governance boundaries.
+- Added:
+  - `docs/ROADMAP_RESTRUCTURE.md`
+  - `docs/architecture/JIRA_CONFLUENCE_AI_ARCHITECTURE.md`
+  - `docs/ai/AI_INDUSTRY_CONCEPTS_ROADMAP.md`
+- Updated:
+  - `README.md`
+  - `docs/INTERVIEW_GUIDE.md`
+  - `knowledge/requirements-traceability.md`
+- Scope kept documentation-only; no runtime RAG/MCP/agent/Jira/Confluence integration implementation claimed.
+
+## Step 4 - Jira + Confluence Enterprise QA Knowledge Foundation
+- Implemented local/mock Jira and Confluence enterprise adapter foundation under:
+  - `mcp/jira-confluence-foundation/`
+- Added typed model validation for canonical Jira issue and Confluence document contracts.
+- Implemented:
+  - `JiraMockAdapter`
+  - `ConfluenceMockAdapter`
+  - repository layer
+  - traceability lookup service
+  - Jira story -> Confluence sync service
+  - deterministic knowledge export service for future RAG ingestion.
+- Added future runtime boundaries:
+  - `JiraRestAdapter` (blocked in this step)
+  - `ConfluenceRestAdapter` (blocked in this step)
+  - future MCP tool contract
+  - future RAGAS metadata contract.
+- Added Step 4 architecture documentation:
+  - `docs/architecture/JIRA_ARCHITECTURE.md`
+  - `docs/architecture/CONFLUENCE_ARCHITECTURE.md`
+  - `docs/architecture/JIRA_CONFLUENCE_INTEGRATION.md`
+  - `docs/architecture/KNOWLEDGE_EXPORT_CONTRACT.md`
+  - `docs/architecture/FUTURE_MCP_JIRA_CONFLUENCE_TOOLS.md`
+- Added deterministic Step 4 validation test:
+  - `node mcp/jira-confluence-foundation/tests/step4-foundation.test.js` PASS
+- Updated core docs and implementation index to mark Step 4 as PASS and shift subsequent roadmap phases accordingly.

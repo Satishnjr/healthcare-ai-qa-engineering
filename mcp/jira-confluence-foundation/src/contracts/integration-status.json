@@ -1,0 +1,43 @@
+{
+  "jira": {
+    "implemented": [
+      "typed_issue_model",
+      "mock_adapter_operations",
+      "repository_abstraction",
+      "traceability_lookup"
+    ],
+    "mock": [
+      "deterministic_local_issue_store"
+    ],
+    "foundation": [
+      "jira_rest_adapter_boundary"
+    ],
+    "planned": [
+      "live_jira_api_integration"
+    ],
+    "blocked": [
+      "external_runtime_verification_not_performed_in_step_4"
+    ]
+  },
+  "confluence": {
+    "implemented": [
+      "typed_document_model",
+      "mock_adapter_operations",
+      "repository_abstraction",
+      "rag_ready_export_contract"
+    ],
+    "mock": [
+      "deterministic_local_page_store",
+      "jira_to_confluence_sync"
+    ],
+    "foundation": [
+      "confluence_rest_adapter_boundary"
+    ],
+    "planned": [
+      "live_confluence_api_integration"
+    ],
+    "blocked": [
+      "external_runtime_verification_not_performed_in_step_4"
+    ]
+  }
+}

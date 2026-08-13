@@ -1,0 +1,18 @@
+{
+  "datasetSchemaVersion": "1.0",
+  "fields": [
+    "datasetId",
+    "queryId",
+    "sourceDocuments",
+    "expectedAnswer",
+    "retrievedContext",
+    "generatedAnswer",
+    "faithfulness",
+    "answerRelevance",
+    "contextPrecision",
+    "contextRecall",
+    "groundedness"
+  ],
+  "runtimeStatus": "PLANNED",
+  "notes": "RAGAS runtime not executed in Step 4; this metadata contract is foundation only."
+}
