@@ -12,12 +12,15 @@ Define release-control gates for functional QA, automation quality, RAG quality,
 - Automation pass rate threshold
 - Flaky test maximum threshold
 
-## RAG Gate (Planned Future Runtime)
+## RAG Gate (Step 6 Local Runtime Implemented)
 - Retrieval quality
 - Faithfulness
 - Context precision
 - Context recall
 - Answer relevancy
+- Groundedness
+- No-evidence expected/unexpected handling
+- Access-control retrieval checks
 
 ## Agent Gate (Planned Future Runtime)
 - Task success rate
@@ -38,7 +41,19 @@ Define release-control gates for functional QA, automation quality, RAG quality,
 - Cost
 - Trace completeness
 
-## Implemented Now in Step 1.10
+## Implemented in Step 6 (Local Evaluation Runtime)
+- Deterministic RAG evaluation run execution (`npm run rag:evaluate`).
+- Deterministic metric aggregation for:
+  - context precision
+  - context recall
+  - faithfulness
+  - answer relevance
+  - groundedness
+- Local configurable quality gate with `PASS/WARN/FAIL`.
+- Run comparison support (`IMPROVED/REGRESSED/UNCHANGED`).
+- Failure category output for QA triage.
+
+## Implemented Previously in Step 1.10
 - Gate taxonomy and ownership model.
 - Required metrics and governance expectations.
 - Release-decision contract: mandatory gates must pass before release sign-off.
@@ -47,6 +62,16 @@ Define release-control gates for functional QA, automation quality, RAG quality,
 - Runtime gate executors in CI/CD.
 - Automated pass/fail policies with pipeline enforcement.
 - Evidence publication to reporting dashboards.
+
+## Step 6 Threshold Baseline (Development)
+- contextPrecision >= 0.55
+- contextRecall >= 0.55
+- faithfulness >= 0.60
+- answerRelevance >= 0.60
+- groundedness >= 0.70
+- minimumOverallScore >= 0.62
+
+These are development quality gates, not production release gates.
 
 ## Step 1.15 AI-Ready Automation Governance Extension
 

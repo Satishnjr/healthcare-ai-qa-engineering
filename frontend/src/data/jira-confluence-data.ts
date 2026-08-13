@@ -263,11 +263,25 @@ export const aiConceptStatuses: AiConceptStatus[] = [
     interviewExplanation: "The Knowledge page now executes real RAG queries against indexed project knowledge.",
   },
   {
-    concept: "RAGAS",
-    status: "PLANNED",
+    concept: "RAGAS-compatible evaluation architecture",
+    status: "IMPLEMENTED",
     futureStep: "STEP 6",
-    relevance: "Evaluation runtime is prepared with sample dataset structure.",
-    interviewExplanation: "RAGAS execution pipeline is intentionally deferred to Step 6.",
+    relevance: "Deterministic evaluator provider is implemented with compatibility boundary for future official RAGAS evaluators.",
+    interviewExplanation: "Step 6 implements local deterministic evaluators and run contracts; official RAGAS library runtime remains future integration.",
+  },
+  {
+    concept: "RAG evaluation metrics",
+    status: "IMPLEMENTED",
+    futureStep: "STEP 6",
+    relevance: "Context precision, context recall, faithfulness, answer relevance, and groundedness are computed per case and per run.",
+    interviewExplanation: "The evaluation dashboard displays real metric values from executed runs.",
+  },
+  {
+    concept: "Evaluation datasets and runs",
+    status: "IMPLEMENTED",
+    futureStep: "STEP 6",
+    relevance: "Step 6 dataset validation, run generation, reports, and comparison are implemented.",
+    interviewExplanation: "Runs are stored under local runtime artifacts and surfaced in UI.",
   },
   {
     concept: "Embeddings (deterministic fallback)",
@@ -327,10 +341,10 @@ export const aiConceptStatuses: AiConceptStatus[] = [
   },
   {
     concept: "AI quality gates",
-    status: "FOUNDATION",
+    status: "IMPLEMENTED",
     futureStep: "STEP 6/11",
-    relevance: "Defect and execution evidence are structured for future gate checks.",
-    interviewExplanation: "Quality gates are documented now and enforced in later runtime steps.",
+    relevance: "Local deterministic quality gates are executed for RAG evaluation runs.",
+    interviewExplanation: "Step 6 enforces local thresholds; enterprise CI/CD enforcement remains future scope.",
   },
   {
     concept: "AI-assisted test prioritization",

@@ -21,14 +21,14 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 | Context assembly | PASS | STEP 5 |
 | Grounded generation | PASS | STEP 5 |
 | Evidence/citations | PASS | STEP 5 |
-| RAGAS | PLANNED | STEP 6 |
-| RAG evaluation | PLANNED | STEP 6 |
-| Retrieval evaluation | PLANNED | STEP 6 |
-| Groundedness | PLANNED | STEP 6 |
-| Faithfulness | PLANNED | STEP 6 |
-| Context precision | PLANNED | STEP 6 |
-| Context recall | PLANNED | STEP 6 |
-| Answer relevance | PLANNED | STEP 6 |
+| RAGAS concepts (compatibility foundation) | PASS | STEP 6 |
+| RAG evaluation | PASS | STEP 6 |
+| Retrieval evaluation | PASS | STEP 6 |
+| Groundedness | PASS | STEP 6 |
+| Faithfulness | PASS | STEP 6 |
+| Context precision | PASS | STEP 6 |
+| Context recall | PASS | STEP 6 |
+| Answer relevance | PASS | STEP 6 |
 | AI observability | FOUNDATION | STEP 11 |
 | MCP | FOUNDATION | STEP 7 |
 | MCP tools | PASS | STEP 7 |
@@ -42,12 +42,12 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 | Prompt injection protection | FOUNDATION | STEP 11 |
 | AI security | FOUNDATION | STEP 11 |
 | LLMOps | FOUNDATION | STEP 11 |
-| AI quality gates | FOUNDATION | STEP 6/11 |
-| Evaluation datasets | FOUNDATION | STEP 6 |
-| Evaluation runs | FOUNDATION | STEP 6 |
-| Model versioning | FOUNDATION | STEP 11 |
-| Prompt versioning | FOUNDATION | STEP 11 |
-| Experiment tracking | FOUNDATION | STEP 6/11 |
+| AI quality gates | PASS (Local) | STEP 6/11 |
+| Evaluation datasets | PASS | STEP 6 |
+| Evaluation runs | PASS | STEP 6 |
+| Model versioning | FOUNDATION | STEP 6/11 |
+| Prompt versioning | FOUNDATION | STEP 6/11 |
+| Experiment tracking | PLANNED | STEP 6/11 |
 | AI failure analysis | FOUNDATION | STEP 8/10 |
 | AI defect management | FOUNDATION | STEP 10/11 |
 | AI-assisted test generation | PLANNED | STEP 8/10 |
@@ -71,3 +71,6 @@ Step 4.1 added frontend simulation visibility for Jira, Confluence, traceability
 
 ## Step 5 Note
 Step 5 implemented deterministic local RAG runtime (ingest/retrieve/cite) with development fallback embeddings and local vector-store abstraction. MCP/agent/LangGraph runtimes remain planned.
+
+## Step 6 Note
+Step 6 implemented deterministic local RAG evaluation runtime (datasets, metrics, quality gates, runs, reports, comparison, and evaluation dashboard). Official RAGAS library runtime integration remains planned and is not claimed.

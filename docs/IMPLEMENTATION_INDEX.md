@@ -18,7 +18,7 @@ This file is the single source of truth for roadmap structure, historical step m
 ## Project Overview
 - Project: Healthcare AI QA Engineering Platform (CareFlow Health).
 - Current delivery model: frontend simulation + deterministic automation baseline + enterprise Jira/Confluence knowledge foundation + Jira/Confluence simulation UI layer + deterministic local RAG runtime.
-- Scope boundary: Step 5 local deterministic RAG runtime is implemented; MCP/agents/LangGraph runtimes are not implemented yet.
+- Scope boundary: Step 5 local deterministic RAG runtime and Step 6 local deterministic evaluation runtime are implemented; MCP/agents/LangGraph runtimes are not implemented yet.
 
 ## New Major Roadmap (Authoritative)
 
@@ -30,7 +30,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 4 | Jira + Confluence Enterprise QA Knowledge Foundation | PASS | Typed models, local/mock adapters, synchronization flow, traceability lookup, and RAG-ready export contracts. |
 | STEP 4.1 | Jira + Confluence UI Simulation | PASS | Jira-style UI, Confluence-style UI, traceability explorer, RAG-ready knowledge explorer, and targeted Step 4.1 automation. |
 | STEP 5 | RAG Knowledge System Runtime | PASS | Deterministic local ingestion/retrieval/citation runtime with role filtering, grounded responses, and evidence metadata. |
-| STEP 6 | RAGAS and AI Evaluation Runtime | PLANNED | Evaluation pipelines and runtime AI quality gates. |
+| STEP 6 | RAGAS and AI Evaluation Runtime | PASS | Deterministic local evaluation pipeline, metrics, quality gates, run comparison, and evaluation UI integration. |
 | STEP 7 | MCP and Tool Calling Runtime | PLANNED | MCP server/tools/runtime integration. |
 | STEP 8 | QA AI Agent Runtime | PLANNED | First real QA agent implementation. |
 | STEP 9 | Agentic QA Orchestration (LangGraph) | PLANNED | Stateful orchestration, checkpoints, HITL gates, retries. |
@@ -47,14 +47,15 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 4 | Completed | `mcp/jira-confluence-foundation/`, Step 4 architecture docs, and implementation artifact package. |
 | STEP 4.1 | Completed | `frontend/src/pages/*jira*`, `frontend/src/pages/*confluence*`, `frontend/src/pages/traceability-page.tsx`, `frontend/src/pages/knowledge-page.tsx`, targeted Step 4.1 automation feature. |
 | STEP 5 | Completed | `rag/` runtime, Step 5 architecture docs, Step 5 implementation package, and targeted `@step5` automation scenarios. |
+| STEP 6 | Completed | `rag/src/evaluation/*`, evaluation dataset/runs/reports/comparison, `/knowledge/evaluation` UI, and targeted `@step6` automation scenarios. |
 
 ## Current Phase
-- Current roadmap position: Step 5 completed; next active phase is Step 6 planning.
-- Active mode: RAG runtime implemented with deterministic local foundations.
+- Current roadmap position: Step 6 completed; next active phase is Step 7 planning.
+- Active mode: RAG runtime + evaluation runtime implemented with deterministic local foundations.
 
 ## Remaining Major Phases
-- STEP 6 through STEP 11 remain planned by design.
-- Runtime RAG is implemented; MCP/agent/LangGraph/live Jira-Confluence API integration is not implemented.
+- STEP 7 through STEP 11 remain planned by design.
+- Runtime RAG and evaluation are implemented; MCP/agent/LangGraph/live Jira-Confluence API integration is not implemented.
 
 ## Old Step -> New Major Step Mapping
 
@@ -90,7 +91,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 3 | 3.1 Playwright + Cucumber Foundation, 3.2 Regression Automation Expansion, 3.3 AI-Ready Automation Governance | PASS |
 | STEP 4 | 4.0 foundation (typed models/adapters/sync/export/docs) + 4.1 UI simulation | PASS |
 | STEP 5 | 5.x | PASS |
-| STEP 6 | 6.x | PLANNED |
+| STEP 6 | 6.x | PASS |
 | STEP 7 | 7.x | PLANNED |
 | STEP 8 | 8.x | PLANNED |
 | STEP 9 | 9.x | PLANNED |
@@ -170,8 +171,9 @@ This file is the single source of truth for roadmap structure, historical step m
 | Confluence export preparation for RAG | PASS | Deterministic export contract implemented. |
 | RAG runtime | PASS | Step 5 runtime implemented in `rag/` and integrated in Knowledge UI. |
 | RAG ingestion/chunking/embedding/vector/retrieval/context/generation/citations | PASS | Deterministic local implementation with development fallback embeddings and local vector store. |
-| RAGAS strategy | FOUNDATION | Existing strategy doc retained and aligned. |
-| RAGAS runtime evaluation pipeline | PLANNED | STEP 6. |
+| RAG evaluation runtime | PASS | Step 6 evaluation runner, metrics, quality gates, reports, and UI are implemented locally. |
+| RAGAS compatibility architecture | PASS | Provider boundary implemented with deterministic local evaluators and future RAGAS integration boundary docs. |
+| RAGAS official library runtime | PLANNED | Future optional integration; not claimed in Step 6. |
 
 ## MCP Status
 
@@ -212,9 +214,9 @@ This file is the single source of truth for roadmap structure, historical step m
 
 | Capability | Status | Notes |
 |---|---|---|
-| AI quality-gate governance | FOUNDATION | Existing baseline retained. |
-| RAGAS evaluation metadata contract | PASS | Step 4 metadata schema added. |
-| Runtime evaluation runs and thresholds | PLANNED | STEP 6 and STEP 11. |
+| AI quality-gate governance | PASS | Step 6 local RAG quality gates implemented with thresholds and run-level decisions. |
+| RAGAS evaluation metadata contract | PASS | Step 6 run contract includes dataset/model/prompt/evaluator version metadata. |
+| Runtime evaluation runs and thresholds | PASS (Local) | Deterministic local evaluation runs/thresholds implemented; enterprise CI enforcement remains Step 11. |
 
 ## CI/CD Status
 
@@ -232,7 +234,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 3 | Built deterministic automation baseline and AI governance foundations. |
 | STEP 4 | Built enterprise Jira/Confluence adapter and knowledge contracts with deterministic mock implementations and traceability-preserving sync/export. |
 | STEP 5 | Implemented deterministic local RAG runtime over governed knowledge exports with citation and access-filtering support. |
-| STEP 6 | Next: implement RAGAS/evaluation runtime and quality gates. |
+| STEP 6 | Implemented deterministic RAG evaluation runtime, quality gates, failure analysis, and evaluation dashboard. |
 | STEP 7 | Next: implement MCP runtime tools for controlled operations. |
 | STEP 8 | Next: implement first QA AI agent with evidence-backed outputs. |
 | STEP 9 | Next: implement LangGraph orchestration with HITL checkpoints. |

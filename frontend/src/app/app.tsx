@@ -20,6 +20,7 @@ import { JiraIssueDetailPage } from "../pages/jira-issue-detail-page";
 import { JiraIssuesPage } from "../pages/jira-issues-page";
 import { JiraTestCasesPage } from "../pages/jira-test-cases-page";
 import { KnowledgePage } from "../pages/knowledge-page";
+import { KnowledgeEvaluationPage } from "../pages/knowledge-evaluation-page";
 import { LoginPage } from "../pages/login-page";
 import { LogoutPage } from "../pages/logout-page";
 import { MedicalRecordsPage } from "../pages/medical-records-page";
@@ -305,6 +306,14 @@ export function App() {
           element={
             <ProtectedOutlet>
               <KnowledgePage />
+            </ProtectedOutlet>
+          }
+        />
+        <Route
+          path="knowledge/evaluation"
+          element={
+            <ProtectedOutlet>
+              <KnowledgeEvaluationPage />
             </ProtectedOutlet>
           }
         />

@@ -1014,3 +1014,30 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira Issue -> Conflue
 ### Step 5 Notes
 - Step 5 implements deterministic local RAG runtime and citation chain while preserving synthetic-data-only boundaries.
 - MCP and agent runtime execution remain future phases.
+
+## Step 6 RAG Evaluation Runtime Traceability Extension
+
+### Extended Evaluation Traceability Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence -> Knowledge Document -> Chunk -> Embedding -> Vector -> Retrieval -> Context -> RAG Answer -> Citation -> Evaluation Dataset -> Evaluation Case -> Evaluation Run -> Metric -> Quality Gate -> Test Scenario -> Test Case -> BDD -> Automation -> Execution -> Future MCP -> Future Agent
+
+### Step 6 Deterministic Mapping Snapshot
+
+| Layer | Example ID | Status |
+|---|---|---|
+| Evaluation Dataset | careflow-rag-eval-v1 | PASS |
+| Evaluation Case | EVAL-001 | PASS |
+| Evaluation Run | RUN-fe2711f1f0934a80 | PASS |
+| Metric | contextPrecision/contextRecall/faithfulness/answerRelevance/groundedness | PASS |
+| Quality Gate | FAIL (development thresholds) | PASS |
+| Evaluation Report | .tmp/rag-evaluation/reports/RUN-fe2711f1f0934a80.md | PASS |
+| Evaluation Comparison | CMP-faf93bc1fe467826 | PASS |
+| UI Dashboard | /knowledge/evaluation | PASS |
+| BDD | TS-STEP6-002 | PASS |
+| Automation | automation/features/functional/step6-rag-evaluation.feature | PASS |
+| Execution | Step 6 targeted run (5/5 PASS) | PASS |
+| Future MCP | query_rag evaluation consumer | PLANNED |
+| Future Agent | AGENT-IMPACT-ANALYZER | PLANNED |
+
+### Step 6 Notes
+- Step 6 adds measurable RAG quality runtime while preserving deterministic synthetic-only boundaries.
+- Official RAGAS library integration is not claimed; architecture is compatibility-ready.

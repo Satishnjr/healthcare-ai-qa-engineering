@@ -42,6 +42,13 @@ export function KnowledgePage() {
         title="RAG Knowledge Explorer"
         subtitle="RAG-ready document readiness, grounded query response, and citation metadata."
       />
+      <article className="card">
+        <div className="inline-actions">
+          <Link to="/knowledge/evaluation" className="btn secondary" data-testid="open-rag-evaluation">
+            Open RAG Evaluation
+          </Link>
+        </div>
+      </article>
 
       <article className="card" data-testid="rag-query-panel">
         <h3>Ask Knowledge</h3>

@@ -1,32 +1,209 @@
 {
-  "datasetId": "RAG-EVAL-STEP5-001",
-  "description": "Step 5 evaluation-ready dataset skeleton for future RAGAS runtime",
+  "datasetId": "careflow-rag-eval-v1",
+  "datasetVersion": "1.0.0",
+  "description": "Step 6 deterministic RAG evaluation dataset for CareFlow Health",
   "records": [
     {
-      "question": "What are the acceptance criteria for patient search by medical record number?",
-      "expectedSources": ["CFH-US-005", "CFH-PAGE-001"],
-      "expectedAnswer": "Answer should reference AC-US-003-003-001 and related patient search criteria from indexed evidence.",
-      "referenceContext": ["US-003-003", "AC-US-003-003-001", "TS-003-007"],
+      "caseId": "EVAL-001",
+      "question": "What is the acceptance criterion for patient search by medical record number?",
+      "expectedSources": ["jira:CFH-101", "repository:requirements-traceability"],
+      "expectedAnswer": "Answer should reference patient-search acceptance criteria and traceability evidence.",
+      "referenceContext": ["patient search", "acceptance criteria", "medical record number"],
+      "expectedTraceabilityIds": ["US-003-003", "TS-003-007"],
+      "role": "Doctor",
+      "category": "ACCEPTANCE_CRITERIA",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-002",
+      "question": "Which test case covers searching a patient by ID?",
+      "expectedSources": ["jira:CFH-101", "repository:requirements-traceability"],
+      "expectedAnswer": "Answer should reference TC-TS-003-007-01.",
+      "referenceContext": ["TC-TS-003-007-01", "patient search"],
+      "expectedTraceabilityIds": ["TS-003-007"],
+      "role": "Doctor",
+      "category": "TEST_CASE_RETRIEVAL",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-003",
+      "question": "Which defect is linked to patient search empty-state mismatch?",
+      "expectedSources": ["jira:CFH-101", "repository:requirements-traceability"],
+      "expectedAnswer": "Answer should mention CFH-301.",
+      "referenceContext": ["CFH-301", "defect", "patient search"],
+      "expectedTraceabilityIds": ["TC-TS-003-008-01"],
+      "role": "Healthcare Administrator",
+      "category": "DEFECT_RETRIEVAL",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-004",
+      "question": "Show traceability for patient search requirement to test case.",
+      "expectedSources": ["repository:requirements-traceability"],
+      "expectedAnswer": "Answer should include chain from user story to test case.",
+      "referenceContext": ["US-003-003", "TS-003-007", "TC-TS-003-007-01"],
+      "expectedTraceabilityIds": ["US-003-003", "TS-003-007", "TC-TS-003-007-01"],
+      "role": "Doctor",
+      "category": "TRACEABILITY",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-005",
+      "question": "Which document defines automation governance?",
+      "expectedSources": ["repository:automation-governance"],
+      "expectedAnswer": "Answer should cite automation governance documentation.",
+      "referenceContext": ["automation governance", "classification", "policy"],
+      "expectedTraceabilityIds": ["AUTOMATION-GOVERNANCE"],
+      "role": "Receptionist",
+      "category": "AUTOMATION_GOVERNANCE",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-006",
+      "question": "What does the automation candidate matrix describe?",
+      "expectedSources": ["repository:automation-candidate-matrix"],
+      "expectedAnswer": "Answer should cite candidate matrix and category coverage.",
+      "referenceContext": ["candidate matrix", "deterministic", "ai-assisted"],
+      "expectedTraceabilityIds": ["AUTOMATION-CANDIDATE-MATRIX"],
+      "role": "Doctor",
+      "category": "AUTOMATION_GOVERNANCE",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-007",
+      "question": "Where is the UI architecture documented?",
+      "expectedSources": ["repository:ui-architecture"],
+      "expectedAnswer": "Answer should reference UI architecture document.",
+      "referenceContext": ["UI architecture", "frontend", "design"],
+      "expectedTraceabilityIds": ["UI-ARCHITECTURE"],
+      "role": "Nurse",
+      "category": "UI_ARCHITECTURE",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-008",
+      "question": "Which document describes UI page specifications?",
+      "expectedSources": ["repository:ui-page-specifications"],
+      "expectedAnswer": "Answer should cite UI page specifications document.",
+      "referenceContext": ["UI page specifications", "routes", "pages"],
+      "expectedTraceabilityIds": ["UI-PAGE-SPECIFICATIONS"],
+      "role": "Nurse",
+      "category": "UI_ARCHITECTURE",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-009",
+      "question": "What contract defines knowledge export metadata for RAG?",
+      "expectedSources": ["repository:knowledge-export-contract"],
+      "expectedAnswer": "Answer should reference knowledge export contract fields.",
+      "referenceContext": ["documentId", "sourceSystem", "traceabilityIds", "checksum"],
+      "expectedTraceabilityIds": ["KNOWLEDGE-EXPORT-CONTRACT"],
+      "role": "Healthcare Administrator",
+      "category": "CONFLUENCE_KNOWLEDGE",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-010",
+      "question": "Which Jira issue captures patient search deterministic behavior?",
+      "expectedSources": ["jira:CFH-101"],
+      "expectedAnswer": "Answer should reference CFH-101 details.",
+      "referenceContext": ["CFH-101", "patient-search", "deterministic"],
+      "expectedTraceabilityIds": ["US-003-003"],
+      "role": "Doctor",
+      "category": "REQUIREMENT_RETRIEVAL",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-011",
+      "question": "Can a patient access Jira management modules?",
+      "expectedSources": ["repository:careflow-help-access"],
+      "expectedAnswer": "Answer should state patient cannot access Jira management modules.",
+      "referenceContext": ["patient", "cannot access", "Jira"],
+      "expectedTraceabilityIds": ["AC-NFR-005"],
+      "role": "Patient",
+      "category": "ACCESS_CONTROL",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-012",
+      "question": "What help guidance is available for patient access policy?",
+      "expectedSources": ["repository:careflow-help-access"],
+      "expectedAnswer": "Answer should cite public help/access guidance.",
+      "referenceContext": ["Patients can access help", "knowledge summaries"],
+      "expectedTraceabilityIds": ["US-011-001"],
+      "role": "Patient",
+      "category": "ACCESS_CONTROL",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-013",
+      "question": "What is the moon mission launch window for next decade?",
+      "expectedSources": [],
+      "expectedAnswer": "System should return NO_EVIDENCE safe refusal.",
+      "referenceContext": [],
+      "expectedTraceabilityIds": [],
+      "role": "Doctor",
+      "category": "NO_EVIDENCE",
       "metadata": {
-        "contextPrecision": null,
-        "contextRecall": null,
-        "faithfulness": null,
-        "answerRelevance": null,
-        "groundedness": null
+        "expectNoEvidence": true
       }
     },
     {
-      "question": "Why can a patient not access Jira dashboard routes?",
-      "expectedSources": ["careflow-help-access", "AC-NFR-005"],
-      "expectedAnswer": "Answer should explain role-based access policy and patient restrictions in simulation UI.",
-      "referenceContext": ["US-011-001", "AC-NFR-005"],
+      "caseId": "EVAL-014",
+      "question": "What is the real patient blood pressure history from last month?",
+      "expectedSources": [],
+      "expectedAnswer": "System should return NO_EVIDENCE and avoid fabricated PHI.",
+      "referenceContext": [],
+      "expectedTraceabilityIds": [],
+      "role": "Healthcare Administrator",
+      "category": "NO_EVIDENCE",
       "metadata": {
-        "contextPrecision": null,
-        "contextRecall": null,
-        "faithfulness": null,
-        "answerRelevance": null,
-        "groundedness": null
+        "expectNoEvidence": true
       }
+    },
+    {
+      "caseId": "EVAL-015",
+      "question": "How is RAGAS evaluation strategy represented in this project?",
+      "expectedSources": ["repository:ragas-evaluation-strategy"],
+      "expectedAnswer": "Answer should reference RAGAS strategy preparation docs.",
+      "referenceContext": ["RAGAS", "evaluation dimensions", "strategy"],
+      "expectedTraceabilityIds": ["RAGAS-EVALUATION-STRATEGY"],
+      "role": "Doctor",
+      "category": "CONFLUENCE_KNOWLEDGE",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-016",
+      "question": "How does the system prepare UI testability architecture?",
+      "expectedSources": ["repository:ui-testability-architecture"],
+      "expectedAnswer": "Answer should cite UI testability architecture document.",
+      "referenceContext": ["data-testid", "selector", "testability"],
+      "expectedTraceabilityIds": ["UI-TESTABILITY-ARCHITECTURE"],
+      "role": "Receptionist",
+      "category": "UI_ARCHITECTURE",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-017",
+      "question": "What are key retrieval-quality dimensions for RAG evaluation?",
+      "expectedSources": ["repository:ragas-evaluation-strategy"],
+      "expectedAnswer": "Answer should mention context precision, context recall, faithfulness, answer relevance.",
+      "referenceContext": ["context precision", "context recall", "faithfulness", "answer relevance"],
+      "expectedTraceabilityIds": ["RAGAS-EVALUATION-STRATEGY"],
+      "role": "Healthcare Administrator",
+      "category": "REQUIREMENT_RETRIEVAL",
+      "metadata": {}
+    },
+    {
+      "caseId": "EVAL-018",
+      "question": "What acceptance criteria are associated with role-based access restrictions?",
+      "expectedSources": ["jira:CFH-102", "repository:requirements-traceability"],
+      "expectedAnswer": "Answer should reference AC-NFR-005 and role-based restriction context.",
+      "referenceContext": ["AC-NFR-005", "role-based access", "patient restriction"],
+      "expectedTraceabilityIds": ["US-011-001", "AC-NFR-005"],
+      "role": "Doctor",
+      "category": "ACCESS_CONTROL",
+      "metadata": {}
     }
   ]
 }

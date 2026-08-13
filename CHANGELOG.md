@@ -1,5 +1,38 @@
 # Changelog
 
+## Step 6 - RAGAS & AI Evaluation Runtime
+- Implemented deterministic RAG evaluation runtime under `rag/src/evaluation/`:
+  - dataset validation and snapshotting
+  - deterministic metric evaluators (context precision/recall, faithfulness, answer relevance, groundedness)
+  - configurable quality-gate evaluator (`PASS/WARN/FAIL`)
+  - deterministic failure classification
+  - evaluation run/report generation
+  - run comparison (`IMPROVED/REGRESSED/UNCHANGED`)
+- Added Step 6 CLI:
+  - `npm run rag:evaluate`
+  - `npm run rag:evaluate:dataset`
+  - `npm run rag:evaluate:report`
+  - `npm run rag:evaluate:gate`
+- Expanded evaluation dataset to 18 categorized cases in `rag/data/rag-evaluation-dataset.sample.json`.
+- Added evaluation dashboard route and UI:
+  - `/knowledge/evaluation`
+  - latest run summary, metrics, quality gate, failed case list, and case detail.
+- Added Step 6 targeted automation:
+  - `automation/features/functional/step6-rag-evaluation.feature`
+  - `automation/src/steps/step6-rag-evaluation.steps.ts`
+- Added Step 6 architecture docs and AI failure analysis:
+  - `docs/architecture/RAG_EVALUATION_ARCHITECTURE.md`
+  - `docs/architecture/RAGAS_INTEGRATION_BOUNDARY.md`
+  - `docs/architecture/RAG_QUALITY_GATE_ARCHITECTURE.md`
+  - `docs/architecture/RAG_EVALUATION_DATASET.md`
+  - `docs/ai/RAG_FAILURE_ANALYSIS.md`
+- Added Step 6 implementation package:
+  - `docs/implementations/6-ragas-ai-evaluation/prompt.md`
+  - `docs/implementations/6-ragas-ai-evaluation/README.md`
+  - `docs/implementations/6-ragas-ai-evaluation/implementation-report.pdf`
+  - `docs/implementations/6-ragas-ai-evaluation/interview-notes.md`
+  - `docs/implementations/6-ragas-ai-evaluation/response.md`
+
 ## Step 5 - RAG Knowledge System Runtime
 - Implemented deterministic local RAG runtime under `rag/`:
   - knowledge discovery and normalized document contract

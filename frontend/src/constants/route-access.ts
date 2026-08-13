@@ -138,4 +138,11 @@ export const routeAccess: Record<string, Role[]> = {
     "Receptionist",
     "Healthcare Administrator",
   ],
+  "/knowledge/evaluation": [
+    "Patient",
+    "Doctor",
+    "Nurse",
+    "Receptionist",
+    "Healthcare Administrator",
+  ],
 };

@@ -1,4 +1,9 @@
-import type { RagQueryInput, RagQueryResponse } from "../types/rag";
+import type {
+  RagEvaluationComparison,
+  RagEvaluationRun,
+  RagQueryInput,
+  RagQueryResponse,
+} from "../types/rag";
 
 interface RuntimeIndexRecord {
   chunkId: string;
@@ -27,6 +32,8 @@ interface RuntimeIndex {
 }
 
 let cachedIndex: RuntimeIndex | null = null;
+let cachedEvaluationRun: RagEvaluationRun | null = null;
+let cachedEvaluationComparison: RagEvaluationComparison | null = null;
 const MIN_EVIDENCE_SCORE = 0.1;
 const MIN_TOKEN_OVERLAP = 2;
 const STOP_WORDS = new Set([
@@ -275,4 +282,38 @@ export async function queryRagKnowledge(input: RagQueryInput): Promise<RagQueryR
     },
     warnings: [],
   };
+}
+
+export async function loadLatestRagEvaluationRun(): Promise<RagEvaluationRun> {
+  if (cachedEvaluationRun) {
+    return cachedEvaluationRun;
+  }
+  const response = await fetch("/rag/latest-evaluation-run.json", {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  });
+  if (!response.ok) {
+    throw new Error(`Unable to load latest RAG evaluation run: ${response.status}`);
+  }
+  cachedEvaluationRun = (await response.json()) as RagEvaluationRun;
+  return cachedEvaluationRun;
+}
+
+export async function loadLatestRagEvaluationComparison(): Promise<RagEvaluationComparison | null> {
+  if (cachedEvaluationComparison) {
+    return cachedEvaluationComparison;
+  }
+  const response = await fetch("/rag/latest-evaluation-comparison.json", {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  });
+  if (!response.ok) {
+    return null;
+  }
+  cachedEvaluationComparison = (await response.json()) as RagEvaluationComparison;
+  return cachedEvaluationComparison;
 }

@@ -13,7 +13,14 @@ function writeJson(filePath, value) {
   ensureDir(path.dirname(filePath));
   const tempFilePath = `${filePath}.tmp`;
   fs.writeFileSync(tempFilePath, JSON.stringify(value, null, 2));
-  fs.renameSync(tempFilePath, filePath);
+  try {
+    fs.renameSync(tempFilePath, filePath);
+  } catch {
+    fs.writeFileSync(filePath, JSON.stringify(value, null, 2));
+    if (fs.existsSync(tempFilePath)) {
+      fs.rmSync(tempFilePath, { force: true });
+    }
+  }
 }
 
 function readText(filePath) {

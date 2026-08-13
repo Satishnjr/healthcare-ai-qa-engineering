@@ -20,7 +20,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 | STEP 4 | Jira + Confluence Enterprise QA Knowledge Foundation | PASS |
 | STEP 4.1 | Jira + Confluence UI Simulation | PASS |
 | STEP 5 | RAG Knowledge System Runtime | PASS |
-| STEP 6 | RAGAS and AI Evaluation Runtime | PLANNED |
+| STEP 6 | RAGAS and AI Evaluation Runtime | PASS |
 | STEP 7 | MCP and Tool Calling Runtime | PLANNED |
 | STEP 8 | QA AI Agent Runtime | PLANNED |
 | STEP 9 | Agentic QA Orchestration (LangGraph) | PLANNED |
@@ -57,10 +57,28 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
  - Added targeted Step 5 automation feature with 7 scenarios (`@step5`) and passing run.
  - Added Step 5 architecture documentation and implementation package.
 
+## Step 6 Highlights
+ - Implemented deterministic RAG evaluation runtime under `rag/src/evaluation/`:
+   - dataset validation
+   - metric evaluators
+   - quality gates
+   - evaluation runs
+   - failure classification
+   - report generation
+   - run comparison
+ - Added Step 6 CLI commands:
+   - `npm run rag:evaluate`
+   - `npm run rag:evaluate:report`
+   - `npm run rag:evaluate:gate`
+ - Extended CareFlow UI with `/knowledge/evaluation` dashboard and case-detail visibility.
+ - Added targeted Step 6 automation scenarios (`@step6`) and Step 6 tests.
+ - Added Step 6 architecture and AI failure-analysis docs.
+
 ## AI/Runtime Boundary
 Implemented:
 - Governance + contracts + local/mock knowledge foundation.
 - Step 5 deterministic local RAG runtime.
+- Step 6 deterministic local RAG evaluation runtime.
 
 Not implemented yet:
 - MCP runtime.

@@ -144,6 +144,17 @@ export const navigationItems: NavigationItem[] = [
     ],
   },
   {
+    path: "/knowledge/evaluation",
+    label: "RAG Evaluation",
+    roles: [
+      "Patient",
+      "Doctor",
+      "Nurse",
+      "Receptionist",
+      "Healthcare Administrator",
+    ],
+  },
+  {
     path: "/admin",
     label: "Administration",
     roles: ["Healthcare Administrator"],

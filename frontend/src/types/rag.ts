@@ -41,3 +41,81 @@ export interface RagQueryInput {
   filters?: Record<string, string>;
   userRole: string;
 }
+
+export interface RagEvaluationCaseResult {
+  caseId: string;
+  question: string;
+  role: string;
+  category: string;
+  expectedSources: string[];
+  expectedAnswer: string;
+  expectedTraceabilityIds: string[];
+  answer: string;
+  citations: RagCitation[];
+  retrievedSources: string[];
+  metrics: {
+    contextPrecision: number;
+    contextRecall: number;
+    faithfulness: number;
+    answerRelevance: number;
+    groundedness: number;
+  };
+  overallScore: number;
+  status: "PASS" | "WARN" | "FAIL";
+  warnings: string[];
+  failureCategory: string | null;
+}
+
+export interface RagEvaluationRun {
+  runId: string;
+  timestamp: string;
+  datasetId: string;
+  datasetVersion: string;
+  ragVersion: string;
+  modelVersion: string;
+  promptVersion: string;
+  embeddingVersion: string;
+  evaluatorVersion: string;
+  embeddingProvider: string;
+  embeddingModel: string;
+  generationProvider: string;
+  generationModel: string;
+  totalCases: number;
+  passedCases: number;
+  warnCases: number;
+  failedCases: number;
+  metrics: {
+    contextPrecision: number;
+    contextRecall: number;
+    faithfulness: number;
+    answerRelevance: number;
+    groundedness: number;
+    overallScore: number;
+  };
+  qualityGate: {
+    status: "PASS" | "WARN" | "FAIL";
+    thresholds: Record<string, number>;
+    failures: string[];
+    warnings: string[];
+  };
+  results: RagEvaluationCaseResult[];
+}
+
+export interface RagEvaluationComparison {
+  comparisonId: string;
+  baseRunId: string;
+  targetRunId: string;
+  timestamp: string;
+  trend: "IMPROVED" | "REGRESSED" | "UNCHANGED";
+  passDelta: number;
+  failDelta: number;
+  delta: Record<
+    string,
+    {
+      before: number;
+      after: number;
+      delta: number;
+      trend: "IMPROVED" | "REGRESSED" | "UNCHANGED";
+    }
+  >;
+}

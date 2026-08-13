@@ -1,7 +1,7 @@
 # Interview Guide
 
 ## Project Story (Major-Phase View)
-Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> planned MCP/agent runtime.
+Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> Step 6 deterministic RAG evaluation runtime -> planned MCP/agent runtime.
 
 ## What Is Implemented
 
@@ -16,12 +16,13 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 | Jira+Confluence enterprise knowledge foundation (local/mock) | PASS | `mcp/jira-confluence-foundation/` + Step 4 architecture docs |
 | Jira+Confluence UI simulation layer | PASS | Jira/Confluence/traceability/knowledge pages in frontend + Step 4.1 targeted automation |
 | RAG runtime (local deterministic) | PASS | `rag/` runtime + Step 5 docs + Knowledge page RAG query flow |
+| RAG evaluation runtime (local deterministic) | PASS | `rag/src/evaluation/*` + `/knowledge/evaluation` + Step 6 docs |
 
 ## What Is Not Yet Implemented
 
 | Area | Status |
 |---|---|
-| RAGAS runtime evaluation pipeline | PLANNED |
+| RAGAS official library runtime integration | PLANNED |
 | MCP runtime server/tools | PLANNED |
 | Single QA agent runtime | PLANNED |
 | LangGraph orchestration runtime | PLANNED |
@@ -54,7 +55,7 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 
 ### STEP 5 to STEP 11 - Runtime Journey
 - STEP 5: RAG runtime (implemented as local deterministic foundation).
-- STEP 6: RAGAS/evaluation runtime.
+- STEP 6: deterministic local RAG evaluation runtime with quality gates (implemented).
 - STEP 7: MCP runtime.
 - STEP 8: first QA AI agent runtime.
 - STEP 9: LangGraph orchestration runtime.
