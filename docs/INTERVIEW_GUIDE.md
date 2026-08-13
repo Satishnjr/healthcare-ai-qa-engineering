@@ -1,7 +1,7 @@
-﻿# Interview Guide
+# Interview Guide
 
 ## Project Overview
-Healthcare AI QA Engineering Platform built incrementally with architecture governance, requirement traceability, and AI-ready documentation.
+Healthcare AI QA Engineering Platform built incrementally with architecture governance, requirement traceability, and AI-ready implementation planning.
 
 ## Implemented Steps
 - 0.1 Environment discovery
@@ -18,28 +18,31 @@ Healthcare AI QA Engineering Platform built incrementally with architecture gove
 - 1.9 Test data and test management strategy
 - 1.10 Project management and delivery foundation
 - 1.11 UI architecture and design system
+- 1.12 CareFlow frontend runtime implementation
 
-## Step 1.11 Highlights
-- Defined complete UI architecture blueprint for future frontend implementation.
-- Defined design system, navigation architecture, and page specifications.
-- Defined role-based UI behavior model and validation architecture.
-- Defined responsive and accessibility strategy by target viewport bands.
-- Defined UI testability architecture for Playwright + Cucumber future framework.
-- Defined UI to AI integration boundary and AI industry concepts mapping.
+## Step 1.12 Highlights
+- Built production-like frontend-only CareFlow Health app with React + TypeScript + Vite + React Router.
+- Implemented role-aware navigation, route-access simulation, and guarded pages.
+- Implemented deterministic mock service/data layer for healthcare entities and workflows.
+- Implemented reusable common components, validation behavior, and deterministic UX states.
+- Implemented stable automation selectors (`data-testid`) for upcoming Playwright+Cucumber steps.
 
 ## Interview Quick Answers
-- Why UI architecture first: ensures consistent implementation and testability.
-- Why design system: enforces visual and behavior consistency at scale.
-- Why testability contract: reduces automation brittleness and maintenance overhead.
-- Why AI boundary in UI step: prepares safe and observable future AI UX.
+- Why React + TypeScript + Vite: fast enterprise UI iteration with maintainable typed contracts.
+- Why role-aware routing: deterministic UX permissions and clear QA coverage boundaries.
+- Why mock service abstraction: realistic UI now, low-friction API replacement later.
+- Why testability-first selectors: avoids flaky automation and reduces maintenance cost.
+- Why no AI runtime yet: strict step discipline; AI runtime is planned for later roadmap steps.
 
 ## Current Boundary
-- UI architecture and design contracts = IMPLEMENTED
-- Frontend = NOT IMPLEMENTED
-- Backend = NOT IMPLEMENTED
-- API = NOT IMPLEMENTED
-- API Automation = NOT IMPLEMENTED
-- Playwright/Cucumber runtime = NOT IMPLEMENTED
-- RAG runtime = NOT IMPLEMENTED
-- MCP runtime = NOT IMPLEMENTED
-- Agent runtime = NOT IMPLEMENTED
+Implemented:
+- Frontend runtime and UI simulation layer (Step 1.12)
+
+Not implemented yet:
+- Backend
+- API
+- API automation
+- Playwright/Cucumber runtime
+- RAG runtime
+- MCP runtime
+- Agent runtime

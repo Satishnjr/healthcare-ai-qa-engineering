@@ -801,3 +801,15 @@ Requirement -> AI Use Case -> AI Component -> Tool/MCP -> Evaluation Dataset -> 
 - UI page/component mappings are architecture contracts for future implementation.
 - Existing stable IDs remain unchanged and are referenced by UI contracts.
 - Automation and AI layers remain planned integrations; no runtime implementation was added in this step.
+
+## Step 1.12 Frontend Runtime Traceability Extension
+
+### Frontend Runtime Chain
+Requirement -> UI Route -> UI Component -> Deterministic Selector -> Planned Playwright Test -> Planned Execution Evidence -> Planned Defect Link
+
+### Step 1.12 Runtime Notes
+- Runtime frontend implementation now exists for core CareFlow modules under `frontend/`.
+- Route and role-access contracts from Step 1.11 are implemented in code (`app.tsx`, `route-access.ts`, `navigation-items.ts`).
+- Deterministic selectors are implemented to preserve test-case to automation mapping expectations.
+- Synthetic deterministic data and mock service contracts were implemented to align with test-data strategy while keeping backend/API out of scope.
+- AI runtime concepts remain planned; only integration boundaries are preserved in the frontend architecture.
