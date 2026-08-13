@@ -89,10 +89,10 @@ Development thresholds:
 Run result:
 - Quality Gate: `FAIL`
 - Failures:
+  - contextPrecision below threshold
   - faithfulness below threshold
   - answerRelevance below threshold
 - Warnings:
-  - contextPrecision slightly below threshold
   - overallScore slightly below threshold
 
 ## 8. Failure Analysis
