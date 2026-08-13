@@ -41,9 +41,42 @@ export function LoginPage() {
 
   return (
     <main className="login-layout" data-testid="page-login-root">
+      <aside className="login-help">
+        <p className="login-kicker">CareFlow Health</p>
+        <h1>Operations Command Center</h1>
+        <p>
+          A production-style healthcare operations UI designed for QA automation, role-aware routing,
+          and deterministic workflows.
+        </p>
+        <div className="login-feature-grid" aria-hidden="true">
+          <article className="login-feature-card">
+            <p className="login-feature-label">Daily Outpatient</p>
+            <p className="login-feature-value">1,248</p>
+          </article>
+          <article className="login-feature-card">
+            <p className="login-feature-label">Avg. Wait Time</p>
+            <p className="login-feature-value">12 min</p>
+          </article>
+          <article className="login-feature-card">
+            <p className="login-feature-label">Bed Occupancy</p>
+            <p className="login-feature-value">78%</p>
+          </article>
+        </div>
+        <h2>Demo Credentials</h2>
+        <ul className="credential-list">
+          {ROLES.map((entry) => (
+            <li key={entry}>
+              <strong>{entry}:</strong> {demoCredentials[entry].username} /{" "}
+              {demoCredentials[entry].password}
+            </li>
+          ))}
+        </ul>
+      </aside>
+
       <section className="login-card">
-        <h1>CareFlow Health</h1>
-        <p>Frontend-only healthcare simulation portal</p>
+        <p className="login-panel-kicker">Secure Access</p>
+        <h2>Sign in to CareFlow</h2>
+        <p className="hint">Use synthetic credentials listed in the left panel.</p>
         <form onSubmit={handleSubmit} noValidate data-testid="login-form">
           <label htmlFor="login-role">Role</label>
           <select
@@ -100,18 +133,6 @@ export function LoginPage() {
           </button>
         </form>
       </section>
-
-      <aside className="login-help">
-        <h2>Demo Credentials</h2>
-        <ul>
-          {ROLES.map((entry) => (
-            <li key={entry}>
-              <strong>{entry}:</strong> {demoCredentials[entry].username} /{" "}
-              {demoCredentials[entry].password}
-            </li>
-          ))}
-        </ul>
-      </aside>
     </main>
   );
 }

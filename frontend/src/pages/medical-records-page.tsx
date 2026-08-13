@@ -5,18 +5,25 @@ import { useAppState } from "../state/app-context";
 
 export function MedicalRecordsPage() {
   const loading = useSimulatedLoad();
-  const { patients } = useAppState();
+  const { patients, role, currentPatientId } = useAppState();
+  const visiblePatients =
+    role === "Patient" && currentPatientId
+      ? patients.filter((entry) => entry.id === currentPatientId)
+      : patients;
 
   if (loading) {
     return <LoadingState label="Loading medical records..." />;
   }
-  if (patients.length === 0) {
+  if (visiblePatients.length === 0) {
     return <EmptyState title="No records" message="No medical records available." />;
   }
 
   return (
     <section data-testid="page-medical-records-root">
-      <PageTitle title="Medical Records" subtitle="Simulated records visibility by role" />
+      <PageTitle
+        title="Medical Records"
+        subtitle={role === "Patient" ? "Showing your personal medical records only" : "Simulated records visibility by role"}
+      />
       <div className="card table-wrapper">
         <table>
           <thead>
@@ -28,7 +35,7 @@ export function MedicalRecordsPage() {
             </tr>
           </thead>
           <tbody>
-            {patients.map((entry, index) => (
+            {visiblePatients.map((entry, index) => (
               <tr key={entry.id} data-testid={`medical-record-row-${entry.id}`}>
                 <td>{entry.id}</td>
                 <td>
@@ -44,4 +51,3 @@ export function MedicalRecordsPage() {
     </section>
   );
 }
-

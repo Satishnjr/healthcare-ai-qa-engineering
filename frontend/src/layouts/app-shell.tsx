@@ -31,14 +31,31 @@ export function AppShell() {
   ).length;
 
   const links = navigationItems.filter((item) => item.roles.includes(role));
+  const mainLinks = links.filter((item) => !["/reports", "/settings", "/help", "/profile"].includes(item.path));
+  const generalLinks = links.filter((item) => ["/reports", "/settings", "/help", "/profile"].includes(item.path));
+  const canSwitchRole = role === "Healthcare Administrator";
 
   return (
     <div className="app-shell" data-testid="app-shell-root">
       <aside className="sidebar" data-testid="nav-sidebar">
-        <h2 className="brand">CareFlow Health</h2>
-        <p className="brand-subtitle">Healthcare Operations Portal</p>
+        <div className="sidebar-brand">
+          <div className="brand-logo" aria-hidden="true">
+            CF
+          </div>
+          <div>
+            <h2 className="brand">CareFlow Health</h2>
+            <p className="brand-subtitle">Healthcare Operations Portal</p>
+          </div>
+        </div>
+
+        <label className="sidebar-search" htmlFor="sidebar-search">
+          <span>Search modules</span>
+          <input id="sidebar-search" type="search" placeholder="Search" data-testid="sidebar-search" />
+        </label>
+
+        <p className="sidebar-group-title">Main Menu</p>
         <nav>
-          {links.map((item) => (
+          {mainLinks.map((item) => (
             <Link
               key={item.path}
               to={item.path}
@@ -48,6 +65,21 @@ export function AppShell() {
               {item.label}
             </Link>
           ))}
+        </nav>
+
+        <p className="sidebar-group-title">General</p>
+        <nav>
+          {generalLinks.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              data-testid={`nav-${item.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-link`}
+              className={location.pathname.startsWith(item.path) ? "active-link" : ""}
+            >
+              {item.label}
+            </Link>
+          ))}
+
           <button
             type="button"
             className="link-like-button"
@@ -60,6 +92,11 @@ export function AppShell() {
             Logout
           </button>
         </nav>
+
+        <div className="sidebar-user-card" data-testid="sidebar-user-card">
+          <p className="sidebar-user-name">{currentUser?.name ?? "Guest"}</p>
+          <p className="sidebar-user-role">{role}</p>
+        </div>
       </aside>
       <div className="main-area">
         <header className="topbar">
@@ -68,21 +105,28 @@ export function AppShell() {
             <p className="topbar-title">Role: {role}</p>
           </div>
           <div className="topbar-controls">
-            <label htmlFor="role-switcher" className="label-inline">
-              Simulated Role
-            </label>
-            <select
-              id="role-switcher"
-              value={role}
-              onChange={(event) => switchRole(event.target.value as typeof role)}
-              data-testid="role-switcher"
-            >
-              {ROLES.map((entry) => (
-                <option key={entry} value={entry}>
-                  {entry}
-                </option>
-              ))}
-            </select>
+            <button type="button" className="btn secondary small" data-testid="topbar-export">
+              Export Data
+            </button>
+            {canSwitchRole ? (
+              <>
+                <label htmlFor="role-switcher" className="label-inline">
+                  Simulated Role
+                </label>
+                <select
+                  id="role-switcher"
+                  value={role}
+                  onChange={(event) => switchRole(event.target.value as typeof role)}
+                  data-testid="role-switcher"
+                >
+                  {ROLES.map((entry) => (
+                    <option key={entry} value={entry}>
+                      {entry}
+                    </option>
+                  ))}
+                </select>
+              </>
+            ) : null}
             <div className="notification-pill" data-testid="notification-unread-count">
               Unread: {unreadCount}
             </div>
@@ -98,4 +142,3 @@ export function AppShell() {
     </div>
   );
 }
-

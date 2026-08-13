@@ -22,6 +22,7 @@ type LoginResult = { success: true } | { success: false; message: string };
 interface AppState {
   isAuthenticated: boolean;
   currentUser: User | null;
+  currentPatientId: string | null;
   role: Role;
   users: User[];
   patients: Patient[];
@@ -84,6 +85,8 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
     mockService.getNotifications(),
   );
   const [preferences, setPreferences] = useState<AppPreference>(defaultPreferences);
+  const currentPatientId =
+    role === "Patient" ? (currentUser?.linkedPatientId ?? null) : null;
 
   const login = (targetRole: Role, username: string, password: string): LoginResult => {
     const expected = demoCredentials[targetRole];
@@ -188,6 +191,7 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
   const value: AppState = {
     isAuthenticated,
     currentUser,
+    currentPatientId,
     role,
     users,
     patients,

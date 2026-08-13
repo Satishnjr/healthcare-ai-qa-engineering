@@ -7,18 +7,25 @@ import { patientName } from "../utils/lookup";
 
 export function PrescriptionsPage() {
   const loading = useSimulatedLoad();
-  const { prescriptions, patients } = useAppState();
+  const { prescriptions, patients, role, currentPatientId } = useAppState();
+  const visiblePrescriptions =
+    role === "Patient" && currentPatientId
+      ? prescriptions.filter((entry) => entry.patientId === currentPatientId)
+      : prescriptions;
 
   if (loading) {
     return <LoadingState label="Loading prescriptions..." />;
   }
-  if (prescriptions.length === 0) {
+  if (visiblePrescriptions.length === 0) {
     return <EmptyState title="No prescriptions" message="No prescription records available." />;
   }
 
   return (
     <section data-testid="page-prescriptions-root">
-      <PageTitle title="Prescriptions" subtitle="Medication and dosage visibility by role" />
+      <PageTitle
+        title="Prescriptions"
+        subtitle={role === "Patient" ? "Showing your prescriptions only" : "Medication and dosage visibility by role"}
+      />
       <div className="card table-wrapper">
         <table>
           <thead>
@@ -32,7 +39,7 @@ export function PrescriptionsPage() {
             </tr>
           </thead>
           <tbody>
-            {prescriptions.map((entry) => (
+            {visiblePrescriptions.map((entry) => (
               <tr key={entry.id} data-testid={`prescription-row-${entry.id}`}>
                 <td>{entry.id}</td>
                 <td>{patientName(patients, entry.patientId)}</td>
@@ -50,4 +57,3 @@ export function PrescriptionsPage() {
     </section>
   );
 }
-

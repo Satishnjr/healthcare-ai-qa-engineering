@@ -18,6 +18,7 @@ export const users: User[] = [
     role: "Patient",
     name: "Aarav Sharma",
     email: "patient.demo@careflow.local",
+    linkedPatientId: "PAT-001",
   },
   {
     id: "USR-DOC-001",
@@ -254,4 +255,3 @@ export const demoCredentials: Record<Role, { username: string; password: string 
       password: "careflow123",
     },
   };
-

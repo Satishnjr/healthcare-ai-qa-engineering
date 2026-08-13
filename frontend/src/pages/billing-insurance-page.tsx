@@ -7,12 +7,20 @@ import { patientName } from "../utils/lookup";
 
 export function BillingInsurancePage() {
   const loading = useSimulatedLoad();
-  const { billingItems, insuranceItems, patients } = useAppState();
+  const { billingItems, insuranceItems, patients, role, currentPatientId } = useAppState();
+  const visibleBilling =
+    role === "Patient" && currentPatientId
+      ? billingItems.filter((entry) => entry.patientId === currentPatientId)
+      : billingItems;
+  const visibleInsurance =
+    role === "Patient" && currentPatientId
+      ? insuranceItems.filter((entry) => entry.patientId === currentPatientId)
+      : insuranceItems;
 
   if (loading) {
     return <LoadingState label="Loading billing and insurance..." />;
   }
-  if (billingItems.length === 0 && insuranceItems.length === 0) {
+  if (visibleBilling.length === 0 && visibleInsurance.length === 0) {
     return (
       <EmptyState
         title="No billing or insurance data"
@@ -23,7 +31,10 @@ export function BillingInsurancePage() {
 
   return (
     <section data-testid="page-billing-insurance-root">
-      <PageTitle title="Billing & Insurance" subtitle="Financial and coverage overview" />
+      <PageTitle
+        title="Billing & Insurance"
+        subtitle={role === "Patient" ? "Showing your billing and coverage details only" : "Financial and coverage overview"}
+      />
       <div className="grid-two">
         <article className="card table-wrapper">
           <h3>Billing</h3>
@@ -38,7 +49,7 @@ export function BillingInsurancePage() {
               </tr>
             </thead>
             <tbody>
-              {billingItems.map((entry) => (
+              {visibleBilling.map((entry) => (
                 <tr key={entry.id} data-testid={`billing-row-${entry.id}`}>
                   <td>{entry.id}</td>
                   <td>{patientName(patients, entry.patientId)}</td>
@@ -65,7 +76,7 @@ export function BillingInsurancePage() {
               </tr>
             </thead>
             <tbody>
-              {insuranceItems.map((entry) => (
+              {visibleInsurance.map((entry) => (
                 <tr key={entry.id} data-testid={`insurance-row-${entry.id}`}>
                   <td>{entry.id}</td>
                   <td>{patientName(patients, entry.patientId)}</td>
@@ -81,4 +92,3 @@ export function BillingInsurancePage() {
     </section>
   );
 }
-

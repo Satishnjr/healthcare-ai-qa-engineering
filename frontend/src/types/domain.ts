@@ -18,6 +18,7 @@ export interface User {
   role: Role;
   name: string;
   email: string;
+  linkedPatientId?: string;
 }
 
 export interface Patient {
@@ -95,4 +96,3 @@ export interface AppPreference {
   smsNotifications: boolean;
   compactMode: boolean;
 }
-

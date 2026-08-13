@@ -29,6 +29,7 @@ export function AppointmentsPage() {
   const loading = useSimulatedLoad();
   const {
     role,
+    currentPatientId,
     appointments,
     providers,
     patients,
@@ -42,11 +43,15 @@ export function AppointmentsPage() {
   const canCreate = role === "Receptionist";
 
   const filtered = useMemo(() => {
+    const scopedAppointments =
+      role === "Patient" && currentPatientId
+        ? appointments.filter((entry) => entry.patientId === currentPatientId)
+        : appointments;
     if (statusFilter === "ALL") {
-      return appointments;
+      return scopedAppointments;
     }
-    return appointments.filter((entry) => entry.status === statusFilter);
-  }, [appointments, statusFilter]);
+    return scopedAppointments.filter((entry) => entry.status === statusFilter);
+  }, [appointments, currentPatientId, role, statusFilter]);
 
   const onCreate = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -73,7 +78,10 @@ export function AppointmentsPage() {
 
   return (
     <section data-testid="page-appointments-root">
-      <PageTitle title="Appointments" subtitle="Create, review, and update appointment statuses" />
+      <PageTitle
+        title="Appointments"
+        subtitle={role === "Patient" ? "Showing your appointments only" : "Create, review, and update appointment statuses"}
+      />
       <div className="grid-two">
         {canCreate ? (
           <form className="card form-grid" onSubmit={onCreate} data-testid="appointment-create">

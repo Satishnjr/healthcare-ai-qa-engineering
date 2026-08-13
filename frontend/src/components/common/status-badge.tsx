@@ -6,6 +6,9 @@ import type {
 type BadgeStatus =
   | AppointmentStatus
   | ClaimStatus
+  | "NORMAL"
+  | "MODERATE"
+  | "HIGH_LOAD"
   | "PENDING"
   | "PAID"
   | "OVERDUE"
@@ -21,6 +24,9 @@ const toneMap: Record<BadgeStatus, string> = {
   IN_REVIEW: "badge-info",
   APPROVED: "badge-success",
   REJECTED: "badge-danger",
+  NORMAL: "badge-success",
+  MODERATE: "badge-warning",
+  HIGH_LOAD: "badge-danger",
   PENDING: "badge-warning",
   PAID: "badge-success",
   OVERDUE: "badge-danger",
@@ -35,4 +41,3 @@ export function StatusBadge({ status }: { status: BadgeStatus }) {
     </span>
   );
 }
-

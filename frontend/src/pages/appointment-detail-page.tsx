@@ -9,7 +9,7 @@ import { appointmentById, patientName, providerName } from "../utils/lookup";
 export function AppointmentDetailPage() {
   const loading = useSimulatedLoad();
   const { appointmentId } = useParams();
-  const { appointments, patients, providers } = useAppState();
+  const { appointments, patients, providers, role, currentPatientId } = useAppState();
   const appointment = appointmentById(appointments, appointmentId ?? "");
 
   if (loading) {
@@ -17,6 +17,9 @@ export function AppointmentDetailPage() {
   }
   if (!appointment) {
     return <ErrorState title="Appointment not found" message="Invalid appointment reference." />;
+  }
+  if (role === "Patient" && currentPatientId && appointment.patientId !== currentPatientId) {
+    return <ErrorState title="Access restricted" message="You can only view your own appointment details." />;
   }
 
   return (
@@ -52,4 +55,3 @@ export function AppointmentDetailPage() {
     </section>
   );
 }
-

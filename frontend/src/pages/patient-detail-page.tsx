@@ -9,7 +9,7 @@ import { useAppState } from "../state/app-context";
 export function PatientDetailPage() {
   const loading = useSimulatedLoad();
   const { patientId } = useParams();
-  const { patients, role, updatePatient } = useAppState();
+  const { patients, role, currentPatientId, updatePatient } = useAppState();
   const patient = useMemo(
     () => patients.find((entry) => entry.id === patientId) ?? null,
     [patients, patientId],
@@ -25,6 +25,9 @@ export function PatientDetailPage() {
 
   if (!patient) {
     return <ErrorState title="Patient Not Found" message="Invalid patient ID." />;
+  }
+  if (role === "Patient" && currentPatientId && patient.id !== currentPatientId) {
+    return <ErrorState title="Access restricted" message="You can only view your own patient profile." />;
   }
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
