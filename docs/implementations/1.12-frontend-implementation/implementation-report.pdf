@@ -1,0 +1,129 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [3 0 R 5 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2218 >>
+stream
+BT
+/F1 11 Tf
+54 720 Td
+(Healthcare AI QA Engineering Platform) Tj
+0 -14 Td (Step 1.12 Implementation Report) Tj
+0 -14 Td () Tj
+0 -14 Td (Project Name:) Tj
+0 -14 Td (CareFlow Health) Tj
+0 -14 Td () Tj
+0 -14 Td (Step:) Tj
+0 -14 Td (STEP 1.12 - CareFlow Health Frontend Application Implementation) Tj
+0 -14 Td () Tj
+0 -14 Td (Objective:) Tj
+0 -14 Td (Implement a production-like frontend-only healthcare application aligned with approved BRD,) Tj
+0 -14 Td (PRD,) Tj
+0 -14 Td (UI architecture, and testability standards.) Tj
+0 -14 Td () Tj
+0 -14 Td (Architecture Summary:) Tj
+0 -14 Td (- React + TypeScript + Vite + React Router runtime foundation.) Tj
+0 -14 Td (- Application shell layout with role indicator, navigation, and routed content.) Tj
+0 -14 Td (- Role-aware route and action control via deterministic UI simulation.) Tj
+0 -14 Td (- Reusable common components for page titles, state panels, status badges, and confirmations.) Tj
+0 -14 Td (- Centralized mock service and mock data contracts for future API swap.) Tj
+0 -14 Td () Tj
+0 -14 Td (Implementation Summary:) Tj
+0 -14 Td (- Frontend scaffolded and configured as strict TypeScript Vite application.) Tj
+0 -14 Td (- Role-based login simulation and guarded routing implemented.) Tj
+0 -14 Td (- Core modules implemented: dashboard, patients, appointments, providers, records,) Tj
+0 -14 Td (  prescriptions, billing and insurance, claims, notifications, reports, admin, profile,) Tj
+0 -14 Td (  settings, help, search, unauthorized and not-found pages.) Tj
+0 -14 Td (- Deterministic in-memory data and mutation flows implemented for realistic behavior.) Tj
+0 -14 Td (- Automation-friendly data-testid selectors implemented for major workflows.) Tj
+0 -14 Td () Tj
+0 -14 Td (Technologies:) Tj
+0 -14 Td (- React) Tj
+0 -14 Td (- TypeScript) Tj
+0 -14 Td (- Vite) Tj
+0 -14 Td (- React Router) Tj
+0 -14 Td (- Oxlint) Tj
+0 -14 Td () Tj
+0 -14 Td (Pages and Modules:) Tj
+0 -14 Td (- Login) Tj
+0 -14 Td (- Dashboard) Tj
+0 -14 Td (- Patient Management, Search, Detail) Tj
+0 -14 Td (- Appointments, Appointment Detail) Tj
+0 -14 Td (- Providers) Tj
+0 -14 Td (- Medical Records) Tj
+0 -14 Td (- Prescriptions) Tj
+0 -14 Td (- Billing and Insurance) Tj
+0 -14 Td (- Claims) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1833 >>
+stream
+BT
+/F1 11 Tf
+54 720 Td
+(- Notifications) Tj
+0 -14 Td (- Reports) Tj
+0 -14 Td (- Administration) Tj
+0 -14 Td (- Profile, Settings, Help, Search) Tj
+0 -14 Td () Tj
+0 -14 Td (Validation:) Tj
+0 -14 Td (- npm run lint: PASS) Tj
+0 -14 Td (- npm run build: PASS) Tj
+0 -14 Td () Tj
+0 -14 Td (Testability:) Tj
+0 -14 Td (- Stable deterministic selectors implemented with data-testid.) Tj
+0 -14 Td (- Deterministic IDs and predictable state transitions for automation reliability.) Tj
+0 -14 Td () Tj
+0 -14 Td (AI Boundary:) Tj
+0 -14 Td (- No runtime RAG, MCP, tool-calling, agentic workflow, or LLM integration in this step.) Tj
+0 -14 Td (- UI architecture preserves clean boundary points for planned AI integrations.) Tj
+0 -14 Td () Tj
+0 -14 Td (AI Concepts Status in Step 1.12:) Tj
+0 -14 Td (- IMPLEMENTED: none \(runtime AI intentionally deferred\)) Tj
+0 -14 Td (- PLANNED: RAG, RAGAS, observability, MCP, tool-calling, LangGraph, multi-agent,) Tj
+0 -14 Td (  HITL, guardrails, prompt-injection protection, AI security, LLMOps, AI quality gates,) Tj
+0 -14 Td (  AI failure analysis, AI defect management, evaluation datasets/runs, model and prompt) Tj
+0 -14 Td (  version tracking, experiment tracking.) Tj
+0 -14 Td () Tj
+0 -14 Td (Risks and Known Issues:) Tj
+0 -14 Td (- TypeScript build metadata file writes required unsandboxed build execution in this) Tj
+0 -14 Td (environment.) Tj
+0 -14 Td (- Backend/API security controls are intentionally out of scope for this frontend-only step.) Tj
+0 -14 Td () Tj
+0 -14 Td (Interview Summary:) Tj
+0 -14 Td (This implementation demonstrates enterprise frontend architecture, role-aware UX behavior,) Tj
+0 -14 Td (validation discipline, accessibility fundamentals, deterministic testability design,) Tj
+0 -14 Td (and readiness for later Playwright automation plus future AI integration layers.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000002517 00000 n 
+0000002643 00000 n 
+0000004528 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4598
+%%EOF
