@@ -184,3 +184,47 @@
   - `frontend`: `npm run lint` PASS
   - `frontend`: `npm run build` PASS
 - Added Step 1.13 implementation artifacts (`prompt.md`, `README.md`, `implementation-report.pdf`, `interview-notes.md`, `response.md`).
+
+## Step 1.14 - Full Regression Automation Expansion
+- Expanded automation suites with new feature coverage:
+  - `automation/features/functional/authentication-regression.feature`
+  - `automation/features/functional/module-navigation-regression.feature`
+  - `automation/features/functional/notifications-preferences-regression.feature`
+  - `automation/features/regression/role-access-regression.feature`
+  - `automation/features/regression/patient-search-regression.feature`
+  - `automation/features/validation/form-validation-regression.feature`
+  - `automation/features/accessibility/accessibility-regression.feature`
+  - `automation/features/responsive/responsive-regression.feature`
+- Added reusable regression architecture:
+  - `automation/src/pages/regression-page.ts`
+  - `automation/src/steps/regression.steps.ts`
+  - world/hook wiring updates for regression page object usage.
+- Added machine-readable execution summary reporting:
+  - `automation/src/reporters/generate-execution-summary.js`
+  - npm scripts `report:summary`, `report:all`, and browser-specific regression scripts.
+- Updated cucumber output handling and report generation compatibility for mixed JSON outputs.
+- Executed real validations:
+  - `frontend`: lint PASS, build PASS
+  - `automation`: typecheck PASS, smoke Chromium PASS (5/5), regression Chromium PASS (39/39)
+  - `automation`: regression Firefox/WebKit BLOCKED by missing Playwright browser binaries.
+- Added Step 1.14 implementation artifacts (`prompt.md`, `README.md`, `implementation-report.pdf`, `interview-notes.md`, `response.md`).
+
+## Documentation Sync - UI Automation Status Alignment
+- Updated `docs/IMPLEMENTATION_INDEX.md` UI automation section from planned list to implemented status table based on Step 1.13/1.14 evidence.
+- Updated `README.md` implementation boundary to reflect UI automation completion status and cross-browser partial condition.
+
+## Step 1.15 - AI-Ready Automation Governance & Agent Handoff Foundation
+- Added automation governance and classification artifacts:
+  - `docs/qa/AUTOMATION_GOVERNANCE.md`
+  - `docs/qa/AUTOMATION_CANDIDATE_MATRIX.md`
+  - `knowledge/test-cases/CAREFLOW_HEALTH_AUTOMATION_CLASSIFICATION.md`
+- Added AI-agent architecture contracts:
+  - `docs/architecture/AI_AGENT_HANDOFF_CONTRACT.md`
+  - `docs/architecture/AI_AGENT_ROLE_MODEL.md`
+  - `docs/architecture/AI_AGENTIC_QA_WORKFLOW.md`
+  - `docs/architecture/AI_PLAYWRIGHT_BOUNDARY.md`
+  - `docs/architecture/AI_OBSERVABILITY_CONTRACT.md`
+  - `docs/ai/RAGAS_EVALUATION_STRATEGY.md`
+- Extended `docs/qa/AI_QUALITY_GATES.md` with Step 1.15 configurable gate foundations and human-approval policy.
+- Updated `docs/IMPLEMENTATION_INDEX.md`, `knowledge/requirements-traceability.md`, `docs/INTERVIEW_GUIDE.md`, and `README.md` for Step 1.15 status alignment.
+- Validation focused on governance completeness and 96-case classification consistency; full regression execution intentionally deferred.

@@ -1,0 +1,14 @@
+{
+  "total": 96,
+  "unique": 96,
+  "counts": {
+    "DETERMINISTIC_AUTOMATION": 20,
+    "AI_ASSISTED_AUTOMATION": 37,
+    "AI_AGENT_CANDIDATE": 17,
+    "MANUAL": 8,
+    "BACKEND_DEPENDENCY": 7,
+    "UI_GAP": 3,
+    "FUTURE": 4
+  },
+  "manualAssigned": 8
+}

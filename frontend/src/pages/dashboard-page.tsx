@@ -26,6 +26,7 @@ export function DashboardPage() {
   const activeAppointments = scopedAppointments.filter((item) => item.status !== "CANCELLED");
   const openClaims = scopedClaims.filter((item) => item.status === "OPEN");
   const occupancy = Math.min(95, Math.max(52, activeAppointments.length * 17));
+  const erLoad = Math.min(98, 48 + activeAppointments.length * 9);
 
   if (loading) {
     return <LoadingState label="Loading dashboard widgets..." />;
@@ -34,6 +35,23 @@ export function DashboardPage() {
   return (
     <section data-testid="page-dashboard-root">
       <PageTitle title="Dashboard" subtitle={`Good day. You are viewing the ${role} operational workspace.`} />
+      <div className="ops-summary-strip" data-testid="dashboard-ops-strip">
+        <article className="ops-summary-card">
+          <p>Emergency Queue</p>
+          <strong>{erLoad}%</strong>
+          <span>Real-time triage pressure</span>
+        </article>
+        <article className="ops-summary-card">
+          <p>Admission Conversion</p>
+          <strong>{Math.max(61, occupancy - 9)}%</strong>
+          <span>From OPD to bed allocation</span>
+        </article>
+        <article className="ops-summary-card">
+          <p>Claims Turnaround</p>
+          <strong>{Math.max(8, 21 - openClaims.length)}h</strong>
+          <span>Average processing cycle</span>
+        </article>
+      </div>
 
       <div className="kpi-grid" data-testid="dashboard-kpi-grid">
         <article className="kpi-card" data-testid="dashboard-kpi-card-patients">
@@ -108,8 +126,14 @@ export function DashboardPage() {
       </article>
 
       <div className="grid-two dashboard-bottom-grid">
-        <article className="card" data-testid="dashboard-appointments-board">
-          <h3>Upcoming Appointment Board</h3>
+        <article className="card dashboard-panel-card" data-testid="dashboard-appointments-board">
+          <header className="panel-header">
+            <div>
+              <p className="panel-kicker">Clinical Scheduling</p>
+              <h3>Upcoming Appointment Board</h3>
+            </div>
+            <span className="panel-chip">Live</span>
+          </header>
           <div className="table-wrapper">
             <table>
               <thead>
@@ -135,8 +159,14 @@ export function DashboardPage() {
             </table>
           </div>
         </article>
-        <article className="card" data-testid="dashboard-alerts-panel">
-          <h3>Alerts and Notifications</h3>
+        <article className="card dashboard-panel-card" data-testid="dashboard-alerts-panel">
+          <header className="panel-header">
+            <div>
+              <p className="panel-kicker">Operations Signals</p>
+              <h3>Alerts and Notifications</h3>
+            </div>
+            <span className="panel-chip">Unread {unreadCount}</span>
+          </header>
           <p className="hint">Unread alerts for current role: {unreadCount}</p>
           <ul className="dashboard-list">
             {notifications

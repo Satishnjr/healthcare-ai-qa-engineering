@@ -13,6 +13,7 @@ import { DashboardPage } from "../pages/dashboard-page";
 import { LayoutPage } from "../pages/layout-page";
 import { LoginPage } from "../pages/login-page";
 import { PatientSearchPage } from "../pages/patient-search-page";
+import { RegressionPage } from "../pages/regression-page";
 import { writeFailureMetadata } from "../utils/report-writer";
 import { artifactPath, ensureDir, sanitizeName, timestamp } from "../utils/path-utils";
 import { launchBrowser } from "../utils/browser-factory";
@@ -22,13 +23,13 @@ setDefaultTimeout(runtimeConfig.timeouts.scenarioMs);
 
 BeforeAll(async () => {
   [
-    "reports/cucumber",
     "reports/html",
     "reports/failure-artifacts",
     "screenshots",
     "videos",
     "traces",
     "test-results",
+    "test-results/cucumber",
   ].forEach((dir) => ensureDir(artifactPath(dir)));
 });
 
@@ -57,6 +58,7 @@ Before(async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
   this.dashboardPage = new DashboardPage(page);
   this.patientSearchPage = new PatientSearchPage(page);
   this.appointmentsPage = new AppointmentsPage(page);
+  this.regressionPage = new RegressionPage(page);
 });
 
 After(async function (this: CustomWorld, scenario: ITestCaseHookParameter) {

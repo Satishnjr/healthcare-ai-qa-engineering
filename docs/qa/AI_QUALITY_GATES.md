@@ -47,3 +47,26 @@ Define release-control gates for functional QA, automation quality, RAG quality,
 - Runtime gate executors in CI/CD.
 - Automated pass/fail policies with pipeline enforcement.
 - Evidence publication to reporting dashboards.
+
+## Step 1.15 AI-Ready Automation Governance Extension
+
+### Configurable Target Gates (Foundation)
+- RAG gates (future runtime):
+  - faithfulness >= configurable target
+  - context relevance >= configurable target
+  - hallucination rate <= configurable threshold
+- Agent gates (future runtime):
+  - task success >= configurable target
+  - tool-call accuracy >= configurable target
+  - unsafe-action rate = 0
+- Automation gates:
+  - deterministic smoke subset must pass
+  - no unexplained critical failure artifacts
+  - no fabricated execution evidence
+
+### Human Approval Gate
+Mandatory human approval for healthcare-sensitive, security-sensitive, destructive, ambiguous, or low-confidence outcomes.
+
+### Step 1.15 Status
+- IMPLEMENTED: governance-level gate definitions and policy contract.
+- PLANNED: runtime metric collection and CI enforcement.

@@ -1,3 +1,5 @@
+const reportPrefix = process.env.REPORT_PREFIX ?? "cucumber-report";
+
 module.exports = {
   default: {
     requireModule: ["ts-node/register"],
@@ -5,8 +7,8 @@ module.exports = {
     paths: ["features/**/*.feature"],
     format: [
       "progress",
-      "json:reports/cucumber/cucumber-report.json",
-      "message:reports/cucumber/cucumber-messages.ndjson"
+      `json:test-results/cucumber/${reportPrefix}.json`,
+      `message:test-results/cucumber/${reportPrefix}-messages.ndjson`
     ],
     parallel: 1,
     retry: 0,

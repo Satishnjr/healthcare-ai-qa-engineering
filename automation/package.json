@@ -1,15 +1,20 @@
 {
   "name": "careflow-automation",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "private": true,
-  "description": "Playwright + Cucumber BDD automation foundation for CareFlow Health",
+  "description": "Playwright + Cucumber BDD regression automation expansion for CareFlow Health",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "smoke:chromium": "cross-env BROWSER=chromium cucumber-js --config cucumber.js --tags \"@smoke\"",
     "smoke:firefox": "cross-env BROWSER=firefox cucumber-js --config cucumber.js --tags \"@smoke\"",
     "smoke:webkit": "cross-env BROWSER=webkit cucumber-js --config cucumber.js --tags \"@smoke\"",
     "smoke:all": "npm run smoke:chromium && npm run smoke:firefox && npm run smoke:webkit",
-    "report:html": "node src/reporters/generate-cucumber-report.js"
+    "regression:chromium": "cross-env BROWSER=chromium cucumber-js --config cucumber.js --tags \"@regression\"",
+    "regression:firefox": "cross-env BROWSER=firefox cucumber-js --config cucumber.js --tags \"@regression\"",
+    "regression:webkit": "cross-env BROWSER=webkit cucumber-js --config cucumber.js --tags \"@regression\"",
+    "report:summary": "node src/reporters/generate-execution-summary.js",
+    "report:html": "node src/reporters/generate-cucumber-report.js",
+    "report:all": "npm run report:summary && npm run report:html"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^11.0.1",

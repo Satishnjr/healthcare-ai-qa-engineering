@@ -17,3 +17,4 @@ test-results/*
 !videos/.gitkeep
 !traces/.gitkeep
 !test-results/.gitkeep
+!test-results/cucumber/.gitkeep

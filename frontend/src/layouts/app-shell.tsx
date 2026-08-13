@@ -34,6 +34,7 @@ export function AppShell() {
   const mainLinks = links.filter((item) => !["/reports", "/settings", "/help", "/profile"].includes(item.path));
   const generalLinks = links.filter((item) => ["/reports", "/settings", "/help", "/profile"].includes(item.path));
   const canSwitchRole = role === "Healthcare Administrator";
+  const occupancyLevel = Math.min(94, 62 + unreadCount * 3);
 
   return (
     <div className="app-shell" data-testid="app-shell-root">
@@ -43,8 +44,8 @@ export function AppShell() {
             CF
           </div>
           <div>
-            <h2 className="brand">CareFlow Health</h2>
-            <p className="brand-subtitle">Healthcare Operations Portal</p>
+            <h2 className="brand">Dr. Nandini A Hospital</h2>
+            <p className="brand-subtitle">Clinical Operations and Patient Care Hub</p>
           </div>
         </div>
 
@@ -96,6 +97,10 @@ export function AppShell() {
         <div className="sidebar-user-card" data-testid="sidebar-user-card">
           <p className="sidebar-user-name">{currentUser?.name ?? "Guest"}</p>
           <p className="sidebar-user-role">{role}</p>
+          <div className="sidebar-user-meta">
+            <span>Shift: Day</span>
+            <span>Security: Verified</span>
+          </div>
         </div>
       </aside>
       <div className="main-area">
@@ -105,6 +110,14 @@ export function AppShell() {
             <p className="topbar-title">Role: {role}</p>
           </div>
           <div className="topbar-controls">
+            <div className="ops-chip">
+              <p>Hospital Occupancy</p>
+              <strong>{occupancyLevel}%</strong>
+            </div>
+            <div className="ops-chip">
+              <p>Incident Queue</p>
+              <strong>{Math.max(1, unreadCount)}</strong>
+            </div>
             <button type="button" className="btn secondary small" data-testid="topbar-export">
               Export Data
             </button>

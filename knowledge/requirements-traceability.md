@@ -837,3 +837,79 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test
 - Full test-case suite conversion is not yet completed; Step 1.13 implements the framework baseline + smoke coverage.
 - Structured failure artifact schema is implemented for AI failure-analysis readiness.
 - Browser matrix readiness is implemented; Firefox/WebKit execution currently depends on local Playwright browser binary installation.
+
+## Step 1.14 Regression Automation Traceability Extension
+
+### Step 1.14 Execution Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case -> Test Data -> BDD Feature -> BDD Scenario -> Step Definition -> Page Object -> Execution Result -> Failure Artifact
+
+### Step 1.14 Coverage Metrics (96 Approved Test Cases)
+- Total approved test cases: 96
+- AUTOMATABLE NOW: 20
+- PARTIALLY AUTOMATABLE: 58
+- BLOCKED BY CURRENT UI: 12
+- REQUIRES FUTURE BACKEND/API: 4
+- MANUAL-ONLY: 2
+- Coverage matrix source: `docs/implementations/1.14-regression-automation/coverage-matrix.md`
+
+### Step 1.14 Implemented Automation Mapping (Executed in Chromium)
+
+| Test Case ID | BDD Feature | BDD Scenario | Step Definition | Page Object | Execution |
+|---|---|---|---|---|---|
+| TC-TS-001-004-01 | `functional/authentication-regression.feature` | Doctor can sign in and access dashboard | `src/steps/regression.steps.ts` + `src/steps/smoke.steps.ts` | `src/pages/login-page.ts`, `src/pages/dashboard-page.ts` | PASS |
+| TC-TS-001-005-01 | `functional/authentication-regression.feature` | Invalid login shows validation error | `src/steps/regression.steps.ts` | `src/pages/login-page.ts` | PASS |
+| TC-TS-001-007-01 | `functional/authentication-regression.feature` | Logout returns user to login page | `src/steps/smoke.steps.ts` | `src/pages/layout-page.ts`, `src/pages/login-page.ts` | PASS |
+| TC-TS-001-008-01 | `functional/authentication-regression.feature` | Doctor cannot see administration navigation option | `src/steps/regression.steps.ts` | `src/pages/layout-page.ts` | PASS |
+| TC-TS-002-001-01 | `functional/module-navigation-regression.feature` | Authorized role can open module and see page root | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-002-003-01 | `accessibility/accessibility-regression.feature` | Authenticated topbar exposes user context indicator | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-003-007-01 | `regression/patient-search-regression.feature` | Doctor can search existing patient by id | `src/steps/regression.steps.ts` | `src/pages/patient-search-page.ts` | PASS |
+| TC-TS-003-008-01 | `regression/patient-search-regression.feature` | Search for unknown patient shows no matching rows | `src/steps/regression.steps.ts` | `src/pages/patient-search-page.ts` | PASS |
+| TC-TS-003-014-01 | `validation/form-validation-regression.feature` | Patient registration validates phone boundary | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-003-021-01 | `responsive/responsive-regression.feature` | Patient management remains reachable in tablet viewport | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-004-001-01 | `smoke/careflow-smoke.feature` | Appointment module navigation | `src/steps/smoke.steps.ts` | `src/pages/appointments-page.ts` | PASS |
+| TC-TS-004-011-01 | `validation/form-validation-regression.feature` | Appointment creation requires mandatory fields | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-005-001-01 | `regression/role-access-regression.feature` | Doctor can access providers module | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-008-001-01 | `regression/role-access-regression.feature` | Billing role can access billing navigation | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-009-004-01 | `functional/notifications-preferences-regression.feature` | Doctor can open notifications center | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-010-001-01 | `functional/notifications-preferences-regression.feature` | Administrator can open reports | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-011-004-01 | `functional/notifications-preferences-regression.feature` | Doctor can open profile and save without errors | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-011-005-01 | `validation/form-validation-regression.feature` | Profile save rejects empty name | `src/steps/regression.steps.ts` | `src/pages/regression-page.ts` | PASS |
+| TC-TS-001-003-01 | `accessibility/accessibility-regression.feature`, `responsive/responsive-regression.feature` | Login accessibility and responsive baseline checks | `src/steps/regression.steps.ts`, `src/steps/smoke.steps.ts` | `src/pages/login-page.ts`, `src/pages/regression-page.ts` | PASS |
+| TC-TS-001-001-01 | `smoke/careflow-smoke.feature`, `regression/role-access-regression.feature` | Authenticated dashboard and role-access baseline | `src/steps/smoke.steps.ts`, `src/steps/regression.steps.ts` | `src/pages/dashboard-page.ts`, `src/pages/layout-page.ts` | PASS |
+
+### Step 1.14 Execution Evidence Artifacts
+- Cucumber JSON/NDJSON: `automation/test-results/cucumber/`
+- Execution summary JSON (AI-ready): `automation/test-results/cucumber/execution-summary.json`
+- HTML report: `automation/reports/html/index.html`
+- Failure artifacts directory: `automation/reports/failure-artifacts/`
+- Screenshot/trace/video directories: `automation/screenshots/`, `automation/traces/`, `automation/videos/`
+
+## Step 1.15 AI Automation Governance Traceability Extension
+
+### Extended Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Test Scenario -> Test Case -> Test Data -> BDD -> Step Definition -> POM -> Execution Result -> Failure Artifact -> AI Agent Handoff
+
+### Step 1.15 Governance Artifacts
+- Automation governance model: `docs/qa/AUTOMATION_GOVERNANCE.md`
+- Test automation classification (96/96): `knowledge/test-cases/CAREFLOW_HEALTH_AUTOMATION_CLASSIFICATION.md`
+- Candidate matrix (96/96): `docs/qa/AUTOMATION_CANDIDATE_MATRIX.md`
+- Agent handoff contract: `docs/architecture/AI_AGENT_HANDOFF_CONTRACT.md`
+- Agent role model: `docs/architecture/AI_AGENT_ROLE_MODEL.md`
+- Agentic QA workflow: `docs/architecture/AI_AGENTIC_QA_WORKFLOW.md`
+- AI/Playwright boundary: `docs/architecture/AI_PLAYWRIGHT_BOUNDARY.md`
+- AI observability contract: `docs/architecture/AI_OBSERVABILITY_CONTRACT.md`
+- RAGAS/evaluation strategy: `docs/ai/RAGAS_EVALUATION_STRATEGY.md`
+
+### Step 1.15 Classification Snapshot
+- Deterministic automated subset retained: 20 test cases
+- AI-assisted candidates: 37
+- AI-agent candidates: 17
+- Manual candidates: 8
+- Backend dependencies: 7
+- UI gap blocked: 3
+- Future candidates: 4
+
+### Step 1.15 Traceability Notes
+- Existing deterministic automation mappings from Step 1.13/1.14 remain valid.
+- Step 1.15 introduces governance + handoff metadata without replacing canonical requirements/test-case IDs.
+- Full 96-case deterministic execution remains intentionally deferred; classification and handoff readiness are now traceable artifacts.

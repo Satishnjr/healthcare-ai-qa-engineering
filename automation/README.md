@@ -1,6 +1,6 @@
-# CareFlow Health Automation Framework (Step 1.13)
+# CareFlow Health Automation Framework (Step 1.14)
 
-Playwright + Cucumber BDD automation foundation for the CareFlow frontend.
+Playwright + Cucumber BDD regression automation expansion for the CareFlow frontend.
 
 ## Scope
 - UI automation framework foundation only
@@ -42,6 +42,8 @@ In `automation`:
 ```bash
 npm run typecheck
 npm run smoke:chromium
+npm run regression:chromium
+npm run report:summary
 npm run report:html
 ```
 
@@ -49,6 +51,8 @@ Optional:
 ```bash
 npm run smoke:firefox
 npm run smoke:webkit
+npm run regression:firefox
+npm run regression:webkit
 ```
 
 ## Tags
