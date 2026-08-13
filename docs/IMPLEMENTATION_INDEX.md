@@ -40,9 +40,9 @@ This file is the single source of truth for roadmap structure, historical step m
 
 | Major Step | Completion | Evidence Base |
 |---|---|---|
-| STEP 1 | Completed | `knowledge/`, `docs/qa/`, `docs/architecture/` foundations and step folders `1.1` to `1.10`. |
-| STEP 2 | Completed | `docs/architecture/UI_*` + frontend runtime in `frontend/` + step folder `1.12-frontend-implementation`. |
-| STEP 3 | Completed | `automation/` framework/suites + governance docs + `1.13`, `1.14`, `1.15`. |
+| STEP 1 | Completed | `knowledge/`, `docs/qa/`, `docs/architecture/` foundations and step folders `1.01` to `1.10`. |
+| STEP 2 | Completed | `docs/architecture/UI_*` + frontend runtime in `frontend/` + step folders `2.1-ui-architecture`, `2.2-frontend-implementation`. |
+| STEP 3 | Completed | `automation/` framework/suites + governance docs + step folders `3.1-playwright-cucumber`, `3.2-regression-automation`, `3.3-ai-automation-governance`. |
 | STEP 4 | Completed | `mcp/jira-confluence-foundation/`, Step 4 architecture docs, and implementation artifact package. |
 
 ## Current Phase
@@ -60,28 +60,28 @@ This file is the single source of truth for roadmap structure, historical step m
 | 0.1 | Environment Discovery | Pre-step foundation before STEP 1 | N/A | PASS |
 | 0.2 | Repository Foundation | Pre-step foundation before STEP 1 | N/A | PASS |
 | 0.3 | Engineering Standards | Pre-step foundation before STEP 1 | N/A | PASS |
-| 1.1 | Product Vision and Requirements Strategy | STEP 1 | 1.1 | PASS |
-| 1.2 | BRD | STEP 1 | 1.2 | PASS |
-| 1.3 | PRD | STEP 1 | 1.3 | PASS |
-| 1.4 | Epics | STEP 1 | 1.4 | PASS |
-| 1.5 | User Stories | STEP 1 | 1.5 | PASS |
-| 1.6 | Acceptance Criteria | STEP 1 | 1.6 | PASS |
-| 1.7 | Test Scenarios | STEP 1 | 1.7 | PASS |
-| 1.8 | Test Cases | STEP 1 | 1.8 | PASS |
-| 1.9 | Test Data and Test Management Strategy | STEP 1 | 1.9 | PASS |
+| 1.01 | Product Vision and Requirements Strategy | STEP 1 | 1.01 | PASS |
+| 1.02 | BRD | STEP 1 | 1.02 | PASS |
+| 1.03 | PRD | STEP 1 | 1.03 | PASS |
+| 1.04 | Epics | STEP 1 | 1.04 | PASS |
+| 1.05 | User Stories | STEP 1 | 1.05 | PASS |
+| 1.06 | Acceptance Criteria | STEP 1 | 1.06 | PASS |
+| 1.07 | Test Scenarios | STEP 1 | 1.07 | PASS |
+| 1.08 | Test Cases | STEP 1 | 1.08 | PASS |
+| 1.09 | Test Data and Test Management Strategy | STEP 1 | 1.09 | PASS |
 | 1.10 | PM Delivery Foundation (Jira/Confluence/Jenkins strategy) | STEP 1 | 1.10 | PASS |
-| 1.11 | UI Architecture and Design System | STEP 2 | 2.1 | PASS |
-| 1.12 | Frontend Application Implementation | STEP 2 | 2.2 | PASS |
-| 1.13 | Playwright + Cucumber Foundation | STEP 3 | 3.1 | PASS |
-| 1.14 | Regression Automation Expansion | STEP 3 | 3.2 | PASS |
-| 1.15 | AI-Ready Automation Governance and Agent Handoff Foundation | STEP 3 | 3.3 | PASS |
+| 2.1 | UI Architecture and Design System | STEP 2 | 2.1 | PASS |
+| 2.2 | Frontend Application Implementation | STEP 2 | 2.2 | PASS |
+| 3.1 | Playwright + Cucumber Foundation | STEP 3 | 3.1 | PASS |
+| 3.2 | Regression Automation Expansion | STEP 3 | 3.2 | PASS |
+| 3.3 | AI-Ready Automation Governance and Agent Handoff Foundation | STEP 3 | 3.3 | PASS |
 | 4 | Jira + Confluence Enterprise QA Knowledge Foundation | STEP 4 | 4.1-4.3 | PASS |
 
 ## Major-Step/Substep Hierarchy
 
 | Major Step | Substeps | Status |
 |---|---|---|
-| STEP 1 | 1.1 to 1.10 | PASS |
+| STEP 1 | 1.01 to 1.10 | PASS |
 | STEP 2 | 2.1 UI Architecture and Design System, 2.2 Frontend Application Implementation | PASS |
 | STEP 3 | 3.1 Playwright + Cucumber Foundation, 3.2 Regression Automation Expansion, 3.3 AI-Ready Automation Governance | PASS |
 | STEP 4 | 4.1 Jira typed models/adapters, 4.2 sync + export + tests, 4.3 docs | PASS |
