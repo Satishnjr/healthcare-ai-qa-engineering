@@ -1,5 +1,31 @@
 # Changelog
 
+## Step 8 - AI Agent Runtime
+- Implemented deterministic single-agent runtime under `agent/`:
+  - task analyzer and task-type classifier
+  - planner and deterministic MCP tool selector
+  - MCP client abstraction over Step 7 runtime server
+  - evidence manager and validator
+  - reasoning engine and canonical response generator
+  - deterministic confidence engine with documented formula
+  - guardrails and human-approval foundation
+  - agent audit NDJSON logging (`.tmp/agent-runtime/agent-audit.ndjson`)
+- Added Step 8 CLI:
+  - `npm run agent:task -- "<query>"`
+  - `npm run agent:frontend-artifacts`
+- Added frontend AI agent page:
+  - `/agent`
+  - selectors for task input, analysis, plan, tool calls, evidence, response, confidence, citations, warnings, and approval actions
+- Added deterministic frontend sample runtime artifact:
+  - `frontend/public/agent/runtime-samples.json`
+- Added Step 8 tests and targeted automation artifacts:
+  - `agent/tests/step8-agent-runtime.test.js`
+  - `automation/features/functional/step8-ai-agent.feature`
+  - `automation/src/steps/step8-ai-agent.steps.ts`
+- Added Step 8 architecture docs and implementation package:
+  - `docs/architecture/AI_AGENT_*.md`
+  - `docs/implementations/8-ai-agent-runtime/*`
+
 ## Step 7 - MCP Runtime & Tool Calling Foundation
 - Implemented local deterministic MCP runtime package under `mcp/runtime/`:
   - stdio JSON-RPC server (`mcp:start`)

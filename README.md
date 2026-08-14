@@ -22,7 +22,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 | STEP 5 | RAG Knowledge System Runtime | PASS |
 | STEP 6 | RAGAS and AI Evaluation Runtime | PASS |
 | STEP 7 | MCP and Tool Calling Runtime | PASS |
-| STEP 8 | QA AI Agent Runtime | PLANNED |
+| STEP 8 | QA AI Agent Runtime | PASS |
 | STEP 9 | Agentic QA Orchestration (LangGraph) | PLANNED |
 | STEP 10 | Multi-Agent QA System | PLANNED |
 | STEP 11 | Enterprise Integration + Observability + LLMOps + Security + Production Readiness | PLANNED |
@@ -95,6 +95,23 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
  - Added targeted Step 7 automation feature and Step 7 runtime tests.
  - Added Step 7 architecture and implementation documentation package.
 
+## Step 8 Highlights
+ - Implemented deterministic single-agent runtime under `agent/`:
+   - task analysis and classification
+   - planning and MCP tool selection
+   - MCP tool execution via Step 7 runtime boundary
+   - evidence collection and validation
+   - controlled reasoning and canonical response contract
+   - deterministic confidence scoring
+   - guardrails and human-approval foundation
+   - agent audit NDJSON logging
+ - Implemented CLI command:
+   - `npm run agent:task -- "<query>"`
+ - Added frontend AI agent route:
+   - `/agent`
+ - Added targeted Step 8 automation feature:
+   - `automation/features/functional/step8-ai-agent.feature`
+
 ## AI/Runtime Boundary
 Implemented:
 - Governance + contracts + local/mock knowledge foundation.
@@ -102,8 +119,7 @@ Implemented:
 - Step 6 deterministic local RAG evaluation runtime.
 
 Not implemented yet:
-- Agent and LangGraph runtime.
-- Multi-agent runtime.
+- LangGraph and multi-agent runtime.
 - Live Jira/Confluence API integration.
 
 ## Source-of-Truth Docs

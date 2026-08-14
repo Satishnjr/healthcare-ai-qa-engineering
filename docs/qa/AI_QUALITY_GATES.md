@@ -22,11 +22,13 @@ Define release-control gates for functional QA, automation quality, RAG quality,
 - No-evidence expected/unexpected handling
 - Access-control retrieval checks
 
-## Agent Gate (Planned Future Runtime)
+## Agent Gate (Step 8 Local Runtime Foundation Implemented)
 - Task success rate
 - Tool-call success rate
 - Failure rate
-- Human escalation rate
+- Human escalation/approval rate
+- Evidence presence and citation coverage
+- Authorization-denial handling
 
 ## MCP Gate (Step 7 Local Runtime Implemented)
 - Required tool registration count and names
@@ -83,6 +85,19 @@ Define release-control gates for functional QA, automation quality, RAG quality,
   - `INTERNAL_ERROR`
 - Authorization checks per role and required scope.
 - NDJSON audit telemetry for each tool call.
+
+## Implemented in Step 8 (Local Agent Runtime)
+- Deterministic single-agent runtime quality signals:
+  - task classification confidence
+  - tool selection and execution outcomes
+  - evidence validation status
+  - citation coverage
+  - deterministic confidence score and band
+  - guardrail and approval state
+- Agent audit telemetry:
+  - `.tmp/agent-runtime/agent-audit.ndjson`
+- Gate status model used in canonical response:
+  - `SUCCESS`, `PARTIAL`, `NO_EVIDENCE`, `NEEDS_APPROVAL`, `ACCESS_DENIED`, `ERROR`
 
 ## Step 6 Threshold Baseline (Development)
 - contextPrecision >= 0.55

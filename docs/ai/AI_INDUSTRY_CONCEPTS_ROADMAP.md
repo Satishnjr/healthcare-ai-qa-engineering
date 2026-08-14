@@ -39,12 +39,19 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 | MCP authorization | PASS | STEP 7 |
 | MCP auditability | PASS | STEP 7 |
 | MCP observability | PASS | STEP 7 |
-| Agentic AI | FOUNDATION | STEP 8 |
-| Agent evaluation | FOUNDATION | STEP 8/10 |
-| Multi-agent systems | FOUNDATION | STEP 10 |
-| LangGraph | FOUNDATION | STEP 9 |
-| Human-in-the-loop | FOUNDATION | STEP 9/11 |
-| Guardrails | FOUNDATION | STEP 11 |
+| Agentic AI | PASS | STEP 8 |
+| Agent runtime | PASS | STEP 8 |
+| Agent planning | PASS | STEP 8 |
+| Tool selection | PASS | STEP 8 |
+| Evidence-based agent | PASS | STEP 8 |
+| Agent confidence | PASS | STEP 8 |
+| Agent observability | PASS | STEP 8 |
+| Agent auditability | PASS | STEP 8 |
+| Agent evaluation | FOUNDATION | STEP 9/10 |
+| Multi-agent systems | PLANNED | STEP 10 |
+| LangGraph | PLANNED | STEP 9 |
+| Human-in-the-loop | PASS (Foundation) | STEP 8/9 |
+| Guardrails | PASS | STEP 8 |
 | Prompt injection protection | FOUNDATION | STEP 11 |
 | AI security | FOUNDATION | STEP 11 |
 | LLMOps | FOUNDATION | STEP 11 |
@@ -66,7 +73,7 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 | Auditability | PASS | STEP 11 |
 | Explainability | FOUNDATION | STEP 11 |
 | Evidence-based AI decisions | PASS | STEP 8/11 |
-| Confidence scoring | FOUNDATION | STEP 8/11 |
+| Confidence scoring | PASS | STEP 8 |
 | No-fabrication policies | PASS | STEP 11 |
 
 ## Step 4 Note
@@ -82,4 +89,7 @@ Step 5 implemented deterministic local RAG runtime (ingest/retrieve/cite) with d
 Step 6 implemented deterministic local RAG evaluation runtime (datasets, metrics, quality gates, runs, reports, comparison, and evaluation dashboard). Official RAGAS library runtime integration remains planned and is not claimed.
 
 ## Step 7 Note
-Step 7 implemented deterministic local MCP server, client harness, tool catalog, tool discovery/calling, role authorization, audit telemetry, and frontend MCP demonstration page. AI agent runtime remains planned for Step 8.
+Step 7 implemented deterministic local MCP server, client harness, tool catalog, tool discovery/calling, role authorization, audit telemetry, and frontend MCP demonstration page. Step 8 then reused this runtime as the agent tool-calling boundary.
+
+## Step 8 Note
+Step 8 implemented deterministic single-agent runtime with task understanding, planning, MCP tool selection/calling, evidence validation, confidence scoring, guardrails, approval foundation, and agent audit logging. LangGraph and multi-agent runtimes remain planned.

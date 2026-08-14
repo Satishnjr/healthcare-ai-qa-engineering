@@ -1069,3 +1069,24 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence ->
 ### Step 7 Notes
 - Step 7 reuses existing Step 4 Jira/Confluence foundation, Step 5 RAG runtime, and Step 6 evaluation artifacts.
 - No autonomous AI agent runtime is implemented in Step 7.
+
+## Step 8 AI Agent Runtime Traceability Extension
+
+### Extended Agent Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence -> Knowledge Document -> Chunk -> Embedding -> Vector -> Retrieval -> RAG Answer -> Citation -> Evaluation Dataset -> Evaluation Run -> Metric -> Quality Gate -> MCP Tool -> MCP Server -> MCP Client -> Tool Result -> AI Agent -> Task -> Plan -> Tool Selection -> Tool Execution -> Evidence -> Reasoning -> Response -> Citation -> Confidence -> Audit -> Test Scenario -> Test Case -> BDD -> Automation -> Execution
+
+### Step 8 Deterministic Mapping Snapshot
+
+| Layer | Example ID | Status |
+|---|---|---|
+| AI Agent | `agent/src/agent-runtime.js` | PASS |
+| Task | `TASK-*` | PASS |
+| Plan | `PLAN-*` | PASS |
+| Tool Selection | `agent/src/tool-selector.js` | PASS |
+| Tool Execution | Step 7 MCP `tools/call` | PASS |
+| Evidence | `agent/src/evidence-manager.js` | PASS |
+| Response | `RESP-*` canonical contract | PASS |
+| Confidence | `agent/src/confidence-engine.js` | PASS |
+| Audit | `.tmp/agent-runtime/agent-audit.ndjson` | PASS |
+| LangGraph | N/A | PLANNED STEP 9 |
+| Multi-agent | N/A | PLANNED STEP 10 |

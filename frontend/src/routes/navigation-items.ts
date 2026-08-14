@@ -160,6 +160,11 @@ export const navigationItems: NavigationItem[] = [
     roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
   },
   {
+    path: "/agent",
+    label: "AI Agent",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
     path: "/admin",
     label: "Administration",
     roles: ["Healthcare Administrator"],

@@ -1152,6 +1152,23 @@ tbody tr:hover {
   background: #eaf5ff;
 }
 
+/* Step 8 Agent */
+.agent-plan-row,
+.agent-tool-row,
+.agent-evidence-row {
+  border: 1px solid #d5e5ef;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #f9fcff;
+}
+
+.agent-plan-row p,
+.agent-tool-row p,
+.agent-evidence-row p {
+  margin: 4px 0;
+}
+
 @media (max-width: 1280px) {
   .ops-summary-strip,
   .kpi-grid,

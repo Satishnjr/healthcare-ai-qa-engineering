@@ -1,7 +1,7 @@
 # Interview Guide
 
 ## Project Story (Major-Phase View)
-Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> Step 6 deterministic RAG evaluation runtime -> Step 7 deterministic MCP runtime -> planned agent runtime.
+Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> Step 6 deterministic RAG evaluation runtime -> Step 7 deterministic MCP runtime -> Step 8 deterministic agent runtime.
 
 ## What Is Implemented
 
@@ -18,13 +18,14 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 | RAG runtime (local deterministic) | PASS | `rag/` runtime + Step 5 docs + Knowledge page RAG query flow |
 | RAG evaluation runtime (local deterministic) | PASS | `rag/src/evaluation/*` + `/knowledge/evaluation` + Step 6 docs |
 | MCP runtime and tool calling foundation | PASS | `mcp/runtime/` + `/mcp` demo page + Step 7 docs/tests |
+| QA AI agent runtime (single-agent) | PASS | `agent/` + `/agent` page + Step 8 docs/tests |
 
 ## What Is Not Yet Implemented
 
 | Area | Status |
 |---|---|
 | RAGAS official library runtime integration | PLANNED |
-| Single QA agent runtime | PLANNED |
+| Single QA agent runtime | PASS |
 | LangGraph orchestration runtime | PLANNED |
 | Multi-agent runtime | PLANNED |
 | Live Jira/Confluence API integration | PLANNED/BLOCKED |
@@ -57,7 +58,7 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 - STEP 5: RAG runtime (implemented as local deterministic foundation).
 - STEP 6: deterministic local RAG evaluation runtime with quality gates (implemented).
 - STEP 7: MCP runtime and tool calling foundation (implemented).
-- STEP 8: first QA AI agent runtime.
+- STEP 8: first QA AI agent runtime (implemented, deterministic local foundation).
 - STEP 9: LangGraph orchestration runtime.
 - STEP 10: multi-agent runtime.
 - STEP 11: enterprise integration, observability, LLMOps, security, and production readiness.

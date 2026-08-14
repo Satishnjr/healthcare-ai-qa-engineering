@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { AppShell } from "../layouts/app-shell";
 import { RequireAuth, RequireRoleAccess } from "../routes/guarded-route";
 import { AdminPage } from "../pages/admin-page";
+import { AgentPage } from "../pages/agent-page";
 import { AppointmentDetailPage } from "../pages/appointment-detail-page";
 import { AppointmentsPage } from "../pages/appointments-page";
 import { BillingInsurancePage } from "../pages/billing-insurance-page";
@@ -323,6 +324,14 @@ export function App() {
           element={
             <ProtectedOutlet>
               <McpPage />
+            </ProtectedOutlet>
+          }
+        />
+        <Route
+          path="agent"
+          element={
+            <ProtectedOutlet>
+              <AgentPage />
             </ProtectedOutlet>
           }
         />

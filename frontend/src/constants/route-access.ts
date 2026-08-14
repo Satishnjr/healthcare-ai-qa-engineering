@@ -146,4 +146,5 @@ export const routeAccess: Record<string, Role[]> = {
     "Healthcare Administrator",
   ],
   "/mcp": ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  "/agent": ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
 };
