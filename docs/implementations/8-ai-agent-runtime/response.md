@@ -267,13 +267,19 @@ Architecture docs added:
 - `docs/architecture/AI_AGENT_*.md`
 
 ## 27. Git
-Step 8 files prepared locally.
-Commit and push not executed in this response yet.
+Commit executed:
+- `c96ca8de1ecdc51a9c89664fc20df0d1a0a708cf`
+- message: `feat(step-8): implement ai agent runtime`
+
+Push:
+- `origin/main` updated from `59475f0` to `c96ca8d`
+- remote verification (`git ls-remote origin refs/heads/main`) matches local HEAD
 
 ## 28. Known Issues
 - `rag npm test` currently failing due existing Step 6 tuning regression (`grounded generation should use evidence`).
 - targeted Step 8 Cucumber execution is blocked by known report file `EPERM` write lock in this environment.
 - Node direct artifact generation into `frontend/public/agent` can hit `EPERM`; artifact was generated via PowerShell + Node fallback.
+- Workspace still contains unrelated in-progress RAG changes from previous step (`rag/src/*` and `frontend/public/rag/*`), intentionally left intact.
 
 ## 29. Next Recommended Step
 Step 9 - LangGraph orchestration foundation over this Step 8 deterministic single-agent baseline.
