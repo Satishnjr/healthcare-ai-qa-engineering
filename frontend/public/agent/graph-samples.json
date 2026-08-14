@@ -1,0 +1,3739 @@
+{
+  "generatedAt": "2026-08-14T04:10:27.737Z",
+  "runtime": "langgraph-compatible-development-runtime",
+  "samples": {
+    "success": {
+      "graphRunId": "GRAPH-a38ee5ccecfe00a0",
+      "requestId": "REQ-983593dab34e4437",
+      "taskId": "TASK-73506e38c71550c9",
+      "originalRequest": "Find the acceptance criteria for appointment cancellation.",
+      "role": "Doctor",
+      "taskType": "KNOWLEDGE_SEARCH",
+      "entities": [
+        {
+          "type": "FEATURE",
+          "value": "appointment cancellation"
+        }
+      ],
+      "constraints": {
+        "role": "Doctor",
+        "readOnly": true,
+        "noFabrication": true
+      },
+      "requestedOutput": "grounded_qa_response",
+      "riskLevel": "LOW",
+      "confidence": {
+        "score": 0.874,
+        "band": "MEDIUM_HIGH",
+        "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+      },
+      "plan": {
+        "planId": "PLAN-ec641deb10a09a01",
+        "taskId": "TASK-73506e38c71550c9",
+        "steps": [
+          {
+            "order": 1,
+            "tool": "search_jira",
+            "purpose": "Collect evidence for KNOWLEDGE_SEARCH",
+            "input": {
+              "query": "Find the acceptance criteria for appointment cancellation.",
+              "role": "Doctor"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          },
+          {
+            "order": 2,
+            "tool": "get_jira_issue",
+            "purpose": "Collect evidence for KNOWLEDGE_SEARCH",
+            "input": {
+              "issueKey": "CFH-US-005"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          }
+        ]
+      },
+      "selectedTools": [
+        "search_jira",
+        "get_jira_issue"
+      ],
+      "currentNode": "END",
+      "previousNode": "audit",
+      "currentStep": 12,
+      "nodeHistory": [
+        {
+          "node": "task_understanding",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.327Z",
+          "details": {}
+        },
+        {
+          "node": "task_understanding",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.328Z",
+          "details": {
+            "durationMs": 0.99
+          }
+        },
+        {
+          "node": "planning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.333Z",
+          "details": {}
+        },
+        {
+          "node": "planning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.334Z",
+          "details": {
+            "durationMs": 0.35
+          }
+        },
+        {
+          "node": "tool_selection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.338Z",
+          "details": {}
+        },
+        {
+          "node": "tool_selection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.338Z",
+          "details": {
+            "durationMs": 0.22
+          }
+        },
+        {
+          "node": "tool_execution",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.343Z",
+          "details": {}
+        },
+        {
+          "node": "tool_execution",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.382Z",
+          "details": {
+            "durationMs": 38.31
+          }
+        },
+        {
+          "node": "evidence_collection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.384Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_collection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.385Z",
+          "details": {
+            "durationMs": 0.86
+          }
+        },
+        {
+          "node": "evidence_validation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.391Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_validation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.393Z",
+          "details": {
+            "durationMs": 1.63
+          }
+        },
+        {
+          "node": "reasoning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.395Z",
+          "details": {}
+        },
+        {
+          "node": "reasoning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.395Z",
+          "details": {
+            "durationMs": 0.25
+          }
+        },
+        {
+          "node": "response_generation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.398Z",
+          "details": {}
+        },
+        {
+          "node": "response_generation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.398Z",
+          "details": {
+            "durationMs": 0.39
+          }
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.400Z",
+          "details": {}
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.401Z",
+          "details": {
+            "durationMs": 0.29
+          }
+        },
+        {
+          "node": "approval_check",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.404Z",
+          "details": {}
+        },
+        {
+          "node": "approval_check",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.404Z",
+          "details": {
+            "durationMs": 0.3
+          }
+        },
+        {
+          "node": "finalization",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.406Z",
+          "details": {}
+        },
+        {
+          "node": "finalization",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.406Z",
+          "details": {
+            "durationMs": 0.17
+          }
+        },
+        {
+          "node": "audit",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.409Z",
+          "details": {}
+        },
+        {
+          "node": "audit",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.411Z",
+          "details": {
+            "durationMs": 1.17
+          }
+        }
+      ],
+      "transitionHistory": [
+        {
+          "from": "START",
+          "to": "task_understanding",
+          "reason": "start",
+          "timestamp": "2026-08-14T04:10:27.327Z"
+        },
+        {
+          "from": "task_understanding",
+          "to": "planning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.333Z"
+        },
+        {
+          "from": "planning",
+          "to": "tool_selection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.338Z"
+        },
+        {
+          "from": "tool_selection",
+          "to": "tool_execution",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.343Z"
+        },
+        {
+          "from": "tool_execution",
+          "to": "evidence_collection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.384Z"
+        },
+        {
+          "from": "evidence_collection",
+          "to": "evidence_validation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.391Z"
+        },
+        {
+          "from": "evidence_validation",
+          "to": "reasoning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.395Z"
+        },
+        {
+          "from": "reasoning",
+          "to": "response_generation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.398Z"
+        },
+        {
+          "from": "response_generation",
+          "to": "confidence_evaluation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.400Z"
+        },
+        {
+          "from": "confidence_evaluation",
+          "to": "approval_check",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.404Z"
+        },
+        {
+          "from": "approval_check",
+          "to": "finalization",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.406Z"
+        },
+        {
+          "from": "finalization",
+          "to": "audit",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.409Z"
+        },
+        {
+          "from": "audit",
+          "to": "END",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.412Z"
+        }
+      ],
+      "toolCalls": [
+        {
+          "tool": "search_jira",
+          "input": {
+            "query": "Find the acceptance criteria for appointment cancellation.",
+            "role": "Doctor"
+          },
+          "requestId": "AGT-REQ-279cef0062b34898",
+          "status": "SUCCESS",
+          "durationMs": 2
+        },
+        {
+          "tool": "get_jira_issue",
+          "input": {
+            "issueKey": "CFH-US-005"
+          },
+          "requestId": "AGT-REQ-307b0e1274468812",
+          "status": "SUCCESS",
+          "durationMs": 1
+        }
+      ],
+      "toolResults": [
+        {
+          "requestId": "AGT-REQ-279cef0062b34898",
+          "tool": "search_jira",
+          "input": {
+            "query": "Find the acceptance criteria for appointment cancellation.",
+            "role": "Doctor"
+          },
+          "status": "SUCCESS",
+          "source": "jira",
+          "durationMs": 2,
+          "output": {
+            "sourceSystem": "jira",
+            "query": {
+              "query": "Find the acceptance criteria for appointment cancellation.",
+              "role": "Doctor"
+            },
+            "total": 0,
+            "issues": []
+          },
+          "audit": {
+            "requestId": "AGT-REQ-279cef0062b34898",
+            "timestamp": "2026-08-14T04:10:27.379Z",
+            "toolName": "search_jira",
+            "inputSummary": {
+              "query": "Find the acceptance criteria for appointment cancellation.",
+              "role": "Doctor"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.51,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "jira"
+            ],
+            "returnedRecordCount": 0
+          }
+        },
+        {
+          "requestId": "AGT-REQ-307b0e1274468812",
+          "tool": "get_jira_issue",
+          "input": {
+            "issueKey": "CFH-US-005"
+          },
+          "status": "SUCCESS",
+          "source": "jira",
+          "durationMs": 1,
+          "output": {
+            "sourceSystem": "jira",
+            "issue": {
+              "issueId": "10002",
+              "issueKey": "CFH-US-005",
+              "issueType": "Story",
+              "summary": "Search patient by medical record number",
+              "description": "As a doctor I need to find a patient quickly by MRN.",
+              "status": "QA Testing",
+              "priority": "High",
+              "labels": [
+                "careflow",
+                "patient-search"
+              ],
+              "components": [
+                "Patient Search"
+              ],
+              "sprint": "Sprint-12",
+              "release": "R1",
+              "assignee": "qa.engineer",
+              "reporter": "product.owner",
+              "parentIssue": "CFH-EPIC-001",
+              "linkedIssues": [
+                "CFH-TC-003-007",
+                "CFH-BUG-014"
+              ],
+              "acceptanceCriteria": [
+                "AC-US-003-003-001",
+                "AC-US-003-003-002",
+                "AC-US-003-003-003"
+              ],
+              "traceabilityIds": [
+                "US-003-003",
+                "TS-003-007",
+                "TC-TS-003-007-01"
+              ],
+              "testCaseIds": [
+                "TC-TS-003-007-01",
+                "TC-TS-003-008-01"
+              ],
+              "testScenarioIds": [
+                "TS-003-007",
+                "TS-003-008"
+              ],
+              "defectSeverity": null,
+              "automationStatus": "DETERMINISTIC_AUTOMATION",
+              "aiClassification": "AI_ASSISTED_AUTOMATION",
+              "aiConfidence": 0.87,
+              "evidenceReferences": [
+                "knowledge/user-stories/CAREFLOW_HEALTH_USER_STORIES.md",
+                "automation/features/regression/patient-search-regression.feature"
+              ],
+              "createdAt": "2026-08-13T10:05:00Z",
+              "updatedAt": "2026-08-13T10:15:00Z"
+            },
+            "acceptanceCriteria": [
+              "AC-US-003-003-001",
+              "AC-US-003-003-002",
+              "AC-US-003-003-003"
+            ],
+            "linkedIssues": [
+              "CFH-TC-003-007",
+              "CFH-BUG-014"
+            ],
+            "testScenarios": [
+              "TS-003-007",
+              "TS-003-008"
+            ],
+            "testCases": [
+              "TC-TS-003-007-01",
+              "TC-TS-003-008-01"
+            ],
+            "defectLinks": [
+              "CFH-BUG-014"
+            ],
+            "confluenceReferences": [
+              "CFH-PAGE-001"
+            ],
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          },
+          "audit": {
+            "requestId": "AGT-REQ-307b0e1274468812",
+            "timestamp": "2026-08-14T04:10:27.381Z",
+            "toolName": "get_jira_issue",
+            "inputSummary": {
+              "issueKey": "CFH-US-005"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.25,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "jira"
+            ],
+            "returnedRecordCount": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "evidenceId": "EVD-c8e9257f00a169bf",
+          "sourceSystem": "jira",
+          "sourceType": "Story",
+          "sourceId": "CFH-US-005",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ],
+          "content": "Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.",
+          "score": 0.92,
+          "timestamp": "2026-08-13T10:15:00Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        },
+        {
+          "evidenceId": "EVD-e41e11b3c501584c",
+          "sourceSystem": "jira",
+          "sourceType": "TestCaseReference",
+          "sourceId": "TC-TS-003-007-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [],
+          "content": "Referenced test case TC-TS-003-007-01",
+          "score": 0.8,
+          "timestamp": "2026-08-14T04:10:27.384Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        },
+        {
+          "evidenceId": "EVD-a9b7457afa6e9081",
+          "sourceSystem": "jira",
+          "sourceType": "TestCaseReference",
+          "sourceId": "TC-TS-003-008-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [],
+          "content": "Referenced test case TC-TS-003-008-01",
+          "score": 0.8,
+          "timestamp": "2026-08-14T04:10:27.384Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        }
+      ],
+      "evidenceValidation": {
+        "status": "VALID",
+        "warnings": []
+      },
+      "reasoning": {
+        "status": "SUCCESS",
+        "answer": "Task type KNOWLEDGE_SEARCH resolved using evidence:\n1. jira:CFH-US-005 - Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.\n2. jira:TC-TS-003-007-01 - Referenced test case TC-TS-003-007-01\n3. jira:TC-TS-003-008-01 - Referenced test case TC-TS-003-008-01",
+        "warnings": [],
+        "recommendedNextAction": "Use traceability lookup for deeper relationship view."
+      },
+      "response": {
+        "responseId": "RESP-24baeb554fc2937b",
+        "taskId": "TASK-73506e38c71550c9",
+        "status": "SUCCESS",
+        "answer": "Task type KNOWLEDGE_SEARCH resolved using evidence:\n1. jira:CFH-US-005 - Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.\n2. jira:TC-TS-003-007-01 - Referenced test case TC-TS-003-007-01\n3. jira:TC-TS-003-008-01 - Referenced test case TC-TS-003-008-01",
+        "taskType": "KNOWLEDGE_SEARCH",
+        "plan": {
+          "planId": "PLAN-ec641deb10a09a01",
+          "taskId": "TASK-73506e38c71550c9",
+          "steps": [
+            {
+              "order": 1,
+              "tool": "search_jira",
+              "purpose": "Collect evidence for KNOWLEDGE_SEARCH",
+              "input": {
+                "query": "Find the acceptance criteria for appointment cancellation.",
+                "role": "Doctor"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            },
+            {
+              "order": 2,
+              "tool": "get_jira_issue",
+              "purpose": "Collect evidence for KNOWLEDGE_SEARCH",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            }
+          ]
+        },
+        "toolCalls": [
+          {
+            "requestId": "AGT-REQ-279cef0062b34898",
+            "tool": "search_jira",
+            "status": "SUCCESS",
+            "source": "jira",
+            "durationMs": 2
+          },
+          {
+            "requestId": "AGT-REQ-307b0e1274468812",
+            "tool": "get_jira_issue",
+            "status": "SUCCESS",
+            "source": "jira",
+            "durationMs": 1
+          }
+        ],
+        "evidence": [
+          {
+            "evidenceId": "EVD-c8e9257f00a169bf",
+            "sourceSystem": "jira",
+            "sourceType": "Story",
+            "sourceId": "CFH-US-005",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ],
+            "content": "Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.",
+            "score": 0.92,
+            "timestamp": "2026-08-13T10:15:00Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          },
+          {
+            "evidenceId": "EVD-e41e11b3c501584c",
+            "sourceSystem": "jira",
+            "sourceType": "TestCaseReference",
+            "sourceId": "TC-TS-003-007-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [],
+            "content": "Referenced test case TC-TS-003-007-01",
+            "score": 0.8,
+            "timestamp": "2026-08-14T04:10:27.384Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          },
+          {
+            "evidenceId": "EVD-a9b7457afa6e9081",
+            "sourceSystem": "jira",
+            "sourceType": "TestCaseReference",
+            "sourceId": "TC-TS-003-008-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [],
+            "content": "Referenced test case TC-TS-003-008-01",
+            "score": 0.8,
+            "timestamp": "2026-08-14T04:10:27.384Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          }
+        ],
+        "citations": [
+          {
+            "evidenceId": "EVD-c8e9257f00a169bf",
+            "sourceSystem": "jira",
+            "sourceId": "CFH-US-005",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          },
+          {
+            "evidenceId": "EVD-e41e11b3c501584c",
+            "sourceSystem": "jira",
+            "sourceId": "TC-TS-003-007-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": []
+          },
+          {
+            "evidenceId": "EVD-a9b7457afa6e9081",
+            "sourceSystem": "jira",
+            "sourceId": "TC-TS-003-008-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": []
+          }
+        ],
+        "confidence": {
+          "score": 0.874,
+          "band": "MEDIUM_HIGH",
+          "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+        },
+        "warnings": [
+          "CONFIDENCE_BAND:VERY_LOW"
+        ],
+        "approval": {
+          "required": false,
+          "action": null,
+          "reason": "Read-only request.",
+          "status": "NOT_REQUIRED",
+          "decision": "APPROVED"
+        },
+        "audit": {
+          "graphRunId": "GRAPH-a38ee5ccecfe00a0",
+          "requestId": "REQ-983593dab34e4437",
+          "taskId": "TASK-73506e38c71550c9",
+          "responseId": "RESP-24baeb554fc2937b",
+          "timestamp": "2026-08-14T04:10:27.410Z",
+          "role": "Doctor",
+          "taskType": "KNOWLEDGE_SEARCH",
+          "toolsCalled": [
+            "search_jira",
+            "get_jira_issue"
+          ],
+          "toolResults": [
+            {
+              "tool": "search_jira",
+              "input": {
+                "query": "Find the acceptance criteria for appointment cancellation.",
+                "role": "Doctor"
+              },
+              "requestId": "AGT-REQ-279cef0062b34898",
+              "status": "SUCCESS",
+              "durationMs": 2
+            },
+            {
+              "tool": "get_jira_issue",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requestId": "AGT-REQ-307b0e1274468812",
+              "status": "SUCCESS",
+              "durationMs": 1
+            }
+          ],
+          "evidenceCount": 3,
+          "confidence": 0.874,
+          "finalStatus": "SUCCESS",
+          "approvalStatus": "NOT_REQUIRED",
+          "durationMs": 86
+        },
+        "generatedAt": "2026-08-14T04:10:27.398Z"
+      },
+      "citations": [
+        {
+          "evidenceId": "EVD-c8e9257f00a169bf",
+          "sourceSystem": "jira",
+          "sourceId": "CFH-US-005",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ]
+        },
+        {
+          "evidenceId": "EVD-e41e11b3c501584c",
+          "sourceSystem": "jira",
+          "sourceId": "TC-TS-003-007-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": []
+        },
+        {
+          "evidenceId": "EVD-a9b7457afa6e9081",
+          "sourceSystem": "jira",
+          "sourceId": "TC-TS-003-008-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": []
+        }
+      ],
+      "warnings": [],
+      "approval": {
+        "required": false,
+        "action": null,
+        "reason": "Read-only request.",
+        "status": "NOT_REQUIRED",
+        "decision": "APPROVED"
+      },
+      "approvalStatus": "NOT_REQUIRED",
+      "waitingForApproval": false,
+      "finalStatus": "SUCCESS",
+      "errors": [],
+      "retry": {
+        "failedNode": null,
+        "retryCount": 0,
+        "retryReason": null,
+        "evidenceRetryCount": 0
+      },
+      "limits": {
+        "stepCount": 12,
+        "toolCallCount": 2
+      },
+      "executionStatus": "COMPLETED",
+      "timestamps": {
+        "createdAt": "2026-08-14T04:10:27.320Z",
+        "updatedAt": "2026-08-14T04:10:27.413Z",
+        "startedAt": "2026-08-14T04:10:27.320Z",
+        "completedAt": "2026-08-14T04:10:27.413Z"
+      },
+      "auditMetadata": {
+        "graphRunId": "GRAPH-a38ee5ccecfe00a0",
+        "requestId": "REQ-983593dab34e4437",
+        "taskId": "TASK-73506e38c71550c9",
+        "responseId": "RESP-24baeb554fc2937b",
+        "mcpRequestIds": [
+          "AGT-REQ-279cef0062b34898",
+          "AGT-REQ-307b0e1274468812"
+        ],
+        "auditRecord": {
+          "responseId": "RESP-24baeb554fc2937b",
+          "graphRunId": "GRAPH-a38ee5ccecfe00a0",
+          "requestId": "REQ-983593dab34e4437",
+          "taskId": "TASK-73506e38c71550c9",
+          "timestamp": "2026-08-14T04:10:27.410Z",
+          "role": "Doctor",
+          "taskType": "KNOWLEDGE_SEARCH",
+          "toolsCalled": [
+            "search_jira",
+            "get_jira_issue"
+          ],
+          "toolResults": [
+            {
+              "tool": "search_jira",
+              "input": {
+                "query": "Find the acceptance criteria for appointment cancellation.",
+                "role": "Doctor"
+              },
+              "requestId": "AGT-REQ-279cef0062b34898",
+              "status": "SUCCESS",
+              "durationMs": 2
+            },
+            {
+              "tool": "get_jira_issue",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requestId": "AGT-REQ-307b0e1274468812",
+              "status": "SUCCESS",
+              "durationMs": 1
+            }
+          ],
+          "evidenceCount": 3,
+          "confidence": 0.874,
+          "finalStatus": "SUCCESS",
+          "approvalStatus": "NOT_REQUIRED",
+          "durationMs": 86
+        }
+      }
+    },
+    "noEvidence": {
+      "graphRunId": "GRAPH-a36e44f7438ef793",
+      "requestId": "REQ-a497a09a18ad3559",
+      "taskId": "TASK-a497a09a18ad3559",
+      "originalRequest": "Explain lunar surgery workflow controls for Mars colony hospitals.",
+      "role": "Doctor",
+      "taskType": "GENERAL_QA_KNOWLEDGE",
+      "entities": [],
+      "constraints": {
+        "role": "Doctor",
+        "readOnly": true,
+        "noFabrication": true
+      },
+      "requestedOutput": "grounded_qa_response",
+      "riskLevel": "LOW",
+      "confidence": {
+        "score": 0.81,
+        "band": "VERY_LOW",
+        "formula": ""
+      },
+      "plan": {
+        "planId": "PLAN-8127c00eeff5b1f8",
+        "taskId": "TASK-a497a09a18ad3559",
+        "steps": [
+          {
+            "order": 1,
+            "tool": "get_qa_knowledge",
+            "purpose": "Collect evidence for GENERAL_QA_KNOWLEDGE",
+            "input": {
+              "query": "Explain lunar surgery workflow controls for Mars colony hospitals.",
+              "role": "Doctor"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          }
+        ]
+      },
+      "selectedTools": [
+        "get_qa_knowledge"
+      ],
+      "currentNode": "END",
+      "previousNode": "audit",
+      "currentStep": 12,
+      "nodeHistory": [
+        {
+          "node": "task_understanding",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.414Z",
+          "details": {}
+        },
+        {
+          "node": "task_understanding",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.414Z",
+          "details": {
+            "durationMs": 0.14
+          }
+        },
+        {
+          "node": "planning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.417Z",
+          "details": {}
+        },
+        {
+          "node": "planning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.417Z",
+          "details": {
+            "durationMs": 0.12
+          }
+        },
+        {
+          "node": "tool_selection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.421Z",
+          "details": {}
+        },
+        {
+          "node": "tool_selection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.421Z",
+          "details": {
+            "durationMs": 0.03
+          }
+        },
+        {
+          "node": "tool_execution",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.423Z",
+          "details": {}
+        },
+        {
+          "node": "tool_execution",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.486Z",
+          "details": {
+            "durationMs": 63.11
+          }
+        },
+        {
+          "node": "evidence_collection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.489Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_collection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.489Z",
+          "details": {
+            "durationMs": 0.02
+          }
+        },
+        {
+          "node": "evidence_validation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.492Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_validation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.492Z",
+          "details": {
+            "durationMs": 0.04
+          }
+        },
+        {
+          "node": "tool_selection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.494Z",
+          "details": {}
+        },
+        {
+          "node": "tool_selection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.494Z",
+          "details": {
+            "durationMs": 0.02
+          }
+        },
+        {
+          "node": "tool_execution",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.496Z",
+          "details": {}
+        },
+        {
+          "node": "tool_execution",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.559Z",
+          "details": {
+            "durationMs": 62.69
+          }
+        },
+        {
+          "node": "evidence_collection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.561Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_collection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.561Z",
+          "details": {
+            "durationMs": 0.02
+          }
+        },
+        {
+          "node": "evidence_validation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.563Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_validation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.563Z",
+          "details": {
+            "durationMs": 0.03
+          }
+        },
+        {
+          "node": "finalization",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.565Z",
+          "details": {}
+        },
+        {
+          "node": "finalization",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.565Z",
+          "details": {
+            "durationMs": 0.01
+          }
+        },
+        {
+          "node": "audit",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.567Z",
+          "details": {}
+        },
+        {
+          "node": "audit",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.568Z",
+          "details": {
+            "durationMs": 0.63
+          }
+        }
+      ],
+      "transitionHistory": [
+        {
+          "from": "START",
+          "to": "task_understanding",
+          "reason": "start",
+          "timestamp": "2026-08-14T04:10:27.414Z"
+        },
+        {
+          "from": "task_understanding",
+          "to": "planning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.417Z"
+        },
+        {
+          "from": "planning",
+          "to": "tool_selection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.421Z"
+        },
+        {
+          "from": "tool_selection",
+          "to": "tool_execution",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.423Z"
+        },
+        {
+          "from": "tool_execution",
+          "to": "evidence_collection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.489Z"
+        },
+        {
+          "from": "evidence_collection",
+          "to": "evidence_validation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.492Z"
+        },
+        {
+          "from": "evidence_validation",
+          "to": "tool_selection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.494Z"
+        },
+        {
+          "from": "tool_selection",
+          "to": "tool_execution",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.496Z"
+        },
+        {
+          "from": "tool_execution",
+          "to": "evidence_collection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.561Z"
+        },
+        {
+          "from": "evidence_collection",
+          "to": "evidence_validation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.563Z"
+        },
+        {
+          "from": "evidence_validation",
+          "to": "finalization",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.565Z"
+        },
+        {
+          "from": "finalization",
+          "to": "audit",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.567Z"
+        },
+        {
+          "from": "audit",
+          "to": "END",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.571Z"
+        }
+      ],
+      "toolCalls": [
+        {
+          "tool": "get_qa_knowledge",
+          "input": {
+            "query": "Explain lunar surgery workflow controls for Mars colony hospitals.",
+            "role": "Doctor"
+          },
+          "requestId": "AGT-REQ-a0c63572f085942e",
+          "status": "ERROR",
+          "durationMs": 16
+        }
+      ],
+      "toolResults": [
+        {
+          "requestId": "AGT-REQ-a0c63572f085942e",
+          "tool": "get_qa_knowledge",
+          "input": {
+            "query": "Explain lunar surgery workflow controls for Mars colony hospitals.",
+            "role": "Doctor"
+          },
+          "status": "ERROR",
+          "source": "mcp-runtime",
+          "durationMs": 16,
+          "error": {
+            "code": "NO_EVIDENCE",
+            "message": "No QA knowledge evidence matched the query",
+            "tool": "get_qa_knowledge",
+            "requestId": "AGT-REQ-a0c63572f085942e",
+            "retryable": false,
+            "details": {
+              "query": "Explain lunar surgery workflow controls for Mars colony hospitals.",
+              "role": "Doctor"
+            }
+          }
+        }
+      ],
+      "evidence": [],
+      "evidenceValidation": {
+        "status": "INSUFFICIENT",
+        "warnings": [
+          "NO_EVIDENCE"
+        ]
+      },
+      "reasoning": null,
+      "response": null,
+      "citations": [],
+      "warnings": [
+        "NO_EVIDENCE",
+        "NO_EVIDENCE"
+      ],
+      "approval": {
+        "required": false,
+        "status": "NOT_REQUIRED",
+        "reason": "Read-only request.",
+        "action": null,
+        "decision": "APPROVED"
+      },
+      "approvalStatus": "NOT_REQUIRED",
+      "waitingForApproval": false,
+      "finalStatus": "SUCCESS",
+      "errors": [],
+      "retry": {
+        "failedNode": "tool_execution",
+        "retryCount": 2,
+        "retryReason": "No QA knowledge evidence matched the query",
+        "evidenceRetryCount": 1
+      },
+      "limits": {
+        "stepCount": 12,
+        "toolCallCount": 2
+      },
+      "executionStatus": "COMPLETED",
+      "timestamps": {
+        "createdAt": "2026-08-14T04:10:27.414Z",
+        "updatedAt": "2026-08-14T04:10:27.571Z",
+        "startedAt": "2026-08-14T04:10:27.414Z",
+        "completedAt": "2026-08-14T04:10:27.571Z"
+      },
+      "auditMetadata": {
+        "graphRunId": "GRAPH-a36e44f7438ef793",
+        "requestId": "REQ-a497a09a18ad3559",
+        "taskId": "TASK-a497a09a18ad3559",
+        "responseId": null,
+        "mcpRequestIds": [
+          "AGT-REQ-a0c63572f085942e"
+        ],
+        "auditRecord": {
+          "responseId": null,
+          "graphRunId": "GRAPH-a36e44f7438ef793",
+          "requestId": "REQ-a497a09a18ad3559",
+          "taskId": "TASK-a497a09a18ad3559",
+          "timestamp": "2026-08-14T04:10:27.567Z",
+          "role": "Doctor",
+          "taskType": "GENERAL_QA_KNOWLEDGE",
+          "toolsCalled": [
+            "get_qa_knowledge"
+          ],
+          "toolResults": [
+            {
+              "tool": "get_qa_knowledge",
+              "input": {
+                "query": "Explain lunar surgery workflow controls for Mars colony hospitals.",
+                "role": "Doctor"
+              },
+              "requestId": "AGT-REQ-a0c63572f085942e",
+              "status": "ERROR",
+              "durationMs": 16
+            }
+          ],
+          "evidenceCount": 0,
+          "confidence": 0.81,
+          "finalStatus": "SUCCESS",
+          "approvalStatus": "NOT_REQUIRED",
+          "durationMs": 151
+        }
+      }
+    },
+    "waiting": {
+      "graphRunId": "GRAPH-5254faadef6563c5",
+      "requestId": "REQ-ff41d834a7a816ad",
+      "taskId": "TASK-ff41d834a7a816ad",
+      "originalRequest": "Create Jira issue for appointment cancellation defect.",
+      "role": "Doctor",
+      "taskType": "JIRA_LOOKUP",
+      "entities": [
+        {
+          "type": "FEATURE",
+          "value": "appointment cancellation"
+        }
+      ],
+      "constraints": {
+        "role": "Doctor",
+        "readOnly": true,
+        "noFabrication": true
+      },
+      "requestedOutput": "grounded_qa_response",
+      "riskLevel": "LOW",
+      "confidence": {
+        "score": 0.844,
+        "band": "MEDIUM_HIGH",
+        "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+      },
+      "plan": {
+        "planId": "PLAN-119deb6254b50be9",
+        "taskId": "TASK-ff41d834a7a816ad",
+        "steps": [
+          {
+            "order": 1,
+            "tool": "search_jira",
+            "purpose": "Collect evidence for JIRA_LOOKUP",
+            "input": {
+              "query": "Create Jira issue for appointment cancellation defect.",
+              "role": "Doctor"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          },
+          {
+            "order": 2,
+            "tool": "get_jira_issue",
+            "purpose": "Collect evidence for JIRA_LOOKUP",
+            "input": {
+              "issueKey": "CFH-US-005"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          }
+        ]
+      },
+      "selectedTools": [
+        "search_jira",
+        "get_jira_issue"
+      ],
+      "currentNode": "END",
+      "previousNode": "audit",
+      "currentStep": 12,
+      "nodeHistory": [
+        {
+          "node": "task_understanding",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.573Z",
+          "details": {}
+        },
+        {
+          "node": "task_understanding",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.573Z",
+          "details": {
+            "durationMs": 0.07
+          }
+        },
+        {
+          "node": "planning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.577Z",
+          "details": {}
+        },
+        {
+          "node": "planning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.577Z",
+          "details": {
+            "durationMs": 0.1
+          }
+        },
+        {
+          "node": "tool_selection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.579Z",
+          "details": {}
+        },
+        {
+          "node": "tool_selection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.579Z",
+          "details": {
+            "durationMs": 0.03
+          }
+        },
+        {
+          "node": "tool_execution",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.581Z",
+          "details": {}
+        },
+        {
+          "node": "tool_execution",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.610Z",
+          "details": {
+            "durationMs": 28.81
+          }
+        },
+        {
+          "node": "evidence_collection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_collection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "details": {
+            "durationMs": 0.13
+          }
+        },
+        {
+          "node": "evidence_validation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.614Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_validation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.614Z",
+          "details": {
+            "durationMs": 0.06
+          }
+        },
+        {
+          "node": "reasoning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.616Z",
+          "details": {}
+        },
+        {
+          "node": "reasoning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.616Z",
+          "details": {
+            "durationMs": 0.05
+          }
+        },
+        {
+          "node": "response_generation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.618Z",
+          "details": {}
+        },
+        {
+          "node": "response_generation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.618Z",
+          "details": {
+            "durationMs": 0.21
+          }
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.621Z",
+          "details": {}
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.621Z",
+          "details": {
+            "durationMs": 0.05
+          }
+        },
+        {
+          "node": "approval_check",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.624Z",
+          "details": {}
+        },
+        {
+          "node": "approval_check",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.624Z",
+          "details": {
+            "durationMs": 0.09
+          }
+        },
+        {
+          "node": "finalization",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.636Z",
+          "details": {}
+        },
+        {
+          "node": "finalization",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.636Z",
+          "details": {
+            "durationMs": 0.04
+          }
+        },
+        {
+          "node": "audit",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.640Z",
+          "details": {}
+        },
+        {
+          "node": "audit",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.641Z",
+          "details": {
+            "durationMs": 0.68
+          }
+        }
+      ],
+      "transitionHistory": [
+        {
+          "from": "START",
+          "to": "task_understanding",
+          "reason": "start",
+          "timestamp": "2026-08-14T04:10:27.573Z"
+        },
+        {
+          "from": "task_understanding",
+          "to": "planning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.577Z"
+        },
+        {
+          "from": "planning",
+          "to": "tool_selection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.579Z"
+        },
+        {
+          "from": "tool_selection",
+          "to": "tool_execution",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.581Z"
+        },
+        {
+          "from": "tool_execution",
+          "to": "evidence_collection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.612Z"
+        },
+        {
+          "from": "evidence_collection",
+          "to": "evidence_validation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.614Z"
+        },
+        {
+          "from": "evidence_validation",
+          "to": "reasoning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.616Z"
+        },
+        {
+          "from": "reasoning",
+          "to": "response_generation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.618Z"
+        },
+        {
+          "from": "response_generation",
+          "to": "confidence_evaluation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.621Z"
+        },
+        {
+          "from": "confidence_evaluation",
+          "to": "approval_check",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.624Z"
+        },
+        {
+          "from": "approval_check",
+          "to": "WAITING_FOR_APPROVAL",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.627Z"
+        },
+        {
+          "from": "finalization",
+          "to": "audit",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.640Z"
+        },
+        {
+          "from": "audit",
+          "to": "END",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.643Z"
+        }
+      ],
+      "toolCalls": [
+        {
+          "tool": "search_jira",
+          "input": {
+            "query": "Create Jira issue for appointment cancellation defect.",
+            "role": "Doctor"
+          },
+          "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+          "status": "SUCCESS",
+          "durationMs": 0
+        },
+        {
+          "tool": "get_jira_issue",
+          "input": {
+            "issueKey": "CFH-US-005"
+          },
+          "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+          "status": "SUCCESS",
+          "durationMs": 1
+        }
+      ],
+      "toolResults": [
+        {
+          "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+          "tool": "search_jira",
+          "input": {
+            "query": "Create Jira issue for appointment cancellation defect.",
+            "role": "Doctor"
+          },
+          "status": "SUCCESS",
+          "source": "jira",
+          "durationMs": 0,
+          "output": {
+            "sourceSystem": "jira",
+            "query": {
+              "query": "Create Jira issue for appointment cancellation defect.",
+              "role": "Doctor"
+            },
+            "total": 0,
+            "issues": []
+          },
+          "audit": {
+            "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+            "timestamp": "2026-08-14T04:10:27.609Z",
+            "toolName": "search_jira",
+            "inputSummary": {
+              "query": "Create Jira issue for appointment cancellation defect.",
+              "role": "Doctor"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.11,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "jira"
+            ],
+            "returnedRecordCount": 0
+          }
+        },
+        {
+          "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+          "tool": "get_jira_issue",
+          "input": {
+            "issueKey": "CFH-US-005"
+          },
+          "status": "SUCCESS",
+          "source": "jira",
+          "durationMs": 1,
+          "output": {
+            "sourceSystem": "jira",
+            "issue": {
+              "issueId": "10002",
+              "issueKey": "CFH-US-005",
+              "issueType": "Story",
+              "summary": "Search patient by medical record number",
+              "description": "As a doctor I need to find a patient quickly by MRN.",
+              "status": "QA Testing",
+              "priority": "High",
+              "labels": [
+                "careflow",
+                "patient-search"
+              ],
+              "components": [
+                "Patient Search"
+              ],
+              "sprint": "Sprint-12",
+              "release": "R1",
+              "assignee": "qa.engineer",
+              "reporter": "product.owner",
+              "parentIssue": "CFH-EPIC-001",
+              "linkedIssues": [
+                "CFH-TC-003-007",
+                "CFH-BUG-014"
+              ],
+              "acceptanceCriteria": [
+                "AC-US-003-003-001",
+                "AC-US-003-003-002",
+                "AC-US-003-003-003"
+              ],
+              "traceabilityIds": [
+                "US-003-003",
+                "TS-003-007",
+                "TC-TS-003-007-01"
+              ],
+              "testCaseIds": [
+                "TC-TS-003-007-01",
+                "TC-TS-003-008-01"
+              ],
+              "testScenarioIds": [
+                "TS-003-007",
+                "TS-003-008"
+              ],
+              "defectSeverity": null,
+              "automationStatus": "DETERMINISTIC_AUTOMATION",
+              "aiClassification": "AI_ASSISTED_AUTOMATION",
+              "aiConfidence": 0.87,
+              "evidenceReferences": [
+                "knowledge/user-stories/CAREFLOW_HEALTH_USER_STORIES.md",
+                "automation/features/regression/patient-search-regression.feature"
+              ],
+              "createdAt": "2026-08-13T10:05:00Z",
+              "updatedAt": "2026-08-13T10:15:00Z"
+            },
+            "acceptanceCriteria": [
+              "AC-US-003-003-001",
+              "AC-US-003-003-002",
+              "AC-US-003-003-003"
+            ],
+            "linkedIssues": [
+              "CFH-TC-003-007",
+              "CFH-BUG-014"
+            ],
+            "testScenarios": [
+              "TS-003-007",
+              "TS-003-008"
+            ],
+            "testCases": [
+              "TC-TS-003-007-01",
+              "TC-TS-003-008-01"
+            ],
+            "defectLinks": [
+              "CFH-BUG-014"
+            ],
+            "confluenceReferences": [
+              "CFH-PAGE-001"
+            ],
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          },
+          "audit": {
+            "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+            "timestamp": "2026-08-14T04:10:27.609Z",
+            "toolName": "get_jira_issue",
+            "inputSummary": {
+              "issueKey": "CFH-US-005"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.06,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "jira"
+            ],
+            "returnedRecordCount": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "evidenceId": "EVD-c8e9257f00a169bf",
+          "sourceSystem": "jira",
+          "sourceType": "Story",
+          "sourceId": "CFH-US-005",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ],
+          "content": "Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.",
+          "score": 0.92,
+          "timestamp": "2026-08-13T10:15:00Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        },
+        {
+          "evidenceId": "EVD-4cfd7f42437005d5",
+          "sourceSystem": "jira",
+          "sourceType": "TestCaseReference",
+          "sourceId": "TC-TS-003-007-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [],
+          "content": "Referenced test case TC-TS-003-007-01",
+          "score": 0.8,
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        },
+        {
+          "evidenceId": "EVD-eeecf59ee18af77b",
+          "sourceSystem": "jira",
+          "sourceType": "TestCaseReference",
+          "sourceId": "TC-TS-003-008-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [],
+          "content": "Referenced test case TC-TS-003-008-01",
+          "score": 0.8,
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        }
+      ],
+      "evidenceValidation": {
+        "status": "PARTIAL",
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE"
+        ]
+      },
+      "reasoning": {
+        "status": "PARTIAL",
+        "answer": "Task type JIRA_LOOKUP resolved using evidence:\n1. jira:CFH-US-005 - Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.\n2. jira:TC-TS-003-007-01 - Referenced test case TC-TS-003-007-01\n3. jira:TC-TS-003-008-01 - Referenced test case TC-TS-003-008-01",
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE"
+        ],
+        "recommendedNextAction": "Use traceability lookup for deeper relationship view."
+      },
+      "response": {
+        "responseId": "RESP-c6eaeaeeca1e517c",
+        "taskId": "TASK-ff41d834a7a816ad",
+        "status": "SUCCESS",
+        "answer": "Task type JIRA_LOOKUP resolved using evidence:\n1. jira:CFH-US-005 - Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.\n2. jira:TC-TS-003-007-01 - Referenced test case TC-TS-003-007-01\n3. jira:TC-TS-003-008-01 - Referenced test case TC-TS-003-008-01",
+        "taskType": "JIRA_LOOKUP",
+        "plan": {
+          "planId": "PLAN-119deb6254b50be9",
+          "taskId": "TASK-ff41d834a7a816ad",
+          "steps": [
+            {
+              "order": 1,
+              "tool": "search_jira",
+              "purpose": "Collect evidence for JIRA_LOOKUP",
+              "input": {
+                "query": "Create Jira issue for appointment cancellation defect.",
+                "role": "Doctor"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            },
+            {
+              "order": 2,
+              "tool": "get_jira_issue",
+              "purpose": "Collect evidence for JIRA_LOOKUP",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            }
+          ]
+        },
+        "toolCalls": [
+          {
+            "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+            "tool": "search_jira",
+            "status": "SUCCESS",
+            "source": "jira",
+            "durationMs": 0
+          },
+          {
+            "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+            "tool": "get_jira_issue",
+            "status": "SUCCESS",
+            "source": "jira",
+            "durationMs": 1
+          }
+        ],
+        "evidence": [
+          {
+            "evidenceId": "EVD-c8e9257f00a169bf",
+            "sourceSystem": "jira",
+            "sourceType": "Story",
+            "sourceId": "CFH-US-005",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ],
+            "content": "Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.",
+            "score": 0.92,
+            "timestamp": "2026-08-13T10:15:00Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          },
+          {
+            "evidenceId": "EVD-4cfd7f42437005d5",
+            "sourceSystem": "jira",
+            "sourceType": "TestCaseReference",
+            "sourceId": "TC-TS-003-007-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [],
+            "content": "Referenced test case TC-TS-003-007-01",
+            "score": 0.8,
+            "timestamp": "2026-08-14T04:10:27.612Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          },
+          {
+            "evidenceId": "EVD-eeecf59ee18af77b",
+            "sourceSystem": "jira",
+            "sourceType": "TestCaseReference",
+            "sourceId": "TC-TS-003-008-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [],
+            "content": "Referenced test case TC-TS-003-008-01",
+            "score": 0.8,
+            "timestamp": "2026-08-14T04:10:27.612Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          }
+        ],
+        "citations": [
+          {
+            "evidenceId": "EVD-c8e9257f00a169bf",
+            "sourceSystem": "jira",
+            "sourceId": "CFH-US-005",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          },
+          {
+            "evidenceId": "EVD-4cfd7f42437005d5",
+            "sourceSystem": "jira",
+            "sourceId": "TC-TS-003-007-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": []
+          },
+          {
+            "evidenceId": "EVD-eeecf59ee18af77b",
+            "sourceSystem": "jira",
+            "sourceId": "TC-TS-003-008-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": []
+          }
+        ],
+        "confidence": {
+          "score": 0.844,
+          "band": "MEDIUM_HIGH",
+          "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+        },
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE",
+          "CONFIDENCE_BAND:VERY_LOW"
+        ],
+        "approval": {
+          "required": true,
+          "action": "CREATE_JIRA_ISSUE",
+          "reason": "Action CREATE_JIRA_ISSUE requires human approval.",
+          "status": "APPROVED",
+          "decision": "APPROVED"
+        },
+        "audit": {
+          "graphRunId": "GRAPH-5254faadef6563c5",
+          "requestId": "REQ-ff41d834a7a816ad",
+          "taskId": "TASK-ff41d834a7a816ad",
+          "responseId": "RESP-c6eaeaeeca1e517c",
+          "timestamp": "2026-08-14T04:10:27.640Z",
+          "role": "Doctor",
+          "taskType": "JIRA_LOOKUP",
+          "toolsCalled": [
+            "search_jira",
+            "get_jira_issue"
+          ],
+          "toolResults": [
+            {
+              "tool": "search_jira",
+              "input": {
+                "query": "Create Jira issue for appointment cancellation defect.",
+                "role": "Doctor"
+              },
+              "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+              "status": "SUCCESS",
+              "durationMs": 0
+            },
+            {
+              "tool": "get_jira_issue",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+              "status": "SUCCESS",
+              "durationMs": 1
+            }
+          ],
+          "evidenceCount": 3,
+          "confidence": 0.844,
+          "finalStatus": "SUCCESS",
+          "approvalStatus": "APPROVED",
+          "durationMs": 63
+        },
+        "generatedAt": "2026-08-14T04:10:27.618Z"
+      },
+      "citations": [
+        {
+          "evidenceId": "EVD-c8e9257f00a169bf",
+          "sourceSystem": "jira",
+          "sourceId": "CFH-US-005",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ]
+        },
+        {
+          "evidenceId": "EVD-4cfd7f42437005d5",
+          "sourceSystem": "jira",
+          "sourceId": "TC-TS-003-007-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": []
+        },
+        {
+          "evidenceId": "EVD-eeecf59ee18af77b",
+          "sourceSystem": "jira",
+          "sourceId": "TC-TS-003-008-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": []
+        }
+      ],
+      "warnings": [
+        "LOW_RELEVANCE_EVIDENCE"
+      ],
+      "approval": {
+        "required": true,
+        "action": "CREATE_JIRA_ISSUE",
+        "reason": "Action CREATE_JIRA_ISSUE requires human approval.",
+        "status": "APPROVED",
+        "decision": "APPROVED"
+      },
+      "approvalStatus": "APPROVED",
+      "waitingForApproval": false,
+      "finalStatus": "SUCCESS",
+      "errors": [
+        {
+          "code": "APPROVAL_REQUIRED",
+          "node": "approval_check",
+          "message": "Action CREATE_JIRA_ISSUE requires human approval.",
+          "timestamp": "2026-08-14T04:10:27.624Z"
+        }
+      ],
+      "retry": {
+        "failedNode": null,
+        "retryCount": 0,
+        "retryReason": null,
+        "evidenceRetryCount": 0
+      },
+      "limits": {
+        "stepCount": 12,
+        "toolCallCount": 2
+      },
+      "executionStatus": "COMPLETED",
+      "timestamps": {
+        "createdAt": "2026-08-14T04:10:27.573Z",
+        "updatedAt": "2026-08-14T04:10:27.643Z",
+        "startedAt": "2026-08-14T04:10:27.573Z",
+        "completedAt": "2026-08-14T04:10:27.643Z"
+      },
+      "auditMetadata": {
+        "graphRunId": "GRAPH-5254faadef6563c5",
+        "requestId": "REQ-ff41d834a7a816ad",
+        "taskId": "TASK-ff41d834a7a816ad",
+        "responseId": "RESP-c6eaeaeeca1e517c",
+        "mcpRequestIds": [
+          "AGT-REQ-c3f73c71b6bf90ed",
+          "AGT-REQ-3ebc4cf4b0e8cab5"
+        ],
+        "auditRecord": {
+          "responseId": "RESP-c6eaeaeeca1e517c",
+          "graphRunId": "GRAPH-5254faadef6563c5",
+          "requestId": "REQ-ff41d834a7a816ad",
+          "taskId": "TASK-ff41d834a7a816ad",
+          "timestamp": "2026-08-14T04:10:27.640Z",
+          "role": "Doctor",
+          "taskType": "JIRA_LOOKUP",
+          "toolsCalled": [
+            "search_jira",
+            "get_jira_issue"
+          ],
+          "toolResults": [
+            {
+              "tool": "search_jira",
+              "input": {
+                "query": "Create Jira issue for appointment cancellation defect.",
+                "role": "Doctor"
+              },
+              "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+              "status": "SUCCESS",
+              "durationMs": 0
+            },
+            {
+              "tool": "get_jira_issue",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+              "status": "SUCCESS",
+              "durationMs": 1
+            }
+          ],
+          "evidenceCount": 3,
+          "confidence": 0.844,
+          "finalStatus": "SUCCESS",
+          "approvalStatus": "APPROVED",
+          "durationMs": 63
+        }
+      }
+    },
+    "approved": {
+      "graphRunId": "GRAPH-5254faadef6563c5",
+      "requestId": "REQ-ff41d834a7a816ad",
+      "taskId": "TASK-ff41d834a7a816ad",
+      "originalRequest": "Create Jira issue for appointment cancellation defect.",
+      "role": "Doctor",
+      "taskType": "JIRA_LOOKUP",
+      "entities": [
+        {
+          "type": "FEATURE",
+          "value": "appointment cancellation"
+        }
+      ],
+      "constraints": {
+        "role": "Doctor",
+        "readOnly": true,
+        "noFabrication": true
+      },
+      "requestedOutput": "grounded_qa_response",
+      "riskLevel": "LOW",
+      "confidence": {
+        "score": 0.844,
+        "band": "MEDIUM_HIGH",
+        "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+      },
+      "plan": {
+        "planId": "PLAN-119deb6254b50be9",
+        "taskId": "TASK-ff41d834a7a816ad",
+        "steps": [
+          {
+            "order": 1,
+            "tool": "search_jira",
+            "purpose": "Collect evidence for JIRA_LOOKUP",
+            "input": {
+              "query": "Create Jira issue for appointment cancellation defect.",
+              "role": "Doctor"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          },
+          {
+            "order": 2,
+            "tool": "get_jira_issue",
+            "purpose": "Collect evidence for JIRA_LOOKUP",
+            "input": {
+              "issueKey": "CFH-US-005"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          }
+        ]
+      },
+      "selectedTools": [
+        "search_jira",
+        "get_jira_issue"
+      ],
+      "currentNode": "END",
+      "previousNode": "audit",
+      "currentStep": 12,
+      "nodeHistory": [
+        {
+          "node": "task_understanding",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.573Z",
+          "details": {}
+        },
+        {
+          "node": "task_understanding",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.573Z",
+          "details": {
+            "durationMs": 0.07
+          }
+        },
+        {
+          "node": "planning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.577Z",
+          "details": {}
+        },
+        {
+          "node": "planning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.577Z",
+          "details": {
+            "durationMs": 0.1
+          }
+        },
+        {
+          "node": "tool_selection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.579Z",
+          "details": {}
+        },
+        {
+          "node": "tool_selection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.579Z",
+          "details": {
+            "durationMs": 0.03
+          }
+        },
+        {
+          "node": "tool_execution",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.581Z",
+          "details": {}
+        },
+        {
+          "node": "tool_execution",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.610Z",
+          "details": {
+            "durationMs": 28.81
+          }
+        },
+        {
+          "node": "evidence_collection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_collection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "details": {
+            "durationMs": 0.13
+          }
+        },
+        {
+          "node": "evidence_validation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.614Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_validation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.614Z",
+          "details": {
+            "durationMs": 0.06
+          }
+        },
+        {
+          "node": "reasoning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.616Z",
+          "details": {}
+        },
+        {
+          "node": "reasoning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.616Z",
+          "details": {
+            "durationMs": 0.05
+          }
+        },
+        {
+          "node": "response_generation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.618Z",
+          "details": {}
+        },
+        {
+          "node": "response_generation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.618Z",
+          "details": {
+            "durationMs": 0.21
+          }
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.621Z",
+          "details": {}
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.621Z",
+          "details": {
+            "durationMs": 0.05
+          }
+        },
+        {
+          "node": "approval_check",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.624Z",
+          "details": {}
+        },
+        {
+          "node": "approval_check",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.624Z",
+          "details": {
+            "durationMs": 0.09
+          }
+        },
+        {
+          "node": "finalization",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.636Z",
+          "details": {}
+        },
+        {
+          "node": "finalization",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.636Z",
+          "details": {
+            "durationMs": 0.04
+          }
+        },
+        {
+          "node": "audit",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.640Z",
+          "details": {}
+        },
+        {
+          "node": "audit",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.641Z",
+          "details": {
+            "durationMs": 0.68
+          }
+        }
+      ],
+      "transitionHistory": [
+        {
+          "from": "START",
+          "to": "task_understanding",
+          "reason": "start",
+          "timestamp": "2026-08-14T04:10:27.573Z"
+        },
+        {
+          "from": "task_understanding",
+          "to": "planning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.577Z"
+        },
+        {
+          "from": "planning",
+          "to": "tool_selection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.579Z"
+        },
+        {
+          "from": "tool_selection",
+          "to": "tool_execution",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.581Z"
+        },
+        {
+          "from": "tool_execution",
+          "to": "evidence_collection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.612Z"
+        },
+        {
+          "from": "evidence_collection",
+          "to": "evidence_validation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.614Z"
+        },
+        {
+          "from": "evidence_validation",
+          "to": "reasoning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.616Z"
+        },
+        {
+          "from": "reasoning",
+          "to": "response_generation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.618Z"
+        },
+        {
+          "from": "response_generation",
+          "to": "confidence_evaluation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.621Z"
+        },
+        {
+          "from": "confidence_evaluation",
+          "to": "approval_check",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.624Z"
+        },
+        {
+          "from": "approval_check",
+          "to": "WAITING_FOR_APPROVAL",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.627Z"
+        },
+        {
+          "from": "finalization",
+          "to": "audit",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.640Z"
+        },
+        {
+          "from": "audit",
+          "to": "END",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.643Z"
+        }
+      ],
+      "toolCalls": [
+        {
+          "tool": "search_jira",
+          "input": {
+            "query": "Create Jira issue for appointment cancellation defect.",
+            "role": "Doctor"
+          },
+          "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+          "status": "SUCCESS",
+          "durationMs": 0
+        },
+        {
+          "tool": "get_jira_issue",
+          "input": {
+            "issueKey": "CFH-US-005"
+          },
+          "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+          "status": "SUCCESS",
+          "durationMs": 1
+        }
+      ],
+      "toolResults": [
+        {
+          "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+          "tool": "search_jira",
+          "input": {
+            "query": "Create Jira issue for appointment cancellation defect.",
+            "role": "Doctor"
+          },
+          "status": "SUCCESS",
+          "source": "jira",
+          "durationMs": 0,
+          "output": {
+            "sourceSystem": "jira",
+            "query": {
+              "query": "Create Jira issue for appointment cancellation defect.",
+              "role": "Doctor"
+            },
+            "total": 0,
+            "issues": []
+          },
+          "audit": {
+            "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+            "timestamp": "2026-08-14T04:10:27.609Z",
+            "toolName": "search_jira",
+            "inputSummary": {
+              "query": "Create Jira issue for appointment cancellation defect.",
+              "role": "Doctor"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.11,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "jira"
+            ],
+            "returnedRecordCount": 0
+          }
+        },
+        {
+          "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+          "tool": "get_jira_issue",
+          "input": {
+            "issueKey": "CFH-US-005"
+          },
+          "status": "SUCCESS",
+          "source": "jira",
+          "durationMs": 1,
+          "output": {
+            "sourceSystem": "jira",
+            "issue": {
+              "issueId": "10002",
+              "issueKey": "CFH-US-005",
+              "issueType": "Story",
+              "summary": "Search patient by medical record number",
+              "description": "As a doctor I need to find a patient quickly by MRN.",
+              "status": "QA Testing",
+              "priority": "High",
+              "labels": [
+                "careflow",
+                "patient-search"
+              ],
+              "components": [
+                "Patient Search"
+              ],
+              "sprint": "Sprint-12",
+              "release": "R1",
+              "assignee": "qa.engineer",
+              "reporter": "product.owner",
+              "parentIssue": "CFH-EPIC-001",
+              "linkedIssues": [
+                "CFH-TC-003-007",
+                "CFH-BUG-014"
+              ],
+              "acceptanceCriteria": [
+                "AC-US-003-003-001",
+                "AC-US-003-003-002",
+                "AC-US-003-003-003"
+              ],
+              "traceabilityIds": [
+                "US-003-003",
+                "TS-003-007",
+                "TC-TS-003-007-01"
+              ],
+              "testCaseIds": [
+                "TC-TS-003-007-01",
+                "TC-TS-003-008-01"
+              ],
+              "testScenarioIds": [
+                "TS-003-007",
+                "TS-003-008"
+              ],
+              "defectSeverity": null,
+              "automationStatus": "DETERMINISTIC_AUTOMATION",
+              "aiClassification": "AI_ASSISTED_AUTOMATION",
+              "aiConfidence": 0.87,
+              "evidenceReferences": [
+                "knowledge/user-stories/CAREFLOW_HEALTH_USER_STORIES.md",
+                "automation/features/regression/patient-search-regression.feature"
+              ],
+              "createdAt": "2026-08-13T10:05:00Z",
+              "updatedAt": "2026-08-13T10:15:00Z"
+            },
+            "acceptanceCriteria": [
+              "AC-US-003-003-001",
+              "AC-US-003-003-002",
+              "AC-US-003-003-003"
+            ],
+            "linkedIssues": [
+              "CFH-TC-003-007",
+              "CFH-BUG-014"
+            ],
+            "testScenarios": [
+              "TS-003-007",
+              "TS-003-008"
+            ],
+            "testCases": [
+              "TC-TS-003-007-01",
+              "TC-TS-003-008-01"
+            ],
+            "defectLinks": [
+              "CFH-BUG-014"
+            ],
+            "confluenceReferences": [
+              "CFH-PAGE-001"
+            ],
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          },
+          "audit": {
+            "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+            "timestamp": "2026-08-14T04:10:27.609Z",
+            "toolName": "get_jira_issue",
+            "inputSummary": {
+              "issueKey": "CFH-US-005"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.06,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "jira"
+            ],
+            "returnedRecordCount": 2
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "evidenceId": "EVD-c8e9257f00a169bf",
+          "sourceSystem": "jira",
+          "sourceType": "Story",
+          "sourceId": "CFH-US-005",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ],
+          "content": "Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.",
+          "score": 0.92,
+          "timestamp": "2026-08-13T10:15:00Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        },
+        {
+          "evidenceId": "EVD-4cfd7f42437005d5",
+          "sourceSystem": "jira",
+          "sourceType": "TestCaseReference",
+          "sourceId": "TC-TS-003-007-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [],
+          "content": "Referenced test case TC-TS-003-007-01",
+          "score": 0.8,
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        },
+        {
+          "evidenceId": "EVD-eeecf59ee18af77b",
+          "sourceSystem": "jira",
+          "sourceType": "TestCaseReference",
+          "sourceId": "TC-TS-003-008-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [],
+          "content": "Referenced test case TC-TS-003-008-01",
+          "score": 0.8,
+          "timestamp": "2026-08-14T04:10:27.612Z",
+          "accessScope": "team",
+          "sensitivity": "Internal"
+        }
+      ],
+      "evidenceValidation": {
+        "status": "PARTIAL",
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE"
+        ]
+      },
+      "reasoning": {
+        "status": "PARTIAL",
+        "answer": "Task type JIRA_LOOKUP resolved using evidence:\n1. jira:CFH-US-005 - Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.\n2. jira:TC-TS-003-007-01 - Referenced test case TC-TS-003-007-01\n3. jira:TC-TS-003-008-01 - Referenced test case TC-TS-003-008-01",
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE"
+        ],
+        "recommendedNextAction": "Use traceability lookup for deeper relationship view."
+      },
+      "response": {
+        "responseId": "RESP-c6eaeaeeca1e517c",
+        "taskId": "TASK-ff41d834a7a816ad",
+        "status": "SUCCESS",
+        "answer": "Task type JIRA_LOOKUP resolved using evidence:\n1. jira:CFH-US-005 - Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.\n2. jira:TC-TS-003-007-01 - Referenced test case TC-TS-003-007-01\n3. jira:TC-TS-003-008-01 - Referenced test case TC-TS-003-008-01",
+        "taskType": "JIRA_LOOKUP",
+        "plan": {
+          "planId": "PLAN-119deb6254b50be9",
+          "taskId": "TASK-ff41d834a7a816ad",
+          "steps": [
+            {
+              "order": 1,
+              "tool": "search_jira",
+              "purpose": "Collect evidence for JIRA_LOOKUP",
+              "input": {
+                "query": "Create Jira issue for appointment cancellation defect.",
+                "role": "Doctor"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            },
+            {
+              "order": 2,
+              "tool": "get_jira_issue",
+              "purpose": "Collect evidence for JIRA_LOOKUP",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            }
+          ]
+        },
+        "toolCalls": [
+          {
+            "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+            "tool": "search_jira",
+            "status": "SUCCESS",
+            "source": "jira",
+            "durationMs": 0
+          },
+          {
+            "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+            "tool": "get_jira_issue",
+            "status": "SUCCESS",
+            "source": "jira",
+            "durationMs": 1
+          }
+        ],
+        "evidence": [
+          {
+            "evidenceId": "EVD-c8e9257f00a169bf",
+            "sourceSystem": "jira",
+            "sourceType": "Story",
+            "sourceId": "CFH-US-005",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ],
+            "content": "Search patient by medical record number. As a doctor I need to find a patient quickly by MRN.",
+            "score": 0.92,
+            "timestamp": "2026-08-13T10:15:00Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          },
+          {
+            "evidenceId": "EVD-4cfd7f42437005d5",
+            "sourceSystem": "jira",
+            "sourceType": "TestCaseReference",
+            "sourceId": "TC-TS-003-007-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [],
+            "content": "Referenced test case TC-TS-003-007-01",
+            "score": 0.8,
+            "timestamp": "2026-08-14T04:10:27.612Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          },
+          {
+            "evidenceId": "EVD-eeecf59ee18af77b",
+            "sourceSystem": "jira",
+            "sourceType": "TestCaseReference",
+            "sourceId": "TC-TS-003-008-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [],
+            "content": "Referenced test case TC-TS-003-008-01",
+            "score": 0.8,
+            "timestamp": "2026-08-14T04:10:27.612Z",
+            "accessScope": "team",
+            "sensitivity": "Internal"
+          }
+        ],
+        "citations": [
+          {
+            "evidenceId": "EVD-c8e9257f00a169bf",
+            "sourceSystem": "jira",
+            "sourceId": "CFH-US-005",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          },
+          {
+            "evidenceId": "EVD-4cfd7f42437005d5",
+            "sourceSystem": "jira",
+            "sourceId": "TC-TS-003-007-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": []
+          },
+          {
+            "evidenceId": "EVD-eeecf59ee18af77b",
+            "sourceSystem": "jira",
+            "sourceId": "TC-TS-003-008-01",
+            "documentId": null,
+            "chunkId": null,
+            "traceabilityIds": []
+          }
+        ],
+        "confidence": {
+          "score": 0.844,
+          "band": "MEDIUM_HIGH",
+          "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+        },
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE",
+          "CONFIDENCE_BAND:VERY_LOW"
+        ],
+        "approval": {
+          "required": true,
+          "action": "CREATE_JIRA_ISSUE",
+          "reason": "Action CREATE_JIRA_ISSUE requires human approval.",
+          "status": "APPROVED",
+          "decision": "APPROVED"
+        },
+        "audit": {
+          "graphRunId": "GRAPH-5254faadef6563c5",
+          "requestId": "REQ-ff41d834a7a816ad",
+          "taskId": "TASK-ff41d834a7a816ad",
+          "responseId": "RESP-c6eaeaeeca1e517c",
+          "timestamp": "2026-08-14T04:10:27.640Z",
+          "role": "Doctor",
+          "taskType": "JIRA_LOOKUP",
+          "toolsCalled": [
+            "search_jira",
+            "get_jira_issue"
+          ],
+          "toolResults": [
+            {
+              "tool": "search_jira",
+              "input": {
+                "query": "Create Jira issue for appointment cancellation defect.",
+                "role": "Doctor"
+              },
+              "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+              "status": "SUCCESS",
+              "durationMs": 0
+            },
+            {
+              "tool": "get_jira_issue",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+              "status": "SUCCESS",
+              "durationMs": 1
+            }
+          ],
+          "evidenceCount": 3,
+          "confidence": 0.844,
+          "finalStatus": "SUCCESS",
+          "approvalStatus": "APPROVED",
+          "durationMs": 63
+        },
+        "generatedAt": "2026-08-14T04:10:27.618Z"
+      },
+      "citations": [
+        {
+          "evidenceId": "EVD-c8e9257f00a169bf",
+          "sourceSystem": "jira",
+          "sourceId": "CFH-US-005",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ]
+        },
+        {
+          "evidenceId": "EVD-4cfd7f42437005d5",
+          "sourceSystem": "jira",
+          "sourceId": "TC-TS-003-007-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": []
+        },
+        {
+          "evidenceId": "EVD-eeecf59ee18af77b",
+          "sourceSystem": "jira",
+          "sourceId": "TC-TS-003-008-01",
+          "documentId": null,
+          "chunkId": null,
+          "traceabilityIds": []
+        }
+      ],
+      "warnings": [
+        "LOW_RELEVANCE_EVIDENCE"
+      ],
+      "approval": {
+        "required": true,
+        "action": "CREATE_JIRA_ISSUE",
+        "reason": "Action CREATE_JIRA_ISSUE requires human approval.",
+        "status": "APPROVED",
+        "decision": "APPROVED"
+      },
+      "approvalStatus": "APPROVED",
+      "waitingForApproval": false,
+      "finalStatus": "SUCCESS",
+      "errors": [
+        {
+          "code": "APPROVAL_REQUIRED",
+          "node": "approval_check",
+          "message": "Action CREATE_JIRA_ISSUE requires human approval.",
+          "timestamp": "2026-08-14T04:10:27.624Z"
+        }
+      ],
+      "retry": {
+        "failedNode": null,
+        "retryCount": 0,
+        "retryReason": null,
+        "evidenceRetryCount": 0
+      },
+      "limits": {
+        "stepCount": 12,
+        "toolCallCount": 2
+      },
+      "executionStatus": "COMPLETED",
+      "timestamps": {
+        "createdAt": "2026-08-14T04:10:27.573Z",
+        "updatedAt": "2026-08-14T04:10:27.643Z",
+        "startedAt": "2026-08-14T04:10:27.573Z",
+        "completedAt": "2026-08-14T04:10:27.643Z"
+      },
+      "auditMetadata": {
+        "graphRunId": "GRAPH-5254faadef6563c5",
+        "requestId": "REQ-ff41d834a7a816ad",
+        "taskId": "TASK-ff41d834a7a816ad",
+        "responseId": "RESP-c6eaeaeeca1e517c",
+        "mcpRequestIds": [
+          "AGT-REQ-c3f73c71b6bf90ed",
+          "AGT-REQ-3ebc4cf4b0e8cab5"
+        ],
+        "auditRecord": {
+          "responseId": "RESP-c6eaeaeeca1e517c",
+          "graphRunId": "GRAPH-5254faadef6563c5",
+          "requestId": "REQ-ff41d834a7a816ad",
+          "taskId": "TASK-ff41d834a7a816ad",
+          "timestamp": "2026-08-14T04:10:27.640Z",
+          "role": "Doctor",
+          "taskType": "JIRA_LOOKUP",
+          "toolsCalled": [
+            "search_jira",
+            "get_jira_issue"
+          ],
+          "toolResults": [
+            {
+              "tool": "search_jira",
+              "input": {
+                "query": "Create Jira issue for appointment cancellation defect.",
+                "role": "Doctor"
+              },
+              "requestId": "AGT-REQ-c3f73c71b6bf90ed",
+              "status": "SUCCESS",
+              "durationMs": 0
+            },
+            {
+              "tool": "get_jira_issue",
+              "input": {
+                "issueKey": "CFH-US-005"
+              },
+              "requestId": "AGT-REQ-3ebc4cf4b0e8cab5",
+              "status": "SUCCESS",
+              "durationMs": 1
+            }
+          ],
+          "evidenceCount": 3,
+          "confidence": 0.844,
+          "finalStatus": "SUCCESS",
+          "approvalStatus": "APPROVED",
+          "durationMs": 63
+        }
+      }
+    },
+    "rejected": {
+      "graphRunId": "GRAPH-f3f4f1bb353b7582",
+      "requestId": "REQ-5c549ca039207d05",
+      "taskId": "TASK-5c549ca039207d05",
+      "originalRequest": "Update Confluence page for appointment cancellation.",
+      "role": "Doctor",
+      "taskType": "CONFLUENCE_LOOKUP",
+      "entities": [
+        {
+          "type": "FEATURE",
+          "value": "appointment cancellation"
+        }
+      ],
+      "constraints": {
+        "role": "Doctor",
+        "readOnly": true,
+        "noFabrication": true
+      },
+      "requestedOutput": "grounded_qa_response",
+      "riskLevel": "LOW",
+      "confidence": {
+        "score": 0.774,
+        "band": "MEDIUM_HIGH",
+        "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+      },
+      "plan": {
+        "planId": "PLAN-864e33ff46621ad8",
+        "taskId": "TASK-5c549ca039207d05",
+        "steps": [
+          {
+            "order": 1,
+            "tool": "search_confluence",
+            "purpose": "Collect evidence for CONFLUENCE_LOOKUP",
+            "input": {
+              "query": "Update Confluence page for appointment cancellation.",
+              "role": "Doctor"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          },
+          {
+            "order": 2,
+            "tool": "get_confluence_page",
+            "purpose": "Collect evidence for CONFLUENCE_LOOKUP",
+            "input": {
+              "pageId": "CFH-PAGE-001"
+            },
+            "requiredEvidence": true,
+            "selected": true
+          }
+        ]
+      },
+      "selectedTools": [
+        "search_confluence",
+        "get_confluence_page"
+      ],
+      "currentNode": "WAITING_FOR_APPROVAL",
+      "previousNode": "approval_check",
+      "currentStep": 10,
+      "nodeHistory": [
+        {
+          "node": "task_understanding",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.645Z",
+          "details": {}
+        },
+        {
+          "node": "task_understanding",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.645Z",
+          "details": {
+            "durationMs": 0.04
+          }
+        },
+        {
+          "node": "planning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.648Z",
+          "details": {}
+        },
+        {
+          "node": "planning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.648Z",
+          "details": {
+            "durationMs": 0.09
+          }
+        },
+        {
+          "node": "tool_selection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.650Z",
+          "details": {}
+        },
+        {
+          "node": "tool_selection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.650Z",
+          "details": {
+            "durationMs": 0.03
+          }
+        },
+        {
+          "node": "tool_execution",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.652Z",
+          "details": {}
+        },
+        {
+          "node": "tool_execution",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.677Z",
+          "details": {
+            "durationMs": 24.4
+          }
+        },
+        {
+          "node": "evidence_collection",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.678Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_collection",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.679Z",
+          "details": {
+            "durationMs": 0.24
+          }
+        },
+        {
+          "node": "evidence_validation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.681Z",
+          "details": {}
+        },
+        {
+          "node": "evidence_validation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.681Z",
+          "details": {
+            "durationMs": 0.05
+          }
+        },
+        {
+          "node": "reasoning",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.682Z",
+          "details": {}
+        },
+        {
+          "node": "reasoning",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.682Z",
+          "details": {
+            "durationMs": 0.08
+          }
+        },
+        {
+          "node": "response_generation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.688Z",
+          "details": {}
+        },
+        {
+          "node": "response_generation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.689Z",
+          "details": {
+            "durationMs": 0.5
+          }
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.700Z",
+          "details": {}
+        },
+        {
+          "node": "confidence_evaluation",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.700Z",
+          "details": {
+            "durationMs": 0.22
+          }
+        },
+        {
+          "node": "approval_check",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.708Z",
+          "details": {}
+        },
+        {
+          "node": "approval_check",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.708Z",
+          "details": {
+            "durationMs": 0.09
+          }
+        }
+      ],
+      "transitionHistory": [
+        {
+          "from": "START",
+          "to": "task_understanding",
+          "reason": "start",
+          "timestamp": "2026-08-14T04:10:27.645Z"
+        },
+        {
+          "from": "task_understanding",
+          "to": "planning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.648Z"
+        },
+        {
+          "from": "planning",
+          "to": "tool_selection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.650Z"
+        },
+        {
+          "from": "tool_selection",
+          "to": "tool_execution",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.652Z"
+        },
+        {
+          "from": "tool_execution",
+          "to": "evidence_collection",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.678Z"
+        },
+        {
+          "from": "evidence_collection",
+          "to": "evidence_validation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.681Z"
+        },
+        {
+          "from": "evidence_validation",
+          "to": "reasoning",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.682Z"
+        },
+        {
+          "from": "reasoning",
+          "to": "response_generation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.688Z"
+        },
+        {
+          "from": "response_generation",
+          "to": "confidence_evaluation",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.700Z"
+        },
+        {
+          "from": "confidence_evaluation",
+          "to": "approval_check",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.708Z"
+        },
+        {
+          "from": "approval_check",
+          "to": "WAITING_FOR_APPROVAL",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.712Z"
+        }
+      ],
+      "toolCalls": [
+        {
+          "tool": "search_confluence",
+          "input": {
+            "query": "Update Confluence page for appointment cancellation.",
+            "role": "Doctor"
+          },
+          "requestId": "AGT-REQ-315a6272f532f166",
+          "status": "SUCCESS",
+          "durationMs": 1
+        },
+        {
+          "tool": "get_confluence_page",
+          "input": {
+            "pageId": "CFH-PAGE-001"
+          },
+          "requestId": "AGT-REQ-93113b2cce5c043b",
+          "status": "SUCCESS",
+          "durationMs": 2
+        }
+      ],
+      "toolResults": [
+        {
+          "requestId": "AGT-REQ-315a6272f532f166",
+          "tool": "search_confluence",
+          "input": {
+            "query": "Update Confluence page for appointment cancellation.",
+            "role": "Doctor"
+          },
+          "status": "SUCCESS",
+          "source": "confluence",
+          "durationMs": 1,
+          "output": {
+            "sourceSystem": "confluence",
+            "query": {
+              "query": "Update Confluence page for appointment cancellation.",
+              "role": "Doctor"
+            },
+            "total": 0,
+            "pages": []
+          },
+          "audit": {
+            "requestId": "AGT-REQ-315a6272f532f166",
+            "timestamp": "2026-08-14T04:10:27.674Z",
+            "toolName": "search_confluence",
+            "inputSummary": {
+              "query": "Update Confluence page for appointment cancellation.",
+              "role": "Doctor"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.07,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "confluence"
+            ],
+            "returnedRecordCount": 0
+          }
+        },
+        {
+          "requestId": "AGT-REQ-93113b2cce5c043b",
+          "tool": "get_confluence_page",
+          "input": {
+            "pageId": "CFH-PAGE-001"
+          },
+          "status": "SUCCESS",
+          "source": "confluence",
+          "durationMs": 2,
+          "output": {
+            "sourceSystem": "confluence",
+            "page": {
+              "documentId": "CFH-PAGE-001",
+              "spaceKey": "CFH",
+              "title": "Patient Search - Medical Record Number",
+              "parentPageId": "CFH-PAGE-ROOT-QA",
+              "version": 1,
+              "content": "Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappings.",
+              "labels": [
+                "requirement",
+                "patient-search",
+                "qa"
+              ],
+              "traceabilityIds": [
+                "US-003-003",
+                "AC-US-003-003-001",
+                "TS-003-007",
+                "TC-TS-003-007-01"
+              ],
+              "sourceType": "requirement",
+              "sourceSystem": "jira",
+              "sourceId": "CFH-US-005",
+              "status": "IMPLEMENTED",
+              "createdAt": "2026-08-13T10:30:00Z",
+              "updatedAt": "2026-08-13T10:30:00Z",
+              "author": "qa.lead",
+              "lastModifiedBy": "qa.lead",
+              "accessScope": "team",
+              "sensitivity": "internal",
+              "checksum": "sha256:cfh-page-001"
+            },
+            "metadata": {
+              "labels": [
+                "requirement",
+                "patient-search",
+                "qa"
+              ],
+              "accessScope": "team",
+              "sensitivity": "internal"
+            },
+            "jiraReferences": [
+              "CFH-US-005",
+              "CFH-EPIC-001",
+              "CFH-BUG-014"
+            ],
+            "testReferences": [
+              "TC-TS-003-007-01",
+              "TC-TS-003-008-01",
+              "TS-003-007",
+              "TS-003-008"
+            ],
+            "traceabilityIds": [
+              "US-003-003",
+              "AC-US-003-003-001",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          },
+          "audit": {
+            "requestId": "AGT-REQ-93113b2cce5c043b",
+            "timestamp": "2026-08-14T04:10:27.675Z",
+            "toolName": "get_confluence_page",
+            "inputSummary": {
+              "pageId": "CFH-PAGE-001"
+            },
+            "role": "Doctor",
+            "authorizationResult": "AUTHORIZED",
+            "durationMs": 0.79,
+            "status": "SUCCESS",
+            "errorCode": null,
+            "sourceSystems": [
+              "confluence"
+            ],
+            "returnedRecordCount": 1
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "evidenceId": "EVD-94a3dad312c0c3fb",
+          "sourceSystem": "confluence",
+          "sourceType": "requirement",
+          "sourceId": "CFH-US-005",
+          "documentId": "CFH-PAGE-001",
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "AC-US-003-003-001",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ],
+          "content": "Patient Search - Medical Record Number. Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappings.",
+          "score": 0.89,
+          "timestamp": "2026-08-13T10:30:00Z",
+          "accessScope": "team",
+          "sensitivity": "internal"
+        }
+      ],
+      "evidenceValidation": {
+        "status": "PARTIAL",
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE"
+        ]
+      },
+      "reasoning": {
+        "status": "PARTIAL",
+        "answer": "Task type CONFLUENCE_LOOKUP resolved using evidence:\n1. confluence:CFH-US-005 - Patient Search - Medical Record Number. Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappin",
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE"
+        ],
+        "recommendedNextAction": "Use traceability lookup for deeper relationship view."
+      },
+      "response": {
+        "responseId": "RESP-ed4a6d723338cc21",
+        "taskId": "TASK-5c549ca039207d05",
+        "status": "PARTIAL",
+        "answer": "Task type CONFLUENCE_LOOKUP resolved using evidence:\n1. confluence:CFH-US-005 - Patient Search - Medical Record Number. Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappin",
+        "taskType": "CONFLUENCE_LOOKUP",
+        "plan": {
+          "planId": "PLAN-864e33ff46621ad8",
+          "taskId": "TASK-5c549ca039207d05",
+          "steps": [
+            {
+              "order": 1,
+              "tool": "search_confluence",
+              "purpose": "Collect evidence for CONFLUENCE_LOOKUP",
+              "input": {
+                "query": "Update Confluence page for appointment cancellation.",
+                "role": "Doctor"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            },
+            {
+              "order": 2,
+              "tool": "get_confluence_page",
+              "purpose": "Collect evidence for CONFLUENCE_LOOKUP",
+              "input": {
+                "pageId": "CFH-PAGE-001"
+              },
+              "requiredEvidence": true,
+              "selected": true
+            }
+          ]
+        },
+        "toolCalls": [
+          {
+            "requestId": "AGT-REQ-315a6272f532f166",
+            "tool": "search_confluence",
+            "status": "SUCCESS",
+            "source": "confluence",
+            "durationMs": 1
+          },
+          {
+            "requestId": "AGT-REQ-93113b2cce5c043b",
+            "tool": "get_confluence_page",
+            "status": "SUCCESS",
+            "source": "confluence",
+            "durationMs": 2
+          }
+        ],
+        "evidence": [
+          {
+            "evidenceId": "EVD-94a3dad312c0c3fb",
+            "sourceSystem": "confluence",
+            "sourceType": "requirement",
+            "sourceId": "CFH-US-005",
+            "documentId": "CFH-PAGE-001",
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "AC-US-003-003-001",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ],
+            "content": "Patient Search - Medical Record Number. Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappings.",
+            "score": 0.89,
+            "timestamp": "2026-08-13T10:30:00Z",
+            "accessScope": "team",
+            "sensitivity": "internal"
+          }
+        ],
+        "citations": [
+          {
+            "evidenceId": "EVD-94a3dad312c0c3fb",
+            "sourceSystem": "confluence",
+            "sourceId": "CFH-US-005",
+            "documentId": "CFH-PAGE-001",
+            "chunkId": null,
+            "traceabilityIds": [
+              "US-003-003",
+              "AC-US-003-003-001",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ]
+          }
+        ],
+        "confidence": {
+          "score": 0.774,
+          "band": "MEDIUM_HIGH",
+          "formula": "0.2*task + 0.2*evidenceCount + 0.2*sourceQuality + 0.2*toolSuccess + 0.1*citationCoverage + 0.1*consistency"
+        },
+        "warnings": [
+          "LOW_RELEVANCE_EVIDENCE",
+          "CONFIDENCE_BAND:VERY_LOW"
+        ],
+        "approval": {
+          "required": false,
+          "status": "NOT_REQUIRED",
+          "reason": "Read-only request.",
+          "action": null,
+          "decision": "REJECTED"
+        },
+        "audit": {
+          "graphRunId": "GRAPH-f3f4f1bb353b7582",
+          "requestId": "REQ-5c549ca039207d05",
+          "taskId": "TASK-5c549ca039207d05"
+        },
+        "generatedAt": "2026-08-14T04:10:27.689Z"
+      },
+      "citations": [
+        {
+          "evidenceId": "EVD-94a3dad312c0c3fb",
+          "sourceSystem": "confluence",
+          "sourceId": "CFH-US-005",
+          "documentId": "CFH-PAGE-001",
+          "chunkId": null,
+          "traceabilityIds": [
+            "US-003-003",
+            "AC-US-003-003-001",
+            "TS-003-007",
+            "TC-TS-003-007-01"
+          ]
+        }
+      ],
+      "warnings": [
+        "LOW_RELEVANCE_EVIDENCE"
+      ],
+      "approval": {
+        "required": true,
+        "action": "UPDATE_CONFLUENCE_PAGE",
+        "reason": "Action UPDATE_CONFLUENCE_PAGE requires human approval.",
+        "status": "REQUIRED",
+        "decision": "REJECTED"
+      },
+      "approvalStatus": "REQUIRED",
+      "waitingForApproval": true,
+      "finalStatus": "NEEDS_APPROVAL",
+      "errors": [
+        {
+          "code": "APPROVAL_REQUIRED",
+          "node": "approval_check",
+          "message": "Action UPDATE_CONFLUENCE_PAGE requires human approval.",
+          "timestamp": "2026-08-14T04:10:27.708Z"
+        }
+      ],
+      "retry": {
+        "failedNode": null,
+        "retryCount": 0,
+        "retryReason": null,
+        "evidenceRetryCount": 0
+      },
+      "limits": {
+        "stepCount": 10,
+        "toolCallCount": 2
+      },
+      "executionStatus": "WAITING_FOR_APPROVAL",
+      "timestamps": {
+        "createdAt": "2026-08-14T04:10:27.645Z",
+        "updatedAt": "2026-08-14T04:10:27.712Z",
+        "startedAt": "2026-08-14T04:10:27.645Z",
+        "completedAt": null
+      },
+      "auditMetadata": {
+        "graphRunId": "GRAPH-f3f4f1bb353b7582",
+        "requestId": "REQ-5c549ca039207d05",
+        "taskId": "TASK-5c549ca039207d05",
+        "responseId": "RESP-ed4a6d723338cc21",
+        "mcpRequestIds": [
+          "AGT-REQ-315a6272f532f166",
+          "AGT-REQ-93113b2cce5c043b"
+        ]
+      }
+    },
+    "accessDenied": {
+      "graphRunId": "GRAPH-1c6120c29f0c48fa",
+      "requestId": "REQ-d5b0e60d312eeb56",
+      "taskId": null,
+      "originalRequest": "Which Jira story is related to appointment cancellation?",
+      "role": "Patient",
+      "taskType": null,
+      "entities": [],
+      "constraints": {},
+      "requestedOutput": null,
+      "riskLevel": null,
+      "confidence": {
+        "score": 0,
+        "band": "VERY_LOW",
+        "formula": ""
+      },
+      "plan": null,
+      "selectedTools": [],
+      "currentNode": "END",
+      "previousNode": "audit",
+      "currentStep": 3,
+      "nodeHistory": [
+        {
+          "node": "task_understanding",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.716Z",
+          "details": {}
+        },
+        {
+          "node": "task_understanding",
+          "status": "FAILED",
+          "timestamp": "2026-08-14T04:10:27.716Z",
+          "details": {
+            "durationMs": 0.04
+          }
+        },
+        {
+          "node": "finalization",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.721Z",
+          "details": {}
+        },
+        {
+          "node": "finalization",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.721Z",
+          "details": {
+            "durationMs": 0.07
+          }
+        },
+        {
+          "node": "audit",
+          "status": "RUNNING",
+          "timestamp": "2026-08-14T04:10:27.725Z",
+          "details": {}
+        },
+        {
+          "node": "audit",
+          "status": "PASS",
+          "timestamp": "2026-08-14T04:10:27.727Z",
+          "details": {
+            "durationMs": 1.27
+          }
+        }
+      ],
+      "transitionHistory": [
+        {
+          "from": "START",
+          "to": "task_understanding",
+          "reason": "start",
+          "timestamp": "2026-08-14T04:10:27.716Z"
+        },
+        {
+          "from": "task_understanding",
+          "to": "finalization",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.721Z"
+        },
+        {
+          "from": "finalization",
+          "to": "audit",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.725Z"
+        },
+        {
+          "from": "audit",
+          "to": "END",
+          "reason": "default",
+          "timestamp": "2026-08-14T04:10:27.731Z"
+        }
+      ],
+      "toolCalls": [],
+      "toolResults": [],
+      "evidence": [],
+      "evidenceValidation": null,
+      "reasoning": null,
+      "response": {
+        "status": "ACCESS_DENIED",
+        "answer": "Role Patient is not authorized to access the AI agent runtime.",
+        "approval": {
+          "required": false,
+          "status": "NOT_REQUIRED",
+          "reason": "Read-only request.",
+          "action": null,
+          "decision": "APPROVED"
+        },
+        "audit": {
+          "responseId": null,
+          "graphRunId": "GRAPH-1c6120c29f0c48fa",
+          "requestId": "REQ-d5b0e60d312eeb56",
+          "taskId": null,
+          "timestamp": "2026-08-14T04:10:27.726Z",
+          "role": "Patient",
+          "taskType": null,
+          "toolsCalled": [],
+          "toolResults": [],
+          "evidenceCount": 0,
+          "confidence": 0,
+          "finalStatus": "ACCESS_DENIED",
+          "approvalStatus": "NOT_REQUIRED",
+          "durationMs": 5
+        }
+      },
+      "citations": [],
+      "warnings": [
+        "ACCESS_DENIED"
+      ],
+      "approval": {
+        "required": false,
+        "status": "NOT_REQUIRED",
+        "reason": "Read-only request.",
+        "action": null,
+        "decision": "APPROVED"
+      },
+      "approvalStatus": "NOT_REQUIRED",
+      "waitingForApproval": false,
+      "finalStatus": "ACCESS_DENIED",
+      "errors": [],
+      "retry": {
+        "failedNode": null,
+        "retryCount": 0,
+        "retryReason": null,
+        "evidenceRetryCount": 0
+      },
+      "limits": {
+        "stepCount": 3,
+        "toolCallCount": 0
+      },
+      "executionStatus": "COMPLETED",
+      "timestamps": {
+        "createdAt": "2026-08-14T04:10:27.716Z",
+        "updatedAt": "2026-08-14T04:10:27.731Z",
+        "startedAt": "2026-08-14T04:10:27.716Z",
+        "completedAt": "2026-08-14T04:10:27.731Z"
+      },
+      "auditMetadata": {
+        "graphRunId": "GRAPH-1c6120c29f0c48fa",
+        "requestId": "REQ-d5b0e60d312eeb56",
+        "taskId": null,
+        "responseId": null,
+        "mcpRequestIds": [],
+        "auditRecord": {
+          "responseId": null,
+          "graphRunId": "GRAPH-1c6120c29f0c48fa",
+          "requestId": "REQ-d5b0e60d312eeb56",
+          "taskId": null,
+          "timestamp": "2026-08-14T04:10:27.726Z",
+          "role": "Patient",
+          "taskType": null,
+          "toolsCalled": [],
+          "toolResults": [],
+          "evidenceCount": 0,
+          "confidence": 0,
+          "finalStatus": "ACCESS_DENIED",
+          "approvalStatus": "NOT_REQUIRED",
+          "durationMs": 5
+        }
+      }
+    }
+  }
+}

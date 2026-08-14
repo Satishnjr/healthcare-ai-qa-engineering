@@ -1090,3 +1090,23 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence ->
 | Audit | `.tmp/agent-runtime/agent-audit.ndjson` | PASS |
 | LangGraph | N/A | PLANNED STEP 9 |
 | Multi-agent | N/A | PLANNED STEP 10 |
+
+## Step 9 LangGraph Orchestration Traceability Extension
+
+### Extended Graph Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence -> Knowledge Document -> Chunk -> Embedding -> Vector -> Retrieval -> Context -> RAG Answer -> Citation -> Evaluation Dataset -> Evaluation Case -> Evaluation Run -> Metric -> Quality Gate -> MCP Tool -> MCP Server -> MCP Client -> Tool Result -> AI Agent -> Task -> Plan -> Graph State -> Graph Node -> Graph Edge -> MCP Execution -> Evidence -> Reasoning -> Response -> Confidence -> Human Approval -> Checkpoint -> Audit -> BDD -> Automation -> Execution
+
+### Step 9 Mapping Snapshot
+
+| Layer | Example | Status |
+|---|---|---|
+| Graph Runtime | `agent/src/graph/graph-runtime.js` | PASS |
+| Graph State | `agent/src/graph/graph-state.js` | PASS |
+| Graph Nodes | `agent/src/graph/graph-nodes.js` | PASS |
+| Graph Edges | `agent/src/graph/graph-edges.js` | PASS |
+| Checkpoint | `.tmp/langgraph-runtime/checkpoints/*.json` | PASS |
+| Telemetry | `.tmp/langgraph-runtime/graph-telemetry.ndjson` | PASS |
+| Resume | `agent:graph:resume` | PASS |
+| Approval Approve | `agent:graph:approve` | PASS |
+| Approval Reject | `agent:graph:reject` | PASS |
+| Multi-agent | N/A | PLANNED STEP 10 |

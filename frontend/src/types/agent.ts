@@ -84,3 +84,41 @@ export interface AgentRuntimeSamples {
   provider: string;
   samples: AgentSample[];
 }
+
+export interface AgentGraphNodeEvent {
+  node: string;
+  status: string;
+  timestamp: string;
+  details?: {
+    durationMs?: number;
+  };
+}
+
+export interface AgentGraphTransition {
+  from: string;
+  to: string;
+  reason: string;
+  timestamp: string;
+}
+
+export interface AgentGraphState {
+  graphRunId: string;
+  taskId: string | null;
+  currentNode: string;
+  executionStatus: string;
+  finalStatus: string;
+  approvalStatus: string;
+  toolCalls: AgentToolCall[];
+  evidence: AgentEvidence[];
+  confidence: AgentConfidence;
+  response: AgentRuntimeResponse | null;
+  nodeHistory: AgentGraphNodeEvent[];
+  transitionHistory: AgentGraphTransition[];
+  errors: Array<{ code: string; message: string }>;
+}
+
+export interface AgentGraphSamples {
+  generatedAt: string;
+  runtime: string;
+  samples: Record<string, AgentGraphState>;
+}

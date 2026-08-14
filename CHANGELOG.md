@@ -1,5 +1,37 @@
 # Changelog
 
+## Step 9 - LangGraph Orchestration Foundation
+- Implemented LangGraph-compatible local graph runtime under `agent/src/graph/`:
+  - graph state initialization and contracts
+  - explicit node registry and edge routing
+  - conditional transitions (evidence/approval/failure paths)
+  - bounded retries and loop protection
+  - checkpointing and resumability
+  - graph telemetry NDJSON
+- Added Step 9 CLI commands:
+  - `agent:graph`
+  - `agent:graph:status`
+  - `agent:graph:resume`
+  - `agent:graph:approve`
+  - `agent:graph:reject`
+  - `agent:graph:frontend-artifacts`
+- Reused Step 8 components for:
+  - task understanding
+  - planning/tool selection
+  - MCP tool execution
+  - evidence management/validation
+  - reasoning/response generation
+  - confidence
+  - approval policy
+- Extended `/agent` frontend page with graph execution status, timeline, transitions, node status, tool calls, evidence, approval actions, and graph response selectors.
+- Added Step 9 test artifacts:
+  - `agent/tests/step9-langgraph-runtime.test.js`
+  - `automation/features/functional/step9-langgraph-orchestration.feature`
+  - `automation/src/steps/step9-langgraph.steps.ts`
+- Added Step 9 architecture docs and implementation package:
+  - `docs/architecture/LANGGRAPH_*.md`
+  - `docs/implementations/9-langgraph-orchestration/*`
+
 ## Step 8 - AI Agent Runtime
 - Implemented deterministic single-agent runtime under `agent/`:
   - task analyzer and task-type classifier

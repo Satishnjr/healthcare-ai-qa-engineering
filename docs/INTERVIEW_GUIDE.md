@@ -19,6 +19,7 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 | RAG evaluation runtime (local deterministic) | PASS | `rag/src/evaluation/*` + `/knowledge/evaluation` + Step 6 docs |
 | MCP runtime and tool calling foundation | PASS | `mcp/runtime/` + `/mcp` demo page + Step 7 docs/tests |
 | QA AI agent runtime (single-agent) | PASS | `agent/` + `/agent` page + Step 8 docs/tests |
+| LangGraph orchestration foundation | PASS | `agent/src/graph/*` + graph CLI + `/agent` graph section + Step 9 docs/tests |
 
 ## What Is Not Yet Implemented
 
@@ -26,7 +27,6 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 |---|---|
 | RAGAS official library runtime integration | PLANNED |
 | Single QA agent runtime | PASS |
-| LangGraph orchestration runtime | PLANNED |
 | Multi-agent runtime | PLANNED |
 | Live Jira/Confluence API integration | PLANNED/BLOCKED |
 
@@ -59,7 +59,7 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 - STEP 6: deterministic local RAG evaluation runtime with quality gates (implemented).
 - STEP 7: MCP runtime and tool calling foundation (implemented).
 - STEP 8: first QA AI agent runtime (implemented, deterministic local foundation).
-- STEP 9: LangGraph orchestration runtime.
+- STEP 9: LangGraph-compatible orchestration runtime (implemented as deterministic local development runtime).
 - STEP 10: multi-agent runtime.
 - STEP 11: enterprise integration, observability, LLMOps, security, and production readiness.
 
@@ -100,6 +100,20 @@ Use role-scoped permissions, human approval gates for write actions, audit logs,
 - What proves RAG implementation: deterministic ingest/query CLI, citation output, role-based filtering, Step 5 automation (`@step5`) and runtime architecture docs.
 - How hallucination risk is controlled: evidence-first outputs, no-fabrication policy, traceability IDs, HITL gates.
 - Why not run full regression here: Step 4 scope is Jira/Confluence foundation only.
+
+## Step 9 LangGraph Interview Topics
+- What is LangGraph?
+- Why graph orchestration for agent workflows?
+- Agent vs workflow vs graph.
+- StateGraph concepts (state, node, edge, conditional edge).
+- Durable execution and checkpointing.
+- Human-in-the-loop waiting/resume.
+- Retry handling and loop protection.
+- MCP + LangGraph integration boundary.
+- RAG + LangGraph integration boundary.
+- LangGraph vs LangChain.
+- LangGraph vs custom orchestration.
+- How QA engineers test deterministic graph execution and failure paths.
 
 ## Canonical References
 - `docs/IMPLEMENTATION_INDEX.md`

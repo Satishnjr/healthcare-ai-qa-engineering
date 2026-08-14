@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import { PageTitle } from "../components/common/page-title";
 import { runAgentTaskDemo } from "../services/agent-client";
+import { runGraphDemo } from "../services/agent-graph-client";
 import { useAppState } from "../state/app-context";
-import type { AgentRuntimeResponse } from "../types/agent";
+import type { AgentGraphState, AgentRuntimeResponse } from "../types/agent";
 
 export function AgentPage() {
   const { role } = useAppState();
@@ -10,6 +11,7 @@ export function AgentPage() {
     "Which test cases cover appointment cancellation?",
   );
   const [result, setResult] = useState<AgentRuntimeResponse | null>(null);
+  const [graphResult, setGraphResult] = useState<AgentGraphState | null>(null);
   const [isRunning, setIsRunning] = useState(false);
   const [error, setError] = useState("");
   const [approvalStatus, setApprovalStatus] = useState<"APPROVED" | "REJECTED">(
@@ -36,11 +38,17 @@ export function AgentPage() {
         role,
       });
       setResult(response);
+      const graph = await runGraphDemo({
+        request: taskInput,
+        role,
+      });
+      setGraphResult(graph);
     } catch (reason) {
       setError(
         reason instanceof Error ? reason.message : "Failed to run deterministic agent demo.",
       );
       setResult(null);
+      setGraphResult(null);
     } finally {
       setIsRunning(false);
     }
@@ -57,6 +65,43 @@ export function AgentPage() {
         ...result.approval,
         status,
       },
+    });
+  };
+
+  const graphResume = () => {
+    if (!graphResult) {
+      return;
+    }
+    setGraphResult({
+      ...graphResult,
+      currentNode: "finalization",
+      executionStatus: "COMPLETED",
+      finalStatus: "SUCCESS",
+      approvalStatus: "APPROVED",
+    });
+  };
+
+  const graphApprove = () => {
+    if (!graphResult) {
+      return;
+    }
+    setGraphResult({
+      ...graphResult,
+      approvalStatus: "APPROVED",
+      executionStatus: "COMPLETED",
+      finalStatus: "SUCCESS",
+    });
+  };
+
+  const graphReject = () => {
+    if (!graphResult) {
+      return;
+    }
+    setGraphResult({
+      ...graphResult,
+      approvalStatus: "REJECTED",
+      executionStatus: "COMPLETED",
+      finalStatus: "PARTIAL",
     });
   };
 
@@ -235,6 +280,86 @@ export function AgentPage() {
           </div>
         </article>
       ) : null}
+
+      <article className="card" data-testid="agent-graph">
+          <h3>LangGraph Orchestration</h3>
+          <p data-testid="agent-graph-run-id">
+            <strong>Graph Run ID:</strong> {graphResult?.graphRunId ?? "Not started"}
+          </p>
+          <p data-testid="agent-graph-current-node">
+            <strong>Current Node:</strong> {graphResult?.currentNode ?? "START"}
+          </p>
+          <p data-testid="agent-graph-confidence">
+            <strong>Confidence:</strong>{" "}
+            {graphResult ? `${graphResult.confidence.score} (${graphResult.confidence.band})` : "0 (VERY_LOW)"}
+          </p>
+          <p data-testid="agent-graph-approval">
+            <strong>Approval:</strong> {graphResult?.approvalStatus ?? "NOT_REQUIRED"}
+          </p>
+
+          <h4>Node Timeline</h4>
+          {(graphResult?.nodeHistory ?? []).map((node, index) => (
+            <div key={`${node.node}-${index}`} className="agent-plan-row" data-testid="agent-graph-node">
+              <p>
+                <strong>{node.node}</strong>
+              </p>
+              <p data-testid="agent-graph-node-status">{node.status}</p>
+            </div>
+          ))}
+
+          <h4>Transitions</h4>
+          {(graphResult?.transitionHistory ?? []).map((transition, index) => (
+            <p key={`${transition.from}-${transition.to}-${index}`} data-testid="agent-graph-transition">
+              {transition.from}
+              {" -> "}
+              {transition.to} ({transition.reason})
+            </p>
+          ))}
+
+          <h4>MCP Tool Calls</h4>
+          {(graphResult?.toolCalls ?? []).map((call) => (
+            <div key={`graph-${call.requestId}`} className="agent-tool-row" data-testid="agent-graph-tool-call">
+              <p data-testid="agent-graph-tool-name">{call.tool}</p>
+              <p data-testid="agent-graph-tool-status">{call.status}</p>
+            </div>
+          ))}
+
+          <h4>Evidence</h4>
+          {(graphResult?.evidence ?? []).map((item) => (
+            <p key={item.evidenceId} data-testid="agent-graph-evidence">
+              {item.sourceSystem}:{item.sourceId} ({item.score})
+            </p>
+          ))}
+
+          <div className="inline-actions">
+            <button type="button" className="btn secondary" data-testid="agent-graph-resume" onClick={graphResume}>
+              Resume
+            </button>
+            <button type="button" className="btn secondary" data-testid="agent-graph-approve" onClick={graphApprove}>
+              Approve
+            </button>
+            <button type="button" className="btn danger" data-testid="agent-graph-reject" onClick={graphReject}>
+              Reject
+            </button>
+          </div>
+
+          {graphResult?.response ? (
+            <div data-testid="agent-graph-response">
+              <h4>Graph Response</h4>
+              <pre>{graphResult.response.answer}</pre>
+            </div>
+          ) : null}
+
+          {graphResult?.errors?.length ? (
+            <div>
+              {graphResult.errors.map((error, index) => (
+                <p key={`${error.code}-${index}`} data-testid="agent-graph-error">
+                  {error.code}: {error.message}
+                </p>
+              ))}
+            </div>
+          ) : <p data-testid="agent-graph-error">No graph errors recorded.</p>}
+        </article>
     </section>
   );
 }

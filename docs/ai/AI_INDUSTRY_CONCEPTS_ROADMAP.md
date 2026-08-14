@@ -48,9 +48,12 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 | Agent observability | PASS | STEP 8 |
 | Agent auditability | PASS | STEP 8 |
 | Agent evaluation | FOUNDATION | STEP 9/10 |
+| Graph orchestration | PASS | STEP 9 |
+| Stateful agent workflow | PASS | STEP 9 |
+| Checkpointing | PASS | STEP 9 |
 | Multi-agent systems | PLANNED | STEP 10 |
-| LangGraph | PLANNED | STEP 9 |
-| Human-in-the-loop | PASS (Foundation) | STEP 8/9 |
+| LangGraph (development runtime) | PASS | STEP 9 |
+| Human-in-the-loop | PASS | STEP 9 |
 | Guardrails | PASS | STEP 8 |
 | Prompt injection protection | FOUNDATION | STEP 11 |
 | AI security | FOUNDATION | STEP 11 |
@@ -83,7 +86,7 @@ Step 4 made Jira/Confluence enterprise knowledge foundations first-class with de
 Step 4.1 added frontend simulation visibility for Jira, Confluence, traceability, and RAG-ready knowledge status.
 
 ## Step 5 Note
-Step 5 implemented deterministic local RAG runtime (ingest/retrieve/cite) with development fallback embeddings and local vector-store abstraction. MCP/agent/LangGraph runtimes remain planned.
+Step 5 implemented deterministic local RAG runtime (ingest/retrieve/cite) with development fallback embeddings and local vector-store abstraction.
 
 ## Step 6 Note
 Step 6 implemented deterministic local RAG evaluation runtime (datasets, metrics, quality gates, runs, reports, comparison, and evaluation dashboard). Official RAGAS library runtime integration remains planned and is not claimed.
@@ -92,4 +95,7 @@ Step 6 implemented deterministic local RAG evaluation runtime (datasets, metrics
 Step 7 implemented deterministic local MCP server, client harness, tool catalog, tool discovery/calling, role authorization, audit telemetry, and frontend MCP demonstration page. Step 8 then reused this runtime as the agent tool-calling boundary.
 
 ## Step 8 Note
-Step 8 implemented deterministic single-agent runtime with task understanding, planning, MCP tool selection/calling, evidence validation, confidence scoring, guardrails, approval foundation, and agent audit logging. LangGraph and multi-agent runtimes remain planned.
+Step 8 implemented deterministic single-agent runtime with task understanding, planning, MCP tool selection/calling, evidence validation, confidence scoring, guardrails, approval foundation, and agent audit logging.
+
+## Step 9 Note
+Step 9 implemented a LangGraph-compatible deterministic local orchestration runtime with explicit state graph nodes/edges, conditional routing, checkpoint/resume, approval waiting states, loop protection, retry handling, and graph telemetry. Multi-agent remains planned for Step 10.

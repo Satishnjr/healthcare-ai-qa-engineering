@@ -1,11 +1,17 @@
 {
   "name": "careflow-agent-runtime",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "private": true,
   "description": "Step 8 deterministic single-agent runtime for CareFlow Health",
   "scripts": {
     "agent:task": "node src/cli-agent.js",
+    "agent:graph": "node src/cli-graph.js",
+    "agent:graph:status": "node src/cli-graph-status.js",
+    "agent:graph:resume": "node src/cli-graph-resume.js",
+    "agent:graph:approve": "node src/cli-graph-approve.js",
+    "agent:graph:reject": "node src/cli-graph-reject.js",
     "agent:frontend-artifacts": "node src/cli-generate-frontend-artifacts.js",
-    "test": "node tests/step8-agent-runtime.test.js"
+    "agent:graph:frontend-artifacts": "node src/cli-generate-graph-frontend-artifacts.js",
+    "test": "node tests/step8-agent-runtime.test.js && node tests/step9-langgraph-runtime.test.js"
   }
 }

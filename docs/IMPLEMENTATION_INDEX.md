@@ -17,8 +17,8 @@ This file is the single source of truth for roadmap structure, historical step m
 
 ## Project Overview
 - Project: Healthcare AI QA Engineering Platform (CareFlow Health).
-- Current delivery model: frontend simulation + deterministic automation baseline + enterprise Jira/Confluence knowledge foundation + Jira/Confluence simulation UI layer + deterministic local RAG runtime + deterministic local MCP runtime.
-- Scope boundary: Step 5 local deterministic RAG runtime, Step 6 local deterministic evaluation runtime, Step 7 local deterministic MCP runtime, and Step 8 deterministic single-agent runtime are implemented; LangGraph and multi-agent runtimes are not implemented yet.
+- Current delivery model: frontend simulation + deterministic automation baseline + enterprise Jira/Confluence knowledge foundation + Jira/Confluence simulation UI layer + deterministic local RAG runtime + deterministic local MCP runtime + deterministic local single-agent runtime + LangGraph-compatible orchestration runtime.
+- Scope boundary: Step 5 local deterministic RAG runtime, Step 6 local deterministic evaluation runtime, Step 7 local deterministic MCP runtime, Step 8 deterministic single-agent runtime, and Step 9 LangGraph-compatible orchestration runtime are implemented; multi-agent runtime is not implemented yet.
 
 ## New Major Roadmap (Authoritative)
 
@@ -33,7 +33,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 6 | RAGAS and AI Evaluation Runtime | PASS | Deterministic local evaluation pipeline, metrics, quality gates, run comparison, and evaluation UI integration. |
 | STEP 7 | MCP and Tool Calling Runtime | PASS | Local deterministic MCP server, client harness, tools, authorization, and audit telemetry. |
 | STEP 8 | QA AI Agent Runtime | PASS | Deterministic single-agent runtime with MCP tool orchestration, evidence validation, confidence scoring, approval foundation, and audit logging. |
-| STEP 9 | Agentic QA Orchestration (LangGraph) | PLANNED | Stateful orchestration, checkpoints, HITL gates, retries. |
+| STEP 9 | Agentic QA Orchestration (LangGraph) | PASS | LangGraph-compatible local state graph orchestration with checkpoints, HITL waiting/resume, retries, limits, and telemetry. |
 | STEP 10 | Multi-Agent QA System | PLANNED | Specialized cooperative QA agents and handoff governance. |
 | STEP 11 | Enterprise Integration + Observability + LLMOps + Security + Production Readiness | PLANNED | Jira/Confluence live integration, CI/CD AI gates, observability, security, auditability, and production controls. |
 
@@ -52,12 +52,12 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 8 | Completed | `agent/` runtime package + `/agent` frontend page + targeted `@step8` automation artifacts + Step 8 architecture/docs package. |
 
 ## Current Phase
-- Current roadmap position: Step 8 completed; next active phase is Step 9 planning.
+- Current roadmap position: Step 9 completed; next active phase is Step 10 planning.
 - Active mode: RAG runtime + evaluation runtime + MCP runtime + single-agent runtime implemented with deterministic local foundations.
 
 ## Remaining Major Phases
-- STEP 9 through STEP 11 remain planned by design.
-- Runtime RAG, evaluation, MCP, and single-agent foundations are implemented; LangGraph/multi-agent/live Jira-Confluence API integration is not implemented.
+- STEP 10 through STEP 11 remain planned by design.
+- Runtime RAG, evaluation, MCP, single-agent, and LangGraph-compatible orchestration foundations are implemented; multi-agent/live Jira-Confluence API integration is not implemented.
 
 ## Old Step -> New Major Step Mapping
 
@@ -96,7 +96,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 6 | 6.x | PASS |
 | STEP 7 | 7.x | PASS |
 | STEP 8 | 8.x | PASS |
-| STEP 9 | 9.x | PLANNED |
+| STEP 9 | 9.x | PASS |
 | STEP 10 | 10.x | PLANNED |
 | STEP 11 | 11.x | PLANNED |
 
@@ -194,7 +194,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | Agent role model/handoff/workflow contracts | PASS | Step 1.15 governance contracts plus Step 8 runtime usage. |
 | Agent usage flow for Jira/Confluence | PASS | Implemented through Step 8 deterministic planning + MCP execution. |
 | Single QA agent runtime | PASS | Implemented in `agent/` with evidence, confidence, approval, and audit layers. |
-| LangGraph orchestration runtime | PLANNED | STEP 9. |
+| LangGraph orchestration runtime | PASS | Implemented as local LangGraph-compatible development runtime in `agent/src/graph/`. |
 | Multi-agent runtime collaboration | PLANNED | STEP 10. |
 
 ## Observability Status
@@ -241,7 +241,7 @@ This file is the single source of truth for roadmap structure, historical step m
 | STEP 6 | Implemented deterministic RAG evaluation runtime, quality gates, failure analysis, and evaluation dashboard. |
 | STEP 7 | Implemented MCP runtime tools, discovery, calling, authorization, and audit boundary. |
 | STEP 8 | Implemented deterministic first QA AI agent with evidence-backed outputs via MCP tools. |
-| STEP 9 | Next: implement LangGraph orchestration with HITL checkpoints. |
+| STEP 9 | Implemented LangGraph-compatible orchestration with HITL checkpoints/resume and graph telemetry. |
 | STEP 10 | Next: implement specialized multi-agent QA workflows. |
 | STEP 11 | Finalize enterprise integration, observability, security, and production readiness. |
 
