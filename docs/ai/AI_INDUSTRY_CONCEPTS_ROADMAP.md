@@ -30,9 +30,15 @@ Map AI engineering concepts to major phases with explicit status to avoid over-c
 | Context recall | PASS | STEP 6 |
 | Answer relevance | PASS | STEP 6 |
 | AI observability | FOUNDATION | STEP 11 |
-| MCP | FOUNDATION | STEP 7 |
+| MCP | PASS | STEP 7 |
+| MCP server | PASS | STEP 7 |
+| MCP client | PASS | STEP 7 |
 | MCP tools | PASS | STEP 7 |
-| Tool calling | FOUNDATION | STEP 7 |
+| Tool discovery | PASS | STEP 7 |
+| Tool calling | PASS | STEP 7 |
+| MCP authorization | PASS | STEP 7 |
+| MCP auditability | PASS | STEP 7 |
+| MCP observability | PASS | STEP 7 |
 | Agentic AI | FOUNDATION | STEP 8 |
 | Agent evaluation | FOUNDATION | STEP 8/10 |
 | Multi-agent systems | FOUNDATION | STEP 10 |
@@ -74,3 +80,6 @@ Step 5 implemented deterministic local RAG runtime (ingest/retrieve/cite) with d
 
 ## Step 6 Note
 Step 6 implemented deterministic local RAG evaluation runtime (datasets, metrics, quality gates, runs, reports, comparison, and evaluation dashboard). Official RAGAS library runtime integration remains planned and is not claimed.
+
+## Step 7 Note
+Step 7 implemented deterministic local MCP server, client harness, tool catalog, tool discovery/calling, role authorization, audit telemetry, and frontend MCP demonstration page. AI agent runtime remains planned for Step 8.

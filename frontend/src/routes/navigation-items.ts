@@ -155,6 +155,11 @@ export const navigationItems: NavigationItem[] = [
     ],
   },
   {
+    path: "/mcp",
+    label: "MCP Tools",
+    roles: ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
+  },
+  {
     path: "/admin",
     label: "Administration",
     roles: ["Healthcare Administrator"],

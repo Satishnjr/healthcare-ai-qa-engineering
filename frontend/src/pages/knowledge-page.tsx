@@ -47,6 +47,9 @@ export function KnowledgePage() {
           <Link to="/knowledge/evaluation" className="btn secondary" data-testid="open-rag-evaluation">
             Open RAG Evaluation
           </Link>
+          <Link to="/mcp" className="btn secondary" data-testid="open-mcp-tools">
+            Open MCP Tools
+          </Link>
         </div>
       </article>
 

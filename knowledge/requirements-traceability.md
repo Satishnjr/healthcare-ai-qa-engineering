@@ -1041,3 +1041,31 @@ BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence ->
 ### Step 6 Notes
 - Step 6 adds measurable RAG quality runtime while preserving deterministic synthetic-only boundaries.
 - Official RAGAS library integration is not claimed; architecture is compatibility-ready.
+
+## Step 7 MCP Runtime Traceability Extension
+
+### Extended MCP Chain
+BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence -> Knowledge Document -> Chunk -> Embedding -> Vector -> Retrieval -> Context -> RAG Answer -> Citation -> Evaluation Dataset -> Evaluation Case -> Evaluation Run -> Metric -> Quality Gate -> MCP Tool -> MCP Server -> MCP Client -> Tool Result -> Test Scenario -> Test Case -> BDD -> Automation -> Execution -> Future AI Agent
+
+### Step 7 Deterministic Mapping Snapshot
+
+| Layer | Example ID | Status |
+|---|---|---|
+| MCP Tool | `search_jira` | PASS |
+| MCP Tool | `get_traceability` | PASS |
+| MCP Tool | `query_rag` | PASS |
+| MCP Tool | `get_rag_evaluation` | PASS |
+| MCP Server | `mcp/runtime/src/server/mcp-server.js` | PASS |
+| MCP Client | `mcp/runtime/src/clients/mcp-client-harness.js` | PASS |
+| Tool Discovery | `tools/list` (10 tools) | PASS |
+| Tool Result | structured envelope with `requestId` and `status` | PASS |
+| Authorization | role-scope gate in `security/authorization.js` | PASS |
+| Audit | `.tmp/mcp-runtime/tool-audit.ndjson` | PASS |
+| Frontend MCP UI | `/mcp` | PASS |
+| BDD | `TS-STEP7-004` | PASS |
+| Automation | `automation/features/functional/step7-mcp-runtime.feature` | PASS |
+| Execution | targeted `@step7` run | BLOCKED_ENVIRONMENT (report file EPERM) |
+
+### Step 7 Notes
+- Step 7 reuses existing Step 4 Jira/Confluence foundation, Step 5 RAG runtime, and Step 6 evaluation artifacts.
+- No autonomous AI agent runtime is implemented in Step 7.

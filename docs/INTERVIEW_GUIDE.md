@@ -1,7 +1,7 @@
 # Interview Guide
 
 ## Project Story (Major-Phase View)
-Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> Step 6 deterministic RAG evaluation runtime -> planned MCP/agent runtime.
+Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> Step 6 deterministic RAG evaluation runtime -> Step 7 deterministic MCP runtime -> planned agent runtime.
 
 ## What Is Implemented
 
@@ -17,13 +17,13 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 | Jira+Confluence UI simulation layer | PASS | Jira/Confluence/traceability/knowledge pages in frontend + Step 4.1 targeted automation |
 | RAG runtime (local deterministic) | PASS | `rag/` runtime + Step 5 docs + Knowledge page RAG query flow |
 | RAG evaluation runtime (local deterministic) | PASS | `rag/src/evaluation/*` + `/knowledge/evaluation` + Step 6 docs |
+| MCP runtime and tool calling foundation | PASS | `mcp/runtime/` + `/mcp` demo page + Step 7 docs/tests |
 
 ## What Is Not Yet Implemented
 
 | Area | Status |
 |---|---|
 | RAGAS official library runtime integration | PLANNED |
-| MCP runtime server/tools | PLANNED |
 | Single QA agent runtime | PLANNED |
 | LangGraph orchestration runtime | PLANNED |
 | Multi-agent runtime | PLANNED |
@@ -56,7 +56,7 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 ### STEP 5 to STEP 11 - Runtime Journey
 - STEP 5: RAG runtime (implemented as local deterministic foundation).
 - STEP 6: deterministic local RAG evaluation runtime with quality gates (implemented).
-- STEP 7: MCP runtime.
+- STEP 7: MCP runtime and tool calling foundation (implemented).
 - STEP 8: first QA AI agent runtime.
 - STEP 9: LangGraph orchestration runtime.
 - STEP 10: multi-agent runtime.
@@ -109,3 +109,5 @@ Use role-scoped permissions, human approval gates for write actions, audit logs,
 - `docs/architecture/JIRA_CONFLUENCE_INTEGRATION.md`
 - `docs/architecture/KNOWLEDGE_EXPORT_CONTRACT.md`
 - `docs/architecture/FUTURE_MCP_JIRA_CONFLUENCE_TOOLS.md`
+- `docs/architecture/MCP_ARCHITECTURE.md`
+- `docs/architecture/MCP_TOOL_CATALOG.md`

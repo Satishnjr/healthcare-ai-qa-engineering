@@ -1,0 +1,1911 @@
+{
+  "generatedAt": "2026-08-13T23:53:11.044Z",
+  "sampleCalls": {
+    "search_jira": {
+      "requestId": "mcp-mss6bog6-6lwax32g",
+      "status": "SUCCESS",
+      "tool": "search_jira",
+      "role": "Doctor",
+      "authorization": {
+        "allowed": true,
+        "requiredScope": "team"
+      },
+      "result": {
+        "sourceSystem": "jira",
+        "query": {
+          "query": "patient search",
+          "issueType": "Story",
+          "status": "QA Testing"
+        },
+        "total": 0,
+        "issues": []
+      },
+      "audit": {
+        "requestId": "mcp-mss6bog6-6lwax32g",
+        "timestamp": "2026-08-13T23:53:11.046Z",
+        "toolName": "search_jira",
+        "inputSummary": {
+          "query": "patient search",
+          "issueType": "Story",
+          "status": "QA Testing"
+        },
+        "role": "Doctor",
+        "authorizationResult": "AUTHORIZED",
+        "durationMs": 0.72,
+        "status": "SUCCESS",
+        "errorCode": null,
+        "sourceSystems": [
+          "jira"
+        ],
+        "returnedRecordCount": 0
+      }
+    },
+    "get_traceability": {
+      "requestId": "mcp-mss6bog8-evp5qblt",
+      "status": "SUCCESS",
+      "tool": "get_traceability",
+      "role": "Doctor",
+      "authorization": {
+        "allowed": true,
+        "requiredScope": "team"
+      },
+      "result": {
+        "sourceSystem": "traceability",
+        "graph": {
+          "entityType": "TEST_CASE",
+          "entityId": "TC-TS-003-007-01",
+          "direction": "both",
+          "nodes": [
+            {
+              "id": "TC-TS-003-007-01",
+              "type": "TEST_CASE",
+              "metadata": {}
+            },
+            {
+              "id": "CFH-US-005",
+              "type": "JIRA_STORY",
+              "metadata": {}
+            },
+            {
+              "id": "DETERMINISTIC_AUTOMATION",
+              "type": "AUTOMATION_CLASSIFICATION",
+              "metadata": {}
+            },
+            {
+              "id": "AUTOMATED_IN_1_13_1_14",
+              "type": "AUTOMATION_STATUS",
+              "metadata": {}
+            }
+          ],
+          "edges": [
+            {
+              "from": "TC-TS-003-007-01",
+              "to": "CFH-US-005",
+              "relation": "TESTS"
+            },
+            {
+              "from": "TC-TS-003-007-01",
+              "to": "DETERMINISTIC_AUTOMATION",
+              "relation": "CLASSIFIED_AS"
+            },
+            {
+              "from": "TC-TS-003-007-01",
+              "to": "AUTOMATED_IN_1_13_1_14",
+              "relation": "AUTOMATION_STATUS"
+            }
+          ]
+        }
+      },
+      "audit": {
+        "requestId": "mcp-mss6bog8-evp5qblt",
+        "timestamp": "2026-08-13T23:53:11.048Z",
+        "toolName": "get_traceability",
+        "inputSummary": {
+          "entityType": "TEST_CASE",
+          "entityId": "TC-TS-003-007-01",
+          "direction": "both"
+        },
+        "role": "Doctor",
+        "authorizationResult": "AUTHORIZED",
+        "durationMs": 0.73,
+        "status": "SUCCESS",
+        "errorCode": null,
+        "sourceSystems": [
+          "traceability"
+        ],
+        "returnedRecordCount": 4
+      }
+    },
+    "query_rag": {
+      "requestId": "mcp-mss6bog9-om00h1dp",
+      "status": "SUCCESS",
+      "tool": "query_rag",
+      "role": "Doctor",
+      "authorization": {
+        "allowed": true,
+        "requiredScope": "public"
+      },
+      "result": {
+        "sourceSystem": "rag",
+        "role": "Doctor",
+        "answer": "Based on retrieved CareFlow evidence:\n1. ries with acceptance criteria: 32 User Stories without acceptance criteria: 0 Orphan acceptance criteria: 0 Unmapped acceptance criteria: 0 Notes: - Story-level acceptance criteria are fully mapped to all 32 user stories\n2. | FR-004, FR-005 | Dashboard content and activity visibility | MAPPED | | BR-004 | FR-006, FR-007 | Patient registration and list behavior | MAPPED | | BR-005 | FR-008 | Patient search by ID | MAPPED | | BR-006 | FR-008 \n3. Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappings.",
+        "citations": [
+          {
+            "chunkId": "CHUNK-cccd782d0d16f9e3",
+            "documentId": "DOC-f15dcd02330aaf7b",
+            "sourceSystem": "confluence",
+            "sourceId": "CFH-PAGE-001",
+            "sourceType": "requirement",
+            "score": 0.774597,
+            "traceabilityIds": [
+              "US-003-003",
+              "AC-US-003-003-001",
+              "TS-003-007",
+              "TC-TS-003-007-01"
+            ],
+            "labels": [
+              "requirement",
+              "patient-search",
+              "qa"
+            ]
+          },
+          {
+            "chunkId": "CHUNK-3c867d30e2a9c91d",
+            "documentId": "DOC-867d763914b3bba8",
+            "sourceSystem": "repository",
+            "sourceId": "requirements-traceability",
+            "sourceType": "traceability",
+            "score": 0.653846,
+            "traceabilityIds": [
+              "TRACEABILITY-MASTER"
+            ],
+            "labels": [
+              "traceability",
+              "requirements"
+            ]
+          },
+          {
+            "chunkId": "CHUNK-e2fd1851d177f60f",
+            "documentId": "DOC-867d763914b3bba8",
+            "sourceSystem": "repository",
+            "sourceId": "requirements-traceability",
+            "sourceType": "traceability",
+            "score": 0.575224,
+            "traceabilityIds": [
+              "TRACEABILITY-MASTER"
+            ],
+            "labels": [
+              "traceability",
+              "requirements"
+            ]
+          }
+        ],
+        "retrievedDocuments": [
+          {
+            "chunkId": "CHUNK-cccd782d0d16f9e3",
+            "documentId": "DOC-f15dcd02330aaf7b",
+            "score": 0.774597,
+            "sourceSystem": "confluence",
+            "sourceType": "requirement",
+            "sourceId": "CFH-PAGE-001"
+          },
+          {
+            "chunkId": "CHUNK-3c867d30e2a9c91d",
+            "documentId": "DOC-867d763914b3bba8",
+            "score": 0.653846,
+            "sourceSystem": "repository",
+            "sourceType": "traceability",
+            "sourceId": "requirements-traceability"
+          },
+          {
+            "chunkId": "CHUNK-e2fd1851d177f60f",
+            "documentId": "DOC-867d763914b3bba8",
+            "score": 0.575224,
+            "sourceSystem": "repository",
+            "sourceType": "traceability",
+            "sourceId": "requirements-traceability"
+          }
+        ],
+        "confidence": 0.67,
+        "retrievalMetadata": {
+          "topK": 3,
+          "filters": {},
+          "provider": "deterministic-fallback",
+          "model": "hashing-v1",
+          "embeddingQuality": "DEVELOPMENT_FALLBACK",
+          "contextSize": 941,
+          "contextPreview": "[#1] (confluence:CFH-PAGE-001) Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappings.\n\n[#2] (repository:requirements-traceability) ries with acceptance criteria: 32\r\n\r\nUser Stories without acceptance criteria: 0\r\n\r\nOrphan acceptance criteria: 0\r\n\r\nUnmapped acceptance criteria: 0\r\n\r\nNotes:\r\n- Story-level acceptance criteria are fully mapped to all 32 user stories.\r\n- Cross-cutting NFR acceptance criteria are intentionally modeled as global criteria mapped to PRD NFR-001..NFR-013.\r\n\r\n## Acceptance Criteria-to-Test Scenario Mapping\r\n\r\n| Acceptance\n"
+        },
+        "warnings": []
+      },
+      "audit": {
+        "requestId": "mcp-mss6bog9-om00h1dp",
+        "timestamp": "2026-08-13T23:53:11.049Z",
+        "toolName": "query_rag",
+        "inputSummary": {
+          "query": "patient search acceptance criteria",
+          "role": "Doctor",
+          "topK": 3
+        },
+        "role": "Doctor",
+        "authorizationResult": "AUTHORIZED",
+        "durationMs": 30.52,
+        "status": "SUCCESS",
+        "errorCode": null,
+        "sourceSystems": [
+          "rag"
+        ],
+        "returnedRecordCount": 3
+      }
+    },
+    "get_rag_evaluation": {
+      "requestId": "mcp-mss6boh4-5qg8rf0u",
+      "status": "SUCCESS",
+      "tool": "get_rag_evaluation",
+      "role": "Doctor",
+      "authorization": {
+        "allowed": true,
+        "requiredScope": "team"
+      },
+      "result": {
+        "sourceSystem": "rag-evaluation",
+        "evaluationRun": {
+          "runId": "RUN-3b89195bfc85fcc7",
+          "timestamp": "2026-08-13T16:41:04.758Z",
+          "datasetId": "careflow-rag-eval-v1",
+          "datasetVersion": "1.0.0",
+          "datasetSnapshotPath": "D:\\SathishKumarN\\Personal\\Trainings\\Canada Preparation\\AI\\Projects\\HealthCare-AI-QA\\.tmp\\rag-evaluation\\datasets\\DATASET-d29112fa4c6f0c38.json",
+          "ragVersion": "step-5-runtime",
+          "modelVersion": "extractive-v1",
+          "promptVersion": "step-5-extractive-v1",
+          "embeddingVersion": "hashing-v1",
+          "evaluatorVersion": "local-deterministic-evaluator-v1",
+          "embeddingProvider": "deterministic-fallback",
+          "embeddingModel": "hashing-v1",
+          "generationProvider": "deterministic-grounded-generator",
+          "generationModel": "extractive-v1",
+          "totalCases": 18,
+          "passedCases": 5,
+          "warnCases": 8,
+          "failedCases": 5,
+          "metrics": {
+            "contextPrecision": 0.4343,
+            "contextRecall": 0.5926,
+            "faithfulness": 0.3395,
+            "answerRelevance": 0.3598,
+            "groundedness": 1,
+            "overallScore": 0.5452
+          },
+          "qualityGate": {
+            "status": "FAIL",
+            "thresholds": {
+              "contextPrecision": 0.55,
+              "contextRecall": 0.55,
+              "faithfulness": 0.6,
+              "answerRelevance": 0.6,
+              "groundedness": 0.7,
+              "minimumOverallScore": 0.62
+            },
+            "failures": [
+              "contextPrecision below threshold (0.4343 < 0.55)",
+              "faithfulness below threshold (0.3395 < 0.6)",
+              "answerRelevance below threshold (0.3598 < 0.6)"
+            ],
+            "warnings": [
+              "overallScore slightly below threshold (0.5452 < 0.62)"
+            ]
+          },
+          "results": [
+            {
+              "caseId": "EVAL-001",
+              "question": "What is the acceptance criterion for patient search by medical record number?",
+              "role": "Doctor",
+              "category": "ACCEPTANCE_CRITERIA",
+              "expectedSources": [
+                "jira:CFH-101",
+                "repository:requirements-traceability"
+              ],
+              "expectedAnswer": "Answer should reference patient-search acceptance criteria and traceability evidence.",
+              "expectedTraceabilityIds": [
+                "US-003-003",
+                "TS-003-007"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. Requirement and QA knowledge for patient search by MRN. Includes acceptance criteria and test mappings.\n2. accessibility, and responsive behavior for View patient list with core columns | MAPPED | | AC-US-003-003-001 | TS-003-007 | Validate happy path for Search patients by ID, name, DOB, or phone | MAPPED | | AC-US-003-003-0\n3. 03-003-003 | TS-003-009 | Validate state, accessibility, and responsive behavior for Search patients by ID, name, DOB, or phone | MAPPED | | AC-US-003-004-001 | TS-003-010 | Validate happy path for View and update patien",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-cccd782d0d16f9e3",
+                  "documentId": "DOC-f15dcd02330aaf7b",
+                  "sourceSystem": "confluence",
+                  "sourceId": "CFH-PAGE-001",
+                  "sourceType": "requirement",
+                  "score": 0.48795,
+                  "traceabilityIds": [
+                    "US-003-003",
+                    "AC-US-003-003-001",
+                    "TS-003-007",
+                    "TC-TS-003-007-01"
+                  ],
+                  "labels": [
+                    "requirement",
+                    "patient-search",
+                    "qa"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-4e0546e61adaf728",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.448327,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-eebbd64c2e481abb",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.440706,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-ac810ead0477e845",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.435836,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-8eda67ae2d23823b",
+                  "documentId": "DOC-8ca918cafcabdfb4",
+                  "sourceSystem": "jira",
+                  "sourceId": "CFH-US-005",
+                  "sourceType": "Story",
+                  "score": 0.423659,
+                  "traceabilityIds": [
+                    "US-003-003",
+                    "TS-003-007",
+                    "TC-TS-003-007-01"
+                  ],
+                  "labels": [
+                    "careflow",
+                    "patient-search"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "confluence:CFH-PAGE-001",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "jira:CFH-US-005"
+              ],
+              "metrics": {
+                "contextPrecision": 0.6,
+                "contextRecall": 0.75,
+                "faithfulness": 0.1591,
+                "answerRelevance": 0.4286,
+                "groundedness": 1
+              },
+              "overallScore": 0.5875,
+              "status": "WARN",
+              "warnings": [],
+              "failureCategory": "WRONG_SOURCE",
+              "observability": {
+                "retrievalLatency": 13,
+                "evaluationLatency": 14,
+                "retrievedChunkIds": [
+                  "CHUNK-cccd782d0d16f9e3",
+                  "CHUNK-4e0546e61adaf728",
+                  "CHUNK-eebbd64c2e481abb",
+                  "CHUNK-ac810ead0477e845",
+                  "CHUNK-8eda67ae2d23823b"
+                ],
+                "scores": [
+                  0.48795,
+                  0.448327,
+                  0.440706,
+                  0.435836,
+                  0.423659
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-002",
+              "question": "Which test case covers searching a patient by ID?",
+              "role": "Doctor",
+              "category": "TEST_CASE_RETRIEVAL",
+              "expectedSources": [
+                "jira:CFH-101",
+                "repository:requirements-traceability"
+              ],
+              "expectedAnswer": "Answer should reference TC-TS-003-007-01.",
+              "expectedTraceabilityIds": [
+                "TS-003-007"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. View and filter simulated activity history | P2 | No | MAPPED | ## Test Case Coverage Summary Total Test Scenarios: 96 Total Test Cases: 96 Test Scenarios with test case coverage: 96 Test Scenarios without test case cove\n2. -Browser test cases: 32 Role/Authorization UI test cases: 5 ## Test Case-to-Test Data Mapping | Test Case ID | Test Scenario ID | User Story ID | Dataset ID(s) | Status | |---|---|---|---|---| | TC-TS-001-001-01 | TS-001\n3. p 4 Deterministic Mapping Example | Layer | Example ID | |---|---| | Epic | CFH-EPIC-001 | | Story | CFH-US-005 | | Acceptance Criteria | AC-US-003-003-001 | | Jira Issue | CFH-US-005 | | Confluence Knowledge Artifact | ",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-3b9febb88522707c",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.513015,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-c5c7c0e0e736acf7",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.490098,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-0c296ae60992d5e2",
+                  "documentId": "DOC-b9555463c0797056",
+                  "sourceSystem": "jira",
+                  "sourceId": "CFH-EPIC-001",
+                  "sourceType": "Epic",
+                  "score": 0.456435,
+                  "traceabilityIds": [
+                    "EPIC-003"
+                  ],
+                  "labels": [
+                    "careflow",
+                    "epic"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-08b4dde41374b5c3",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.439155,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-eebbd64c2e481abb",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.432742,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "jira:CFH-EPIC-001",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability"
+              ],
+              "metrics": {
+                "contextPrecision": 0.8,
+                "contextRecall": 0.3333,
+                "faithfulness": 0.1167,
+                "answerRelevance": 0.5,
+                "groundedness": 1
+              },
+              "overallScore": 0.55,
+              "status": "WARN",
+              "warnings": [],
+              "failureCategory": "LOW_CONTEXT_RECALL",
+              "observability": {
+                "retrievalLatency": 5,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [
+                  "CHUNK-3b9febb88522707c",
+                  "CHUNK-c5c7c0e0e736acf7",
+                  "CHUNK-0c296ae60992d5e2",
+                  "CHUNK-08b4dde41374b5c3",
+                  "CHUNK-eebbd64c2e481abb"
+                ],
+                "scores": [
+                  0.513015,
+                  0.490098,
+                  0.456435,
+                  0.439155,
+                  0.432742
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-003",
+              "question": "Which defect is linked to patient search empty-state mismatch?",
+              "role": "Healthcare Administrator",
+              "category": "DEFECT_RETRIEVAL",
+              "expectedSources": [
+                "jira:CFH-101",
+                "repository:requirements-traceability"
+              ],
+              "expectedAnswer": "Answer should mention CFH-301.",
+              "expectedTraceabilityIds": [
+                "TC-TS-003-008-01"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. PPED | | BR-004 | FR-006, FR-007 | EPIC-003 | Patient registration and list behavior | MAPPED | | BR-005 | FR-008 | EPIC-003 | Patient search by patient ID | MAPPED | | BR-006 | FR-008 | EPIC-003 | Patient search by demo\n2. | FR-004, FR-005 | Dashboard content and activity visibility | MAPPED | | BR-004 | FR-006, FR-007 | Patient registration and list behavior | MAPPED | | BR-005 | FR-008 | Patient search by ID | MAPPED | | BR-006 | FR-008 ",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-c400700269f5d68b",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.451848,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-e2fd1851d177f60f",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.438357,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:requirements-traceability",
+                "repository:requirements-traceability"
+              ],
+              "metrics": {
+                "contextPrecision": 1,
+                "contextRecall": 0.3333,
+                "faithfulness": 0.0714,
+                "answerRelevance": 0.3333,
+                "groundedness": 1
+              },
+              "overallScore": 0.5476,
+              "status": "WARN",
+              "warnings": [],
+              "failureCategory": "LOW_CONTEXT_RECALL",
+              "observability": {
+                "retrievalLatency": 4,
+                "evaluationLatency": 4,
+                "retrievedChunkIds": [
+                  "CHUNK-c400700269f5d68b",
+                  "CHUNK-e2fd1851d177f60f"
+                ],
+                "scores": [
+                  0.451848,
+                  0.438357
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-004",
+              "question": "Show traceability for patient search requirement to test case.",
+              "role": "Doctor",
+              "category": "TRACEABILITY",
+              "expectedSources": [
+                "repository:requirements-traceability"
+              ],
+              "expectedAnswer": "Answer should include chain from user story to test case.",
+              "expectedTraceabilityIds": [
+                "US-003-003",
+                "TS-003-007",
+                "TC-TS-003-007-01"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. PPED | | BR-004 | FR-006, FR-007 | EPIC-003 | Patient registration and list behavior | MAPPED | | BR-005 | FR-008 | EPIC-003 | Patient search by patient ID | MAPPED | | BR-006 | FR-008 | EPIC-003 | Patient search by demo\n2. n standards in patient lists | MAPPED | | AC-US-003-006-002 | TS-003-017 | Validate negative and validation behavior for Apply search, filter, sort, and pagination standards in patient lists | MAPPED | | AC-US-003-006-00\n3. gative and validation behavior for Apply search, filter, sort, and pagination standards in patient lists | P1 | No | MAPPED | | TS-003-018 | TC-TS-003-018-01 | Validate state, accessibility, and responsive behavior for A",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-b660c12323c0c546",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.548088,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-18e4fb7422bf0d02",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.515406,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-cccd782d0d16f9e3",
+                  "documentId": "DOC-f15dcd02330aaf7b",
+                  "sourceSystem": "confluence",
+                  "sourceId": "CFH-PAGE-001",
+                  "sourceType": "requirement",
+                  "score": 0.48795,
+                  "traceabilityIds": [
+                    "US-003-003",
+                    "AC-US-003-003-001",
+                    "TS-003-007",
+                    "TC-TS-003-007-01"
+                  ],
+                  "labels": [
+                    "requirement",
+                    "patient-search",
+                    "qa"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-654491d0896d25c7",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.453557,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-c400700269f5d68b",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.448211,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "confluence:CFH-PAGE-001",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability"
+              ],
+              "metrics": {
+                "contextPrecision": 0.8,
+                "contextRecall": 1,
+                "faithfulness": 0.1136,
+                "answerRelevance": 0.2857,
+                "groundedness": 1
+              },
+              "overallScore": 0.6399,
+              "status": "PASS",
+              "warnings": [],
+              "failureCategory": null,
+              "observability": {
+                "retrievalLatency": 6,
+                "evaluationLatency": 6,
+                "retrievedChunkIds": [
+                  "CHUNK-b660c12323c0c546",
+                  "CHUNK-18e4fb7422bf0d02",
+                  "CHUNK-cccd782d0d16f9e3",
+                  "CHUNK-654491d0896d25c7",
+                  "CHUNK-c400700269f5d68b"
+                ],
+                "scores": [
+                  0.548088,
+                  0.515406,
+                  0.48795,
+                  0.453557,
+                  0.448211
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-005",
+              "question": "Which document defines automation governance?",
+              "role": "Receptionist",
+              "category": "AUTOMATION_GOVERNANCE",
+              "expectedSources": [
+                "repository:automation-governance"
+              ],
+              "expectedAnswer": "Answer should cite automation governance documentation.",
+              "expectedTraceabilityIds": [
+                "AUTOMATION-GOVERNANCE"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. ults/cucumber/` - Execution summary JSON (AI-ready): `automation/test-results/cucumber/execution-summary.json` - HTML report: `automation/reports/html/index.html` - Failure artifacts directory: `automation/reports/failur\n2. # Automation Governance ## Objective Define how CareFlow QA uses deterministic automation, AI-assisted automation, agentic automation, and human approval without mixing responsibilities. ## Core Principles - Preserve syn\n3. equired | Safety and governance | | Healthcare-sensitive decision support | Human-in-the-loop | High-risk domain | ## Automation Strategy Boundaries ### Deterministic Automation - Required for core smoke/regression subse",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-52c52e95a93eee87",
+                  "documentId": "DOC-50376a0eaf61cbc0",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-governance",
+                  "sourceType": "automation-governance",
+                  "score": 0.480537,
+                  "traceabilityIds": [
+                    "AUTOMATION-GOVERNANCE"
+                  ],
+                  "labels": [
+                    "automation",
+                    "governance"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-d8bd429fbd738fa1",
+                  "documentId": "DOC-50376a0eaf61cbc0",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-governance",
+                  "sourceType": "automation-governance",
+                  "score": 0.427121,
+                  "traceabilityIds": [
+                    "AUTOMATION-GOVERNANCE"
+                  ],
+                  "labels": [
+                    "automation",
+                    "governance"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-d288cec5fcb76e31",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.391675,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:automation-governance",
+                "repository:automation-governance",
+                "repository:requirements-traceability"
+              ],
+              "metrics": {
+                "contextPrecision": 0.6667,
+                "contextRecall": 1,
+                "faithfulness": 0.0536,
+                "answerRelevance": 0.5,
+                "groundedness": 1
+              },
+              "overallScore": 0.6441,
+              "status": "PASS",
+              "warnings": [],
+              "failureCategory": null,
+              "observability": {
+                "retrievalLatency": 5,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [
+                  "CHUNK-52c52e95a93eee87",
+                  "CHUNK-d8bd429fbd738fa1",
+                  "CHUNK-d288cec5fcb76e31"
+                ],
+                "scores": [
+                  0.480537,
+                  0.427121,
+                  0.391675
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-006",
+              "question": "What does the automation candidate matrix describe?",
+              "role": "Doctor",
+              "category": "AUTOMATION_GOVERNANCE",
+              "expectedSources": [
+                "repository:automation-candidate-matrix"
+              ],
+              "expectedAnswer": "Answer should cite candidate matrix and category coverage.",
+              "expectedTraceabilityIds": [
+                "AUTOMATION-CANDIDATE-MATRIX"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. n | P2 | FUTURE_CANDIDATE | Planned future automation | Regression Selection Agent | Notifications and Feedback / Functional, Positive, Navigation evaluation | DATA-NOTIFICATIONS-AND-FEEDBACK-001 | RAG + MCP + Planning |\n2. ional, Positive, Navigation | P2 | FUTURE_CANDIDATE | Planned future automation | Regression Selection Agent | Prescriptions / Functional, Positive, Navigation evaluation | DATA-PRESCRIPTIONS-001 | RAG + MCP + Planning |\n3. xpansion | Automation Agent | Patient Management / Functional, Positive, Navigation, Form evaluation | DATA-PATIENT-MANAGEMENT-001 | Playwright + Cucumber + Prompt Templates | Yes | High | Near-term | | TC-TS-003-002-01 ",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-76ba589f9a82f1bc",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.421637,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-714b4c4b822a249e",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.379236,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-edbf4741a7bb83d4",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.354459,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-64271b2b19ad1316",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.323029,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:automation-candidate-matrix",
+                "repository:automation-candidate-matrix",
+                "repository:automation-candidate-matrix",
+                "repository:automation-candidate-matrix"
+              ],
+              "metrics": {
+                "contextPrecision": 1,
+                "contextRecall": 1,
+                "faithfulness": 0.0952,
+                "answerRelevance": 0.4,
+                "groundedness": 1
+              },
+              "overallScore": 0.699,
+              "status": "PASS",
+              "warnings": [],
+              "failureCategory": null,
+              "observability": {
+                "retrievalLatency": 4,
+                "evaluationLatency": 4,
+                "retrievedChunkIds": [
+                  "CHUNK-76ba589f9a82f1bc",
+                  "CHUNK-714b4c4b822a249e",
+                  "CHUNK-edbf4741a7bb83d4",
+                  "CHUNK-64271b2b19ad1316"
+                ],
+                "scores": [
+                  0.421637,
+                  0.379236,
+                  0.354459,
+                  0.323029
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-007",
+              "question": "Where is the UI architecture documented?",
+              "role": "Nurse",
+              "category": "UI_ARCHITECTURE",
+              "expectedSources": [
+                "repository:ui-architecture"
+              ],
+              "expectedAnswer": "Answer should reference UI architecture document.",
+              "expectedTraceabilityIds": [
+                "UI-ARCHITECTURE"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. nal, Positive, Navigation, Filter | P1 | BLOCKED_UI_GAP | Blocked until UI module exists | Requirement Analysis Agent | Activity History / Functional, Positive, Navigation, Filter evaluation | DATA-ACTIVITY-HISTORY-001 |\n2. -012-001 | State Management, Loading State, Success State, Accessibility, Responsive, Cross-Browser, Regression, Usability | P2 | BLOCKED_UI_GAP | Blocked until UI module exists | Requirement Analysis Agent | Activity Hi\n3. # UI Architecture ## Objective Define the complete frontend architecture blueprint for the future CareFlow Health React + TypeScript + Vite implementation. ## Scope Classification - IMPLEMENTED IN FUTURE FRONTEND PHASE: ",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-e86ed933ffc422a2",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.666667,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-a9146af265742d88",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.418167,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-afefc38edfb54b4f",
+                  "documentId": "DOC-c63ac9a4629cb572",
+                  "sourceSystem": "repository",
+                  "sourceId": "ui-architecture",
+                  "sourceType": "ui-architecture",
+                  "score": 0.412479,
+                  "traceabilityIds": [
+                    "UI-ARCHITECTURE"
+                  ],
+                  "labels": [
+                    "ui",
+                    "architecture"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-beb1ae0bc6222e3b",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.381881,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-0608ef61d53bdc94",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.351726,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:automation-candidate-matrix",
+                "repository:automation-candidate-matrix",
+                "repository:ui-architecture",
+                "repository:automation-candidate-matrix",
+                "repository:automation-candidate-matrix"
+              ],
+              "metrics": {
+                "contextPrecision": 0.2,
+                "contextRecall": 1,
+                "faithfulness": 0.0909,
+                "answerRelevance": 0.6667,
+                "groundedness": 1
+              },
+              "overallScore": 0.5915,
+              "status": "WARN",
+              "warnings": [],
+              "failureCategory": "LOW_CONTEXT_PRECISION",
+              "observability": {
+                "retrievalLatency": 4,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [
+                  "CHUNK-e86ed933ffc422a2",
+                  "CHUNK-a9146af265742d88",
+                  "CHUNK-afefc38edfb54b4f",
+                  "CHUNK-beb1ae0bc6222e3b",
+                  "CHUNK-0608ef61d53bdc94"
+                ],
+                "scores": [
+                  0.666667,
+                  0.418167,
+                  0.412479,
+                  0.381881,
+                  0.351726
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-008",
+              "question": "Which document describes UI page specifications?",
+              "role": "Nurse",
+              "category": "UI_ARCHITECTURE",
+              "expectedSources": [
+                "repository:ui-page-specifications"
+              ],
+              "expectedAnswer": "Answer should cite UI page specifications document.",
+              "expectedTraceabilityIds": [
+                "UI-PAGE-SPECIFICATIONS"
+              ],
+              "answer": "I could not find sufficient evidence in the indexed CareFlow knowledge base to answer this question.",
+              "citations": [],
+              "retrievedSources": [],
+              "metrics": {
+                "contextPrecision": 0,
+                "contextRecall": 0,
+                "faithfulness": 1,
+                "answerRelevance": 0,
+                "groundedness": 1
+              },
+              "overallScore": 0.4,
+              "status": "FAIL",
+              "warnings": [
+                "NO_EVIDENCE"
+              ],
+              "failureCategory": "NO_EVIDENCE_UNEXPECTED",
+              "observability": {
+                "retrievalLatency": 5,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [],
+                "scores": []
+              }
+            },
+            {
+              "caseId": "EVAL-009",
+              "question": "What contract defines knowledge export metadata for RAG?",
+              "role": "Healthcare Administrator",
+              "category": "CONFLUENCE_KNOWLEDGE",
+              "expectedSources": [
+                "repository:knowledge-export-contract"
+              ],
+              "expectedAnswer": "Answer should reference knowledge export contract fields.",
+              "expectedTraceabilityIds": [
+                "KNOWLEDGE-EXPORT-CONTRACT"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. # Knowledge Export Contract ## Purpose Define deterministic export format from Confluence knowledge artifacts to future RAG ingestion. ## Export Shape ```json { \"documentId\": \"CFH-PAGE-001\", \"sourceSystem\": \"confluence\",\n2. automation/features/regression/patient-search-regression.feature | | Execution | automation/test-results/cucumber/execution-summary.json | | Defect | CFH-BUG-014 | ### Step 4 Notes - Jira and Confluence local/mock adapte",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-83cd0b117c1a68b8",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.633553,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-15d04c47e6715c65",
+                  "documentId": "DOC-791328c3f4116688",
+                  "sourceSystem": "repository",
+                  "sourceId": "knowledge-export-contract",
+                  "sourceType": "rag-contract",
+                  "score": 0.575396,
+                  "traceabilityIds": [
+                    "KNOWLEDGE-EXPORT-CONTRACT"
+                  ],
+                  "labels": [
+                    "rag",
+                    "contract"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:requirements-traceability",
+                "repository:knowledge-export-contract"
+              ],
+              "metrics": {
+                "contextPrecision": 0.5,
+                "contextRecall": 1,
+                "faithfulness": 0.0476,
+                "answerRelevance": 0.6667,
+                "groundedness": 1
+              },
+              "overallScore": 0.6429,
+              "status": "PASS",
+              "warnings": [],
+              "failureCategory": null,
+              "observability": {
+                "retrievalLatency": 5,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [
+                  "CHUNK-83cd0b117c1a68b8",
+                  "CHUNK-15d04c47e6715c65"
+                ],
+                "scores": [
+                  0.633553,
+                  0.575396
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-010",
+              "question": "Which Jira issue captures patient search deterministic behavior?",
+              "role": "Doctor",
+              "category": "REQUIREMENT_RETRIEVAL",
+              "expectedSources": [
+                "jira:CFH-101"
+              ],
+              "expectedAnswer": "Answer should reference CFH-101 details.",
+              "expectedTraceabilityIds": [
+                "US-003-003"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. 03-003-003 | TS-003-009 | Validate state, accessibility, and responsive behavior for Search patients by ID, name, DOB, or phone | MAPPED | | AC-US-003-004-001 | TS-003-010 | Validate happy path for View and update patien\n2. accessibility, and responsive behavior for View patient list with core columns | MAPPED | | AC-US-003-003-001 | TS-003-007 | Validate happy path for Search patients by ID, name, DOB, or phone | MAPPED | | AC-US-003-003-0\n3. DOB, or phone | P0 | Yes | MAPPED | | TS-003-008 | TC-TS-003-008-01 | Validate negative and validation behavior for Search patients by ID, name, DOB, or phone | P0 | No | MAPPED | | TS-003-009 | TC-TS-003-009-01 | Valida",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-eebbd64c2e481abb",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.600962,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-72352fdbfe4d972f",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.592999,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-4e0546e61adaf728",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.570597,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-f25ab17006793f9f",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.566947,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability"
+              ],
+              "metrics": {
+                "contextPrecision": 0,
+                "contextRecall": 0,
+                "faithfulness": 0.0909,
+                "answerRelevance": 0.4286,
+                "groundedness": 1
+              },
+              "overallScore": 0.3039,
+              "status": "FAIL",
+              "warnings": [],
+              "failureCategory": "LOW_CONTEXT_RECALL",
+              "observability": {
+                "retrievalLatency": 4,
+                "evaluationLatency": 4,
+                "retrievedChunkIds": [
+                  "CHUNK-eebbd64c2e481abb",
+                  "CHUNK-72352fdbfe4d972f",
+                  "CHUNK-4e0546e61adaf728",
+                  "CHUNK-f25ab17006793f9f"
+                ],
+                "scores": [
+                  0.600962,
+                  0.592999,
+                  0.570597,
+                  0.566947
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-011",
+              "question": "Can a patient access Jira management modules?",
+              "role": "Patient",
+              "category": "ACCESS_CONTROL",
+              "expectedSources": [
+                "repository:careflow-help-access"
+              ],
+              "expectedAnswer": "Answer should state patient cannot access Jira management modules.",
+              "expectedTraceabilityIds": [
+                "AC-NFR-005"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. Patients can access help and knowledge summaries but cannot access Jira management modules. Doctors and QA roles can access operational knowledge modules.",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-a101fb9f5076f20d",
+                  "documentId": "DOC-91a68debdab2cb0b",
+                  "sourceSystem": "repository",
+                  "sourceId": "careflow-help-access",
+                  "sourceType": "public-help",
+                  "score": 0.818923,
+                  "traceabilityIds": [
+                    "US-011-001",
+                    "AC-NFR-005"
+                  ],
+                  "labels": [
+                    "help",
+                    "access-control",
+                    "public"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:careflow-help-access"
+              ],
+              "metrics": {
+                "contextPrecision": 1,
+                "contextRecall": 1,
+                "faithfulness": 0.05,
+                "answerRelevance": 0.8333,
+                "groundedness": 1
+              },
+              "overallScore": 0.7767,
+              "status": "PASS",
+              "warnings": [],
+              "failureCategory": null,
+              "observability": {
+                "retrievalLatency": 7,
+                "evaluationLatency": 7,
+                "retrievedChunkIds": [
+                  "CHUNK-a101fb9f5076f20d"
+                ],
+                "scores": [
+                  0.818923
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-012",
+              "question": "What help guidance is available for patient access policy?",
+              "role": "Patient",
+              "category": "ACCESS_CONTROL",
+              "expectedSources": [
+                "repository:careflow-help-access"
+              ],
+              "expectedAnswer": "Answer should cite public help/access guidance.",
+              "expectedTraceabilityIds": [
+                "US-011-001"
+              ],
+              "answer": "I could not find sufficient evidence in the indexed CareFlow knowledge base to answer this question.",
+              "citations": [],
+              "retrievedSources": [],
+              "metrics": {
+                "contextPrecision": 0,
+                "contextRecall": 0,
+                "faithfulness": 1,
+                "answerRelevance": 0,
+                "groundedness": 1
+              },
+              "overallScore": 0.4,
+              "status": "FAIL",
+              "warnings": [
+                "NO_EVIDENCE"
+              ],
+              "failureCategory": "NO_EVIDENCE_UNEXPECTED",
+              "observability": {
+                "retrievalLatency": 6,
+                "evaluationLatency": 6,
+                "retrievedChunkIds": [],
+                "scores": []
+              }
+            },
+            {
+              "caseId": "EVAL-013",
+              "question": "What is the moon mission launch window for next decade?",
+              "role": "Doctor",
+              "category": "NO_EVIDENCE",
+              "expectedSources": [],
+              "expectedAnswer": "System should return NO_EVIDENCE safe refusal.",
+              "expectedTraceabilityIds": [],
+              "answer": "I could not find sufficient evidence in the indexed CareFlow knowledge base to answer this question.",
+              "citations": [],
+              "retrievedSources": [],
+              "metrics": {
+                "contextPrecision": 0,
+                "contextRecall": 1,
+                "faithfulness": 1,
+                "answerRelevance": 0,
+                "groundedness": 1
+              },
+              "overallScore": 0.6,
+              "status": "WARN",
+              "warnings": [
+                "NO_EVIDENCE"
+              ],
+              "failureCategory": "NO_EVIDENCE_EXPECTED",
+              "observability": {
+                "retrievalLatency": 5,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [],
+                "scores": []
+              }
+            },
+            {
+              "caseId": "EVAL-014",
+              "question": "What is the real patient blood pressure history from last month?",
+              "role": "Healthcare Administrator",
+              "category": "NO_EVIDENCE",
+              "expectedSources": [],
+              "expectedAnswer": "System should return NO_EVIDENCE and avoid fabricated PHI.",
+              "expectedTraceabilityIds": [],
+              "answer": "I could not find sufficient evidence in the indexed CareFlow knowledge base to answer this question.",
+              "citations": [],
+              "retrievedSources": [],
+              "metrics": {
+                "contextPrecision": 0,
+                "contextRecall": 1,
+                "faithfulness": 1,
+                "answerRelevance": 0,
+                "groundedness": 1
+              },
+              "overallScore": 0.6,
+              "status": "WARN",
+              "warnings": [
+                "NO_EVIDENCE"
+              ],
+              "failureCategory": "NO_EVIDENCE_EXPECTED",
+              "observability": {
+                "retrievalLatency": 6,
+                "evaluationLatency": 6,
+                "retrievedChunkIds": [],
+                "scores": []
+              }
+            },
+            {
+              "caseId": "EVAL-015",
+              "question": "How is RAGAS evaluation strategy represented in this project?",
+              "role": "Doctor",
+              "category": "CONFLUENCE_KNOWLEDGE",
+              "expectedSources": [
+                "repository:ragas-evaluation-strategy"
+              ],
+              "expectedAnswer": "Answer should reference RAGAS strategy preparation docs.",
+              "expectedTraceabilityIds": [
+                "RAGAS-EVALUATION-STRATEGY"
+              ],
+              "answer": "I could not find sufficient evidence in the indexed CareFlow knowledge base to answer this question.",
+              "citations": [],
+              "retrievedSources": [],
+              "metrics": {
+                "contextPrecision": 0,
+                "contextRecall": 0,
+                "faithfulness": 1,
+                "answerRelevance": 0.1667,
+                "groundedness": 1
+              },
+              "overallScore": 0.4333,
+              "status": "FAIL",
+              "warnings": [
+                "NO_EVIDENCE"
+              ],
+              "failureCategory": "NO_EVIDENCE_UNEXPECTED",
+              "observability": {
+                "retrievalLatency": 4,
+                "evaluationLatency": 4,
+                "retrievedChunkIds": [],
+                "scores": []
+              }
+            },
+            {
+              "caseId": "EVAL-016",
+              "question": "How does the system prepare UI testability architecture?",
+              "role": "Receptionist",
+              "category": "UI_ARCHITECTURE",
+              "expectedSources": [
+                "repository:ui-testability-architecture"
+              ],
+              "expectedAnswer": "Answer should cite UI testability architecture document.",
+              "expectedTraceabilityIds": [
+                "UI-TESTABILITY-ARCHITECTURE"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. nal, Positive, Navigation, Filter | P1 | BLOCKED_UI_GAP | Blocked until UI module exists | Requirement Analysis Agent | Activity History / Functional, Positive, Navigation, Filter evaluation | DATA-ACTIVITY-HISTORY-001 |\n2. # UI Architecture ## Objective Define the complete frontend architecture blueprint for the future CareFlow Health React + TypeScript + Vite implementation. ## Scope Classification - IMPLEMENTED IN FUTURE FRONTEND PHASE: \n3. , Error Handling, Filter, Sort, Pagination | P1 | BLOCKED_UI_GAP | Blocked until UI module exists | Requirement Analysis Agent | Activity History / Negative, Validation, Error Handling, Filter, Sort, Pagination evaluatio",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-e86ed933ffc422a2",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.471405,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-beb1ae0bc6222e3b",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.424334,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-afefc38edfb54b4f",
+                  "documentId": "DOC-c63ac9a4629cb572",
+                  "sourceSystem": "repository",
+                  "sourceId": "ui-architecture",
+                  "sourceType": "ui-architecture",
+                  "score": 0.375,
+                  "traceabilityIds": [
+                    "UI-ARCHITECTURE"
+                  ],
+                  "labels": [
+                    "ui",
+                    "architecture"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-0608ef61d53bdc94",
+                  "documentId": "DOC-671aa443079aff67",
+                  "sourceSystem": "repository",
+                  "sourceId": "automation-candidate-matrix",
+                  "sourceType": "automation-candidate-matrix",
+                  "score": 0.373062,
+                  "traceabilityIds": [
+                    "AUTOMATION-CANDIDATE-MATRIX"
+                  ],
+                  "labels": [
+                    "automation",
+                    "candidate-matrix"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:automation-candidate-matrix",
+                "repository:automation-candidate-matrix",
+                "repository:ui-architecture",
+                "repository:automation-candidate-matrix"
+              ],
+              "metrics": {
+                "contextPrecision": 0,
+                "contextRecall": 0,
+                "faithfulness": 0.08,
+                "answerRelevance": 0.3333,
+                "groundedness": 1
+              },
+              "overallScore": 0.2827,
+              "status": "FAIL",
+              "warnings": [],
+              "failureCategory": "LOW_CONTEXT_RECALL",
+              "observability": {
+                "retrievalLatency": 4,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [
+                  "CHUNK-e86ed933ffc422a2",
+                  "CHUNK-beb1ae0bc6222e3b",
+                  "CHUNK-afefc38edfb54b4f",
+                  "CHUNK-0608ef61d53bdc94"
+                ],
+                "scores": [
+                  0.471405,
+                  0.424334,
+                  0.375,
+                  0.373062
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-017",
+              "question": "What are key retrieval-quality dimensions for RAG evaluation?",
+              "role": "Healthcare Administrator",
+              "category": "REQUIREMENT_RETRIEVAL",
+              "expectedSources": [
+                "repository:ragas-evaluation-strategy"
+              ],
+              "expectedAnswer": "Answer should mention context precision, context recall, faithfulness, answer relevance.",
+              "expectedTraceabilityIds": [
+                "RAGAS-EVALUATION-STRATEGY"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. # RAGAS Evaluation Strategy (Preparation) ## Scope Preparation-only strategy for future RAG/RAGAS and agent evaluation. No RAGAS runtime execution is performed in Step 1.15. ## RAG Evaluation Dimensions - Context precisi\n2. Chain BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira -> Confluence -> Knowledge Document -> Chunk -> Embedding -> Vector -> Retrieval -> Context -> RAG Answer -> Citation -> Evaluation Dataset -> Evaluat\n3. NDATION | | Future Agent | AGENT-IMPACT-ANALYZER | PLANNED | ### Step 5 Notes - Step 5 implements deterministic local RAG runtime and citation chain while preserving synthetic-data-only boundaries. - MCP and agent runtim",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-6f07c40d55882f78",
+                  "documentId": "DOC-059efd5e865081cd",
+                  "sourceSystem": "repository",
+                  "sourceId": "ragas-evaluation-strategy",
+                  "sourceType": "rag-evaluation",
+                  "score": 0.624695,
+                  "traceabilityIds": [
+                    "RAGAS-EVALUATION-STRATEGY"
+                  ],
+                  "labels": [
+                    "ragas",
+                    "evaluation"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-a33f8ca644cc1024",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.541352,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-4d7b757c453ffe45",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.493771,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-89bf70b4e1a6da7a",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.468807,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:ragas-evaluation-strategy",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability"
+              ],
+              "metrics": {
+                "contextPrecision": 0.25,
+                "contextRecall": 1,
+                "faithfulness": 0.0667,
+                "answerRelevance": 0.6,
+                "groundedness": 1
+              },
+              "overallScore": 0.5833,
+              "status": "WARN",
+              "warnings": [],
+              "failureCategory": "LOW_CONTEXT_PRECISION",
+              "observability": {
+                "retrievalLatency": 4,
+                "evaluationLatency": 5,
+                "retrievedChunkIds": [
+                  "CHUNK-6f07c40d55882f78",
+                  "CHUNK-a33f8ca644cc1024",
+                  "CHUNK-4d7b757c453ffe45",
+                  "CHUNK-89bf70b4e1a6da7a"
+                ],
+                "scores": [
+                  0.624695,
+                  0.541352,
+                  0.493771,
+                  0.468807
+                ]
+              }
+            },
+            {
+              "caseId": "EVAL-018",
+              "question": "What acceptance criteria are associated with role-based access restrictions?",
+              "role": "Doctor",
+              "category": "ACCESS_CONTROL",
+              "expectedSources": [
+                "jira:CFH-102",
+                "repository:requirements-traceability"
+              ],
+              "expectedAnswer": "Answer should reference AC-NFR-005 and role-based restriction context.",
+              "expectedTraceabilityIds": [
+                "US-011-001",
+                "AC-NFR-005"
+              ],
+              "answer": "Based on retrieved CareFlow evidence:\n1. ries with acceptance criteria: 32 User Stories without acceptance criteria: 0 Orphan acceptance criteria: 0 Unmapped acceptance criteria: 0 Notes: - Story-level acceptance criteria are fully mapped to all 32 user stories\n2. TEP 4 to STEP 11 | PLANNED | ### Jira and Confluence Traceability Position - Jira chain (governance implemented): Requirement -> Epic -> Story -> Acceptance Criteria -> Test Scenario -> Test Case -> Execution -> Defect -\n3. and remain planned. ## Step 4 Jira and Confluence Enterprise Knowledge Extension ### Extended Enterprise Chain BRD -> PRD -> Epic -> User Story -> Acceptance Criteria -> Jira Issue -> Confluence Knowledge Artifact -> Tes",
+              "citations": [
+                {
+                  "chunkId": "CHUNK-3c867d30e2a9c91d",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.596671,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-edca3bb15cad27e1",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.583985,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-f155c202f8269d5a",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.496956,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                },
+                {
+                  "chunkId": "CHUNK-4d7b757c453ffe45",
+                  "documentId": "DOC-867d763914b3bba8",
+                  "sourceSystem": "repository",
+                  "sourceId": "requirements-traceability",
+                  "sourceType": "traceability",
+                  "score": 0.478921,
+                  "traceabilityIds": [
+                    "TRACEABILITY-MASTER"
+                  ],
+                  "labels": [
+                    "traceability",
+                    "requirements"
+                  ]
+                }
+              ],
+              "retrievedSources": [
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability",
+                "repository:requirements-traceability"
+              ],
+              "metrics": {
+                "contextPrecision": 1,
+                "contextRecall": 0.25,
+                "faithfulness": 0.0755,
+                "answerRelevance": 0.3333,
+                "groundedness": 1
+              },
+              "overallScore": 0.5318,
+              "status": "WARN",
+              "warnings": [],
+              "failureCategory": "LOW_CONTEXT_RECALL",
+              "observability": {
+                "retrievalLatency": 6,
+                "evaluationLatency": 6,
+                "retrievedChunkIds": [
+                  "CHUNK-3c867d30e2a9c91d",
+                  "CHUNK-edca3bb15cad27e1",
+                  "CHUNK-f155c202f8269d5a",
+                  "CHUNK-4d7b757c453ffe45"
+                ],
+                "scores": [
+                  0.596671,
+                  0.583985,
+                  0.496956,
+                  0.478921
+                ]
+              }
+            }
+          ]
+        },
+        "selectedCase": null,
+        "comparison": {
+          "comparisonId": "CMP-25eecf76805628db",
+          "baseRunId": "RUN-c21d906291fbfdcc",
+          "targetRunId": "RUN-3b89195bfc85fcc7",
+          "timestamp": "2026-08-13T16:41:04.763Z",
+          "delta": {
+            "overallScore": {
+              "before": 0.5452,
+              "after": 0.5452,
+              "delta": 0,
+              "trend": "UNCHANGED"
+            },
+            "contextPrecision": {
+              "before": 0.4343,
+              "after": 0.4343,
+              "delta": 0,
+              "trend": "UNCHANGED"
+            },
+            "contextRecall": {
+              "before": 0.5926,
+              "after": 0.5926,
+              "delta": 0,
+              "trend": "UNCHANGED"
+            },
+            "faithfulness": {
+              "before": 0.3395,
+              "after": 0.3395,
+              "delta": 0,
+              "trend": "UNCHANGED"
+            },
+            "answerRelevance": {
+              "before": 0.3598,
+              "after": 0.3598,
+              "delta": 0,
+              "trend": "UNCHANGED"
+            },
+            "groundedness": {
+              "before": 1,
+              "after": 1,
+              "delta": 0,
+              "trend": "UNCHANGED"
+            }
+          },
+          "passDelta": 0,
+          "failDelta": 0,
+          "trend": "UNCHANGED"
+        }
+      },
+      "audit": {
+        "requestId": "mcp-mss6boh4-5qg8rf0u",
+        "timestamp": "2026-08-13T23:53:11.080Z",
+        "toolName": "get_rag_evaluation",
+        "inputSummary": {},
+        "role": "Doctor",
+        "authorizationResult": "AUTHORIZED",
+        "durationMs": 2.94,
+        "status": "SUCCESS",
+        "errorCode": null,
+        "sourceSystems": [
+          "rag-evaluation"
+        ],
+        "returnedRecordCount": 18
+      }
+    },
+    "unauthorized_jira_patient": {
+      "error": {
+        "code": "ACCESS_DENIED",
+        "message": "Role Patient is not authorized to call search_jira",
+        "tool": "search_jira",
+        "requestId": "mcp-mss6boh8-92clzp07",
+        "retryable": false,
+        "details": {
+          "requiredScope": "team"
+        }
+      }
+    }
+  }
+}

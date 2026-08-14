@@ -1,0 +1,269 @@
+{
+  "generatedAt": "2026-08-13T23:52:54.174Z",
+  "runtime": "careflow-mcp-runtime",
+  "tools": [
+    {
+      "name": "search_jira",
+      "description": "Search deterministic local Jira issues by query and optional filters.",
+      "inputSchema": {
+        "query": {
+          "type": "string",
+          "optional": true
+        },
+        "issueType": {
+          "type": "string",
+          "optional": true
+        },
+        "status": {
+          "type": "string",
+          "optional": true
+        },
+        "priority": {
+          "type": "string",
+          "optional": true
+        },
+        "assignee": {
+          "type": "string",
+          "optional": true
+        },
+        "labels": {
+          "type": "array:string",
+          "optional": true
+        },
+        "project": {
+          "type": "string",
+          "optional": true
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "get_jira_issue",
+      "description": "Get a Jira issue with linked QA traceability fields.",
+      "inputSchema": {
+        "issueKey": {
+          "type": "string"
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "search_confluence",
+      "description": "Search deterministic local Confluence pages with metadata filters.",
+      "inputSchema": {
+        "query": {
+          "type": "string",
+          "optional": true
+        },
+        "space": {
+          "type": "string",
+          "optional": true
+        },
+        "labels": {
+          "type": "array:string",
+          "optional": true
+        },
+        "sourceType": {
+          "type": "string",
+          "optional": true
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "get_confluence_page",
+      "description": "Get a Confluence page with Jira/test/traceability references.",
+      "inputSchema": {
+        "pageId": {
+          "type": "string"
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "get_traceability",
+      "description": "Get structured traceability graph across Jira, Confluence, testing and automation.",
+      "inputSchema": {
+        "entityType": {
+          "type": "string"
+        },
+        "entityId": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string",
+          "optional": true,
+          "enum": [
+            "outbound",
+            "inbound",
+            "both"
+          ]
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "search_test_cases",
+      "description": "Search Step 1.15 automation classification records for test cases.",
+      "inputSchema": {
+        "query": {
+          "type": "string",
+          "optional": true
+        },
+        "classification": {
+          "type": "string",
+          "optional": true
+        },
+        "module": {
+          "type": "string",
+          "optional": true
+        },
+        "automationStatus": {
+          "type": "string",
+          "optional": true
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "get_rag_context",
+      "description": "Retrieve RAG context chunks and citations without generating an answer.",
+      "inputSchema": {
+        "query": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "optional": true,
+          "enum": [
+            "Healthcare Administrator",
+            "Doctor",
+            "Nurse",
+            "Receptionist",
+            "Patient"
+          ]
+        },
+        "topK": {
+          "type": "number",
+          "optional": true
+        },
+        "filters": {
+          "type": "object",
+          "optional": true
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "query_rag",
+      "description": "Run existing RAG query service and return answer with citations and metadata.",
+      "inputSchema": {
+        "query": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "optional": true,
+          "enum": [
+            "Healthcare Administrator",
+            "Doctor",
+            "Nurse",
+            "Receptionist",
+            "Patient"
+          ]
+        },
+        "topK": {
+          "type": "number",
+          "optional": true
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "get_rag_evaluation",
+      "description": "Return Step 6 RAG evaluation run/case/comparison artifacts.",
+      "inputSchema": {
+        "runId": {
+          "type": "string",
+          "optional": true
+        },
+        "caseId": {
+          "type": "string",
+          "optional": true
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    },
+    {
+      "name": "get_qa_knowledge",
+      "description": "Unified QA lookup combining Jira, Confluence and RAG evidence.",
+      "inputSchema": {
+        "query": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "optional": true,
+          "enum": [
+            "Healthcare Administrator",
+            "Doctor",
+            "Nurse",
+            "Receptionist",
+            "Patient"
+          ]
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "sourceSystem"
+        ]
+      }
+    }
+  ]
+}

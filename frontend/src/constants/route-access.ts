@@ -145,4 +145,5 @@ export const routeAccess: Record<string, Role[]> = {
     "Receptionist",
     "Healthcare Administrator",
   ],
+  "/mcp": ["Doctor", "Nurse", "Receptionist", "Healthcare Administrator"],
 };

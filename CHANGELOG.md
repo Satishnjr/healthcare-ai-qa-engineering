@@ -1,5 +1,43 @@
 # Changelog
 
+## Step 7 - MCP Runtime & Tool Calling Foundation
+- Implemented local deterministic MCP runtime package under `mcp/runtime/`:
+  - stdio JSON-RPC server (`mcp:start`)
+  - tool runtime with schema validation and structured error contract
+  - role authorization and scope enforcement
+  - audit telemetry in `.tmp/mcp-runtime/tool-audit.ndjson`
+  - read-only resource catalog
+- Implemented MCP client harness and discovery/call demo:
+  - `npm run mcp:client`
+- Implemented 10 MCP tools:
+  - `search_jira`, `get_jira_issue`, `search_confluence`, `get_confluence_page`
+  - `get_traceability`, `search_test_cases`
+  - `get_rag_context`, `query_rag`, `get_rag_evaluation`, `get_qa_knowledge`
+- Reused existing Step 4/5/6 services:
+  - Jira/Confluence repositories and traceability service
+  - Step 5 RAG runtime boundary
+  - Step 6 evaluation artifacts
+- Added frontend MCP demo route `/mcp` with selectors for tool list, schema, execute, request ID, status, source, and error display.
+- Added frontend deterministic MCP artifact files:
+  - `frontend/public/mcp/tool-catalog.json`
+  - `frontend/public/mcp/sample-results.json`
+- Added Step 7 targeted automation:
+  - `automation/features/functional/step7-mcp-runtime.feature`
+  - `automation/src/steps/step7-mcp-runtime.steps.ts`
+- Added Step 7 architecture docs:
+  - `docs/architecture/MCP_ARCHITECTURE.md`
+  - `docs/architecture/MCP_SERVER_ARCHITECTURE.md`
+  - `docs/architecture/MCP_TOOL_CATALOG.md`
+  - `docs/architecture/MCP_SECURITY.md`
+  - `docs/architecture/MCP_OBSERVABILITY.md`
+  - `docs/architecture/MCP_AGENT_BOUNDARY.md`
+- Added Step 7 implementation package:
+  - `docs/implementations/7-mcp-runtime/prompt.md`
+  - `docs/implementations/7-mcp-runtime/README.md`
+  - `docs/implementations/7-mcp-runtime/interview-notes.md`
+  - `docs/implementations/7-mcp-runtime/response.md`
+  - `docs/implementations/7-mcp-runtime/implementation-report.pdf`
+
 ## Step 6 - RAGAS & AI Evaluation Runtime
 - Implemented deterministic RAG evaluation runtime under `rag/src/evaluation/`:
   - dataset validation and snapshotting

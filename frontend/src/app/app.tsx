@@ -24,6 +24,7 @@ import { KnowledgeEvaluationPage } from "../pages/knowledge-evaluation-page";
 import { LoginPage } from "../pages/login-page";
 import { LogoutPage } from "../pages/logout-page";
 import { MedicalRecordsPage } from "../pages/medical-records-page";
+import { McpPage } from "../pages/mcp-page";
 import { NotFoundPage } from "../pages/not-found-page";
 import { NotificationsPage } from "../pages/notifications-page";
 import { PatientDetailPage } from "../pages/patient-detail-page";
@@ -314,6 +315,14 @@ export function App() {
           element={
             <ProtectedOutlet>
               <KnowledgeEvaluationPage />
+            </ProtectedOutlet>
+          }
+        />
+        <Route
+          path="mcp"
+          element={
+            <ProtectedOutlet>
+              <McpPage />
             </ProtectedOutlet>
           }
         />

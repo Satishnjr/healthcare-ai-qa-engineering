@@ -28,6 +28,14 @@ Define release-control gates for functional QA, automation quality, RAG quality,
 - Failure rate
 - Human escalation rate
 
+## MCP Gate (Step 7 Local Runtime Implemented)
+- Required tool registration count and names
+- Schema validation for valid/invalid payloads
+- Structured error contract consistency
+- Role authorization enforcement
+- Deterministic tool discovery and invocation success
+- Audit log generation with request IDs
+
 ## Security Gate (Planned Future Runtime)
 - Prompt injection detection
 - Sensitive data leakage checks
@@ -62,6 +70,19 @@ Define release-control gates for functional QA, automation quality, RAG quality,
 - Runtime gate executors in CI/CD.
 - Automated pass/fail policies with pipeline enforcement.
 - Evidence publication to reporting dashboards.
+
+## Implemented in Step 7 (Local MCP Runtime)
+- Deterministic MCP tool runtime validation (`mcp/runtime` tests).
+- Tool discovery + invocation validation via MCP client harness.
+- Structured error codes for MCP tools:
+  - `INVALID_INPUT`
+  - `NOT_FOUND`
+  - `ACCESS_DENIED`
+  - `NO_EVIDENCE`
+  - `TOOL_NOT_AVAILABLE`
+  - `INTERNAL_ERROR`
+- Authorization checks per role and required scope.
+- NDJSON audit telemetry for each tool call.
 
 ## Step 6 Threshold Baseline (Development)
 - contextPrecision >= 0.55

@@ -1,0 +1,12 @@
+{
+  "name": "careflow-mcp-runtime",
+  "version": "7.0.0",
+  "private": true,
+  "description": "Step 7 MCP runtime and tool calling foundation for CareFlow Health",
+  "scripts": {
+    "mcp:start": "node src/cli-start.js",
+    "mcp:client": "node src/cli-client-demo.js",
+    "mcp:frontend-artifacts": "node src/cli-generate-frontend-artifacts.js",
+    "test": "node tests/step7-mcp-runtime.test.js && node tests/step7-mcp-client-server.test.js"
+  }
+}

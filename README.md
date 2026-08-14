@@ -8,7 +8,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 - CareFlow frontend runtime implemented.
 - Playwright+Cucumber deterministic baseline implemented.
 - Step 4 Jira+Confluence enterprise QA knowledge foundation implemented with deterministic local/mock adapters.
-- Runtime RAG is implemented (deterministic local foundation); MCP/agent/LangGraph and live Jira/Confluence API integrations remain planned.
+- Runtime RAG and MCP foundations are implemented (deterministic local); agent/LangGraph and live Jira/Confluence API integrations remain planned.
 
 ## New Major Roadmap
 
@@ -21,7 +21,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 | STEP 4.1 | Jira + Confluence UI Simulation | PASS |
 | STEP 5 | RAG Knowledge System Runtime | PASS |
 | STEP 6 | RAGAS and AI Evaluation Runtime | PASS |
-| STEP 7 | MCP and Tool Calling Runtime | PLANNED |
+| STEP 7 | MCP and Tool Calling Runtime | PASS |
 | STEP 8 | QA AI Agent Runtime | PLANNED |
 | STEP 9 | Agentic QA Orchestration (LangGraph) | PLANNED |
 | STEP 10 | Multi-Agent QA System | PLANNED |
@@ -74,6 +74,27 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
  - Added targeted Step 6 automation scenarios (`@step6`) and Step 6 tests.
  - Added Step 6 architecture and AI failure-analysis docs.
 
+## Step 7 Highlights
+ - Implemented local deterministic MCP runtime under `mcp/runtime/`:
+   - stdio JSON-RPC server
+   - tool registry, schema validation, and structured error contract
+   - role-based authorization
+   - audit telemetry NDJSON
+   - read-only MCP resources
+ - Implemented deterministic MCP client harness with:
+   - server connect/disconnect
+   - tool discovery
+   - schema visibility
+   - structured tool invocation and error handling
+ - Implemented 10 MCP tools:
+   - `search_jira`, `get_jira_issue`, `search_confluence`, `get_confluence_page`
+   - `get_traceability`, `search_test_cases`
+   - `get_rag_context`, `query_rag`, `get_rag_evaluation`, `get_qa_knowledge`
+ - Extended frontend with MCP demo route:
+   - `/mcp`
+ - Added targeted Step 7 automation feature and Step 7 runtime tests.
+ - Added Step 7 architecture and implementation documentation package.
+
 ## AI/Runtime Boundary
 Implemented:
 - Governance + contracts + local/mock knowledge foundation.
@@ -81,7 +102,6 @@ Implemented:
 - Step 6 deterministic local RAG evaluation runtime.
 
 Not implemented yet:
-- MCP runtime.
 - Agent and LangGraph runtime.
 - Multi-agent runtime.
 - Live Jira/Confluence API integration.
@@ -95,4 +115,6 @@ Not implemented yet:
 - `docs/architecture/JIRA_CONFLUENCE_INTEGRATION.md`
 - `docs/architecture/KNOWLEDGE_EXPORT_CONTRACT.md`
 - `docs/architecture/FUTURE_MCP_JIRA_CONFLUENCE_TOOLS.md`
+- `docs/architecture/MCP_ARCHITECTURE.md`
+- `docs/architecture/MCP_TOOL_CATALOG.md`
 - `docs/ai/AI_INDUSTRY_CONCEPTS_ROADMAP.md`
