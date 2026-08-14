@@ -122,3 +122,75 @@ export interface AgentGraphSamples {
   runtime: string;
   samples: Record<string, AgentGraphState>;
 }
+
+export interface MultiAgentEvidence {
+  evidenceId: string;
+  sourceSystem: string;
+  sourceType: string;
+  sourceId: string;
+  citation: string;
+  score: number;
+  agentId: string;
+}
+
+export interface MultiAgentConflict {
+  conflictId: string;
+  type: string;
+  agents: string[];
+  description: string;
+  severity: string;
+  resolutionStatus: string;
+}
+
+export interface MultiAgentResult {
+  agentId: string;
+  agentType: string;
+  taskId: string;
+  status: string;
+  objective: string;
+  toolsUsed: string[];
+  evidence: MultiAgentEvidence[];
+  findings: string[];
+  recommendations: string[];
+  citations: AgentCitation[];
+  confidence: AgentConfidence;
+  durationMs: number;
+}
+
+export interface MultiAgentState {
+  multiAgentRunId: string;
+  requestId: string;
+  role: string;
+  originalRequest: string;
+  currentPhase: string;
+  executionStatus: string;
+  finalStatus: string;
+  approvalStatus: string;
+  selectedAgents: string[];
+  supervisorPlan: {
+    rationale: string[];
+  };
+  agentStatuses: Record<string, string>;
+  agentResults: Record<string, MultiAgentResult>;
+  evidence: MultiAgentEvidence[];
+  conflicts: MultiAgentConflict[];
+  citations: AgentCitation[];
+  confidence: AgentConfidence;
+  finalResponse: {
+    answer: string;
+    status: string;
+  } | null;
+  warnings: string[];
+  errors: Array<{ code: string; message: string }>;
+  auditMetadata: {
+    multiAgentRunId: string;
+    agentTaskIds: string[];
+    mcpRequestIds: string[];
+  };
+}
+
+export interface MultiAgentSamples {
+  generatedAt: string;
+  runtime: string;
+  samples: Record<string, MultiAgentState>;
+}

@@ -1,5 +1,28 @@
 # Changelog
 
+## Step 10 - Multi-Agent Orchestration Foundation
+- Implemented deterministic local multi-agent runtime under `agent/src/multi-agent/`:
+  - supervisor planning and deterministic specialist selection
+  - QA analyst, RAG knowledge, test analyst, and review agent execution
+  - conflict detection and multi-agent confidence aggregation
+  - telemetry (`.tmp/multi-agent-runtime/multi-agent-telemetry.ndjson`)
+  - audit (`.tmp/multi-agent-runtime/multi-agent-audit.ndjson`)
+- Reused Step 9 graph execution/checkpointing and Step 7 MCP tool boundary.
+- Added Step 10 CLI commands:
+  - `agent:multi`
+  - `agent:multi:status`
+  - `agent:multi:resume`
+  - `agent:multi:approve`
+  - `agent:multi:reject`
+- Extended `/agent` UI with multi-agent orchestration panel and stable selectors.
+- Added Step 10 tests and automation artifacts:
+  - `agent/tests/step10-multi-agent-runtime.test.js`
+  - `automation/features/functional/step10-multi-agent.feature`
+  - `automation/src/steps/step10-multi-agent.steps.ts`
+- Added Step 10 architecture and implementation docs under:
+  - `docs/architecture/MULTI_AGENT_*.md`
+  - `docs/implementations/10-multi-agent-orchestration/*`
+
 ## Step 9 - LangGraph Orchestration Foundation
 - Implemented LangGraph-compatible local graph runtime under `agent/src/graph/`:
   - graph state initialization and contracts

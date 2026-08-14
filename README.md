@@ -8,7 +8,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 - CareFlow frontend runtime implemented.
 - Playwright+Cucumber deterministic baseline implemented.
 - Step 4 Jira+Confluence enterprise QA knowledge foundation implemented with deterministic local/mock adapters.
-- Runtime RAG, MCP, single-agent, and LangGraph-compatible orchestration foundations are implemented (deterministic local); live Jira/Confluence API integrations remain planned.
+- Runtime RAG, MCP, single-agent, LangGraph-compatible orchestration, and deterministic multi-agent foundations are implemented (local development); live Jira/Confluence API integrations remain planned.
 
 ## New Major Roadmap
 
@@ -24,7 +24,7 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
 | STEP 7 | MCP and Tool Calling Runtime | PASS |
 | STEP 8 | QA AI Agent Runtime | PASS |
 | STEP 9 | Agentic QA Orchestration (LangGraph) | PASS |
-| STEP 10 | Multi-Agent QA System | PLANNED |
+| STEP 10 | Multi-Agent QA System | PASS |
 | STEP 11 | Enterprise Integration + Observability + LLMOps + Security + Production Readiness | PLANNED |
 
 ## Step 4 Highlights
@@ -130,6 +130,24 @@ Healthcare AI QA Engineering Platform for CareFlow Health.
  - Extended `/agent` frontend page with graph orchestration timeline and state section.
  - Added targeted Step 9 BDD artifacts:
    - `automation/features/functional/step9-langgraph-orchestration.feature`
+
+## Step 10 Highlights
+ - Implemented deterministic local multi-agent runtime under `agent/src/multi-agent/`:
+   - supervisor-led orchestration
+   - specialist agents (QA, RAG knowledge, test analyst, review)
+   - deterministic sequential execution and selection
+   - conflict detection
+   - aggregated confidence scoring
+   - local telemetry/audit streams
+ - Added Step 10 CLI commands:
+   - `npm run agent:multi -- "<query>"`
+   - `npm run agent:multi:status -- "<multiAgentRunId>"`
+   - `npm run agent:multi:resume -- "<multiAgentRunId>"`
+   - `npm run agent:multi:approve -- "<multiAgentRunId>"`
+   - `npm run agent:multi:reject -- "<multiAgentRunId>"`
+ - Extended `/agent` frontend page with dedicated multi-agent section and stable selectors.
+ - Added Step 10 BDD artifacts:
+   - `automation/features/functional/step10-multi-agent.feature`
 
 ## AI/Runtime Boundary
 Implemented:

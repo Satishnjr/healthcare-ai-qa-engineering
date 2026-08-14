@@ -1,0 +1,330 @@
+{
+  "generatedAt": "2026-08-14T00:00:00.000Z",
+  "runtime": "step10-multi-agent-deterministic-local",
+  "samples": {
+    "success": {
+      "multiAgentRunId": "MAGRUN-SAMPLE-SUCCESS",
+      "requestId": "REQ-SAMPLE-SUCCESS",
+      "role": "Doctor",
+      "originalRequest": "Find the acceptance criteria for appointment cancellation and identify the test cases that should cover it.",
+      "currentPhase": "FINALIZATION",
+      "executionStatus": "COMPLETED",
+      "finalStatus": "SUCCESS",
+      "approvalStatus": "NOT_REQUIRED",
+      "selectedAgents": ["qa_analyst", "rag_knowledge", "test_analyst"],
+      "supervisorPlan": {
+        "rationale": [
+          "QA Analyst selected for acceptance criteria and traceability.",
+          "RAG Knowledge Agent selected for grounded enterprise context.",
+          "Test Analyst selected for coverage and test-case recommendations."
+        ]
+      },
+      "agentStatuses": {
+        "qa_analyst": "COMPLETED",
+        "rag_knowledge": "COMPLETED",
+        "test_analyst": "COMPLETED",
+        "review_agent": "VALID"
+      },
+      "agentResults": {
+        "qa_analyst": {
+          "agentId": "AGENT-QA-001",
+          "agentType": "qa_analyst",
+          "taskId": "AGTASK-QA-001",
+          "status": "COMPLETED",
+          "objective": "Collect acceptance criteria and Jira traceability evidence.",
+          "toolsUsed": ["search_jira", "get_jira_issue", "get_traceability"],
+          "evidence": [
+            {
+              "evidenceId": "EVD-QA-001",
+              "sourceSystem": "jira",
+              "sourceType": "Story",
+              "sourceId": "CFH-US-005",
+              "citation": "jira:CFH-US-005",
+              "score": 0.92,
+              "agentId": "AGENT-QA-001"
+            }
+          ],
+          "findings": [
+            "Acceptance criteria for appointment cancellation are linked to CFH-US-005 and AC-US-004-003-001."
+          ],
+          "recommendations": ["Validate AC-to-test-case mapping before release."],
+          "citations": [{ "sourceSystem": "jira", "sourceId": "CFH-US-005", "documentId": null, "chunkId": null }],
+          "confidence": {
+            "score": 0.88,
+            "band": "MEDIUM_HIGH",
+            "formula": "STEP10_AGENT_CONFIDENCE_V1"
+          },
+          "durationMs": 84
+        },
+        "rag_knowledge": {
+          "agentId": "AGENT-RAG-001",
+          "agentType": "rag_knowledge",
+          "taskId": "AGTASK-RAG-001",
+          "status": "COMPLETED",
+          "objective": "Collect grounded knowledge and evaluation context.",
+          "toolsUsed": ["query_rag", "get_rag_evaluation"],
+          "evidence": [
+            {
+              "evidenceId": "EVD-RAG-001",
+              "sourceSystem": "rag",
+              "sourceType": "Citation",
+              "sourceId": "RAG-CFH-PAGE-001",
+              "citation": "rag:RAG-CFH-PAGE-001",
+              "score": 0.81,
+              "agentId": "AGENT-RAG-001"
+            }
+          ],
+          "findings": [
+            "RAG evidence supports appointment cancellation workflow and linked QA knowledge artifacts."
+          ],
+          "recommendations": ["Monitor quality gate trend for cancellation queries."],
+          "citations": [{ "sourceSystem": "rag", "sourceId": "RAG-CFH-PAGE-001", "documentId": "DOC-001", "chunkId": "CHUNK-001" }],
+          "confidence": {
+            "score": 0.81,
+            "band": "MEDIUM_HIGH",
+            "formula": "STEP10_AGENT_CONFIDENCE_V1"
+          },
+          "durationMs": 66
+        },
+        "test_analyst": {
+          "agentId": "AGENT-TEST-001",
+          "agentType": "test_analyst",
+          "taskId": "AGTASK-TEST-001",
+          "status": "COMPLETED",
+          "objective": "Identify test case coverage recommendations.",
+          "toolsUsed": ["search_test_cases", "get_traceability"],
+          "evidence": [
+            {
+              "evidenceId": "EVD-TEST-001",
+              "sourceSystem": "classification",
+              "sourceType": "TestCase",
+              "sourceId": "TC-TS-004-003-01",
+              "citation": "classification:TC-TS-004-003-01",
+              "score": 0.86,
+              "agentId": "AGENT-TEST-001"
+            }
+          ],
+          "findings": [
+            "Test coverage should include cancellation happy path, negative validation, and authorization checks."
+          ],
+          "recommendations": ["Prioritize deterministic regression for appointment cancellation."],
+          "citations": [{ "sourceSystem": "classification", "sourceId": "TC-TS-004-003-01", "documentId": null, "chunkId": null }],
+          "confidence": {
+            "score": 0.84,
+            "band": "MEDIUM_HIGH",
+            "formula": "STEP10_AGENT_CONFIDENCE_V1"
+          },
+          "durationMs": 72
+        }
+      },
+      "evidence": [
+        {
+          "evidenceId": "EVD-QA-001",
+          "sourceSystem": "jira",
+          "sourceType": "Story",
+          "sourceId": "CFH-US-005",
+          "citation": "jira:CFH-US-005",
+          "score": 0.92,
+          "agentId": "AGENT-QA-001"
+        },
+        {
+          "evidenceId": "EVD-RAG-001",
+          "sourceSystem": "rag",
+          "sourceType": "Citation",
+          "sourceId": "RAG-CFH-PAGE-001",
+          "citation": "rag:RAG-CFH-PAGE-001",
+          "score": 0.81,
+          "agentId": "AGENT-RAG-001"
+        },
+        {
+          "evidenceId": "EVD-TEST-001",
+          "sourceSystem": "classification",
+          "sourceType": "TestCase",
+          "sourceId": "TC-TS-004-003-01",
+          "citation": "classification:TC-TS-004-003-01",
+          "score": 0.86,
+          "agentId": "AGENT-TEST-001"
+        }
+      ],
+      "conflicts": [],
+      "citations": [
+        { "sourceSystem": "jira", "sourceId": "CFH-US-005", "documentId": null, "chunkId": null },
+        { "sourceSystem": "rag", "sourceId": "RAG-CFH-PAGE-001", "documentId": "DOC-001", "chunkId": "CHUNK-001" },
+        { "sourceSystem": "classification", "sourceId": "TC-TS-004-003-01", "documentId": null, "chunkId": null }
+      ],
+      "confidence": {
+        "score": 0.8642,
+        "band": "MEDIUM_HIGH",
+        "formula": "STEP10_MULTI_AGENT_CONFIDENCE_V1"
+      },
+      "finalResponse": {
+        "answer": "Multi-agent deterministic response:\n- qa_analyst: acceptance criteria mapped for cancellation\n- rag_knowledge: grounded cancellation context confirmed\n- test_analyst: deterministic test case recommendations produced\nReview status: VALID (Evidence validated)\nConflicts: 0",
+        "status": "SUCCESS"
+      },
+      "warnings": [],
+      "errors": [],
+      "auditMetadata": {
+        "multiAgentRunId": "MAGRUN-SAMPLE-SUCCESS",
+        "agentTaskIds": ["AGTASK-QA-001", "AGTASK-RAG-001", "AGTASK-TEST-001"],
+        "mcpRequestIds": ["MCP-REQ-001", "MCP-REQ-002", "MCP-REQ-003"]
+      }
+    },
+    "ragQuality": {
+      "multiAgentRunId": "MAGRUN-SAMPLE-RAG",
+      "requestId": "REQ-SAMPLE-RAG",
+      "role": "Doctor",
+      "originalRequest": "What is the RAG quality for appointment cancellation?",
+      "currentPhase": "FINALIZATION",
+      "executionStatus": "COMPLETED",
+      "finalStatus": "SUCCESS",
+      "approvalStatus": "NOT_REQUIRED",
+      "selectedAgents": ["rag_knowledge"],
+      "supervisorPlan": {
+        "rationale": ["RAG Knowledge Agent selected for evaluation and quality context."]
+      },
+      "agentStatuses": {
+        "rag_knowledge": "COMPLETED",
+        "review_agent": "VALID"
+      },
+      "agentResults": {
+        "rag_knowledge": {
+          "agentId": "AGENT-RAG-002",
+          "agentType": "rag_knowledge",
+          "taskId": "AGTASK-RAG-002",
+          "status": "COMPLETED",
+          "objective": "Retrieve RAG quality and evaluation evidence.",
+          "toolsUsed": ["get_rag_evaluation", "query_rag"],
+          "evidence": [],
+          "findings": ["RAG quality remains below target and requires retrieval/faithfulness improvement."],
+          "recommendations": ["Tune retrieval depth and answer grounding prompts."],
+          "citations": [{ "sourceSystem": "rag-eval", "sourceId": "RUN-89131957b2fd16c3", "documentId": null, "chunkId": null }],
+          "confidence": { "score": 0.72, "band": "MEDIUM", "formula": "STEP10_AGENT_CONFIDENCE_V1" },
+          "durationMs": 64
+        }
+      },
+      "evidence": [],
+      "conflicts": [],
+      "citations": [{ "sourceSystem": "rag-eval", "sourceId": "RUN-89131957b2fd16c3", "documentId": null, "chunkId": null }],
+      "confidence": { "score": 0.71, "band": "MEDIUM", "formula": "STEP10_MULTI_AGENT_CONFIDENCE_V1" },
+      "finalResponse": {
+        "answer": "RAG quality for appointment cancellation is currently below release threshold; improvement is required before production usage.",
+        "status": "SUCCESS"
+      },
+      "warnings": ["QUALITY_GATE_WARN"],
+      "errors": [],
+      "auditMetadata": {
+        "multiAgentRunId": "MAGRUN-SAMPLE-RAG",
+        "agentTaskIds": ["AGTASK-RAG-002"],
+        "mcpRequestIds": ["MCP-REQ-201"]
+      }
+    },
+    "conflict": {
+      "multiAgentRunId": "MAGRUN-SAMPLE-CONFLICT",
+      "requestId": "REQ-SAMPLE-CONFLICT",
+      "role": "Doctor",
+      "originalRequest": "Show conflict analysis for appointment cancellation evidence.",
+      "currentPhase": "CONFLICT_CHECK",
+      "executionStatus": "COMPLETED",
+      "finalStatus": "PARTIAL",
+      "approvalStatus": "NOT_REQUIRED",
+      "selectedAgents": ["qa_analyst", "rag_knowledge", "test_analyst"],
+      "supervisorPlan": {
+        "rationale": ["All specialist agents selected for cross-source comparison."]
+      },
+      "agentStatuses": {
+        "qa_analyst": "COMPLETED",
+        "rag_knowledge": "COMPLETED",
+        "test_analyst": "PARTIAL",
+        "review_agent": "CONFLICTING"
+      },
+      "agentResults": {},
+      "evidence": [],
+      "conflicts": [
+        {
+          "conflictId": "CONFLICT-001",
+          "type": "EVIDENCE_MISMATCH",
+          "agents": ["qa_analyst", "rag_knowledge"],
+          "description": "QA and RAG outputs disagree on cancellation evidence scope.",
+          "severity": "MEDIUM",
+          "resolutionStatus": "OPEN"
+        }
+      ],
+      "citations": [],
+      "confidence": { "score": 0.52, "band": "LOW", "formula": "STEP10_MULTI_AGENT_CONFIDENCE_V1" },
+      "finalResponse": {
+        "answer": "Conflict detected between specialist outputs. Additional review is required before final acceptance.",
+        "status": "PARTIAL"
+      },
+      "warnings": ["CONFLICT_DETECTED"],
+      "errors": [],
+      "auditMetadata": {
+        "multiAgentRunId": "MAGRUN-SAMPLE-CONFLICT",
+        "agentTaskIds": ["AGTASK-QA-003", "AGTASK-RAG-003", "AGTASK-TEST-003"],
+        "mcpRequestIds": ["MCP-REQ-301", "MCP-REQ-302"]
+      }
+    },
+    "unauthorized": {
+      "multiAgentRunId": "MAGRUN-SAMPLE-UNAUTHORIZED",
+      "requestId": "REQ-SAMPLE-UNAUTHORIZED",
+      "role": "Patient",
+      "originalRequest": "Find all defects related to cancellation.",
+      "currentPhase": "SUPERVISOR_UNDERSTANDING",
+      "executionStatus": "FAILED",
+      "finalStatus": "UNAUTHORIZED",
+      "approvalStatus": "NOT_REQUIRED",
+      "selectedAgents": [],
+      "supervisorPlan": { "rationale": [] },
+      "agentStatuses": {},
+      "agentResults": {},
+      "evidence": [],
+      "conflicts": [],
+      "citations": [],
+      "confidence": { "score": 0.22, "band": "VERY_LOW", "formula": "STEP10_MULTI_AGENT_CONFIDENCE_V1" },
+      "finalResponse": {
+        "answer": "Role Patient is not authorized to access multi-agent runtime.",
+        "status": "UNAUTHORIZED"
+      },
+      "warnings": ["ACCESS_DENIED"],
+      "errors": [{ "code": "UNAUTHORIZED", "message": "Role Patient is not authorized to access multi-agent runtime." }],
+      "auditMetadata": {
+        "multiAgentRunId": "MAGRUN-SAMPLE-UNAUTHORIZED",
+        "agentTaskIds": [],
+        "mcpRequestIds": []
+      }
+    },
+    "approval": {
+      "multiAgentRunId": "MAGRUN-SAMPLE-APPROVAL",
+      "requestId": "REQ-SAMPLE-APPROVAL",
+      "role": "Doctor",
+      "originalRequest": "Create Jira issue for appointment cancellation defect.",
+      "currentPhase": "APPROVAL_CHECK",
+      "executionStatus": "WAITING_FOR_APPROVAL",
+      "finalStatus": "NEEDS_APPROVAL",
+      "approvalStatus": "REQUIRED",
+      "selectedAgents": ["qa_analyst", "test_analyst"],
+      "supervisorPlan": { "rationale": ["Write-intent request requires approval boundary."] },
+      "agentStatuses": {
+        "qa_analyst": "COMPLETED",
+        "test_analyst": "COMPLETED",
+        "review_agent": "VALID"
+      },
+      "agentResults": {},
+      "evidence": [],
+      "conflicts": [],
+      "citations": [],
+      "confidence": { "score": 0.76, "band": "MEDIUM", "formula": "STEP10_MULTI_AGENT_CONFIDENCE_V1" },
+      "finalResponse": {
+        "answer": "Approval required before executing recommended write action.",
+        "status": "NEEDS_APPROVAL"
+      },
+      "warnings": ["APPROVAL_REQUIRED"],
+      "errors": [],
+      "auditMetadata": {
+        "multiAgentRunId": "MAGRUN-SAMPLE-APPROVAL",
+        "agentTaskIds": ["AGTASK-QA-004", "AGTASK-TEST-004"],
+        "mcpRequestIds": ["MCP-REQ-401"]
+      }
+    }
+  }
+}
+

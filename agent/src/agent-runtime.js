@@ -1,6 +1,7 @@
 const { AgentController } = require("./agent-controller");
 const { DeterministicProvider } = require("./providers/deterministic-provider");
 const { LangGraphCompatibleRuntime } = require("./graph/graph-runtime");
+const { MultiAgentRuntime } = require("./multi-agent/multi-agent-runtime");
 
 class AgentRuntime {
   constructor({ provider = null } = {}) {
@@ -9,6 +10,7 @@ class AgentRuntime {
       provider: this.provider,
     });
     this.graphRuntime = new LangGraphCompatibleRuntime();
+    this.multiAgentRuntime = new MultiAgentRuntime();
   }
 
   executeTask({ request, role = "Doctor", approvalDecision = "APPROVED" }) {
@@ -53,6 +55,38 @@ class AgentRuntime {
 
   listGraphCheckpoints() {
     return this.graphRuntime.listCheckpoints();
+  }
+
+  executeMultiAgentTask({ request, role = "Doctor", approvalDecision = "APPROVED" }) {
+    return this.multiAgentRuntime.run({
+      request,
+      role,
+      approvalDecision,
+    });
+  }
+
+  resumeMultiAgent(multiAgentRunId) {
+    return this.multiAgentRuntime.resume(multiAgentRunId);
+  }
+
+  approveMultiAgent(multiAgentRunId) {
+    return this.multiAgentRuntime.approve(multiAgentRunId);
+  }
+
+  rejectMultiAgent(multiAgentRunId) {
+    return this.multiAgentRuntime.reject(multiAgentRunId);
+  }
+
+  getMultiAgentState(multiAgentRunId) {
+    return this.multiAgentRuntime.getState(multiAgentRunId);
+  }
+
+  getMultiAgentHistory(multiAgentRunId) {
+    return this.multiAgentRuntime.getHistory(multiAgentRunId);
+  }
+
+  listMultiAgentCheckpoints() {
+    return this.multiAgentRuntime.listCheckpoints();
   }
 }
 

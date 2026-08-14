@@ -1,7 +1,7 @@
 # Interview Guide
 
 ## Project Story (Major-Phase View)
-Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> Step 6 deterministic RAG evaluation runtime -> Step 7 deterministic MCP runtime -> Step 8 deterministic agent runtime.
+Requirements and QA governance -> UI architecture and frontend runtime -> deterministic automation baseline -> Jira/Confluence enterprise knowledge foundation -> Step 5 deterministic RAG runtime -> Step 6 deterministic RAG evaluation runtime -> Step 7 deterministic MCP runtime -> Step 8 deterministic agent runtime -> Step 9 deterministic graph orchestration -> Step 10 deterministic multi-agent orchestration.
 
 ## What Is Implemented
 
@@ -20,14 +20,13 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 | MCP runtime and tool calling foundation | PASS | `mcp/runtime/` + `/mcp` demo page + Step 7 docs/tests |
 | QA AI agent runtime (single-agent) | PASS | `agent/` + `/agent` page + Step 8 docs/tests |
 | LangGraph orchestration foundation | PASS | `agent/src/graph/*` + graph CLI + `/agent` graph section + Step 9 docs/tests |
+| Multi-agent orchestration foundation | PASS | `agent/src/multi-agent/*` + `agent:multi*` CLI + `/agent` multi-agent section + Step 10 docs/tests |
 
 ## What Is Not Yet Implemented
 
 | Area | Status |
 |---|---|
 | RAGAS official library runtime integration | PLANNED |
-| Single QA agent runtime | PASS |
-| Multi-agent runtime | PLANNED |
 | Live Jira/Confluence API integration | PLANNED/BLOCKED |
 
 ## Interview Walkthrough by Major Step
@@ -60,7 +59,7 @@ Requirements and QA governance -> UI architecture and frontend runtime -> determ
 - STEP 7: MCP runtime and tool calling foundation (implemented).
 - STEP 8: first QA AI agent runtime (implemented, deterministic local foundation).
 - STEP 9: LangGraph-compatible orchestration runtime (implemented as deterministic local development runtime).
-- STEP 10: multi-agent runtime.
+- STEP 10: deterministic local multi-agent runtime with supervisor/specialists/review/conflict handling (implemented).
 - STEP 11: enterprise integration, observability, LLMOps, security, and production readiness.
 
 ## Required Interview Statements
@@ -114,6 +113,18 @@ Use role-scoped permissions, human approval gates for write actions, audit logs,
 - LangGraph vs LangChain.
 - LangGraph vs custom orchestration.
 - How QA engineers test deterministic graph execution and failure paths.
+
+## Step 10 Multi-Agent Interview Topics
+- Supervisor vs specialist agent responsibilities.
+- Deterministic agent selection and decomposition strategy.
+- Sequential multi-agent execution vs future parallel execution.
+- Evidence normalization across agents.
+- Review-agent validation statuses.
+- Conflict detection model and escalation.
+- Aggregated confidence across multiple agents.
+- Multi-agent telemetry and audit correlation.
+- Multi-agent approval and resume behavior.
+- Multi-agent local foundation vs production enterprise runtime boundaries.
 
 ## Canonical References
 - `docs/IMPLEMENTATION_INDEX.md`
